@@ -1,0 +1,110 @@
+# Requirements contract — filled at stage 1, one per project.
+# Requirements say WHAT, never which visual. The mission's page map is a
+# user-fixed design constraint carried separately into stage 5.
+
+contract: requirements
+project: "hp-world-champs"
+date: "2026-07-12"
+
+audiences:
+  - id: A1
+    who: "contest judges (Power BI Dataviz World Champs, Round 2 panel)"
+    decisions: "score the entry on five criteria: Insightfulness, Visual Effectiveness, Creativity & Innovation, Accessibility, Storytelling & Communication"
+    cadence: "ad hoc (one judging window after 2026-07-19)"
+  - id: A2
+    who: "entrant (requester)"
+    decisions: "submit vs iterate; custom-visual fallback go/no-go by 2026-07-16; content-freeze by 2026-07-17"
+    cadence: "daily during the build week"
+  - id: A3
+    who: "gallery viewers / Fabric community (secondary)"
+    decisions: "engage with the gallery post; none binding on the build"
+    cadence: "ad hoc"
+
+requirements:
+  - id: R1
+    audience: A1
+    question: "What happened to LEGO Harry Potter over time — and how dramatic was the seven-year disappearance and comeback?"
+    needs_history: "2001–2026, with the 2012–2017 gap visibly on the axis"
+    latency: "static contest dataset — none"
+    priority: "must"
+  - id: R2
+    audience: A1
+    question: "How do the two eras differ in scale — sets released, average set size, largest set?"
+    needs_history: "both eras, full"
+    latency: "none"
+    priority: "must"
+  - id: R3
+    audience: A1
+    question: "How did the palette change between eras — how many distinct colors, how gray, and which actual colors?"
+    needs_history: "both eras"
+    latency: "none"
+    priority: "must"
+  - id: R4
+    audience: A1
+    question: "How did the minifigures change — which characters exist in both eras, and how did faces go from yellow to flesh-tone?"
+    needs_history: "both eras"
+    latency: "none"
+    priority: "must"
+  - id: R5
+    audience: A1
+    question: "Which Harry Potter set is the most colorful, and where does it rank among all LEGO sets ever made?"
+    needs_history: "entire dataset (all themes, all years) — ranking needs the full universe, not just HP"
+    latency: "none"
+    priority: "must"
+  - id: R6
+    audience: A1
+    question: "What is the grayest counterpart — how gray can a major licensed theme get, and how does Star Wars compare to Harry Potter?"
+    needs_history: "entire dataset (theme-level comparison)"
+    latency: "none"
+    priority: "must"
+  - id: R7
+    audience: A1
+    question: "Can a reader test whether they can tell the eras apart from the minifigures alone, with immediate feedback and a score?"
+    needs_history: "curated 10-question pool from both eras"
+    latency: "none"
+    priority: "must (custom visual); pre-approved fallback: native disconnected-slicer pattern if toolchain fails by 2026-07-16"
+  - id: R8
+    audience: A1
+    question: "Can the whole report — including the dark-side state and the game — be used by keyboard and screen reader, at WCAG AA contrast?"
+    needs_history: "n/a"
+    latency: "none"
+    priority: "must"
+  - id: R9
+    audience: A1
+    question: "Does the entry meet every contest rule (single .pbix, ≤5 pages, ≥3 core visuals, ≤50-word Key Takeaway on landing, Rebrickable attribution on every page)?"
+    needs_history: "n/a"
+    latency: "none"
+    priority: "must"
+  - id: R10
+    audience: A2
+    question: "Is the entry content-complete by 2026-07-17 with every visible number re-derived from the model and recorded in the evidence manifest?"
+    needs_history: "n/a"
+    latency: "none"
+    priority: "must"
+
+data_landscape:
+  - system: "Rebrickable CSVs — sets.csv (27,069 rows), themes.csv (494), colors.csv (275), minifigs.csv (16,960), parts.csv, part_categories.csv, inventories.csv, inventory_parts.csv (~1.5M rows / 130 MB), inventory_minifigs.csv, inventory_sets.csv"
+    owner: "Rebrickable (contest-provided snapshot, 2026-07-12)"
+    grain_available: "inventory_parts: one row per (inventory, part, color, is_spare); inventory_minifigs: one row per (inventory, minifig); sets: one row per set; inventories: one row per (set, version)"
+    quality_notes: "sets can have multiple inventory versions — v1 only; is_spare must be excluded from shipped-parts counts; colors.rgb lacks '#' prefix; themes.parent_id is recursive (needs flattening); sets.num_parts is Rebrickable's own set-size figure and may differ from summing v1 inventory_parts — definitional choice at stage 2 (Q2); img_url coverage for HP minifigs claimed 100% (E9) — verify at stage 4"
+
+open_questions:
+  - id: Q1
+    question: "Grayscale set definition edge cases: does 'Glow In Dark White' count as grayscale? trans-black? name-based rule vs curated color-id list"
+    blocking: false   # resolved at stage 2 and recorded in the metric contract
+  - id: Q2
+    question: "Avg Parts per Set: sets.num_parts vs SUM of v1 no-spare inventory_parts — which is the contracted source?"
+    blocking: false   # stage 2 decision
+  - id: Q3
+    question: "Current pbiviz version / visuals API version and scaffold syntax"
+    blocking: false   # researched when custom-visual work starts (research-first)
+  - id: Q4
+    question: "Does an imported-from-file .pbiviz embed in the exported .pbix so it renders on a judge's machine without the dev toolchain?"
+    blocking: false   # verified at stage 7 sweep
+  - id: Q5
+    question: "Do hidden tooltip pages count toward the 5-page limit?"
+    blocking: false   # assumption 'no' per mission §1.2, documented in BUILD_LOG
+
+gate_g1:
+  all_requirements_traced: true   # every R references A1/A2; visual preferences parked for stage 5
+  no_blocking_questions: true     # all five open questions have owners in later stages
