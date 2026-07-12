@@ -44,6 +44,14 @@ adopt a new idea into it, add its source here in the same change
 | **Nielsen Norman Group** | Evidence-based dashboard usability. | source register |
 | **W3C** ([WCAG 2.2](https://www.w3.org/TR/WCAG22/)) | The accessibility criteria our contrast script and audit implement. | a11y-studio, check_contrast.py |
 
+## Project: hp-world-champs (Dataviz World Champs Round 2)
+
+| Who | What we owe them | Where it lands |
+|---|---|---|
+| **[Rebrickable](https://rebrickable.com/)** | The LEGO database the entire entry is built on — every set, part, color, and minifigure, plus the image CDN the report renders from. Attribution appears on every report page. | semantic model, all pages |
+| **Stephanie Bruno** | The Round 2 starter model the contest provided; consulted as read-only modeling reference. | stage-3 audit, gallery-post credit |
+| **Power BI Dataviz World Champs organizers** (Fabric community) | The Round 2 brief whose constraints and judging criteria shape the whole build. | intake contract, stage-7 compliance sweep |
+
 ## Built with
 
 This repository was designed and authored with **Claude Code** (Anthropic),

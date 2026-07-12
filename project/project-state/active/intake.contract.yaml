@@ -1,0 +1,65 @@
+# Intake contract — filled at stage 0, one per project.
+# Purpose: pin down what is being asked before any analysis starts.
+
+contract: intake
+project: "hp-world-champs"
+date: "2026-07-12"
+
+request:
+  raw: >
+    "Read project/MISSION-hp-world-champs.md in full — it is the stage-0 source
+    of truth for a Power BI contest build with a hard deadline of July 19.
+    Initialize the project exactly as its §0 specifies, then run the lifecycle
+    via /next stage by stage. The mission file seeds each stage: treat its
+    evidence pack as hypotheses to re-verify against the data, its page map and
+    game spec as contractual, and its contest constraints as blocker-severity.
+    At stage 5, run real divergence on mood/metaphor only — the story and page
+    map are fixed. Flag anything in the mission that conflicts with a repo rule
+    before working around it."
+    Full brief: project/MISSION-hp-world-champs.md ("The Boy Who Came Back",
+    prepared 2026-07-12 by the requester) — contest entry for Power BI Dataviz
+    World Champs Barcelona, Round 2.
+  classification: "new-build"
+  requester: "contest entrant (repo owner)"
+  deadline: "2026-07-19 23:59 Pacific (submission); content-complete target 2026-07-17"
+
+delivery_target: "pbip-file"   # authored as PBIP; submitted as a single .pbix exported
+                               # from Power BI Desktop (mission §1.1 — file, not URL)
+
+sources:
+  - system: "Rebrickable LEGO Database CSVs (contest-provided, Round 2)"
+    access: "local folder 'e:/PowerBI Set-up/World Champs Round 2 Data' — wired via DataFolder parameter, never absolute paths in queries"
+    known_issues: "inventories have versions (use v1 only); inventory_parts has is_spare flag (exclude spares); img_url columns are high-cardinality (drop on the parts fact); 10 CSVs incl. 130 MB inventory_parts"
+  - system: "Starter PBIP 'World Champs BCN 26 - Round 2' (Stephanie Bruno)"
+    access: "workspace root, read-only reference for stage-3 audit"
+    known_issues: "hardcoded author paths in queries (must not be inherited); 3 bidirectional relationships (must not survive rebuild); Parts measure v1-filter becomes redundant once fact query filters v1"
+  - system: "Rebrickable CDN (set/minifig images at render time)"
+    access: "public URLs from img_url columns; judges need connectivity — note in BUILD_LOG"
+    known_issues: "online-only rendering; verify URLs resolve at stage 7"
+
+constraints:                       # mission §1 — all blocker-severity
+  - "Built in Power BI Desktop, submitted as a single .pbix (not Publish-to-Web)"
+  - "Max 5 report pages; hidden tooltip pages assumed not to count — assumption documented in BUILD_LOG"
+  - "Use the provided dataset (clean/transform/enrich/remodel allowed)"
+  - "At least three core Power BI visuals; custom visual is additive only"
+  - "Key Takeaway statement ≤50 words visible on landing page, general audience"
+  - "Attribution 'Source: Rebrickable LEGO Database (rebrickable.com)' in the footer of every page — missing = ineligible"
+  - "Accessibility: alt text on every visual, WCAG contrast (incl. dark-side bookmark state), intentional tab/reading order"
+  - "No Warner Bros. trademark assets; imagery only from dataset img_url columns; licensed/embeddable fonts only"
+
+out_of_scope:
+  - "inventory_sets (set bundles) — recorded in the model blueprint"
+  - "Revenue, film box office, any metric not derivable from the CSVs — metrics-NOT-available list; real-world context appears only as clearly-separated narrative text"
+  - "deneb-studio module — escalation for the quiz goes straight to pbiviz (mission §6 justification)"
+  - "Workspace deployment / Publish-to-Web"
+
+gate_g0:
+  user_confirmed: true
+  confirmation_note: >
+    Classification and scope are the requester's own written brief: mission file
+    authored 2026-07-12 by the requester, plus the execution plan (restating
+    classification, sources, constraints, stage seeding) approved in writing by
+    the requester in-session 2026-07-12 with four setup decisions answered
+    (dataset path in place; modules = mission's seven + canvas-studio; fresh
+    copy at hp-world-champs; pbir-cli 0.9.25 installed). Standing instruction:
+    run the lifecycle autonomously via /next.

@@ -75,4 +75,13 @@ tier_4_community:                # practitioner blogs - inspiring, verify agains
     url: https://data-goblins.com/
     use_for: "Power BI design & agentic development practice"
 
-project_additions: []            # per-project sources appended at stage 0
+project_additions:               # per-project sources appended at stage 0
+  - name: Rebrickable LEGO Database
+    url: https://rebrickable.com/downloads/
+    use_for: "contest dataset (Round 2 CSVs) and image CDN; attribution required on every report page"
+  - name: Power BI Dataviz World Champs Barcelona — Round 2 brief
+    url: https://community.fabric.microsoft.com/t5/Data-Stories-Gallery/bd-p/DataStoriesGallery/article/5272049
+    use_for: "contest rules: submission format, page limit, judging criteria, accessibility expectations"
+  - name: Stephanie Bruno — Round 2 starter model
+    url: https://community.fabric.microsoft.com/
+    use_for: "starter pbix/PBIP consulted read-only as modeling reference; nothing inherited (paths, bidi relationships rebuilt)"
