@@ -1,0 +1,27 @@
+# --- OS / editor noise ---
+Thumbs.db
+.DS_Store
+*.swp
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- Node (custom-visual-studio module) ---
+node_modules/
+dist/
+.tmp/
+
+# --- Power BI local state (never commit) ---
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+*.pbix
+
+# --- Project data (sample extracts stay local) ---
+project/data-samples/*
+!project/data-samples/.gitkeep
+
+# --- Claude Code local settings ---
+.claude/settings.local.json

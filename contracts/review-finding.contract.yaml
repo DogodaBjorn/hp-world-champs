@@ -1,0 +1,20 @@
+# Review-finding contract — used at stages 6-7 (and any audit), one per finding.
+# Purpose: findings that are specific enough to be fixed or explicitly accepted,
+# never vague feedback.
+
+contract: review-finding
+finding_id: "<F-001>"
+date: "<YYYY-MM-DD>"
+reviewer: "<agent or role>"
+
+severity: "<blocker | major | minor | polish>"
+dimension: "<technical | semantic | design | delivery>"
+location: "<file path / page / visual id>"
+
+observed: "<what is, stated as a fact>"
+expected: "<what the contract/rule/blueprint says it should be, with the reference>"
+evidence: "<how to reproduce or where to look>"
+
+resolution:
+  status: "<open | fixed | accepted-as-is>"
+  note: "<fix summary, or the user's acceptance reason>"

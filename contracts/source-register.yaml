@@ -1,0 +1,78 @@
+# Source register — pre-filled, tiered knowledge sources.
+# Purpose: when agents research, they consult sources in tier order and cite
+# which tier answered. Tier 1 overrules Tier 2 overrules Tier 3 on conflicts.
+# Usage policy: consult and reference — never copy text or assets into the repo.
+
+register_version: 1
+
+tier_1_authoritative:            # binding for file formats, APIs, product behavior
+  - name: Microsoft Learn — Power BI / Fabric documentation
+    url: https://learn.microsoft.com/power-bi/
+    use_for: "PBIP/PBIR/TMDL formats, feature availability, service behavior"
+  - name: PBIR / report definition JSON schemas
+    url: https://github.com/microsoft/json-schemas
+    use_for: "exact property names and enums — resolve from each file's $schema"
+  - name: TMDL documentation
+    url: https://learn.microsoft.com/analysis-services/tmdl/tmdl-overview
+    use_for: "TMDL syntax and semantics"
+  - name: WCAG 2.2
+    url: https://www.w3.org/TR/WCAG22/
+    use_for: "accessibility criteria (contrast, non-color encoding)"
+
+tier_2_method:                   # binding for method unless Tier 1 contradicts
+  - name: Kimball Group — dimensional modeling
+    url: https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/
+    use_for: "star schema, grain, conformed dimensions"
+  - name: SQLBI (DAX Patterns, DAX Guide)
+    url: https://www.sqlbi.com/
+    use_for: "DAX correctness and patterns; time intelligence"
+  - name: Tabular Editor docs & Best Practice Analyzer rules
+    url: https://docs.tabulareditor.com/
+    use_for: "model hygiene checks and conventions"
+
+tier_3_craft:                    # informing, not binding — design judgment
+  - name: Financial Times — Visual Vocabulary
+    url: https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary
+    use_for: "chart-type selection by analytical intent"
+  - name: IBCS standards
+    url: https://www.ibcs.com/standards/
+    use_for: "notation consistency, variance visualization"
+  - name: Storytelling with Data
+    url: https://www.storytellingwithdata.com/
+    use_for: "decluttering, focus, narrative"
+  - name: Nielsen Norman Group
+    url: https://www.nngroup.com/
+    use_for: "dashboard usability evidence"
+  - name: Fluent 2 design system
+    url: https://fluent2.microsoft.design/
+    use_for: "spacing, type, and component conventions native to the platform"
+
+tier_4_community:                # practitioner blogs - inspiring, verify against Tier 1 before authoring
+  # Usage policy: consult and cite, never copy text/specs/assets; techniques
+  # are re-derived in this repo's own terms. Maintained by /scout runs.
+  - name: bibb.pro
+    url: https://bibb.pro/
+    use_for: "modern UI patterns (button slicer, navbars, layouts, themes)"
+  - name: Valerie Junk (PorcuBI)
+    url: https://www.valeriejunk.nl/
+    use_for: "tables/matrix craft, storytelling per audience, adoption"
+  - name: Kerry Kolosko
+    url: https://kerrykolosko.com/
+    use_for: "SVG/HTML micro-viz, sparklines, Deneb/SVG templates"
+  - name: Deneb guide & community
+    url: https://deneb.guide/
+    use_for: "Deneb/Vega-Lite capabilities, showcase, versioning"
+  - name: Data Pears (Mara Pereira)
+    url: https://www.datapears.com/
+    use_for: "design-tool-first backgrounds and layout workflow"
+  - name: Havens Consulting (Reid Havens)
+    url: https://www.havensconsulting.net/
+    use_for: "tooltip techniques, report design tricks"
+  - name: Data Savvy (Meagan Longoria)
+    url: https://datasavvy.me/
+    use_for: "Power BI accessibility practice"
+  - name: Data Goblins (Kurt Buhler)
+    url: https://data-goblins.com/
+    use_for: "Power BI design & agentic development practice"
+
+project_additions: []            # per-project sources appended at stage 0

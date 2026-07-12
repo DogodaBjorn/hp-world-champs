@@ -1,0 +1,35 @@
+// measures.dax — <project name>
+// Paste-ready display/support measures added by the design (stage 5), layered
+// on the stage-4 model. Conventions (see the dax-patterns skill):
+//   - every measure has a docstring comment, a displayFolder, a formatString
+//   - layering: base measures -> time intelligence -> display measures
+//   - scenario logic (thresholds, targets that are choices) is marked
+//     "SCENARIO CHOICE" and mirrored in data-model.md
+// When implemented in TMDL, docstrings become /// docs and folders become
+// displayFolder — keep names byte-identical to the design handoff.
+
+// ============================== 03 Display ==============================
+
+// Insight title for <hero_trend>: states the message, not the metric name.
+// Folder: 03 Display\Titles | Format: text
+// Title <Hero Trend> =
+// VAR Delta = [<Measure>] - [<Measure PY>]
+// VAR Direction = IF(Delta >= 0, "up", "down")
+// RETURN "<Metric> " & Direction & " " & FORMAT(ABS(Delta), "<format>") & " vs <baseline>"
+
+// Semantic color for <visual>: returns a theme token hex; color never alone —
+// the bound visual also shows the sign. SCENARIO CHOICE: threshold <x>.
+// Folder: 03 Display\Colors | Format: text
+// Color <Measure> =
+// SWITCH(TRUE(),
+//     [<Measure>] >= <good threshold>, "<good hex from theme>",
+//     [<Measure>] <  <bad threshold>,  "<bad hex from theme>",
+//     "<neutral hex from theme>"
+// )
+
+// ========================== 02 Time intelligence =========================
+
+// <Measure> prior period, using the model's marked Date table.
+// Folder: 02 Time intelligence | Format: <same as base>
+// <Measure> PY =
+// CALCULATE([<Measure>], DATEADD('Date'[Date], -1, YEAR))

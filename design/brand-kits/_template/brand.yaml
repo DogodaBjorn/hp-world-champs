@@ -1,0 +1,70 @@
+# Brand kit — blank scaffold.
+# Copy this folder to design/brand-kits/<kit-name>/ and fill it in (the
+# brand-kit-studio module's bk-brand-kit skill does this by interview).
+# Roles, not favorites: every value answers "what job does this color/type do?"
+# The theme-from-brand-kit skill compiles this file into theme.json and into
+# concrete values for the design hard rules.
+
+kit: "<kit-name>"
+version: 1
+date: "<YYYY-MM-DD>"
+
+identity:
+  organization_alias: "<alias — never a real client name in shareable repos>"
+  personality: "<3 adjectives the report should radiate, e.g. calm, precise, warm>"
+
+color:
+  # Core surfaces and text
+  canvas: "<hex — page background, never pure white>"
+  surface: "<hex — cards>"
+  ink: "<hex — primary text, near-black>"
+  ink_secondary: "<hex — labels, captions>"
+  hairline: "<hex — borders, dividers>"
+
+  # Meaning-bearing colors
+  accent: "<hex — THE focal color; one per page>"
+  good: "<hex — direction-is-good>"
+  bad: "<hex — direction-is-bad; NOT necessarily red, but must contrast good>"
+  neutral_data: "<hex — context series, grayed>"
+
+  # Categorical ramp, assignment order, max 6
+  categorical:
+    - "<hex 1 — usually the accent>"
+    - "<hex 2>"
+    - "<hex 3>"
+    - "<hex 4>"
+    - "<hex 5>"
+    - "<hex 6>"
+
+  # Sequential/diverging for heat encodings
+  sequential: ["<light hex>", "<dark hex>"]
+  diverging: ["<bad-end hex>", "<neutral mid hex>", "<good-end hex>"]
+
+typography:
+  # Every family names a Power BI-safe fallback: fonts not installed on the
+  # reader's machine silently fall back — design for the fallback too.
+  display: "<font>, <safe fallback e.g. Segoe UI Semibold>"
+  body: "<font>, <safe fallback e.g. Segoe UI>"
+  numeric: "<font for figures, monospaced if brand allows>, <fallback>"
+  scale_pt: [28, 20, 14, 12, 10]   # hero / page title / section / body / caption
+
+shape:
+  radius_px: 8
+  shadow: "<none | subtle: ~10% opacity, small blur>"
+  hairline_px: 1
+
+grid:
+  base_px: 8
+  page_margin_px: 24
+  gutter_px: 16
+
+assets:
+  logo: "assets/<file>"            # placed in this kit's assets/ folder
+  usage: "<where the logo may appear — usually chrome only, never on charts>"
+
+voice:
+  title_style: "<insight sentences | neutral labels — pick one report-wide>"
+  number_format_notes: "<thousand separators, currency placement, decimals>"
+
+forbidden:
+  - "<brand-specific bans, e.g. 'no gradients', 'never use competitor blue'>"

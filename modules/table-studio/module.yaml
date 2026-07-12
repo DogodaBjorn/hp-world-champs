@@ -1,0 +1,8 @@
+# Module manifest (miniyaml subset)
+name: table-studio
+version: 1
+description: Premium tables and matrices - typography and alignment doctrine, variance columns, in-cell micro-viz, layered headers, density presets.
+provides: table/matrix pattern catalog and build recipes for stages 5-6
+skills:
+  - tb-tables
+requires: none (icon-studio recommended for SVG in-cell marks)

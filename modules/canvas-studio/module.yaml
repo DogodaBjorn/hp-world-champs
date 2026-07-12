@@ -1,0 +1,8 @@
+# Module manifest (miniyaml subset)
+name: canvas-studio
+version: 1
+description: Designed page backgrounds and wireframe-first layout - SVG canvases carrying the grid, card slots, and chrome zones in brand tokens.
+provides: page wireframes and background SVGs in project/deliverables/canvas/
+skills:
+  - ca-canvas
+requires: none (icon-studio recommended for shared SVG geometry discipline)

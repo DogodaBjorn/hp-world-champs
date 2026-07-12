@@ -1,0 +1,40 @@
+# Design-brief contract — filled at stage 5 as part of the handoff quartet.
+# Purpose: the token-level agreement between design and build. The theme.json
+# and the stage-6 build both derive from THIS, so they can never drift apart.
+
+contract: design-brief
+project: "<project name>"
+direction: "<chosen direction id from the creative-direction contract>"
+date: "<YYYY-MM-DD>"
+
+canvas:
+  size: "<1280x720 | 1920x1080>"
+  background: "<hex>"
+
+tokens:
+  surface: "<hex — cards>"
+  ink: "<hex — primary text>"
+  ink_secondary: "<hex>"
+  hairline: "<hex — borders/dividers>"
+  accent: "<hex — the one focal accent>"
+  good: "<hex>"
+  bad: "<hex>"
+  neutral_data: "<hex — context series>"
+  categorical: ["<up to 6 hex values, ordered by assignment priority>"]
+  radius_px: 8
+  shadow: "<none | subtle: opacity/blur spec>"
+  grid: "8px base; 24px page margin; 16px gutter"
+
+typography:
+  family_display: "<font + Power BI-safe fallback>"
+  family_body: "<font + fallback>"
+  family_mono: "<font + fallback, for figures if used>"
+  scale_pt: [28, 20, 14, 12, 10]
+
+page_chrome: "<masthead/nav/footer treatment shared by all pages>"
+accessibility:
+  contrast: "WCAG AA minimum on all text"
+  color_never_alone: true        # direction encoding always paired with sign/icon/label
+
+forbidden:
+  - "<direction-specific additions to the design-hard-rules forbidden list>"

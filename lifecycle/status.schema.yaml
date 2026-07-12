@@ -1,0 +1,58 @@
+# Schema for project/project-state/status.yaml
+#
+# status.yaml is written in a deliberate YAML *subset* so the stdlib-only
+# tooling (scripts/check_state.py) can parse it without pip installs:
+#   - block mappings and block lists of scalars only (no inline {} / [] nesting,
+#     no lists of mappings, no anchors, no multi-line scalars)
+#   - 2-space indentation
+#   - full-line comments allowed; trailing comments only after unquoted values
+#
+# scripts/check_state.py enforces this schema; this file documents it for
+# humans and agents.
+
+schema_version: 1
+
+fields:
+  project:
+    type: string
+    required: true
+    note: Project name; must match project/project.yaml name.
+  template_version:
+    type: string
+    required: true
+    note: TEMPLATE_VERSION the project was instantiated from (see root VERSION).
+  current_stage:
+    type: integer
+    required: true
+    range: [0, 7]
+  updated:
+    type: string
+    required: true
+    note: ISO date (YYYY-MM-DD) of the last state change.
+  stages:
+    type: mapping
+    required: true
+    keys: [s0_intake, s1_requirements, s2_metrics, s3_model_design,
+           s4_model_build, s5_design, s6_report_build, s7_delivery]
+    each:
+      status:
+        type: enum
+        values: [pending, in_progress, passed, waived]
+        required: true
+      evidence:
+        type: string
+        required: false
+        note: >
+          Repo-relative path to the gate evidence (usually the stage's numbered
+          file under project/project-state/active/). Required — and the file
+          must exist — when status is passed or waived.
+      gate_note:
+        type: string
+        required: false
+        note: One line; for waived status this MUST contain the user's reason.
+
+consistency_rules:
+  - Every stage with index < current_stage has status passed or waived.
+  - The stage at current_stage has status in_progress or pending.
+  - Every stage with index > current_stage has status pending.
+  - evidence paths, when set, point to existing files.

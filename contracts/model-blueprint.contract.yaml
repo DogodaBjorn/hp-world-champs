@@ -1,0 +1,49 @@
+# Model blueprint contract — filled at stage 3, one per project.
+# Purpose: the star schema on paper before it exists on disk. Grain first.
+
+contract: model-blueprint
+project: "<project name>"
+date: "<YYYY-MM-DD>"
+
+facts:
+  - name: "<Fact table name>"
+    grain: "<ONE ROW MEANS: … (finish this sentence before anything else)>"
+    source: "<system/table/view — parameterized, never a machine path>"
+    date_keys: ["<column>"]
+    expected_rows: "<order of magnitude>"
+
+dimensions:
+  - name: "<Dimension name>"
+    grain: "<one row means …>"
+    source: "<system/table/view>"
+    attributes: ["<key attributes worth naming now>"]
+
+date_dimension:
+  marked: true
+  range: "<from — to, and how it extends>"
+  business_flags: ["<e.g. IsWorkingDay, FiscalPeriod, CampaignWindow>"]
+
+relationships:
+  - from: "<Fact[column]>"
+    to: "<Dimension[column]>"
+    cardinality: many-to-one
+    cross_filter: single         # bidirectional requires written justification
+    justification: ""
+
+measure_table:
+  name: "_Measures"
+  folder_taxonomy: "<numbered top-level folders, e.g. 01 Core / 02 Time intelligence / …>"
+
+metric_map:                      # every stage-2 metric appears exactly once
+  - metric_id: "<M-001>"
+    path: "<Fact[column] + aggregation, or 'derived: see formula'>"
+
+not_available:                   # DO NOT FABRICATE list — visible to the user
+  - metric_or_field: "<what was asked for>"
+    reason: "<why the sources cannot support it>"
+    nearest_honest_proxy: "<proxy + its caveat, or 'none'>"
+
+gate_g3:
+  every_metric_mapped: false
+  grains_declared_first: false
+  user_accepted: false

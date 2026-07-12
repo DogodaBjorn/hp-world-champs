@@ -1,0 +1,8 @@
+# Module manifest (miniyaml subset)
+name: a11y-studio
+version: 1
+description: Accessibility as an auditable gate - WCAG contrast checks (scripted), color-never-alone, alt text, tab and reading order, consistency.
+provides: accessibility audit checklist wired into gates 6-7, plus scripts/check_contrast.py
+skills:
+  - ax-audit
+requires: none

@@ -1,0 +1,8 @@
+# Module manifest (miniyaml subset)
+name: deneb-studio
+version: 1
+description: Bespoke declarative visuals via Deneb and Vega-Lite - the middle rung between native visuals and full custom-visual development.
+provides: Vega-Lite spec conventions and versioned specs under project/deliverables/deneb-specs/
+skills:
+  - dn-deneb
+requires: the Deneb custom visual (free, certified; user installs from AppSource; check its current license at adoption)

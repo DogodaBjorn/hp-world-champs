@@ -1,0 +1,38 @@
+# pbi-atelier project state — schema: lifecycle/status.schema.yaml
+project: hp-world-champs
+template_version: 0.3.1
+current_stage: 0
+updated: 2026-07-12
+stages:
+  s0_intake:
+    status: in_progress
+    evidence: ""
+    gate_note: ""
+  s1_requirements:
+    status: pending
+    evidence: ""
+    gate_note: ""
+  s2_metrics:
+    status: pending
+    evidence: ""
+    gate_note: ""
+  s3_model_design:
+    status: pending
+    evidence: ""
+    gate_note: ""
+  s4_model_build:
+    status: pending
+    evidence: ""
+    gate_note: ""
+  s5_design:
+    status: pending
+    evidence: ""
+    gate_note: ""
+  s6_report_build:
+    status: pending
+    evidence: ""
+    gate_note: ""
+  s7_delivery:
+    status: pending
+    evidence: ""
+    gate_note: ""

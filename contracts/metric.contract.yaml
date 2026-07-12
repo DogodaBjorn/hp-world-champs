@@ -1,0 +1,32 @@
+# Metric contract — filled at stage 2, ONE PER KPI.
+# Purpose: make every number mean exactly one thing. Same-name measures can
+# still be different metrics — this contract is how we catch that.
+
+contract: metric
+metric_id: "<M-001>"
+name: "<business name, exactly as it will appear in the report>"
+date: "<YYYY-MM-DD>"
+
+definition:
+  plain_language: "<one sentence a stakeholder would sign off on>"
+  formula_in_words: "<numerator / denominator / aggregation, in words not DAX>"
+  grain: "<the grain at which this metric is meaningful>"
+  filters: "<standing inclusions/exclusions, e.g. 'excludes internal orders'>"
+  unit: "<currency | count | percentage | duration | score>"
+  direction_is_good: "<up | down | target-band | context-dependent>"
+
+edge_cases:
+  - "<what happens at zero denominator / missing dimension / partial period>"
+
+targets:
+  exists: false
+  source: "<where the target comes from, or 'scenario logic — label as such'>"
+
+owner: "<role who owns this definition>"
+synonyms: "<other names in circulation for this metric, to prevent collisions>"
+conflicts_checked: false         # steward confirmed no same-name/other-meaning clash
+
+implementation:                  # filled during stage 4, not stage 2
+  measure_name: ""
+  display_folder: ""
+  format_string: ""

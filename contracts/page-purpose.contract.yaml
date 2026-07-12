@@ -1,0 +1,24 @@
+# Page-purpose contract — filled at stage 5, ONE PER REPORT PAGE.
+# Purpose: a page exists to answer one question for one audience. If you cannot
+# fill this in, the page should not exist.
+
+contract: page-purpose
+page_id: "<p1>"
+page_name: "<display name>"
+date: "<YYYY-MM-DD>"
+
+audience: "<audience id from the requirements contract>"
+question: "<the ONE question this page answers>"
+archetype: "<overview | drivers | comparison | detail-list | definitions — see design/page-archetypes.md>"
+
+three_second_message: "<what a reader takes away at a glance — a sentence, not a topic>"
+three_minute_path: "<how a skeptical reader verifies it: labels, periods, definitions, drill path>"
+
+hero: "<the single focal element and why it earns that position>"
+supporting_visuals:
+  - id: "<visual id per naming conventions>"
+    intent: "<which analysis intent it serves — see design/visual-selection.md>"
+    metric_ids: ["<M-001>"]
+
+interactions: "<slicers, drill-through targets, tooltips — only those that serve the question>"
+leaves_out: "<what was deliberately excluded from this page, so it isn't re-added later>"

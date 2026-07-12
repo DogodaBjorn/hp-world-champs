@@ -1,0 +1,30 @@
+# Intake contract — filled at stage 0, one per project.
+# Purpose: pin down what is being asked before any analysis starts.
+# Copy to project/project-state/active/ and fill; keep placeholders in <>.
+
+contract: intake
+project: "<project name>"
+date: "<YYYY-MM-DD>"
+
+request:
+  raw: "<the request in the requester's own words — do not paraphrase>"
+  classification: "<new-build | redesign | model-extension | analysis-only>"
+  requester: "<role, not personal name if the repo may be shared>"
+  deadline: "<date or 'none stated'>"
+
+delivery_target: "<pbip-file | workspace-deploy | embedded | undecided>"
+
+sources:
+  - system: "<source system>"
+    access: "<how we reach it / who grants it>"
+    known_issues: "<data quality or availability caveats, or 'none known'>"
+
+constraints:
+  - "<hard constraint, e.g. 'native visuals only', 'must run on shared capacity'>"
+
+out_of_scope:
+  - "<explicitly excluded, agreed with the requester>"
+
+gate_g0:
+  user_confirmed: false          # set true only after explicit confirmation
+  confirmation_note: "<where/when the user confirmed>"

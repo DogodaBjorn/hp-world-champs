@@ -1,0 +1,8 @@
+# Module manifest (miniyaml subset)
+name: tooltip-studio
+version: 1
+description: The hover layer - report-page tooltips as progressive disclosure: mini-trends, definition/trust tooltips from metric contracts, mini-breakdowns.
+provides: tooltip page patterns and per-visual tooltip mapping for stages 5-6
+skills:
+  - tt-tooltips
+requires: none

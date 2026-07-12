@@ -1,0 +1,47 @@
+# Evidence manifest — assembled at stage 7, one per project.
+# Purpose: one file that proves every gate was passed (or knowingly waived),
+# with pointers instead of prose. This is what an auditor — or you in six
+# months — reads first.
+
+contract: evidence-manifest
+project: "<project name>"
+date: "<YYYY-MM-DD>"
+template_version: "<from project.yaml>"
+
+gates:
+  - gate: G0
+    status: "<passed | waived>"
+    evidence: "project-state/active/00-intake.md"
+    note: ""
+  - gate: G1
+    status: "<passed | waived>"
+    evidence: "project-state/active/01-requirements.md"
+    note: ""
+  - gate: G2
+    status: "<passed | waived>"
+    evidence: "project-state/active/02-metrics.md"
+    note: ""
+  - gate: G3
+    status: "<passed | waived>"
+    evidence: "project-state/active/03-model-blueprint.md"
+    note: ""
+  - gate: G4
+    status: "<passed | waived>"
+    evidence: "project-state/active/04-model-build.md"
+    validation: "<validate_tmdl strict run date + result>"
+  - gate: G5
+    status: "<passed | waived>"
+    evidence: "project-state/active/05-design.md"
+    quartet: ["deliverables/design-handoff.md", "deliverables/data-model.md",
+              "deliverables/measures.dax", "deliverables/theme.json"]
+  - gate: G6
+    status: "<passed | waived>"
+    evidence: "project-state/active/06-build.md"
+    build_log: "deliverables/BUILD_LOG.md"
+    fidelity_review: "<review-finding ids or 'clean'>"
+  - gate: G7
+    status: "<passed | waived>"
+    evidence: "project-state/active/07-delivery.md"
+    user_acceptance: "<where recorded>"
+
+open_findings: ["<F-ids still open at delivery, with the user's sign-off>"]

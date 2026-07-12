@@ -1,0 +1,8 @@
+# Module manifest (miniyaml subset)
+name: icon-studio
+version: 1
+description: Generate and use custom SVG icons and visual additions - brand-colored icon sets, state variants, page-chrome graphics, and dynamic DAX-driven SVGs.
+provides: icon assets in project/deliverables/icons/ and SVG usage guidance
+skills:
+  - ic-icons
+requires: none (brand kit recommended for colored variants)

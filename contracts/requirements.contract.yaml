@@ -1,0 +1,36 @@
+# Requirements contract — filled at stage 1, one per project.
+# Purpose: tie every requirement to an audience decision, so nothing is built
+# "because it looked useful". Requirements say WHAT, never which visual.
+
+contract: requirements
+project: "<project name>"
+date: "<YYYY-MM-DD>"
+
+audiences:
+  - id: A1
+    who: "<role/team>"
+    decisions: "<the decisions this audience takes with the report>"
+    cadence: "<daily | weekly | monthly | ad hoc>"
+
+requirements:
+  - id: R1
+    audience: A1                 # must reference an audience id
+    question: "<the business question, phrased as the audience would ask it>"
+    needs_history: "<how far back>"
+    latency: "<how fresh the data must be>"
+    priority: "<must | should | could>"
+
+data_landscape:
+  - system: "<system>"
+    owner: "<data owner role>"
+    grain_available: "<finest grain the source offers>"
+    quality_notes: "<known issues>"
+
+open_questions:
+  - id: Q1
+    question: "<what we still do not know>"
+    blocking: false              # true blocks gate G1
+
+gate_g1:
+  all_requirements_traced: false # every R references a real A
+  no_blocking_questions: false

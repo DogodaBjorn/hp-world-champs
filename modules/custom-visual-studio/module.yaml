@@ -1,0 +1,8 @@
+# Module manifest (miniyaml subset)
+name: custom-visual-studio
+version: 1
+description: Scaffold and develop pbiviz TypeScript custom visuals when native visuals genuinely cannot serve an analytical intent.
+provides: custom visual projects under project/custom-visuals/<name>/
+skills:
+  - cv-custom-visual
+requires: Node.js >= 20 and the pbiviz CLI (see DEPENDENCIES.md)

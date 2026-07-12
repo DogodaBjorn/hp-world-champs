@@ -1,0 +1,8 @@
+# Module manifest (miniyaml subset)
+name: brand-kit-studio
+version: 1
+description: Create and refine brand kits by interview; kits compile into Power BI themes and design hard-rule tokens.
+provides: brand kits under design/brand-kits/<kit>/
+skills:
+  - bk-brand-kit
+requires: none

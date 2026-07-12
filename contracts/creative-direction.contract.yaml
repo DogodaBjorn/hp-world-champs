@@ -1,0 +1,38 @@
+# Creative-direction contract — filled at stage 5, one per project.
+# Purpose: force real divergence before convergence, and record why the chosen
+# direction won. Three shades of the same idea do not count as three directions.
+
+contract: creative-direction
+project: "<project name>"
+date: "<YYYY-MM-DD>"
+
+directions:
+  - id: D1
+    name: "<evocative working title>"
+    concept: "<the organizing metaphor/mood in 2-3 sentences>"
+    visual_language: "<typography feel, color temperature, density, signature layout move>"
+    signature_moment: "<the one element a reader would remember>"
+    risk: "<what could make this direction fail its audience>"
+  - id: D2
+    name: "<…>"
+    concept: "<must differ in KIND from D1, not in degree>"
+    visual_language: "<…>"
+    signature_moment: "<…>"
+    risk: "<…>"
+  - id: D3
+    name: "<…>"
+    concept: "<…>"
+    visual_language: "<…>"
+    signature_moment: "<…>"
+    risk: "<…>"
+
+critique:
+  method: "each direction argued against design/design-doctrine.md, per audience"
+  notes: "<one honest paragraph per direction — strengths AND failure modes>"
+
+chosen: "<D1 | D2 | D3>"
+chosen_because: "<the deciding argument, in the user's terms>"
+user_decided: false              # the user picks; the agent recommends
+
+fidelity_checklist:              # stage 6 checks the build against these
+  - "<the 3-5 elements that define the chosen direction and must survive the build>"

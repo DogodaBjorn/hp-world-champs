@@ -1,0 +1,16 @@
+# pbi-atelier project configuration (see GETTING-STARTED.md)
+name: hp-world-champs
+client_alias: fabric-contest
+language: en
+template_version: 0.3.1
+created: 2026-07-12
+brand_kit: none
+modules:
+  - custom-visual-studio
+  - brand-kit-studio
+  - icon-studio
+  - nav-studio
+  - tooltip-studio
+  - a11y-studio
+  - table-studio
+  - canvas-studio

@@ -1,0 +1,9 @@
+# Module manifest (miniyaml subset)
+name: nl-deliverables
+version: 1
+description: Dutch client deliverables generated from the contracts - UAT/testplan and definitie-pagina content.
+provides: Dutch UAT plan and definitions-page content in project/deliverables/
+skills:
+  - nl-uat
+  - nl-definities
+requires: project language nl (or explicit user request)

@@ -1,0 +1,6 @@
+# Hooks and scripts must keep LF endings on every platform (Git Bash on
+# Windows chokes on CRLF shebangs).
+*.sh text eol=lf
+*.py text eol=lf
+# Everything else: normalize in the repo, checkout per platform default.
+* text=auto

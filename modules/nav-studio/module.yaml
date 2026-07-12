@@ -1,0 +1,8 @@
+# Module manifest (miniyaml subset)
+name: nav-studio
+version: 1
+description: Modern navigation and selection UI - button-slicer patterns (segmented controls, tabs, toggles, clickable KPI cards), page navigation, and bookmark-driven panels.
+provides: navigation pattern catalog and build recipes for stages 5-6
+skills:
+  - nv-navigation
+requires: none (icon-studio recommended for image and toggle patterns)

@@ -1,0 +1,82 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Grep(**)",
+      "Glob(**)",
+      "Edit(project/**)",
+      "Write(project/**)",
+      "Bash(ls:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(python scripts/*)",
+      "Bash(python --version)",
+      "Bash(pbir --version)",
+      "Bash(pbir ls:*)",
+      "Bash(pbir tree:*)",
+      "Bash(pbir cat:*)",
+      "Bash(pbir get:*)",
+      "Bash(pbir find:*)",
+      "Bash(pbir model:*)",
+      "Bash(pbir validate:*)",
+      "Bash(pbir schema:*)"
+    ],
+    "deny": [
+      "Edit(.claude/settings.json)",
+      "Edit(.claude/hooks/**)",
+      "Edit(DEPENDENCIES.md)",
+      "Write(.claude/settings.json)",
+      "Write(.claude/hooks/**)",
+      "Write(DEPENDENCIES.md)",
+      "Bash(rm -rf:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(fab deploy:*)",
+      "Bash(fab publish:*)",
+      "Bash(pbir publish:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/block-destructive.sh\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/validate-pbip-json.sh\""
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/validate-tmdl.sh\""
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/check-project-state.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
