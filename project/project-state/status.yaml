@@ -34,5 +34,5 @@ stages:
     gate_note: "G6: pbir validate 0 errors; strict TMDL clean; fidelity review passed with 5 recorded deviations (none reopen G5); hpSortingQuiz packaged lint-clean; Desktop steps D1-D11 in BUILD_LOG"
   s7_delivery:
     status: in_progress
-    evidence: ""
-    gate_note: ""
+    evidence: "project-state/active/07-delivery.md"
+    gate_note: "G7 agent-side complete 2026-07-13: sweeps green, ax-audit run (F1/F2 fixed), compliance sweep done, UAT + evidence manifest delivered; gate closes on user Desktop verification (D1-D11) + .pbix export + recorded acceptance"

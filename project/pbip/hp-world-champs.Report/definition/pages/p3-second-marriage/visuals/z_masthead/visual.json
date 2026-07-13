@@ -36,11 +36,19 @@
                     }
                   },
                   {
-                    "value": "   Second marriage (2018– )",
+                    "value": "   ● ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "14pt",
+                      "color": "#720E0F"
+                    }
+                  },
+                  {
+                    "value": "Second marriage (2018– )",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
                       "fontSize": "12pt",
-                      "color": "#720E0F"
+                      "color": "#05131D"
                     }
                   }
                 ]

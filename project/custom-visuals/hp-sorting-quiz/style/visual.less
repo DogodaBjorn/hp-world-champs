@@ -149,7 +149,8 @@
     font-weight: 600;
     font-size: 0.9em;
 
-    &.hpq-chip-era1 { background: var(--hpq-era1); }
+    // ax-audit F2: white on gold is 3.63:1 — era-1 chip text uses ink instead.
+    &.hpq-chip-era1 { background: var(--hpq-era1); color: var(--hpq-text); }
     &.hpq-chip-era2 { background: var(--hpq-era2); }
 }
 

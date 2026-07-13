@@ -36,11 +36,19 @@
                     }
                   },
                   {
-                    "value": "   First marriage (2001–2011)",
+                    "value": "   ● ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "14pt",
+                      "color": "#AA7F2E"
+                    }
+                  },
+                  {
+                    "value": "First marriage (2001–2011)",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
                       "fontSize": "12pt",
-                      "color": "#AA7F2E"
+                      "color": "#05131D"
                     }
                   }
                 ]

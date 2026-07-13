@@ -208,7 +208,10 @@ def chrome(page_no, title, era_chip=None, dark=False, suffix=""):
         run(title, size="20pt", family="Georgia", color=ink),
     ]
     if era_chip:
-        head_runs.append(run("   " + era_chip[0], size="12pt", family="Segoe UI Semibold", color=era_chip[1]))
+        # ax-audit F1: era label text must be ink (gold text fails 4.5:1);
+        # the era color rides on a ● marker (non-text, 3.22:1 ≥ 3.0 verified).
+        head_runs.append(run("   ● ", size="14pt", color=era_chip[1]))
+        head_runs.append(run(era_chip[0], size="12pt", family="Segoe UI Semibold", color=ink))
     vis.append(textbox(f"z_masthead{suffix}", 24, 8, 900, 36, head_runs, 90000,
                        alt=f"Chapter {numerals[page_no - 1]}: {title}"))
     vis.append({

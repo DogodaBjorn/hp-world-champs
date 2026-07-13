@@ -1,0 +1,48 @@
+# Evidence manifest — hp-world-champs (assembled at stage 7, 2026-07-13).
+# One file that proves every gate was passed, with pointers instead of prose.
+
+contract: evidence-manifest
+project: "hp-world-champs"
+date: "2026-07-13"
+template_version: "0.3.1"
+
+gates:
+  - gate: G0
+    status: "passed"
+    evidence: "project-state/active/00-intake.md"
+    note: "written confirmation = requester-authored mission + approved plan (intake.contract.yaml gate_g0)"
+  - gate: G1
+    status: "passed"
+    evidence: "project-state/active/01-requirements.md"
+    note: "every requirement traces to a judging criterion; 10 CSV schemas verified"
+  - gate: G2
+    status: "passed"
+    evidence: "project-state/active/02-metrics.md"
+    note: "user signed 2026-07-12; 9 contracts in project-state/active/metrics/"
+  - gate: G3
+    status: "passed"
+    evidence: "project-state/active/03-model-blueprint.md"
+    note: "user accepted 2026-07-13; strict HP scope; starter audit verified 3 bidis"
+  - gate: G4
+    status: "passed"
+    evidence: "project-state/active/04-model-build.md"
+    validation: "validate_tmdl --strict 2026-07-13: 13 files, 0 errors, 0 warnings; E1-E10 re-derived in project-state/active/evidence-manifest.md"
+  - gate: G5
+    status: "passed"
+    evidence: "project-state/active/05-design.md"
+    quartet: ["deliverables/design-handoff.md", "deliverables/data-model.md",
+              "deliverables/measures.dax", "deliverables/theme.json"]
+  - gate: G6
+    status: "passed"
+    evidence: "project-state/active/06-build.md"
+    build_log: "deliverables/BUILD_LOG.md"
+    fidelity_review: "passed with 5 recorded deviations (06-build.md); pbir validate 0 errors"
+  - gate: G7
+    status: "passed"
+    evidence: "project-state/active/07-delivery.md"
+    user_acceptance: "pending user Desktop verification (D1-D11) and .pbix export — recorded in 07-delivery.md when done"
+
+open_findings:
+  - "F1 gold-text-on-canvas era chips — FIXED at s7 (marker dot + ink label; 3.22:1 marker ≥3.0, ink 16.7:1)"
+  - "F2 white-on-gold quiz chip — FIXED at s7 (ink text on gold chip, 5.18:1)"
+  - "D1-D11 Desktop steps open by design (headless environment) — BUILD_LOG checklist, closed by the user at rendered review"
