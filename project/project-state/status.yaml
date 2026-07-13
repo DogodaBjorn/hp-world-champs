@@ -1,7 +1,7 @@
 # pbi-atelier project state — schema: lifecycle/status.schema.yaml
 project: hp-world-champs
 template_version: 0.3.1
-current_stage: 6
+current_stage: 7
 updated: 2026-07-13
 stages:
   s0_intake:
@@ -29,10 +29,10 @@ stages:
     evidence: "project-state/active/05-design.md"
     gate_note: "G5: user chose D1 Illuminated Storybook + signed 3 deviations (true-hex palettes, Hex fx path, definitions-as-tooltips); quartet complete; contrast all-PASS both states"
   s6_report_build:
-    status: in_progress
-    evidence: ""
-    gate_note: ""
+    status: passed
+    evidence: "project-state/active/06-build.md"
+    gate_note: "G6: pbir validate 0 errors; strict TMDL clean; fidelity review passed with 5 recorded deviations (none reopen G5); hpSortingQuiz packaged lint-clean; Desktop steps D1-D11 in BUILD_LOG"
   s7_delivery:
-    status: pending
+    status: in_progress
     evidence: ""
     gate_note: ""

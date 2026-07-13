@@ -1,0 +1,212 @@
+// hpSortingQuiz styles. All colors flow from CSS variables set by the
+// formatting settings (theme slots) — no hardcoded hex in the render path.
+
+.hpq-root {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", sans-serif;
+    font-size: var(--hpq-fontsize, 11px);
+    color: var(--hpq-text);
+    overflow: hidden;
+}
+
+.hpq-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+
+    .hpq-score {
+        font-family: Georgia, serif;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-right: auto;
+    }
+}
+
+.hpq-btn {
+    font: inherit;
+    color: var(--hpq-card);
+    background: var(--hpq-text);
+    border: 1px solid var(--hpq-text);
+    border-radius: 8px;
+    padding: 4px 14px;
+    cursor: pointer;
+
+    &:focus-visible {
+        outline: 3px solid var(--hpq-correct);
+        outline-offset: 2px;
+    }
+}
+
+.hpq-board {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex: 1;
+    gap: 16px;
+    padding: 4px 8px 8px;
+    min-height: 0;
+}
+
+.hpq-col {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    flex: 1;
+
+    h3 {
+        font-family: Georgia, serif;
+        font-size: 1.3em;   // ≥14px at the default 11px base (serif floor rule)
+        font-style: italic;
+        margin: 0 0 4px;
+        font-weight: normal;
+    }
+
+    .hpq-col-body {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        overflow-y: auto;
+        min-height: 0;
+        flex: 1;
+    }
+}
+
+.hpq-col-figs { flex: 0 0 26%; }
+.hpq-col-chars { flex: 0 0 30%; }
+.hpq-col-reveal { flex: 1; }
+
+.hpq-card {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--hpq-card);
+    border: 1px solid color-mix(in srgb, var(--hpq-text) 20%, transparent);
+    border-radius: 8px;
+    padding: 3px 8px;
+    min-height: 30px;
+    cursor: pointer;
+    user-select: none;
+
+    &:focus-visible {
+        outline: 3px solid var(--hpq-correct);
+        outline-offset: 1px;
+    }
+
+    img {
+        height: 30px;
+        width: auto;
+        border-radius: 4px;
+        pointer-events: none;
+    }
+
+    .hpq-cap {
+        font-size: 0.9em;
+        opacity: 0.75;
+    }
+}
+
+.hpq-fig.hpq-selected {
+    border: 2px solid var(--hpq-correct);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--hpq-correct) 40%, transparent);
+}
+
+.hpq-fig.hpq-matched {
+    border-color: var(--hpq-correct);
+    cursor: default;
+}
+
+.hpq-fig.hpq-revealed-fig {
+    opacity: 0.75;
+    cursor: default;
+}
+
+.hpq-reveal {
+    cursor: default;
+    justify-content: flex-start;
+    color: color-mix(in srgb, var(--hpq-text) 55%, transparent);
+
+    &.hpq-revealed {
+        color: var(--hpq-text);
+    }
+
+    .hpq-set {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.hpq-chip {
+    flex: none;
+    color: var(--hpq-card);
+    border-radius: 8px;
+    padding: 1px 8px;
+    font-weight: 600;
+    font-size: 0.9em;
+
+    &.hpq-chip-era1 { background: var(--hpq-era1); }
+    &.hpq-chip-era2 { background: var(--hpq-era2); }
+}
+
+.hpq-lines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+
+    .hpq-line-locked {
+        stroke: var(--hpq-correct);
+        stroke-width: 2.5;
+        stroke-linecap: round;
+    }
+
+    .hpq-line-wrong {
+        stroke: var(--hpq-wrong);
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-dasharray: 6 4;
+        animation: hpq-fade 0.7s forwards;
+    }
+}
+
+.hpq-shake {
+    animation: hpq-shake 0.35s;
+}
+
+.hpq-empty {
+    padding: 12px;
+}
+
+.hpq-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+@keyframes hpq-fade {
+    to { opacity: 0; }
+}
+
+@keyframes hpq-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}
+
+@media (forced-colors: active) {
+    .hpq-card { border: 1px solid CanvasText; }
+    .hpq-fig.hpq-selected,
+    .hpq-fig.hpq-matched { border: 2px solid Highlight; }
+    .hpq-lines .hpq-line-locked { stroke: Highlight; }
+    .hpq-lines .hpq-line-wrong { stroke: LinkText; }
+}

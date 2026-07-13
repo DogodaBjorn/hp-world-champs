@@ -382,9 +382,9 @@ def p4_visuals(ev):
         },
     })
     vis.append(textbox("c_rank_note", 832, 556, 424, 100, [
-        run("Five mosaic sculptures are 100% gray — Vader's TIE is the grayest large ", size="12pt", family="Georgia", color=T["ink2"], italic=True),
-        run("Star Wars", size="12pt", family="Georgia", color=T["ink2"], bold=True, italic=True),
-        run(" set. Honest ranks only.", size="12pt", family="Georgia", color=T["ink2"], italic=True),
+        run("Five mosaic sculptures are 100% gray — Vader's TIE is the grayest large ", size="14pt", family="Georgia", color=T["ink2"], italic=True),
+        run("Star Wars", size="14pt", family="Georgia", color=T["ink2"], bold=True, italic=True),
+        run(" set. Honest ranks only.", size="14pt", family="Georgia", color=T["ink2"], italic=True),
     ], 5000, alt="Note: five mosaic sculptures are 100 percent gray; Vader's TIE Advanced is the grayest large Star Wars set."))
     # DARK state
     vis.append(chart(

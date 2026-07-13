@@ -22,7 +22,7 @@
                     "value": "Five mosaic sculptures are 100% gray — Vader's TIE is the grayest large ",
                     "textStyle": {
                       "fontFamily": "Georgia",
-                      "fontSize": "12pt",
+                      "fontSize": "14pt",
                       "color": "#6C6E68",
                       "fontStyle": "italic"
                     }
@@ -31,7 +31,7 @@
                     "value": "Star Wars",
                     "textStyle": {
                       "fontFamily": "Georgia",
-                      "fontSize": "12pt",
+                      "fontSize": "14pt",
                       "color": "#6C6E68",
                       "fontWeight": "bold",
                       "fontStyle": "italic"
@@ -41,7 +41,7 @@
                     "value": " set. Honest ranks only.",
                     "textStyle": {
                       "fontFamily": "Georgia",
-                      "fontSize": "12pt",
+                      "fontSize": "14pt",
                       "color": "#6C6E68",
                       "fontStyle": "italic"
                     }

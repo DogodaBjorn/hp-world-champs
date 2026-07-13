@@ -1,0 +1,67 @@
+{
+    "privileges": [
+        {
+            "name": "WebAccess",
+            "essential": true,
+            "parameters": [ "https://cdn.rebrickable.com" ]
+        }
+    ],
+    "dataRoles": [
+        { "name": "questionNo",  "displayName": "Question number",         "kind": "Grouping" },
+        { "name": "figureId",    "displayName": "Figure ID (fig_num)",    "kind": "Grouping" },
+        { "name": "figureImage", "displayName": "Figure image URL",       "kind": "Grouping" },
+        { "name": "character",   "displayName": "Character (answer key)", "kind": "Grouping" },
+        { "name": "era",         "displayName": "Era (answer key)",       "kind": "Grouping" },
+        { "name": "setName",     "displayName": "Set name (answer key)",  "kind": "Grouping" },
+        { "name": "setImage",    "displayName": "Set image URL",          "kind": "Grouping" }
+    ],
+    "dataViewMappings": [
+        {
+            "conditions": [
+                {
+                    "questionNo":  { "max": 1 },
+                    "figureId":    { "max": 1 },
+                    "figureImage": { "max": 1 },
+                    "character":   { "max": 1 },
+                    "era":         { "max": 1 },
+                    "setName":     { "max": 1 },
+                    "setImage":    { "max": 1 }
+                }
+            ],
+            "table": {
+                "rows": {
+                    "select": [
+                        { "for": { "in": "questionNo" } },
+                        { "for": { "in": "figureId" } },
+                        { "for": { "in": "figureImage" } },
+                        { "for": { "in": "character" } },
+                        { "for": { "in": "era" } },
+                        { "for": { "in": "setName" } },
+                        { "for": { "in": "setImage" } }
+                    ],
+                    "dataReductionAlgorithm": { "top": { "count": 30 } }
+                }
+            }
+        }
+    ],
+    "objects": {
+        "gameColors": {
+            "properties": {
+                "correctColor": { "type": { "fill": { "solid": { "color": true } } } },
+                "wrongColor":   { "type": { "fill": { "solid": { "color": true } } } },
+                "textColor":    { "type": { "fill": { "solid": { "color": true } } } },
+                "cardColor":    { "type": { "fill": { "solid": { "color": true } } } },
+                "eraOneColor":  { "type": { "fill": { "solid": { "color": true } } } },
+                "eraTwoColor":  { "type": { "fill": { "solid": { "color": true } } } }
+            }
+        },
+        "gameText": {
+            "properties": {
+                "fontSize": { "type": { "formatting": { "fontSize": true } } }
+            }
+        }
+    },
+    "supportsKeyboardFocus": true,
+    "supportsEmptyDataView": true,
+    "sorting": { "default": {} }
+}

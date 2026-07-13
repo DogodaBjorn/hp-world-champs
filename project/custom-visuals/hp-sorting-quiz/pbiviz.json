@@ -1,0 +1,21 @@
+{
+  "visual": {
+    "name": "hpSortingQuiz",
+    "displayName": "The Sorting Quiz",
+    "guid": "hpSortingQuizC5E71AA64D2B441BB9BD1B65FFFA17A6",
+    "visualClassName": "Visual",
+    "version": "1.0.0.0",
+    "description": "Minifigure matching game for 'The Boy Who Came Back' (Dataviz World Champs BCN Round 2): connect each minifigure to its character; era and set reveal on a correct match. Data: disconnected QuizQuestions table (Rebrickable LEGO Database). Fully keyboard-operable with ARIA announcements.",
+    "supportUrl": "https://rebrickable.com",
+    "gitHubUrl": ""
+  },
+  "apiVersion": "5.3.0",
+  "author": { "name": "Bjorn (dogoda.nl)", "email": "bjorn@dogoda.nl" },
+  "assets": { "icon": "assets/icon.png" },
+  "externalJS": null,
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "dependencies": null,
+  "stringResources": [],
+  "version": "1.0.0.0"
+}
