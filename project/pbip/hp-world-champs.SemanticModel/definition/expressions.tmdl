@@ -38,6 +38,31 @@ expression RawInventoryMinifigs =
 
 	annotation PBI_ResultType = Table
 
+/// Staging (not loaded): raw colors.csv (firewall split for DimColors).
+expression RawColors =
+		fnCsv("colors.csv", 8)
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): raw minifigs.csv (firewall split for DimMinifigures).
+expression RawMinifigs =
+		fnCsv("minifigs.csv", 4)
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): raw parts.csv (firewall split for DimParts).
+expression RawParts =
+		fnCsv("parts.csv", 4)
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): raw part_categories.csv — DimParts joins two files;
+/// the firewall flags in-query combination of two source-reading step chains.
+expression RawPartCategories =
+		fnCsv("part_categories.csv", 2)
+
+	annotation PBI_ResultType = Table
+
 /// Staging (not loaded): themes with Root Theme / Sub Theme resolved by
 /// walking parent_id to the topmost ancestor (494 rows, chains are short).
 expression ThemesResolved =

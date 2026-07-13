@@ -53,7 +53,8 @@ table DimColors
 		mode: import
 		source =
 				let
-				    Source = fnCsv("colors.csv", 8),
+				    // Reference only (RawColors) — uniform firewall-safe pattern.
+				    Source = RawColors,
 				    Typed = Table.TransformColumnTypes(Source, {{"id", Int64.Type}, {"name", type text}, {"rgb", type text}, {"is_trans", type logical}, {"num_parts", Int64.Type}, {"num_sets", Int64.Type}, {"y1", Int64.Type}, {"y2", Int64.Type}}),
 				    WithHex = Table.AddColumn(Typed, "Hex", each "#" & [rgb], type text),
 				    WithGray = Table.AddColumn(WithHex, "IsGrayscale", each

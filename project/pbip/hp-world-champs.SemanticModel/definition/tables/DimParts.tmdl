@@ -27,9 +27,11 @@ table DimParts
 		mode: import
 		source =
 				let
-				    Source = fnCsv("parts.csv", 4),
+				    // References only (RawParts + RawPartCategories) — joining two
+				    // in-query file reads trips the Formula.Firewall step rule.
+				    Source = RawParts,
 				    Typed = Table.TransformColumnTypes(Source, {{"part_num", type text}, {"name", type text}, {"part_cat_id", Int64.Type}, {"part_material", type text}}),
-				    Cats = Table.TransformColumnTypes(fnCsv("part_categories.csv", 2), {{"id", Int64.Type}, {"name", type text}}),
+				    Cats = Table.TransformColumnTypes(RawPartCategories, {{"id", Int64.Type}, {"name", type text}}),
 				    Merged = Table.NestedJoin(Typed, {"part_cat_id"}, Cats, {"id"}, "C", JoinKind.LeftOuter),
 				    Expanded = Table.ExpandTableColumn(Merged, "C", {"name"}, {"Part Category"}),
 				    Renamed = Table.RenameColumns(Expanded, {{"name", "Part Name"}}),

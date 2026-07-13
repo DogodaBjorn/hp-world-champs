@@ -37,7 +37,8 @@ table DimMinifigures
 		mode: import
 		source =
 				let
-				    Source = fnCsv("minifigs.csv", 4),
+				    // Reference only (RawMinifigs) — uniform firewall-safe pattern.
+				    Source = RawMinifigs,
 				    Typed = Table.TransformColumnTypes(Source, {{"fig_num", type text}, {"name", type text}, {"num_parts", Int64.Type}, {"img_url", type text}}),
 				    WithCharacter = Table.AddColumn(Typed, "Character", each
 				        let

@@ -60,16 +60,18 @@ Maintained continuously during stages 4 and 6 (never retroactively).
 
 ## 2026-07-13 — D1 finding: Formula.Firewall fix
 
-User's first refresh hit `Formula.Firewall` on DimSets / FactPartsInSets /
-FactMinifigsInSets: those queries read a CSV directly (via `fnCsv`) AND
-referenced a staging query (`ThemesResolved` / `V1Inventories`) — the
-firewall forbids mixing direct source access and query references in one
-query. Fix: three new raw staging expressions (`RawSets`,
-`RawInventoryParts`, `RawInventoryMinifigs`) now own the file access; the
-three affected queries contain query references only. No Desktop privacy
-setting needed; works on any machine. **If Desktop still had the PBIP open:
-close WITHOUT saving, reopen, then refresh** (Desktop caches the old
-definition in memory and saving would overwrite this fix).
+User's first refresh hit `Formula.Firewall` on several queries: any query
+that reads a CSV directly (via `fnCsv`) AND references another query — or
+joins two file-reading step chains inside one query (DimParts) — trips the
+firewall ("references other queries or steps … rebuild this data
+combination"). Fix, applied uniformly: **only `Raw*` staging expressions
+touch File.Contents** (RawSets, RawInventoryParts, RawInventoryMinifigs,
+RawColors, RawMinifigs, RawParts, RawPartCategories — plus ThemesResolved
+and V1Inventories which each read exactly one file); **every loaded table
+query is references-only**. This is definitionally firewall-proof, needs no
+Desktop privacy setting, and works on any machine. **If Desktop still has
+the PBIP open: close WITHOUT saving, reopen, then refresh** (Desktop caches
+the old definition in memory and saving would overwrite the fix).
 
 ### Manual steps still required in Desktop (running checklist)
 
