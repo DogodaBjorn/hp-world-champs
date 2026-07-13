@@ -18,6 +18,26 @@ expression fnCsv =
 
 	annotation PBI_ResultType = Function
 
+/// Staging (not loaded): raw sets.csv. Exists so DimSets contains query
+/// REFERENCES only — a query that both reads a file and references another
+/// query trips the Formula.Firewall ("rebuild this data combination").
+expression RawSets =
+		fnCsv("sets.csv", 6)
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): raw inventory_parts.csv (firewall split for FactPartsInSets).
+expression RawInventoryParts =
+		fnCsv("inventory_parts.csv", 6)
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): raw inventory_minifigs.csv (firewall split for FactMinifigsInSets).
+expression RawInventoryMinifigs =
+		fnCsv("inventory_minifigs.csv", 3)
+
+	annotation PBI_ResultType = Table
+
 /// Staging (not loaded): themes with Root Theme / Sub Theme resolved by
 /// walking parent_id to the topmost ancestor (494 rows, chains are short).
 expression ThemesResolved =

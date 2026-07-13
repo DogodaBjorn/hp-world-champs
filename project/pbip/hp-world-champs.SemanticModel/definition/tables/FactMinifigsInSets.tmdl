@@ -25,7 +25,8 @@ table FactMinifigsInSets
 		mode: import
 		source =
 				let
-				    Source = fnCsv("inventory_minifigs.csv", 3),
+				    // References only (RawInventoryMinifigs + V1Inventories) — firewall rule.
+				    Source = RawInventoryMinifigs,
 				    Typed = Table.TransformColumnTypes(Source, {{"inventory_id", Int64.Type}, {"fig_num", type text}, {"quantity", Int64.Type}}),
 				    V1 = Table.NestedJoin(Typed, {"inventory_id"}, V1Inventories, {"inventory_id"}, "inv", JoinKind.Inner),
 				    WithSet = Table.ExpandTableColumn(V1, "inv", {"set_num"}),

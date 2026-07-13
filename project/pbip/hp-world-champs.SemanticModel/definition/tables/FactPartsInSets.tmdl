@@ -33,7 +33,8 @@ table FactPartsInSets
 		mode: import
 		source =
 				let
-				    Source = fnCsv("inventory_parts.csv", 6),
+				    // References only (RawInventoryParts + V1Inventories) — firewall rule.
+				    Source = RawInventoryParts,
 				    Typed = Table.TransformColumnTypes(Source, {{"inventory_id", Int64.Type}, {"part_num", type text}, {"color_id", Int64.Type}, {"quantity", Int64.Type}, {"is_spare", type logical}, {"img_url", type text}}),
 				    NoSpares = Table.SelectRows(Typed, each not [is_spare]),
 				    Slim = Table.RemoveColumns(NoSpares, {"is_spare", "img_url"}),

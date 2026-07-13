@@ -58,7 +58,9 @@ table DimSets
 		mode: import
 		source =
 				let
-				    Source = fnCsv("sets.csv", 6),
+				    // References only (RawSets + ThemesResolved) — direct file access here
+				    // plus a query reference trips the Formula.Firewall.
+				    Source = RawSets,
 				    Typed = Table.TransformColumnTypes(Source, {{"set_num", type text}, {"name", type text}, {"year", Int64.Type}, {"theme_id", Int64.Type}, {"num_parts", Int64.Type}, {"img_url", type text}}),
 				    MergedThemes = Table.NestedJoin(Typed, {"theme_id"}, ThemesResolved, {"id"}, "T", JoinKind.LeftOuter),
 				    Expanded = Table.ExpandTableColumn(MergedThemes, "T", {"Root Theme", "Sub Theme"}),

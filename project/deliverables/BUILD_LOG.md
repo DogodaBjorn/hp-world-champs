@@ -58,6 +58,19 @@ Maintained continuously during stages 4 and 6 (never retroactively).
   carries attribution only (page-role text dropped). "Show items with no
   data" could not be encoded schema-safely → Desktop step D6.
 
+## 2026-07-13 — D1 finding: Formula.Firewall fix
+
+User's first refresh hit `Formula.Firewall` on DimSets / FactPartsInSets /
+FactMinifigsInSets: those queries read a CSV directly (via `fnCsv`) AND
+referenced a staging query (`ThemesResolved` / `V1Inventories`) — the
+firewall forbids mixing direct source access and query references in one
+query. Fix: three new raw staging expressions (`RawSets`,
+`RawInventoryParts`, `RawInventoryMinifigs`) now own the file access; the
+three affected queries contain query references only. No Desktop privacy
+setting needed; works on any machine. **If Desktop still had the PBIP open:
+close WITHOUT saving, reopen, then refresh** (Desktop caches the old
+definition in memory and saving would overwrite this fix).
+
 ### Manual steps still required in Desktop (running checklist)
 
 | # | Step | Status |
