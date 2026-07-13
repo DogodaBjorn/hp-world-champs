@@ -1,0 +1,107 @@
+# Creative-direction contract — stage 5. Story and page map are FIXED by the
+# mission (user pre-decision); divergence below is mood / metaphor / layout
+# only, per the kickoff instruction.
+
+contract: creative-direction
+project: "hp-world-champs"
+date: "2026-07-13"
+
+directions:
+  - id: D1
+    name: "The Illuminated Storybook"
+    concept: >
+      A beloved book reread as an adult. Each page is a chapter of the
+      two-marriages tale; annotations behave like handwritten marginalia; the
+      Key Takeaway opens with a drop cap. Warm parchment light, serif voice,
+      gold-and-dark-red accents from the bricks themselves.
+    visual_language: >
+      Georgia display with italic marginalia; parchment canvas #F7F1E3 (flat
+      tint, no texture images); chapter numerals I–V as page markers; hairline
+      flourish rules; asymmetric book-spread layout — wide data pane plus a
+      narrow narrative margin column carrying annotations and the 3-minute
+      trust path.
+    signature_moment: >
+      The seven-year silence on the P1 hero chart annotated like a margin
+      note in italic — "seven silent years" — with a thin rule bracketing the
+      empty 2012–2017 columns.
+    risk: >
+      Nostalgia can slide into kitsch: texture, flourishes, and italics at
+      small sizes all threaten the data-ink and contrast rules. Ornament
+      budget must be hard-capped (chapter rule + drop cap + margin notes,
+      nothing else).
+  - id: D2
+    name: "The Museum Retrospective"
+    concept: >
+      A design museum stages an exhibition on one franchise's two periods.
+      Curatorial minimalism on the warm brick palette: every number is an
+      exhibit, every page a room, P2/P3 literally mirrored gallery rooms.
+    visual_language: >
+      Exhibit-label typography (caps-spaced captions, catalog numbers like
+      "EXHIBIT 76444-1"), plinth-like cards on generous whitespace, strict
+      modular grid, one crimson accent per room; era rooms distinguished by
+      gold/dark-red wayfinding chips.
+    signature_moment: >
+      Diagon Alley Wizarding Shops presented as an acquisition card — "the
+      second most colorful artifact in 27,069 sets" — with its true-color
+      composition as the exhibit.
+    risk: >
+      Curatorial cool mutes the resurrection arc's emotion, and the cheeky
+      dark-side flip lands oddly in a formal museum voice. Whitespace
+      discipline fights the quiz page's density.
+  - id: D3
+    name: "Built From Bricks"
+    concept: >
+      The report itself is a LEGO build. Cards are chunky rounded tiles,
+      the grid shows as subtle stud dots, palette strips are literal rows of
+      1×1 bricks, navigation chips are 2×4 plates. Toy-forward, playful,
+      higher density and bolder color blocking.
+    visual_language: >
+      Segoe UI Semibold display (no serif); stud-corner card motif; brick-row
+      palette strips; era chips as plates in gold/dark red; column charts
+      styled as brick towers; denser, louder pages.
+    signature_moment: >
+      The P1 hero chart where every year-column reads as a stacked brick
+      tower and the hiatus is six empty baseplates.
+    risk: >
+      Highest gimmick risk: brick furniture is decoration unless it carries
+      data; density threatens 3-second clarity; decorative studs must stay
+      out of tab order and alt text; heaviest render cost on P4's doubled
+      visual count.
+
+critique:
+  method: "each direction argued against design/design-doctrine.md, per audience (judges scoring the five contest criteria)"
+  notes: >
+    D1 strengths: the voice matches the story (marriages, hiatus, return);
+    marginalia give the 3-minute trust path a natural home; tooltips read as
+    footnotes; strongest Storytelling & Communication score. Failure modes:
+    ornament creep, serif-at-small-size readability, margin column stealing
+    data real estate on 1280×720 — capped by the fidelity checklist.
+    D2 strengths: cleanest hierarchy, strongest accessibility posture, honest
+    exhibit framing flatters Insightfulness. Failure modes: emotional
+    flatness for a comeback story; museum voice undercuts the dark-side gag;
+    known contest aesthetic (weaker Creativity differentiation).
+    D3 strengths: most memorable, most "LEGO"; Creativity & Innovation
+    strongest on first impression. Failure modes: doctrine collisions
+    (decoration carrying no data), density vs clarity, accessibility surface
+    area, render weight on P4 — the direction that most needs policing.
+
+chosen: "D1"
+chosen_because: >
+  User pick 2026-07-13 (in-session): the storybook voice matches the
+  two-marriages arc and carries the strongest Storytelling & Communication
+  case; ornament risk accepted because the fidelity checklist hard-caps it.
+  Signed in the same gate: three rule deviations — (1) true-hex palette
+  visuals on P2/P3/P4 exceed the 6-hue cap (color IS the data; cap holds
+  everywhere else), (2) DimColors[Hex] field-value conditional formatting is
+  the accepted semantic-color path, (3) no Definitions page — definitions
+  ship as metric-contract tooltips (contest 5-page cap).
+user_decided: true
+
+fidelity_checklist:              # stage 6 is judged against these
+  - "Chapter numerals I–V present on every page header; attribution footer on every page"
+  - "Ornament budget: drop cap (P1 takeaway) + chapter hairline rule + italic margin annotations ONLY — no texture images, no flourishes beyond these"
+  - "P1 hero: hiatus years visibly empty on a contiguous year axis, bracketed by the italic margin note"
+  - "P2/P3 are exact mirror grids (same slots, same visual types, filtered per era); era chips gold/dark-red per kit"
+  - "P4 dark-side flip: bookmark swap to dark_state tokens; both states pass check_contrast; toggle is a real button, keyboard-operable, alt-texted"
+  - "Serif (Georgia) only at 14pt+; body text stays Segoe UI; Pearl Gold never as text below 18pt"
+  - "Every visual: explicit title (or recorded hide), background, alt text; 6-hue cap everywhere except the three signed palette visuals"

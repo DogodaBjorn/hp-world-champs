@@ -682,6 +682,708 @@
       "qty": 1645
     }
   ],
+  "hp_color_table_full": [
+    {
+      "color": "Black",
+      "hex": "#05131D",
+      "is_trans": false,
+      "qty": 17232,
+      "share_pct": 14.53
+    },
+    {
+      "color": "Tan",
+      "hex": "#E4CD9E",
+      "is_trans": false,
+      "qty": 15391,
+      "share_pct": 12.98
+    },
+    {
+      "color": "Dark Bluish Gray",
+      "hex": "#6C6E68",
+      "is_trans": false,
+      "qty": 12099,
+      "share_pct": 10.2
+    },
+    {
+      "color": "Reddish Brown",
+      "hex": "#582A12",
+      "is_trans": false,
+      "qty": 11268,
+      "share_pct": 9.5
+    },
+    {
+      "color": "Light Bluish Gray",
+      "hex": "#A0A5A9",
+      "is_trans": false,
+      "qty": 10651,
+      "share_pct": 8.98
+    },
+    {
+      "color": "White",
+      "hex": "#FFFFFF",
+      "is_trans": false,
+      "qty": 8416,
+      "share_pct": 7.1
+    },
+    {
+      "color": "Dark Tan",
+      "hex": "#958A73",
+      "is_trans": false,
+      "qty": 7731,
+      "share_pct": 6.52
+    },
+    {
+      "color": "Red",
+      "hex": "#C91A09",
+      "is_trans": false,
+      "qty": 3590,
+      "share_pct": 3.03
+    },
+    {
+      "color": "Medium Nougat",
+      "hex": "#AA7D55",
+      "is_trans": false,
+      "qty": 2932,
+      "share_pct": 2.47
+    },
+    {
+      "color": "Pearl Gold",
+      "hex": "#AA7F2E",
+      "is_trans": false,
+      "qty": 2449,
+      "share_pct": 2.06
+    },
+    {
+      "color": "Sand Green",
+      "hex": "#A0BCAC",
+      "is_trans": false,
+      "qty": 2230,
+      "share_pct": 1.88
+    },
+    {
+      "color": "Trans-Clear",
+      "hex": "#FCFCFC",
+      "is_trans": true,
+      "qty": 1999,
+      "share_pct": 1.69
+    },
+    {
+      "color": "Dark Red",
+      "hex": "#720E0F",
+      "is_trans": false,
+      "qty": 1778,
+      "share_pct": 1.5
+    },
+    {
+      "color": "Dark Brown",
+      "hex": "#352100",
+      "is_trans": false,
+      "qty": 1627,
+      "share_pct": 1.37
+    },
+    {
+      "color": "Dark Orange",
+      "hex": "#A95500",
+      "is_trans": false,
+      "qty": 1201,
+      "share_pct": 1.01
+    },
+    {
+      "color": "Green",
+      "hex": "#237841",
+      "is_trans": false,
+      "qty": 1061,
+      "share_pct": 0.89
+    },
+    {
+      "color": "Dark Purple",
+      "hex": "#3F3691",
+      "is_trans": false,
+      "qty": 1041,
+      "share_pct": 0.88
+    },
+    {
+      "color": "Orange",
+      "hex": "#FE8A18",
+      "is_trans": false,
+      "qty": 1037,
+      "share_pct": 0.87
+    },
+    {
+      "color": "Light Gray",
+      "hex": "#9BA19D",
+      "is_trans": false,
+      "qty": 965,
+      "share_pct": 0.81
+    },
+    {
+      "color": "Bright Light Blue",
+      "hex": "#9FC3E9",
+      "is_trans": false,
+      "qty": 959,
+      "share_pct": 0.81
+    },
+    {
+      "color": "Dark Blue",
+      "hex": "#0A3463",
+      "is_trans": false,
+      "qty": 866,
+      "share_pct": 0.73
+    },
+    {
+      "color": "Olive Green",
+      "hex": "#9B9A5A",
+      "is_trans": false,
+      "qty": 865,
+      "share_pct": 0.73
+    },
+    {
+      "color": "Yellow",
+      "hex": "#F2CD37",
+      "is_trans": false,
+      "qty": 845,
+      "share_pct": 0.71
+    },
+    {
+      "color": "Dark Green",
+      "hex": "#184632",
+      "is_trans": false,
+      "qty": 805,
+      "share_pct": 0.68
+    },
+    {
+      "color": "Blue",
+      "hex": "#0055BF",
+      "is_trans": false,
+      "qty": 762,
+      "share_pct": 0.64
+    },
+    {
+      "color": "Dark Gray",
+      "hex": "#6D6E5C",
+      "is_trans": false,
+      "qty": 752,
+      "share_pct": 0.63
+    },
+    {
+      "color": "Medium Blue",
+      "hex": "#5A93DB",
+      "is_trans": false,
+      "qty": 597,
+      "share_pct": 0.5
+    },
+    {
+      "color": "Bright Light Orange",
+      "hex": "#F8BB3D",
+      "is_trans": false,
+      "qty": 591,
+      "share_pct": 0.5
+    },
+    {
+      "color": "Sand Blue",
+      "hex": "#6074A1",
+      "is_trans": false,
+      "qty": 511,
+      "share_pct": 0.43
+    },
+    {
+      "color": "Light Nougat",
+      "hex": "#F6D7B3",
+      "is_trans": false,
+      "qty": 424,
+      "share_pct": 0.36
+    },
+    {
+      "color": "Trans-Yellow",
+      "hex": "#F5CD2F",
+      "is_trans": true,
+      "qty": 410,
+      "share_pct": 0.35
+    },
+    {
+      "color": "Lavender",
+      "hex": "#E1D5ED",
+      "is_trans": false,
+      "qty": 394,
+      "share_pct": 0.33
+    },
+    {
+      "color": "Trans-Light Blue",
+      "hex": "#AEEFEC",
+      "is_trans": true,
+      "qty": 342,
+      "share_pct": 0.29
+    },
+    {
+      "color": "Trans-Orange",
+      "hex": "#F08F1C",
+      "is_trans": true,
+      "qty": 330,
+      "share_pct": 0.28
+    },
+    {
+      "color": "Flat Silver",
+      "hex": "#898788",
+      "is_trans": false,
+      "qty": 327,
+      "share_pct": 0.28
+    },
+    {
+      "color": "Lime",
+      "hex": "#BBE90B",
+      "is_trans": false,
+      "qty": 311,
+      "share_pct": 0.26
+    },
+    {
+      "color": "Bright Green",
+      "hex": "#4B9F4A",
+      "is_trans": false,
+      "qty": 262,
+      "share_pct": 0.22
+    },
+    {
+      "color": "Brown",
+      "hex": "#583927",
+      "is_trans": false,
+      "qty": 255,
+      "share_pct": 0.21
+    },
+    {
+      "color": "Bright Pink",
+      "hex": "#E4ADC8",
+      "is_trans": false,
+      "qty": 242,
+      "share_pct": 0.2
+    },
+    {
+      "color": "Medium Azure",
+      "hex": "#36AEBF",
+      "is_trans": false,
+      "qty": 241,
+      "share_pct": 0.2
+    },
+    {
+      "color": "Trans-Red",
+      "hex": "#C91A09",
+      "is_trans": true,
+      "qty": 233,
+      "share_pct": 0.2
+    },
+    {
+      "color": "Trans-Green",
+      "hex": "#84B68D",
+      "is_trans": true,
+      "qty": 226,
+      "share_pct": 0.19
+    },
+    {
+      "color": "Trans-Neon Orange",
+      "hex": "#FF800D",
+      "is_trans": true,
+      "qty": 194,
+      "share_pct": 0.16
+    },
+    {
+      "color": "Trans-Dark Blue",
+      "hex": "#0020A0",
+      "is_trans": true,
+      "qty": 183,
+      "share_pct": 0.15
+    },
+    {
+      "color": "Dark Turquoise",
+      "hex": "#008F9B",
+      "is_trans": false,
+      "qty": 172,
+      "share_pct": 0.15
+    },
+    {
+      "color": "Medium Lavender",
+      "hex": "#AC78BA",
+      "is_trans": false,
+      "qty": 149,
+      "share_pct": 0.13
+    },
+    {
+      "color": "[No Color/Any Color]",
+      "hex": "#05131D",
+      "is_trans": false,
+      "qty": 137,
+      "share_pct": 0.12
+    },
+    {
+      "color": "Magenta",
+      "hex": "#923978",
+      "is_trans": false,
+      "qty": 107,
+      "share_pct": 0.09
+    },
+    {
+      "color": "Pearl Titanium",
+      "hex": "#3E3C39",
+      "is_trans": false,
+      "qty": 106,
+      "share_pct": 0.09
+    },
+    {
+      "color": "Trans-Bright Green",
+      "hex": "#D9E4A7",
+      "is_trans": true,
+      "qty": 105,
+      "share_pct": 0.09
+    },
+    {
+      "color": "Bright Light Yellow",
+      "hex": "#FFF03A",
+      "is_trans": false,
+      "qty": 103,
+      "share_pct": 0.09
+    },
+    {
+      "color": "Dark Pink",
+      "hex": "#C870A0",
+      "is_trans": false,
+      "qty": 99,
+      "share_pct": 0.08
+    },
+    {
+      "color": "Light Aqua",
+      "hex": "#ADC3C0",
+      "is_trans": false,
+      "qty": 98,
+      "share_pct": 0.08
+    },
+    {
+      "color": "Opal Trans-Light Blue",
+      "hex": "#68BCC5",
+      "is_trans": true,
+      "qty": 98,
+      "share_pct": 0.08
+    },
+    {
+      "color": "Trans-Black",
+      "hex": "#635F52",
+      "is_trans": true,
+      "qty": 90,
+      "share_pct": 0.08
+    },
+    {
+      "color": "Trans-Brown",
+      "hex": "#635F52",
+      "is_trans": true,
+      "qty": 80,
+      "share_pct": 0.07
+    },
+    {
+      "color": "Yellowish Green",
+      "hex": "#DFEEA5",
+      "is_trans": false,
+      "qty": 67,
+      "share_pct": 0.06
+    },
+    {
+      "color": "Opal Trans-Clear",
+      "hex": "#FCFCFC",
+      "is_trans": true,
+      "qty": 51,
+      "share_pct": 0.04
+    },
+    {
+      "color": "Trans-Dark Pink",
+      "hex": "#DF6695",
+      "is_trans": true,
+      "qty": 47,
+      "share_pct": 0.04
+    },
+    {
+      "color": "Dark Azure",
+      "hex": "#078BC9",
+      "is_trans": false,
+      "qty": 39,
+      "share_pct": 0.03
+    },
+    {
+      "color": "Chrome Gold",
+      "hex": "#BBA53D",
+      "is_trans": false,
+      "qty": 38,
+      "share_pct": 0.03
+    },
+    {
+      "color": "Trans-Neon Green",
+      "hex": "#F8F184",
+      "is_trans": true,
+      "qty": 37,
+      "share_pct": 0.03
+    },
+    {
+      "color": "Trans-Purple",
+      "hex": "#A5A5CB",
+      "is_trans": true,
+      "qty": 36,
+      "share_pct": 0.03
+    },
+    {
+      "color": "Chrome Silver",
+      "hex": "#E0E0E0",
+      "is_trans": false,
+      "qty": 31,
+      "share_pct": 0.03
+    },
+    {
+      "color": "Medium Dark Pink",
+      "hex": "#F785B1",
+      "is_trans": false,
+      "qty": 28,
+      "share_pct": 0.02
+    },
+    {
+      "color": "Chrome Antique Brass",
+      "hex": "#645A4C",
+      "is_trans": false,
+      "qty": 26,
+      "share_pct": 0.02
+    },
+    {
+      "color": "Metallic Silver",
+      "hex": "#A5A9B4",
+      "is_trans": false,
+      "qty": 25,
+      "share_pct": 0.02
+    },
+    {
+      "color": "Glow In Dark Trans",
+      "hex": "#BDC6AD",
+      "is_trans": true,
+      "qty": 25,
+      "share_pct": 0.02
+    },
+    {
+      "color": "Glow in Dark White",
+      "hex": "#D9D9D9",
+      "is_trans": false,
+      "qty": 22,
+      "share_pct": 0.02
+    },
+    {
+      "color": "Metallic Gold",
+      "hex": "#DBAC34",
+      "is_trans": false,
+      "qty": 21,
+      "share_pct": 0.02
+    },
+    {
+      "color": "Medium Orange",
+      "hex": "#FFA70B",
+      "is_trans": false,
+      "qty": 13,
+      "share_pct": 0.01
+    },
+    {
+      "color": "Reddish Orange",
+      "hex": "#CA4C0B",
+      "is_trans": false,
+      "qty": 13,
+      "share_pct": 0.01
+    },
+    {
+      "color": "Blue Violet",
+      "hex": "#A3A9FF",
+      "is_trans": false,
+      "qty": 13,
+      "share_pct": 0.01
+    },
+    {
+      "color": "Nougat",
+      "hex": "#D09168",
+      "is_trans": false,
+      "qty": 10,
+      "share_pct": 0.01
+    },
+    {
+      "color": "Coral",
+      "hex": "#FF698F",
+      "is_trans": false,
+      "qty": 10,
+      "share_pct": 0.01
+    },
+    {
+      "color": "Pearl Light Gray",
+      "hex": "#9CA3A8",
+      "is_trans": false,
+      "qty": 9,
+      "share_pct": 0.01
+    },
+    {
+      "color": "Purple",
+      "hex": "#81007B",
+      "is_trans": false,
+      "qty": 7,
+      "share_pct": 0.01
+    },
+    {
+      "color": "Dark Nougat",
+      "hex": "#AD6140",
+      "is_trans": false,
+      "qty": 6,
+      "share_pct": 0.01
+    },
+    {
+      "color": "Glitter Trans-Purple",
+      "hex": "#A5A5CB",
+      "is_trans": true,
+      "qty": 6,
+      "share_pct": 0.01
+    },
+    {
+      "color": "Glitter Trans-Light Blue",
+      "hex": "#68BCC5",
+      "is_trans": true,
+      "qty": 6,
+      "share_pct": 0.01
+    },
+    {
+      "color": "Opal Trans-Dark Pink",
+      "hex": "#CE1D9B",
+      "is_trans": true,
+      "qty": 6,
+      "share_pct": 0.01
+    },
+    {
+      "color": "Light Violet",
+      "hex": "#C9CAE2",
+      "is_trans": false,
+      "qty": 5,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Opal Trans-Dark Blue",
+      "hex": "#0020A0",
+      "is_trans": true,
+      "qty": 5,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Medium Brown",
+      "hex": "#755945",
+      "is_trans": false,
+      "qty": 4,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Opal Trans-Purple",
+      "hex": "#8320B7",
+      "is_trans": true,
+      "qty": 4,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Copper",
+      "hex": "#AE7A59",
+      "is_trans": false,
+      "qty": 3,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Speckle Black-Silver",
+      "hex": "#05131D",
+      "is_trans": false,
+      "qty": 3,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Glitter Trans-Dark Pink",
+      "hex": "#DF6695",
+      "is_trans": true,
+      "qty": 3,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Light Turquoise",
+      "hex": "#55A5AF",
+      "is_trans": false,
+      "qty": 2,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Earth Orange",
+      "hex": "#FA9C1C",
+      "is_trans": false,
+      "qty": 2,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Violet",
+      "hex": "#4354A3",
+      "is_trans": false,
+      "qty": 2,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Glow In Dark Opaque",
+      "hex": "#D4D5C9",
+      "is_trans": false,
+      "qty": 2,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Warm Tan",
+      "hex": "#CCA373",
+      "is_trans": false,
+      "qty": 2,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Opal Trans-Bright Green",
+      "hex": "#84B68D",
+      "is_trans": true,
+      "qty": 2,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Vibrant Yellow",
+      "hex": "#EBD800",
+      "is_trans": false,
+      "qty": 2,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Opal Trans-Yellow",
+      "hex": "#F5CD2F",
+      "is_trans": true,
+      "qty": 2,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Light Green",
+      "hex": "#C2DAB8",
+      "is_trans": false,
+      "qty": 1,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Reddish Gold",
+      "hex": "#AC8247",
+      "is_trans": false,
+      "qty": 1,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Glitter Trans-Neon Green",
+      "hex": "#C0F500",
+      "is_trans": true,
+      "qty": 1,
+      "share_pct": 0.0
+    },
+    {
+      "color": "Opal Trans-Brown",
+      "hex": "#583927",
+      "is_trans": true,
+      "qty": 1,
+      "share_pct": 0.0
+    }
+  ],
   "quiz_pool_candidates": {
     "Albert Runcorn / Harry Potter": {
       "era1_figs": [],

@@ -312,6 +312,12 @@ manifest = {
         {"color": colors[c]["name"], "hex": "#" + colors[c]["rgb"], "qty": q}
         for c, q in sorted(era2_color_qty.items(), key=lambda kv: -kv[1])[:12]
     ],
+    "hp_color_table_full": [
+        {"color": colors[c]["name"], "hex": "#" + colors[c]["rgb"],
+         "is_trans": colors[c]["is_trans"], "qty": q,
+         "share_pct": round(100 * q / sum(hp_color_qty.values()), 2)}
+        for c, q in sorted(hp_color_qty.items(), key=lambda kv: -kv[1])
+    ],
     "quiz_pool_candidates": quiz_pool,
     "both_era_characters": both_era_chars,
 }

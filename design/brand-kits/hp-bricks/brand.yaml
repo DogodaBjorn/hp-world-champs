@@ -1,0 +1,81 @@
+# Brand kit "hp-bricks" — built from the dataset itself (stage 5, 2026-07-13).
+# Every meaning-bearing color IS a real LEGO color from the verified HP palette
+# (evidence-manifest.json hp_color_table_full); surfaces are documented tints.
+# Contrast: every pair below verified with scripts/check_contrast.py (see
+# 05-design.md); Pearl Gold FAILS 4.5:1 as text — markers/large display only.
+
+kit: "hp-bricks"
+version: 1
+date: "2026-07-13"
+
+identity:
+  organization_alias: "fabric-contest"
+  personality: "nostalgic, crafted, confident"
+
+color:
+  # Core surfaces and text
+  canvas: "#F7F1E3"            # 25% tint of Tan #E4CD9E (12.98% of HP parts) — warm paper, never pure white
+  surface: "#FFFFFF"           # White (a real brick: 7.1% of HP parts)
+  ink: "#05131D"               # Black — HP's single most common brick color (14.53%)
+  ink_secondary: "#6C6E68"     # Dark Bluish Gray brick — 4.58:1 on canvas, 5.16:1 on cards (AA)
+  hairline: "#DCD2BD"          # darker tan tint, dividers only
+
+  # Meaning-bearing colors
+  accent: "#720E0F"            # Dark Red brick — 10.4:1 on canvas; text-safe; THE focal color
+  good: "#184632"              # Dark Green brick — 9.5:1 on canvas
+  bad: "#A95500"               # Dark Orange brick — must never pair with good as sole carrier
+  neutral_data: "#6C6E68"      # Dark Bluish Gray (Light Bluish Gray #A0A5A9 fails 3:1 on canvas — dark state only)
+
+  # Categorical ramp, assignment order, max 6.
+  # SEMANTIC PAIR (the report's core encoding): Era 1 = Pearl Gold, Era 2 = Dark Red.
+  # Light-vs-dark luminance difference keeps the pair legible under CVD.
+  categorical:
+    - "#AA7F2E"                # Pearl Gold brick — Era 1 "yellow-skin years" (marks only, never text)
+    - "#720E0F"                # Dark Red brick — Era 2 "the grown-up return"
+    - "#184632"                # Dark Green brick
+    - "#0A3463"                # Dark Blue brick
+    - "#AA7D55"                # Medium Nougat brick
+    - "#6C6E68"                # Dark Bluish Gray brick
+
+  sequential: ["#F7F1E3", "#720E0F"]
+  diverging: ["#A95500", "#CBC2AB", "#184632"]
+
+typography:
+  display: "Georgia, Segoe UI Semibold"     # licensed system serif, strong italics (mission §4)
+  body: "Segoe UI, Segoe UI"
+  numeric: "Segoe UI Semibold, Segoe UI Semibold"
+  scale_pt: [28, 20, 14, 12, 10]
+
+shape:
+  radius_px: 8
+  shadow: "none"               # flat like a printed page; consistency rule: no cards shadowed
+  hairline_px: 1
+
+grid:
+  base_px: 8
+  page_margin_px: 24
+  gutter_px: 16
+
+assets:
+  logo: "none"
+  usage: "no logo; all imagery comes from Rebrickable CDN img_url data columns — contest-clean and rights-clean"
+
+voice:
+  title_style: "insight sentences"
+  number_format_notes: "thousands separators #,0; percentages one decimal (0.0%); years plain (0)"
+
+forbidden:
+  - "Warner Bros. trademark assets: film logos, crests, movie stills"
+  - "bootleg 'magic' display fonts — licensed system fonts only"
+  - "Pearl Gold (#AA7F2E) as text below 18pt — fails 4.5:1 (verified)"
+  - "red-vs-green as the era pair (CVD trap) — era pair is gold-vs-dark-red"
+  - "pure white canvas; gradients; glassmorphism"
+
+# --- Dark-side state (P4 bookmark flip) — kit extension, contrast-verified ---
+dark_state:
+  canvas: "#05131D"            # Black brick as the page itself
+  surface: "#101820"           # lifted panel derived from Black
+  ink: "#F5F1E6"               # warm white — 16.7:1 on canvas
+  ink_secondary: "#A0A5A9"     # Light Bluish Gray brick — 7.6:1 on canvas, 7.2:1 on surface
+  accent: "#DBAC34"            # Metallic Gold brick — 8.9:1 canvas / 8.5:1 surface (text-safe HERE)
+  hairline: "#2A313B"

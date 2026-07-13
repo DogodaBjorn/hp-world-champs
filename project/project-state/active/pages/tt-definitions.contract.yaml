@@ -1,0 +1,23 @@
+contract: page-purpose
+page_id: "tt-definitions"
+page_name: "tt · Definitions (hidden tooltip page)"
+date: "2026-07-13"
+
+audience: "A1"
+question: "What exactly does this number mean? (signed deviation 3: the Definitions page lives in the hover layer — contest caps report pages at 5)"
+archetype: "definitions (as report-page tooltip)"
+
+three_second_message: "The definition of the hovered metric, one sentence, from its signed contract."
+three_minute_path: "Tooltip text is generated verbatim from the metric contracts (M-001…M-009 plain_language + standing filters); nothing hand-invented."
+
+hero: "c_definition — text callout bound to the hovered visual's context (metric name, plain-language definition, exclusions: 'version-1 inventories, spares excluded')."
+supporting_visuals:
+  - id: "c_definition"
+    intent: "definition/trust from metric contracts (tooltip-studio pattern)"
+    metric_ids: ["M-001", "M-002", "M-003", "M-004", "M-005", "M-006"]
+  - id: "kpi_context_value"
+    intent: "the hovered slice's value, restated with unit"
+    metric_ids: ["M-002"]
+
+interactions: "Assigned as tooltip page to hero_parts_timeline (P1), kpi_era_band (P2/P3), kpi_theme_grayness (P4). Hidden; kept minimal per BUILD_LOG page-count assumption."
+leaves_out: "Anything interactive — tooltips are read-only surfaces."

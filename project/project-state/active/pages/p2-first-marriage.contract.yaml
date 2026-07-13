@@ -1,0 +1,38 @@
+contract: page-purpose
+page_id: "p2-first-marriage"
+page_name: "II · The First Marriage (2001–2011)"
+date: "2026-07-13"
+
+audience: "A1"
+question: "What did the original LEGO Harry Potter line look like? (R2/R3/R4, era 1 side)"
+archetype: "comparison (mirror twin A — grid identical to p3)"
+
+three_second_message: "A modest toy line in classic yellow."
+three_minute_path: "Era window in the masthead; every visual filtered Era = First marriage; set-size axis labeled in parts; palette strip ordered by verified quantity share; gallery figs named; era KPIs match P1's band; footer attribution."
+
+hero: "tbl_top_sets — image matrix of the era's largest sets (DimSets img_url renders natively in the core matrix), because the artifacts themselves carry the nostalgia."
+supporting_visuals:
+  - id: "ch_size_distribution"
+    intent: "distribution — set sizes, era 1 (avg 267, max 2,029 verified)"
+    metric_ids: ["M-001", "M-003"]
+  - id: "ch_palette_strip"
+    intent: "part-to-whole — true-hex palette by quantity (SIGNED DEVIATION: marks colored by DimColors[Hex])"
+    metric_ids: ["M-002", "M-005"]
+  - id: "tbl_fig_gallery"
+    intent: "detail-list — yellow-skin minifig gallery (E10; DimMinifigures img_url)"
+    metric_ids: ["M-006"]
+  - id: "kpi_era_band"
+    intent: "era KPI strip: 67 sets · 267 avg parts · 66 colors · 51.1% gray (cites evidence manifest)"
+    metric_ids: ["M-001", "M-003", "M-004", "M-005"]
+  - id: "z_masthead"
+    intent: "chapter numeral II + era chip (Pearl Gold)"
+    metric_ids: []
+  - id: "z_nav"
+    intent: "navigation"
+    metric_ids: []
+  - id: "z_footer"
+    intent: "attribution"
+    metric_ids: []
+
+interactions: "Paging II↔III is the core interaction (mirror grids make the era contrast physical); fig gallery hover shows fig name + set tooltip."
+leaves_out: "Cross-era deltas on-page (the mirror layout carries the comparison; numbers stay per-era to avoid double-encoding)."

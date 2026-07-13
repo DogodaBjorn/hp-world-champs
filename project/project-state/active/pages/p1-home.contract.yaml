@@ -1,0 +1,41 @@
+contract: page-purpose
+page_id: "p1-home"
+page_name: "I · The Boy Who Came Back"
+date: "2026-07-13"
+
+audience: "A1"
+question: "What happened to LEGO Harry Potter over time — and how dramatic was the disappearance and return? (R1)"
+archetype: "overview"
+
+three_second_message: "He vanished for seven years and returned three times bigger."
+three_minute_path: "Hero axis shows every year 2001–2027 including six empty hiatus columns; KPI band states era windows explicitly; takeaway numbers trace to M-001/M-003/M-004 (tooltip definitions); footer attribution."
+
+hero: "hero_parts_timeline — column chart of Parts Shipped (M-002) on the contiguous DimYear axis; the seven-year silence is the story, so the empty years stay on the axis, bracketed by the italic margin note (D1 signature)."
+supporting_visuals:
+  - id: "kpi_sets_by_era"
+    intent: "magnitude comparison"
+    metric_ids: ["M-001"]
+  - id: "kpi_avg_size_by_era"
+    intent: "magnitude comparison"
+    metric_ids: ["M-003"]
+  - id: "kpi_colors_by_era"
+    intent: "magnitude comparison"
+    metric_ids: ["M-004"]
+  - id: "c_takeaway"
+    intent: "Key Takeaway statement (contest §1.5, ≤50 words, drop cap)"
+    metric_ids: []
+  - id: "c_note_hiatus"
+    intent: "margin annotation — seven silent years"
+    metric_ids: []
+  - id: "z_masthead"
+    intent: "chapter numeral + title chrome"
+    metric_ids: []
+  - id: "z_nav"
+    intent: "cross-page navigation (nav-studio; text+icon, never icon-only)"
+    metric_ids: []
+  - id: "z_footer"
+    intent: "attribution: Source: Rebrickable LEGO Database (rebrickable.com)"
+    metric_ids: []
+
+interactions: "Nav buttons to II–V; hover on hero shows tt-definitions tooltip (year, parts, era, M-002 definition). No slicers — the page is a statement."
+leaves_out: "Theme comparisons (P4's job), minifigs detail (P2/P3/P5), any pre-2001 context (out of story scope; axis starts 2001 with full-range data available on drill)."

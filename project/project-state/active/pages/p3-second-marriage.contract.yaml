@@ -1,0 +1,38 @@
+contract: page-purpose
+page_id: "p3-second-marriage"
+page_name: "III · The Second Marriage (2018– )"
+date: "2026-07-13"
+
+audience: "A1"
+question: "How is the returned line different in kind? (R2/R3/R4, era 2 side)"
+archetype: "comparison (mirror twin B — grid identical to p2)"
+
+three_second_message: "It came back for the grown-ups."
+three_minute_path: "Identical grid to II makes every difference attributable to the era, not the layout; callouts cite verified maxima (6,020-part Hogwarts Castle, 79 colors); footer attribution."
+
+hero: "tbl_top_sets — same slot as p2: the era's giants (Hogwarts Castle 71043, 6,020 parts) rendered as images."
+supporting_visuals:
+  - id: "ch_size_distribution"
+    intent: "distribution — set sizes, era 2 (avg 731 = 2.74× era 1, verified)"
+    metric_ids: ["M-001", "M-003"]
+  - id: "ch_palette_strip"
+    intent: "part-to-whole — true-hex palette (SIGNED DEVIATION as p2); visibly wider and less gray (40.9%)"
+    metric_ids: ["M-002", "M-005"]
+  - id: "tbl_fig_gallery"
+    intent: "detail-list — flesh-tone figures of the same characters (E10 counterpart)"
+    metric_ids: ["M-006"]
+  - id: "kpi_era_band"
+    intent: "era KPI strip: 142 sets · 731 avg parts · 79 colors · 40.9% gray"
+    metric_ids: ["M-001", "M-003", "M-004", "M-005"]
+  - id: "z_masthead"
+    intent: "chapter numeral III + era chip (Dark Red)"
+    metric_ids: []
+  - id: "z_nav"
+    intent: "navigation"
+    metric_ids: []
+  - id: "z_footer"
+    intent: "attribution"
+    metric_ids: []
+
+interactions: "Paging II↔III; identical hover layer as p2."
+leaves_out: "Same exclusions as p2 (mirror discipline)."

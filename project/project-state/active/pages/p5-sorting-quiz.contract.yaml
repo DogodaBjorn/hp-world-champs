@@ -1,0 +1,35 @@
+contract: page-purpose
+page_id: "p5-sorting-quiz"
+page_name: "V · The Sorting Quiz"
+date: "2026-07-13"
+
+audience: "A1"
+question: "Can the reader tell the two marriages apart from the minifigures alone? (R7 — engagement that teaches the thesis)"
+archetype: "interactive game (custom visual) with core-visual support"
+
+three_second_message: "Ten minifigures, two eras — can you sort them?"
+three_minute_path: "Rules stated on-page; 'scenario logic' label on the score card; the curated pool is real data (fig_num + set cited per question); yellow-vs-flesh same-character pairs make the era tell learnable; footer attribution."
+
+hero: "hero_quiz — the hpSortingQuiz custom visual (§6 spec): three columns (figure | character | era+set), click-to-pair connection lines, internal score state, full keyboard operation + ARIA. Pre-approved fallback (decision 2026-07-16): disconnected slicers + DAX validation + bookmarks in the same slot."
+supporting_visuals:
+  - id: "kpi_quiz_questions"
+    intent: "score card slot — 'Quiz Questions' metadata measure, labeled scenario logic (M-009); becomes the live DAX score in fallback mode"
+    metric_ids: ["M-009"]
+  - id: "c_era_legend"
+    intent: "era legend chip pair (gold = first marriage, dark red = second) — also serves the ≥3-core-visuals requirement with the KPI card"
+    metric_ids: []
+  - id: "c_how_to_play"
+    intent: "rules in two sentences + keyboard instructions (a11y)"
+    metric_ids: []
+  - id: "z_masthead"
+    intent: "chapter numeral V"
+    metric_ids: []
+  - id: "z_nav"
+    intent: "navigation"
+    metric_ids: []
+  - id: "z_footer"
+    intent: "attribution"
+    metric_ids: []
+
+interactions: "All game state internal to the custom visual (match-by-value: duplicate characters — two Harrys, two Hermiones — accept either slot). Reveal and Reset buttons inside the visual. No cross-filtering: QuizQuestions is disconnected by design."
+leaves_out: "Any live-model binding beyond QuizQuestions (aggregation stays in DAX; the game is deliberately an island)."

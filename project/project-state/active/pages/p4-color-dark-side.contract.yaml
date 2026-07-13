@@ -1,0 +1,41 @@
+contract: page-purpose
+page_id: "p4-color-dark-side"
+page_name: "IV · The Most Colorful of Them All"
+date: "2026-07-13"
+
+audience: "A1"
+question: "Which HP set is the most colorful ever — and what does the opposite look like? (R5/R6)"
+archetype: "detail with a bookmark-swapped dark twin state"
+
+three_second_message: "Harry Potter is LEGO's most colorful license — Star Wars its grayest."
+three_minute_path: "Rank stated precisely (#2 of 27,069 behind D&D's 56); every mark's color is the brick's own hex; dark state cites 97.9% of 1,212 parts for the grayest large STAR WARS set (never 'grayest ever' — five mosaics are 100%); theme grayness quantified (SW 71.8% vs HP 42.4%); footer attribution in both states."
+
+hero: "hero_color_composition — true-hex bar composition of Diagon Alley Wizarding Shops 76444-1, 55 colors (SIGNED DEVIATION: Hex field-value formatting). In the dark state the same slot shows Vader's TIE Advanced 10175-1 at 97.9% gray."
+supporting_visuals:
+  - id: "ch_colorful_rank"
+    intent: "ranking — most colorful sets ever (76444-1 highlighted; light state) / grayest ≥1,000-part sets (10175-1; dark state)"
+    metric_ids: ["M-004", "M-005"]
+  - id: "kpi_theme_grayness"
+    intent: "magnitude — HP 42.4% vs SW 71.8% grayscale share; HP 99 lifetime colors = #1 license"
+    metric_ids: ["M-004", "M-005"]
+  - id: "btn_dark_side"
+    intent: "the flip: 'Want the least colorful? Come to the dark side →' — real button, keyboard-operable, alt-texted, swaps bm_p4_light ↔ bm_p4_dark"
+    metric_ids: []
+  - id: "img_voldemort"
+    intent: "dark state only — Voldemort minifig (DimMinifigures img_url) fading in beside the SW stat"
+    metric_ids: []
+  - id: "c_rank_note"
+    intent: "margin annotation with the honest rank caveat (mosaics are grayer than Vader's TIE)"
+    metric_ids: []
+  - id: "z_masthead"
+    intent: "chapter numeral IV"
+    metric_ids: []
+  - id: "z_nav"
+    intent: "navigation"
+    metric_ids: []
+  - id: "z_footer"
+    intent: "attribution (must remain visible in BOTH bookmark states)"
+    metric_ids: []
+
+interactions: "btn_dark_side toggles the grouped Selection-pane states; report-page tooltip on kpi_theme_grayness teases SW grayness before the flip; both states lean (mission render-time note) and independently contrast-checked."
+leaves_out: "Era mechanics (II/III's job); per-part detail (would bloat the doubled visual count)."

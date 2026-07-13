@@ -1,0 +1,62 @@
+// measures.dax — hp-world-champs
+// Paste-ready display/support measures added by the design (stage 5), layered
+// on the stage-4 model. Implemented in TMDL at stage 6 with /// docstrings,
+// displayFolder "05 Display" (unless noted), explicit formatString.
+// Names are byte-identical to the design handoff.
+
+// ============================== 05 Display ==============================
+
+// Insight title for hero_parts_timeline: states the comeback, not the metric.
+// Folder: 05 Display\Titles | Format: text
+Title Home Hero =
+VAR P2018 = CALCULATE ( [Parts Shipped], DimYear[Year] = 2018 )
+VAR PEarly = CALCULATE ( [Parts Shipped], DimYear[Year] >= 2001 && DimYear[Year] <= 2004 )
+RETURN
+"Gone 2012–2017 — the 2018 return shipped " & FORMAT ( P2018, "#,0" )
+    & " parts, nearly twice the first four years combined (" & FORMAT ( PEarly, "#,0" ) & ")"
+
+// Insight title for ch_size_distribution (era pages) — era-aware.
+// Folder: 05 Display\Titles | Format: text
+Title Size Dist =
+VAR AvgSize = [Avg Parts per Set]
+RETURN
+SELECTEDVALUE ( DimSets[Era], "All eras" ) & ": a typical set has "
+    & FORMAT ( AvgSize, "#,0" ) & " parts"
+
+// Insight title for hero_color_composition, light state.
+// Folder: 05 Display\Titles | Format: text
+Title Color Hero =
+"Diagon Alley Wizarding Shops uses " & FORMAT ( [Distinct Colors Used], "#,0" )
+    & " colors — no. 2 in 27,069 sets, ever"
+
+// Insight title for hero_color_composition, dark state.
+// Folder: 05 Display\Titles | Format: text
+Title Gray Hero =
+"Vader's TIE Advanced: " & FORMAT ( [Grayscale Share %], "0.0%" )
+    & " gray — the grayest large Star Wars set"
+
+// Era color fx for hero_parts_timeline columns (conditional formatting,
+// Format by: Field value). Returns kit hexes — the two era colors are the
+// report's core semantic pair; hiatus/n.a. fall back to neutral.
+// Folder: 05 Display\Colors | Format: text
+Color Era =
+SWITCH (
+    SELECTEDVALUE ( DimSets[Era] ),
+    "First marriage (2001–2011)", "#AA7F2E",
+    "Second marriage (2018– )", "#720E0F",
+    "#6C6E68"
+)
+
+// =================== 04 Quiz (scenario logic) — FALLBACK ONLY ===================
+// Authored at s6 ONLY if the 2026-07-16 fallback decision triggers the native
+// pattern. SCENARIO CHOICE: score = count of correct (figure, character)
+// pairings among disconnected slicer selections vs the QuizQuestions key.
+// Folder: 04 Quiz (scenario logic) | Format: 0
+// Quiz Score =
+// VAR PickedFig = SELECTEDVALUE ( 'QuizPickFig'[fig_num] )
+// VAR PickedChar = SELECTEDVALUE ( 'QuizPickChar'[character] )
+// RETURN
+// COUNTROWS (
+//     FILTER ( QuizQuestions,
+//         QuizQuestions[fig_num] = PickedFig
+//             && QuizQuestions[character] = PickedChar ) )

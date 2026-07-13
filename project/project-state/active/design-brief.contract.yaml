@@ -1,0 +1,52 @@
+# Design-brief contract — hp-world-champs. Tokens = hp-bricks kit (real HP
+# brick colors, contrast-verified); theme.json and the s6 build derive from this.
+
+contract: design-brief
+project: "hp-world-champs"
+direction: "D1"
+date: "2026-07-13"
+
+canvas:
+  size: "1280x720"
+  background: "#F7F1E3"          # parchment (Tan brick tint)
+
+tokens:
+  surface: "#FFFFFF"
+  ink: "#05131D"                 # Black brick
+  ink_secondary: "#6C6E68"       # Dark Bluish Gray brick
+  hairline: "#DCD2BD"
+  accent: "#720E0F"              # Dark Red brick
+  good: "#184632"                # Dark Green brick
+  bad: "#A95500"                 # Dark Orange brick
+  neutral_data: "#6C6E68"
+  categorical: ["#AA7F2E", "#720E0F", "#184632", "#0A3463", "#AA7D55", "#6C6E68"]
+  radius_px: 8
+  shadow: "none"
+  grid: "8px base; 24px page margin; 16px gutter"
+
+typography:
+  family_display: "Georgia, Segoe UI Semibold"
+  family_body: "Segoe UI, Segoe UI"
+  family_mono: "Segoe UI Semibold (numerics), Segoe UI"
+  scale_pt: [28, 20, 14, 12, 10]
+
+page_chrome: >
+  Masthead 56px: chapter numeral (Georgia italic, accent) + page title
+  (Georgia 20pt) + era chip where applicable; single hairline rule under the
+  masthead (the chapter rule). Nav 40px right-aligned text buttons I–V
+  (never icon-only). Footer 24px: attribution left
+  ("Source: Rebrickable LEGO Database (rebrickable.com)"), page role right.
+  Identical geometry on all five pages; dark_state tokens swap on P4's dark
+  bookmark (canvas #05131D, surface #101820, ink #F5F1E6,
+  ink_secondary #A0A5A9, accent #DBAC34, hairline #2A313B).
+
+accessibility:
+  contrast: "WCAG AA on all text in BOTH theme states (verified pairs in 05-design.md)"
+  color_never_alone: true
+
+forbidden:
+  - "WB trademark assets, movie stills, bootleg magic fonts"
+  - "Pearl Gold #AA7F2E as text below 18pt (3.6:1 — markers only)"
+  - "texture/parchment images — the parchment is a flat tint"
+  - "ornament beyond: drop cap (P1), chapter rule, italic margin annotations"
+  - "serif below 14pt"
