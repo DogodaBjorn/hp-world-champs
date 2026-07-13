@@ -25,6 +25,6 @@ synonyms: "Marriage, Period"
 conflicts_checked: true
 
 implementation:
-  measure_name: ""
-  display_folder: ""
-  format_string: ""
+  measure_name: "n/a — Power Query column DimSets[Era], sorted by hidden DimSets[EraSort]"
+  display_folder: "n/a"
+  format_string: "n/a (category)"

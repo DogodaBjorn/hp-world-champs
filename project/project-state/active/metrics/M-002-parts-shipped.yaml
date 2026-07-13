@@ -25,6 +25,6 @@ synonyms: "Parts, Total Parts — the starter model's 'Parts' measure is this me
 conflicts_checked: true
 
 implementation:
-  measure_name: ""
-  display_folder: ""
-  format_string: ""
+  measure_name: "Parts Shipped"
+  display_folder: "01 Scale"
+  format_string: "#,0"

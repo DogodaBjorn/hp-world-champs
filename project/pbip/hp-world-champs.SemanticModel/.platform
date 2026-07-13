@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "hp-world-champs"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0d07c2d4-b782-44ad-af2c-87c50b3581ac"
+  }
+}

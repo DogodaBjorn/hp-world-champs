@@ -1,0 +1,70 @@
+/// SCENARIO LOGIC (M-009): 10 hand-curated Sorting Quiz questions. Deliberately
+/// DISCONNECTED — no relationships, outside the filter graph. Curated by
+/// fig_num from the verified evidence pack: 5 per era, 8 characters, two
+/// same-character yellow-vs-flesh teaching pairs (Harry, Hermione — E10).
+/// Era strings match DimSets[Era] exactly (M-008: one definition everywhere).
+table QuizQuestions
+
+	column question_no
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: question_no
+
+	column fig_num
+		dataType: string
+		summarizeBy: none
+		sourceColumn: fig_num
+
+	column fig_img_url
+		dataType: string
+		summarizeBy: none
+		sourceColumn: fig_img_url
+		dataCategory: ImageUrl
+
+	column character
+		dataType: string
+		summarizeBy: none
+		sourceColumn: character
+
+	column era
+		dataType: string
+		summarizeBy: none
+		sourceColumn: era
+
+	column set_num
+		dataType: string
+		summarizeBy: none
+		sourceColumn: set_num
+
+	column set_name
+		dataType: string
+		summarizeBy: none
+		sourceColumn: set_name
+
+	column set_img_url
+		dataType: string
+		summarizeBy: none
+		sourceColumn: set_img_url
+		dataCategory: ImageUrl
+
+	partition QuizQuestions = m
+		mode: import
+		source =
+				let
+				    Source = #table(
+				        type table [question_no = Int64.Type, fig_num = text, fig_img_url = text, character = text, era = text, set_num = text, set_name = text, set_img_url = text],
+				        {
+				            {1, "fig-000471", "https://cdn.rebrickable.com/media/sets/fig-000471.jpg", "Harry Potter", "First marriage (2001–2011)", "4701-1", "Sorting Hat", "https://cdn.rebrickable.com/media/sets/4701-1.jpg"},
+				            {2, "fig-001818", "https://cdn.rebrickable.com/media/sets/fig-001818.jpg", "Harry Potter", "Second marriage (2018– )", "75954-1", "Hogwarts Great Hall", "https://cdn.rebrickable.com/media/sets/75954-1.jpg"},
+				            {3, "fig-000593", "https://cdn.rebrickable.com/media/sets/fig-000593.jpg", "Hermione Granger", "First marriage (2001–2011)", "4723-1", "Diagon Alley Shops", "https://cdn.rebrickable.com/media/sets/4723-1.jpg"},
+				            {4, "fig-008935", "https://cdn.rebrickable.com/media/sets/fig-008935.jpg", "Hermione Granger", "Second marriage (2018– )", "75966-1", "Hogwarts Room of Requirement", "https://cdn.rebrickable.com/media/sets/75966-1.jpg"},
+				            {5, "fig-000594", "https://cdn.rebrickable.com/media/sets/fig-000594.jpg", "Ron Weasley", "First marriage (2001–2011)", "4722-1", "Gryffindor", "https://cdn.rebrickable.com/media/sets/4722-1.jpg"},
+				            {6, "fig-006056", "https://cdn.rebrickable.com/media/sets/fig-006056.jpg", "Albus Dumbledore", "First marriage (2001–2011)", "4707-1", "Hagrid's Hut", "https://cdn.rebrickable.com/media/sets/4707-1.jpg"},
+				            {7, "fig-006049", "https://cdn.rebrickable.com/media/sets/fig-006049.jpg", "Severus Snape", "First marriage (2001–2011)", "4709-1", "Hogwarts Castle", "https://cdn.rebrickable.com/media/sets/4709-1.jpg"},
+				            {8, "fig-010514", "https://cdn.rebrickable.com/media/sets/fig-010514.jpg", "Draco Malfoy", "Second marriage (2018– )", "75978-1", "Diagon Alley", "https://cdn.rebrickable.com/media/sets/75978-1.jpg"},
+				            {9, "fig-002136", "https://cdn.rebrickable.com/media/sets/fig-002136.jpg", "Voldemort", "Second marriage (2018– )", "75965-1", "The Rise of Voldemort", "https://cdn.rebrickable.com/media/sets/75965-1.jpg"},
+				            {10, "fig-013042", "https://cdn.rebrickable.com/media/sets/fig-013042.jpg", "Luna Lovegood", "Second marriage (2018– )", "76405-1", "Hogwarts Express - Collectors' Edition", "https://cdn.rebrickable.com/media/sets/76405-1.jpg"}
+				        })
+				in
+				    Source

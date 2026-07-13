@@ -24,6 +24,6 @@ synonyms: "Number of Sets, Sets Released"
 conflicts_checked: true
 
 implementation:
-  measure_name: ""
-  display_folder: ""
-  format_string: ""
+  measure_name: "Sets"
+  display_folder: "01 Scale"
+  format_string: "#,0"

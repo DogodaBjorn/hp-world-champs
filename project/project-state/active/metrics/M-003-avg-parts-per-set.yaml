@@ -24,6 +24,6 @@ synonyms: "Average Set Size"
 conflicts_checked: true
 
 implementation:
-  measure_name: ""
-  display_folder: ""
-  format_string: ""
+  measure_name: "Avg Parts per Set"
+  display_folder: "01 Scale"
+  format_string: "#,0"

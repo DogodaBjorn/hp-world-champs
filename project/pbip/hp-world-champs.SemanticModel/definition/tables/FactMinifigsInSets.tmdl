@@ -1,0 +1,34 @@
+/// GRAIN: one row = n copies of one minifigure design in the version-1
+/// inventory of one set. v1 filter inherited from the V1Inventories staging.
+table FactMinifigsInSets
+
+	column set_num
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: set_num
+
+	column fig_num
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: fig_num
+
+	column quantity
+		dataType: int64
+		isHidden
+		formatString: #,0
+		summarizeBy: sum
+		sourceColumn: quantity
+
+	partition FactMinifigsInSets = m
+		mode: import
+		source =
+				let
+				    Source = fnCsv("inventory_minifigs.csv", 3),
+				    Typed = Table.TransformColumnTypes(Source, {{"inventory_id", Int64.Type}, {"fig_num", type text}, {"quantity", Int64.Type}}),
+				    V1 = Table.NestedJoin(Typed, {"inventory_id"}, V1Inventories, {"inventory_id"}, "inv", JoinKind.Inner),
+				    WithSet = Table.ExpandTableColumn(V1, "inv", {"set_num"}),
+				    Grouped = Table.Group(WithSet, {"set_num", "fig_num"}, {{"quantity", each List.Sum([quantity]), Int64.Type}})
+				in
+				    Grouped

@@ -1,0 +1,55 @@
+/// One row per minifigure design. Character is the contracted M-007 heuristic
+/// (name before first comma or paren) — known artifacts documented in the
+/// evidence manifest; the quiz is hand-curated by fig_num, never by Character.
+table DimMinifigures
+
+	column fig_num
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: fig_num
+
+	column 'Minifig Name'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Minifig Name
+
+	column Character
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Character
+
+	column num_parts
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: num_parts
+
+	column img_url
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: img_url
+		dataCategory: ImageUrl
+
+	partition DimMinifigures = m
+		mode: import
+		source =
+				let
+				    Source = fnCsv("minifigs.csv", 4),
+				    Typed = Table.TransformColumnTypes(Source, {{"fig_num", type text}, {"name", type text}, {"num_parts", Int64.Type}, {"img_url", type text}}),
+				    WithCharacter = Table.AddColumn(Typed, "Character", each
+				        let
+				            n = [name],
+				            pc = Text.PositionOf(n, ","),
+				            pp = Text.PositionOf(n, "("),
+				            cut = if pc = -1 and pp = -1 then Text.Length(n)
+				                  else if pc = -1 then pp
+				                  else if pp = -1 then pc
+				                  else List.Min({pc, pp})
+				        in
+				            Text.Trim(Text.Start(n, cut)), type text),
+				    Renamed = Table.RenameColumns(WithCharacter, {{"name", "Minifig Name"}})
+				in
+				    Renamed

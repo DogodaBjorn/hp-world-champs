@@ -1,0 +1,38 @@
+/// One row per part design, with its category flattened in (blueprint: one
+/// text column, no snowflake to part_categories).
+table DimParts
+
+	column part_num
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: part_num
+
+	column 'Part Name'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Part Name
+
+	column 'Part Category'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Part Category
+
+	column part_material
+		dataType: string
+		summarizeBy: none
+		sourceColumn: part_material
+
+	partition DimParts = m
+		mode: import
+		source =
+				let
+				    Source = fnCsv("parts.csv", 4),
+				    Typed = Table.TransformColumnTypes(Source, {{"part_num", type text}, {"name", type text}, {"part_cat_id", Int64.Type}, {"part_material", type text}}),
+				    Cats = Table.TransformColumnTypes(fnCsv("part_categories.csv", 2), {{"id", Int64.Type}, {"name", type text}}),
+				    Merged = Table.NestedJoin(Typed, {"part_cat_id"}, Cats, {"id"}, "C", JoinKind.LeftOuter),
+				    Expanded = Table.ExpandTableColumn(Merged, "C", {"name"}, {"Part Category"}),
+				    Renamed = Table.RenameColumns(Expanded, {{"name", "Part Name"}}),
+				    Removed = Table.RemoveColumns(Renamed, {"part_cat_id"})
+				in
+				    Removed

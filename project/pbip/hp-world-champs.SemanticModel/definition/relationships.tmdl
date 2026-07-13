@@ -1,0 +1,23 @@
+relationship FactPartsInSets_DimSets
+	fromColumn: FactPartsInSets.set_num
+	toColumn: DimSets.set_num
+
+relationship FactPartsInSets_DimColors
+	fromColumn: FactPartsInSets.color_id
+	toColumn: DimColors.id
+
+relationship FactPartsInSets_DimParts
+	fromColumn: FactPartsInSets.part_num
+	toColumn: DimParts.part_num
+
+relationship FactMinifigsInSets_DimSets
+	fromColumn: FactMinifigsInSets.set_num
+	toColumn: DimSets.set_num
+
+relationship FactMinifigsInSets_DimMinifigures
+	fromColumn: FactMinifigsInSets.fig_num
+	toColumn: DimMinifigures.fig_num
+
+relationship DimSets_DimYear
+	fromColumn: DimSets.year
+	toColumn: DimYear.Year

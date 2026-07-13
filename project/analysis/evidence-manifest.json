@@ -1,0 +1,1089 @@
+{
+  "derived": "2026-07-13",
+  "definitions": "strict HP scope (root 246); v1 inventories, no spares; gray = name rule; pseudo-colors excluded from color counts",
+  "E1_era1": {
+    "sets": 67,
+    "avg_num_parts": 266.8,
+    "max_num_parts": 2029,
+    "max_set": "Diagon Alley"
+  },
+  "E2_era2": {
+    "sets": 142,
+    "avg_num_parts": 731.1,
+    "max_num_parts": 6020,
+    "max_set": "Hogwarts Castle"
+  },
+  "E2_era2_2018_2026_only": {
+    "sets": 142
+  },
+  "E3_hiatus_sets_by_year": {
+    "2012": 0,
+    "2013": 0,
+    "2014": 0,
+    "2015": 0,
+    "2016": 0,
+    "2017": 0
+  },
+  "E4_parts_2018": 15053,
+  "E4_parts_2001_2004": 8141,
+  "E5_palette": {
+    "era1_distinct_colors": 66,
+    "era1_gray_pct": 51.1,
+    "era2_distinct_colors": 79,
+    "era2_gray_pct": 40.9
+  },
+  "E6_most_colorful_sets": [
+    {
+      "set_num": "21348-1",
+      "name": "Dungeons & Dragons: Red Dragon's Tale",
+      "year": 2024,
+      "root": "LEGO Ideas and CUUSOO",
+      "distinct_colors": 56
+    },
+    {
+      "set_num": "76444-1",
+      "name": "Diagon Alley Wizarding Shops",
+      "year": 2025,
+      "root": "Harry Potter",
+      "distinct_colors": 55
+    },
+    {
+      "set_num": "70620-1",
+      "name": "NINJAGO City",
+      "year": 2017,
+      "root": "Ninjago",
+      "distinct_colors": 52
+    },
+    {
+      "set_num": "71799-1",
+      "name": "NINJAGO City Markets",
+      "year": 2023,
+      "root": "Ninjago",
+      "distinct_colors": 52
+    },
+    {
+      "set_num": "43245-1",
+      "name": "The Magical Madrigal House",
+      "year": 2024,
+      "root": "Disney",
+      "distinct_colors": 52
+    },
+    {
+      "set_num": "42639-1",
+      "name": "Andrea's Modern Mansion",
+      "year": 2024,
+      "root": "Friends",
+      "distinct_colors": 51
+    },
+    {
+      "set_num": "71741-1",
+      "name": "NINJAGO City Gardens",
+      "year": 2021,
+      "root": "Ninjago",
+      "distinct_colors": 50
+    },
+    {
+      "set_num": "910051-1",
+      "name": "Mushroom Village",
+      "year": 2025,
+      "root": "BrickLink Designer Program",
+      "distinct_colors": 50
+    },
+    {
+      "set_num": "10717-1",
+      "name": "Bricks Bricks Bricks",
+      "year": 2018,
+      "root": "Classic",
+      "distinct_colors": 49
+    },
+    {
+      "set_num": "11717-1",
+      "name": "Bricks Bricks Plates",
+      "year": 2020,
+      "root": "Classic",
+      "distinct_colors": 49
+    }
+  ],
+  "E7_grayest_big_sets": [
+    {
+      "set_num": "K34434-1",
+      "name": "Mosaic Tiger",
+      "year": 2003,
+      "root": "Sculptures",
+      "parts": 2217,
+      "gray_pct": 100.0
+    },
+    {
+      "set_num": "k34431-1",
+      "name": "Lego Mosaic Cat",
+      "year": 2003,
+      "root": "Sculptures",
+      "parts": 2127,
+      "gray_pct": 100.0
+    },
+    {
+      "set_num": "k34432-1",
+      "name": "Lego Mosaic Dino",
+      "year": 2003,
+      "root": "Sculptures",
+      "parts": 2847,
+      "gray_pct": 100.0
+    },
+    {
+      "set_num": "k34433-1",
+      "name": "Lego Mosaic Johnny Thunder",
+      "year": 2003,
+      "root": "Sculptures",
+      "parts": 2127,
+      "gray_pct": 100.0
+    },
+    {
+      "set_num": "3443-1",
+      "name": "Mosaic",
+      "year": 2000,
+      "root": "Creator",
+      "parts": 1057,
+      "gray_pct": 100.0
+    },
+    {
+      "set_num": "10175-1",
+      "name": "Vader's TIE Advanced",
+      "year": 2006,
+      "root": "Star Wars",
+      "parts": 1212,
+      "gray_pct": 97.9
+    },
+    {
+      "set_num": "8480-1",
+      "name": "Space Shuttle",
+      "year": 1996,
+      "root": "Technic",
+      "parts": 1366,
+      "gray_pct": 96.6
+    },
+    {
+      "set_num": "8466-1",
+      "name": "4x4 Off Roader",
+      "year": 2001,
+      "root": "Technic",
+      "parts": 1103,
+      "gray_pct": 95.1
+    },
+    {
+      "set_num": "8485-1",
+      "name": "Control Centre / Control II",
+      "year": 1995,
+      "root": "Technic",
+      "parts": 1067,
+      "gray_pct": 95.0
+    },
+    {
+      "set_num": "8880-1",
+      "name": "Super Car",
+      "year": 1994,
+      "root": "Technic",
+      "parts": 1346,
+      "gray_pct": 94.6
+    }
+  ],
+  "E8_gray_by_major_root_theme": [
+    {
+      "root": "Star Wars",
+      "parts": 402488,
+      "gray_pct": 71.8
+    },
+    {
+      "root": "Super Heroes DC",
+      "parts": 78878,
+      "gray_pct": 69.9
+    },
+    {
+      "root": "Technic",
+      "parts": 313730,
+      "gray_pct": 68.2
+    },
+    {
+      "root": "Town",
+      "parts": 78348,
+      "gray_pct": 58.8
+    },
+    {
+      "root": "City",
+      "parts": 218180,
+      "gray_pct": 58.8
+    },
+    {
+      "root": "FIRST LEGO League",
+      "parts": 51981,
+      "gray_pct": 57.7
+    },
+    {
+      "root": "Icons",
+      "parts": 167635,
+      "gray_pct": 56.9
+    },
+    {
+      "root": "Super Heroes Marvel",
+      "parts": 123228,
+      "gray_pct": 56.4
+    },
+    {
+      "root": "Modular Buildings",
+      "parts": 56235,
+      "gray_pct": 53.7
+    },
+    {
+      "root": "Architecture",
+      "parts": 50426,
+      "gray_pct": 52.4
+    },
+    {
+      "root": "Creator",
+      "parts": 233876,
+      "gray_pct": 50.3
+    },
+    {
+      "root": "Ninjago",
+      "parts": 182851,
+      "gray_pct": 50.0
+    },
+    {
+      "root": "BrickLink Designer Program",
+      "parts": 121273,
+      "gray_pct": 47.7
+    },
+    {
+      "root": "Educational and Dacta",
+      "parts": 175677,
+      "gray_pct": 46.7
+    },
+    {
+      "root": "LEGO Ideas and CUUSOO",
+      "parts": 116630,
+      "gray_pct": 45.7
+    },
+    {
+      "root": "Harry Potter",
+      "parts": 118608,
+      "gray_pct": 42.4
+    },
+    {
+      "root": "Minecraft",
+      "parts": 58060,
+      "gray_pct": 40.3
+    },
+    {
+      "root": "Seasonal",
+      "parts": 90797,
+      "gray_pct": 37.1
+    },
+    {
+      "root": "Disney",
+      "parts": 104344,
+      "gray_pct": 34.6
+    },
+    {
+      "root": "Friends",
+      "parts": 162742,
+      "gray_pct": 33.8
+    },
+    {
+      "root": "LEGO Art",
+      "parts": 69071,
+      "gray_pct": 31.9
+    },
+    {
+      "root": "Universal Building Set",
+      "parts": 68578,
+      "gray_pct": 31.5
+    },
+    {
+      "root": "Make & Create",
+      "parts": 52617,
+      "gray_pct": 31.1
+    },
+    {
+      "root": "Duplo",
+      "parts": 50501,
+      "gray_pct": 17.5
+    }
+  ],
+  "E8_hp_lifetime_colors": 99,
+  "root_theme_lifetime_colors_major": [
+    {
+      "root": "Duplo",
+      "distinct_colors": 123,
+      "parts": 50501,
+      "gray_pct": 17.5
+    },
+    {
+      "root": "Harry Potter",
+      "distinct_colors": 99,
+      "parts": 118608,
+      "gray_pct": 42.4
+    },
+    {
+      "root": "Creator",
+      "distinct_colors": 97,
+      "parts": 233876,
+      "gray_pct": 50.3
+    },
+    {
+      "root": "Seasonal",
+      "distinct_colors": 92,
+      "parts": 90797,
+      "gray_pct": 37.1
+    },
+    {
+      "root": "Disney",
+      "distinct_colors": 90,
+      "parts": 104344,
+      "gray_pct": 34.6
+    },
+    {
+      "root": "Educational and Dacta",
+      "distinct_colors": 89,
+      "parts": 175677,
+      "gray_pct": 46.7
+    },
+    {
+      "root": "Friends",
+      "distinct_colors": 81,
+      "parts": 162742,
+      "gray_pct": 33.8
+    },
+    {
+      "root": "Star Wars",
+      "distinct_colors": 81,
+      "parts": 402488,
+      "gray_pct": 71.8
+    },
+    {
+      "root": "Super Heroes Marvel",
+      "distinct_colors": 77,
+      "parts": 123228,
+      "gray_pct": 56.4
+    },
+    {
+      "root": "Ninjago",
+      "distinct_colors": 76,
+      "parts": 182851,
+      "gray_pct": 50.0
+    },
+    {
+      "root": "City",
+      "distinct_colors": 74,
+      "parts": 218180,
+      "gray_pct": 58.8
+    },
+    {
+      "root": "LEGO Ideas and CUUSOO",
+      "distinct_colors": 74,
+      "parts": 116630,
+      "gray_pct": 45.7
+    },
+    {
+      "root": "FIRST LEGO League",
+      "distinct_colors": 72,
+      "parts": 51981,
+      "gray_pct": 57.7
+    },
+    {
+      "root": "Technic",
+      "distinct_colors": 71,
+      "parts": 313730,
+      "gray_pct": 68.2
+    },
+    {
+      "root": "BrickLink Designer Program",
+      "distinct_colors": 66,
+      "parts": 121273,
+      "gray_pct": 47.7
+    },
+    {
+      "root": "Super Heroes DC",
+      "distinct_colors": 65,
+      "parts": 78878,
+      "gray_pct": 69.9
+    },
+    {
+      "root": "Make & Create",
+      "distinct_colors": 65,
+      "parts": 52617,
+      "gray_pct": 31.1
+    },
+    {
+      "root": "Icons",
+      "distinct_colors": 65,
+      "parts": 167635,
+      "gray_pct": 56.9
+    },
+    {
+      "root": "Minecraft",
+      "distinct_colors": 62,
+      "parts": 58060,
+      "gray_pct": 40.3
+    },
+    {
+      "root": "Modular Buildings",
+      "distinct_colors": 62,
+      "parts": 56235,
+      "gray_pct": 53.7
+    },
+    {
+      "root": "LEGO Art",
+      "distinct_colors": 61,
+      "parts": 69071,
+      "gray_pct": 31.9
+    },
+    {
+      "root": "Architecture",
+      "distinct_colors": 51,
+      "parts": 50426,
+      "gray_pct": 52.4
+    },
+    {
+      "root": "Town",
+      "distinct_colors": 45,
+      "parts": 78348,
+      "gray_pct": 58.8
+    },
+    {
+      "root": "Universal Building Set",
+      "distinct_colors": 25,
+      "parts": 68578,
+      "gray_pct": 31.5
+    }
+  ],
+  "E9_minifigs": {
+    "unique_hp_figs": 576,
+    "figs_missing_img": 0,
+    "chars_in_both_eras": 44,
+    "harry_variants": {
+      "era1": 22,
+      "era2": 59
+    },
+    "hermione_variants": {
+      "era1": 9,
+      "era2": 33
+    }
+  },
+  "E10_yellow_skin_figs": [
+    {
+      "fig": "fig-000471",
+      "name": "Harry Potter, Yellow Skin, Hogwarts Sweater with Crest, Black Hat, Cape with Stars"
+    },
+    {
+      "fig": "fig-000593",
+      "name": "Hermione Granger, Yellow Skin, Medium Blue Sweater"
+    },
+    {
+      "fig": "fig-000594",
+      "name": "Ron Weasley, Yellow Skin, Blue Sweater, Cape with Stars"
+    },
+    {
+      "fig": "fig-000595",
+      "name": "Harry Potter, Yellow Skin, Gryffindor Sweater with Crest, Violet Cape"
+    },
+    {
+      "fig": "fig-001139",
+      "name": "Draco Malfoy, Yellow Skin, Black Sweater"
+    },
+    {
+      "fig": "fig-006051",
+      "name": "Ron Weasley, Yellow Skin, Gryffindor Sweater with Crest, Cape with Stars"
+    },
+    {
+      "fig": "fig-006052",
+      "name": "Harry Potter, Yellow Skin, Gryffindor Sweater with Crest, Cape with Stars"
+    },
+    {
+      "fig": "fig-006054",
+      "name": "Professor Quirinus Quirrell (Voldemort), Yellow Skin, Purple Turban"
+    },
+    {
+      "fig": "fig-006055",
+      "name": "Rubeus Hagrid, Yellow Skin"
+    },
+    {
+      "fig": "fig-006056",
+      "name": "Albus Dumbledore, Yellow Skin, Purple Robes"
+    },
+    {
+      "fig": "fig-006057",
+      "name": "Draco Malfoy, Yellow Skin, Slytherin Sweater, Cape with Stars"
+    },
+    {
+      "fig": "fig-006059",
+      "name": "Hermione Granger, Yellow Skin, Gryffindor Sweater with Crest, Cape with Stars"
+    },
+    {
+      "fig": "fig-006060",
+      "name": "Harry Potter, Yellow Skin, Open Blue Jacket"
+    },
+    {
+      "fig": "fig-006061",
+      "name": "Hermione Granger, Yellow Skin, Hogwarts Sweater with Crest, Cape with Stars"
+    },
+    {
+      "fig": "fig-006062",
+      "name": "Ron Weasley, Yellow Skin, Blue Sweater"
+    }
+  ],
+  "hp_parts_by_year": {
+    "2001": 2205,
+    "2002": 2191,
+    "2003": 320,
+    "2004": 3425,
+    "2005": 2007,
+    "2007": 907,
+    "2010": 3030,
+    "2011": 2846,
+    "2018": 15053,
+    "2019": 2713,
+    "2020": 9625,
+    "2021": 10013,
+    "2022": 11438,
+    "2023": 14170,
+    "2024": 11057,
+    "2025": 15844,
+    "2026": 11764
+  },
+  "scope_exclusions_lookalikes": {
+    "sets": 51,
+    "by_theme": {
+      "Harry Potter and Fantastic Beasts Series 1": 25,
+      "Harry Potter and Fantastic Beasts Series 2": 19,
+      "Harry Potter": 7
+    }
+  },
+  "hp_sets_without_v1_inventory": [],
+  "hp_top_colors_era1": [
+    {
+      "color": "Black",
+      "hex": "#05131D",
+      "qty": 3238
+    },
+    {
+      "color": "Tan",
+      "hex": "#E4CD9E",
+      "qty": 2206
+    },
+    {
+      "color": "Dark Bluish Gray",
+      "hex": "#6C6E68",
+      "qty": 1595
+    },
+    {
+      "color": "Light Bluish Gray",
+      "hex": "#A0A5A9",
+      "qty": 1325
+    },
+    {
+      "color": "Reddish Brown",
+      "hex": "#582A12",
+      "qty": 1205
+    },
+    {
+      "color": "Light Gray",
+      "hex": "#9BA19D",
+      "qty": 965
+    },
+    {
+      "color": "White",
+      "hex": "#FFFFFF",
+      "qty": 757
+    },
+    {
+      "color": "Dark Gray",
+      "hex": "#6D6E5C",
+      "qty": 752
+    },
+    {
+      "color": "Red",
+      "hex": "#C91A09",
+      "qty": 647
+    },
+    {
+      "color": "Sand Green",
+      "hex": "#A0BCAC",
+      "qty": 585
+    },
+    {
+      "color": "Dark Red",
+      "hex": "#720E0F",
+      "qty": 376
+    },
+    {
+      "color": "Medium Blue",
+      "hex": "#5A93DB",
+      "qty": 350
+    }
+  ],
+  "hp_top_colors_era2": [
+    {
+      "color": "Black",
+      "hex": "#05131D",
+      "qty": 13994
+    },
+    {
+      "color": "Tan",
+      "hex": "#E4CD9E",
+      "qty": 13185
+    },
+    {
+      "color": "Dark Bluish Gray",
+      "hex": "#6C6E68",
+      "qty": 10504
+    },
+    {
+      "color": "Reddish Brown",
+      "hex": "#582A12",
+      "qty": 10063
+    },
+    {
+      "color": "Light Bluish Gray",
+      "hex": "#A0A5A9",
+      "qty": 9326
+    },
+    {
+      "color": "White",
+      "hex": "#FFFFFF",
+      "qty": 7659
+    },
+    {
+      "color": "Dark Tan",
+      "hex": "#958A73",
+      "qty": 7597
+    },
+    {
+      "color": "Red",
+      "hex": "#C91A09",
+      "qty": 2943
+    },
+    {
+      "color": "Medium Nougat",
+      "hex": "#AA7D55",
+      "qty": 2838
+    },
+    {
+      "color": "Pearl Gold",
+      "hex": "#AA7F2E",
+      "qty": 2234
+    },
+    {
+      "color": "Trans-Clear",
+      "hex": "#FCFCFC",
+      "qty": 1717
+    },
+    {
+      "color": "Sand Green",
+      "hex": "#A0BCAC",
+      "qty": 1645
+    }
+  ],
+  "quiz_pool_candidates": {
+    "Albert Runcorn / Harry Potter": {
+      "era1_figs": [],
+      "era2_figs": [
+        "fig-012697"
+      ]
+    },
+    "Albus Dumbledore": {
+      "era1_figs": [
+        "fig-006056",
+        "fig-006112",
+        "fig-006119",
+        "fig-006141"
+      ],
+      "era2_figs": [
+        "fig-006185",
+        "fig-006204",
+        "fig-011366",
+        "fig-011385",
+        "fig-011760",
+        "fig-012611",
+        "fig-012704",
+        "fig-015120",
+        "fig-016464",
+        "fig-017719"
+      ]
+    },
+    "Draco Malfoy": {
+      "era1_figs": [
+        "fig-001139",
+        "fig-006057",
+        "fig-006069",
+        "fig-006080",
+        "fig-006102",
+        "fig-006111",
+        "fig-006133",
+        "fig-006154"
+      ],
+      "era2_figs": [
+        "fig-006186",
+        "fig-008948",
+        "fig-008953",
+        "fig-010514",
+        "fig-010726",
+        "fig-010881",
+        "fig-013040",
+        "fig-013541",
+        "fig-013575",
+        "fig-015890",
+        "fig-016797",
+        "fig-017230",
+        "fig-017723"
+      ]
+    },
+    "Ginny Weasley": {
+      "era1_figs": [
+        "fig-006091",
+        "fig-006134",
+        "fig-006139"
+      ],
+      "era2_figs": [
+        "fig-008940",
+        "fig-010513",
+        "fig-011375",
+        "fig-013044",
+        "fig-013818",
+        "fig-015481",
+        "fig-017733"
+      ]
+    },
+    "Gregory Goyle / Harry Potter": {
+      "era1_figs": [
+        "fig-006085"
+      ],
+      "era2_figs": [
+        "fig-017722"
+      ]
+    },
+    "Harry Potter": {
+      "era1_figs": [
+        "fig-000029",
+        "fig-000457",
+        "fig-000471",
+        "fig-000595",
+        "fig-003085",
+        "fig-006052",
+        "fig-006060",
+        "fig-006063",
+        "fig-006065",
+        "fig-006068",
+        "fig-006070",
+        "fig-006081",
+        "fig-006095",
+        "fig-006099",
+        "fig-006104",
+        "fig-006108",
+        "fig-006113",
+        "fig-006118",
+        "fig-006130",
+        "fig-006140",
+        "fig-006144",
+        "fig-006155"
+      ],
+      "era2_figs": [
+        "fig-001818",
+        "fig-006171",
+        "fig-006172",
+        "fig-006180",
+        "fig-006195",
+        "fig-006208",
+        "fig-006218",
+        "fig-006225",
+        "fig-008909",
+        "fig-008927",
+        "fig-008931",
+        "fig-008936",
+        "fig-008946",
+        "fig-008951",
+        "fig-010508",
+        "fig-010530",
+        "fig-010871",
+        "fig-011341",
+        "fig-011346",
+        "fig-011354",
+        "fig-011361",
+        "fig-011377",
+        "fig-011589",
+        "fig-011746",
+        "fig-012308",
+        "fig-012317",
+        "fig-012676",
+        "fig-012690",
+        "fig-012702",
+        "fig-012707",
+        "fig-012709",
+        "fig-013035",
+        "fig-013039",
+        "fig-013043",
+        "fig-013550",
+        "fig-013561",
+        "fig-013578",
+        "fig-013813",
+        "fig-013821",
+        "fig-013825",
+        "fig-014337",
+        "fig-014341",
+        "fig-014759",
+        "fig-014761",
+        "fig-014762",
+        "fig-014768",
+        "fig-014770",
+        "fig-015112",
+        "fig-015478",
+        "fig-015884",
+        "fig-016030",
+        "fig-016076",
+        "fig-016474",
+        "fig-016799",
+        "fig-017219",
+        "fig-017227",
+        "fig-017229",
+        "fig-017267",
+        "fig-017735"
+      ]
+    },
+    "Harry Potter / Gregory Goyle": {
+      "era1_figs": [],
+      "era2_figs": [
+        "fig-011348"
+      ]
+    },
+    "Hermione Granger": {
+      "era1_figs": [
+        "fig-000593",
+        "fig-003084",
+        "fig-006059",
+        "fig-006061",
+        "fig-006076",
+        "fig-006105",
+        "fig-006115",
+        "fig-006156",
+        "fig-006167"
+      ],
+      "era2_figs": [
+        "fig-002060",
+        "fig-002148",
+        "fig-006184",
+        "fig-006211",
+        "fig-008935",
+        "fig-008944",
+        "fig-008952",
+        "fig-010507",
+        "fig-010884",
+        "fig-011345",
+        "fig-011351",
+        "fig-011352",
+        "fig-011362",
+        "fig-011601",
+        "fig-012314",
+        "fig-012316",
+        "fig-012708",
+        "fig-012891",
+        "fig-013032",
+        "fig-013037",
+        "fig-013563",
+        "fig-013577",
+        "fig-013812",
+        "fig-014760",
+        "fig-014766",
+        "fig-015887",
+        "fig-016473",
+        "fig-016490",
+        "fig-016794",
+        "fig-017228",
+        "fig-017266",
+        "fig-017726",
+        "fig-017737"
+      ]
+    },
+    "Hermione Granger in Bellatrix Lestrange Disguise": {
+      "era1_figs": [],
+      "era2_figs": [
+        "fig-014336"
+      ]
+    },
+    "Luna Lovegood": {
+      "era1_figs": [
+        "fig-006131"
+      ],
+      "era2_figs": [
+        "fig-008933",
+        "fig-008957",
+        "fig-011373",
+        "fig-012701",
+        "fig-013042",
+        "fig-013538",
+        "fig-015886"
+      ]
+    },
+    "Mafalda Hopkirk / Hermione Granger": {
+      "era1_figs": [],
+      "era2_figs": [
+        "fig-012698"
+      ]
+    },
+    "Minerva McGonagall": {
+      "era1_figs": [],
+      "era2_figs": [
+        "fig-011758"
+      ]
+    },
+    "Professor Minerva McGonagall": {
+      "era1_figs": [
+        "fig-006093",
+        "fig-006125"
+      ],
+      "era2_figs": [
+        "fig-006192",
+        "fig-010883",
+        "fig-011380",
+        "fig-014755",
+        "fig-015896",
+        "fig-017231"
+      ]
+    },
+    "Professor Severus Snape": {
+      "era1_figs": [
+        "fig-006049",
+        "fig-006101",
+        "fig-006126",
+        "fig-006151"
+      ],
+      "era2_figs": [
+        "fig-002131",
+        "fig-010880",
+        "fig-011360",
+        "fig-012280",
+        "fig-015094"
+      ]
+    },
+    "Reg Cattermole / Ron Weasley": {
+      "era1_figs": [],
+      "era2_figs": [
+        "fig-012699"
+      ]
+    },
+    "Ron Weasley": {
+      "era1_figs": [
+        "fig-000594",
+        "fig-006051",
+        "fig-006062",
+        "fig-006066",
+        "fig-006077",
+        "fig-006107",
+        "fig-006109",
+        "fig-006114",
+        "fig-006132",
+        "fig-006162"
+      ],
+      "era2_figs": [
+        "fig-006183",
+        "fig-006190",
+        "fig-006194",
+        "fig-006209",
+        "fig-006214",
+        "fig-008937",
+        "fig-008954",
+        "fig-010506",
+        "fig-010885",
+        "fig-011353",
+        "fig-011363",
+        "fig-011378",
+        "fig-012318",
+        "fig-012684",
+        "fig-013030",
+        "fig-013036",
+        "fig-013564",
+        "fig-013819",
+        "fig-014340",
+        "fig-014765",
+        "fig-014769",
+        "fig-015111",
+        "fig-015482",
+        "fig-016459",
+        "fig-016475",
+        "fig-016496",
+        "fig-016791",
+        "fig-017226",
+        "fig-017265"
+      ]
+    },
+    "Ron Weasley / Vincent Crabbe": {
+      "era1_figs": [],
+      "era2_figs": [
+        "fig-011350"
+      ]
+    },
+    "Vincent Crabbe / Ron Weasley": {
+      "era1_figs": [
+        "fig-006086"
+      ],
+      "era2_figs": [
+        "fig-017721"
+      ]
+    },
+    "Voldemort": {
+      "era1_figs": [
+        "fig-006124",
+        "fig-006149"
+      ],
+      "era2_figs": [
+        "fig-002136",
+        "fig-011369",
+        "fig-013824",
+        "fig-015889"
+      ]
+    }
+  },
+  "both_era_characters": [
+    "Alastor Mad-Eye Moody",
+    "Albus Dumbledore",
+    "Argus Filch",
+    "Arthur Weasley",
+    "Bellatrix Lestrange",
+    "Death Eater",
+    "Dementor",
+    "Dobby",
+    "Draco Malfoy",
+    "Ernie Prang",
+    "Fenrir Greyback",
+    "Garrick Ollivander",
+    "Ginny Weasley",
+    "Gregory Goyle / Harry Potter",
+    "Harry Potter",
+    "Hermione Granger",
+    "Lucius Malfoy",
+    "Luna Lovegood",
+    "Madame Hooch",
+    "Marcus Flint",
+    "Molly Weasley",
+    "Narcissa Malfoy",
+    "Neville Longbottom",
+    "Oliver Wood",
+    "Peter Pettigrew",
+    "Professor Dolores Umbridge",
+    "Professor Filius Flitwick",
+    "Professor Gilderoy Lockhart",
+    "Professor Igor Karkaroff",
+    "Professor Minerva McGonagall",
+    "Professor Quirinus Quirrell",
+    "Professor Severus Snape",
+    "Professor Sybill Trelawney",
+    "Remus Lupin",
+    "Ron Weasley",
+    "Rubeus Hagrid",
+    "Sirius Black",
+    "Stan Shunpike",
+    "Tom Riddle",
+    "Troll",
+    "Vernon Dursley",
+    "Viktor Krum",
+    "Vincent Crabbe / Ron Weasley",
+    "Voldemort"
+  ]
+}

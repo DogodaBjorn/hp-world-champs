@@ -1,0 +1,44 @@
+/// GRAIN: one row = n copies of one part in one color in the version-1
+/// inventory of one set, spares excluded. Filters live HERE, not in DAX
+/// (M-002: the exclusions are the contract). img_url dropped (blueprint).
+table FactPartsInSets
+
+	column set_num
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: set_num
+
+	column part_num
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: part_num
+
+	column color_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: color_id
+
+	column quantity
+		dataType: int64
+		isHidden
+		formatString: #,0
+		summarizeBy: sum
+		sourceColumn: quantity
+
+	partition FactPartsInSets = m
+		mode: import
+		source =
+				let
+				    Source = fnCsv("inventory_parts.csv", 6),
+				    Typed = Table.TransformColumnTypes(Source, {{"inventory_id", Int64.Type}, {"part_num", type text}, {"color_id", Int64.Type}, {"quantity", Int64.Type}, {"is_spare", type logical}, {"img_url", type text}}),
+				    NoSpares = Table.SelectRows(Typed, each not [is_spare]),
+				    Slim = Table.RemoveColumns(NoSpares, {"is_spare", "img_url"}),
+				    V1 = Table.NestedJoin(Slim, {"inventory_id"}, V1Inventories, {"inventory_id"}, "inv", JoinKind.Inner),
+				    WithSet = Table.ExpandTableColumn(V1, "inv", {"set_num"}),
+				    Grouped = Table.Group(WithSet, {"set_num", "part_num", "color_id"}, {{"quantity", each List.Sum([quantity]), Int64.Type}})
+				in
+				    Grouped

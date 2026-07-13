@@ -24,6 +24,6 @@ synonyms: "Colors, Palette Size, Colors per Set (set grain)"
 conflicts_checked: true
 
 implementation:
-  measure_name: ""
-  display_folder: ""
-  format_string: ""
+  measure_name: "Distinct Colors Used"
+  display_folder: "02 Color"
+  format_string: "#,0"

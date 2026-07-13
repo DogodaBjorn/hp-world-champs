@@ -1,0 +1,52 @@
+/// Measure home. Folder taxonomy per blueprint: 01 Scale / 02 Color /
+/// 03 Minifigures / 04 Quiz (scenario logic) / 05 Display helpers (s6).
+table _Measures
+
+	/// How many LEGO sets were released in the current slice (M-001).
+	measure Sets = COUNTROWS ( DimSets )
+		formatString: #,0
+		displayFolder: 01 Scale
+
+	/// Physical parts in the boxes of the sets in view — v1 inventories, spares excluded by fact construction (M-002).
+	measure 'Parts Shipped' = SUM ( FactPartsInSets[quantity] )
+		formatString: #,0
+		displayFolder: 01 Scale
+
+	/// Typical set size: mean of Rebrickable's own per-set part count — deliberately NOT Parts Shipped / Sets (M-003).
+	measure 'Avg Parts per Set' = AVERAGE ( DimSets[num_parts] )
+		formatString: #,0
+		displayFolder: 01 Scale
+
+	/// Different LEGO colors across the parts in view, pseudo-colors [Unknown]/[No Color] excluded (M-004).
+	measure 'Distinct Colors Used' = CALCULATE ( DISTINCTCOUNT ( FactPartsInSets[color_id] ), KEEPFILTERS ( DimColors[IsPseudoColor] = FALSE () ) )
+		formatString: #,0
+		displayFolder: 02 Color
+
+	/// Share of parts whose color is gray, black, or white by the contracted name rule (M-005); blank when no parts in context.
+	measure 'Grayscale Share %' = DIVIDE ( CALCULATE ( [Parts Shipped], KEEPFILTERS ( DimColors[IsGrayscale] = TRUE () ) ), [Parts Shipped] )
+		formatString: 0.0%
+		displayFolder: 02 Color
+
+	/// Different minifigure designs appearing in the sets in view, via v1 inventories (M-006; at Character grain this is M-007).
+	measure 'Unique Minifigures' = DISTINCTCOUNT ( FactMinifigsInSets[fig_num] )
+		formatString: #,0
+		displayFolder: 03 Minifigures
+
+	/// SCENARIO LOGIC: number of curated Sorting Quiz questions (M-009 metadata; live score is internal to the custom visual).
+	measure 'Quiz Questions' = COUNTROWS ( QuizQuestions )
+		formatString: 0
+		displayFolder: 04 Quiz (scenario logic)
+
+	column Value
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: Value
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [Value = text], {})
+				in
+				    Source

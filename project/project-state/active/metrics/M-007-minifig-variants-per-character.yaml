@@ -25,6 +25,6 @@ synonyms: "Fig Variants, Character Variants"
 conflicts_checked: true
 
 implementation:
-  measure_name: ""
-  display_folder: ""
-  format_string: ""
+  measure_name: "Unique Minifigures"   # same measure evaluated at DimMinifigures[Character] grain — one calculation, one home
+  display_folder: "03 Minifigures"
+  format_string: "#,0"

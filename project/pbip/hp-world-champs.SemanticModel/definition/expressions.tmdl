@@ -1,0 +1,55 @@
+/// Folder containing the contest CSVs. Set once in Desktop (Transform data >
+/// Edit parameters). Ships as a placeholder on purpose: machine paths are a
+/// validator error in this repo; imported data travels inside the .pbix.
+expression DataFolder = "SET-ME - folder containing the Round 2 CSVs" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+
+	annotation PBI_ResultType = Text
+
+/// Reads one contest CSV: UTF-8, quote-aware (the starter's QuoteStyle.None
+/// mis-splits quoted set names containing commas), headers promoted.
+expression fnCsv =
+		(fileName as text, columnCount as number) =>
+		let
+		    root = if Text.EndsWith(DataFolder, "\") or Text.EndsWith(DataFolder, "/") then DataFolder else DataFolder & "\",
+		    Source = Csv.Document(File.Contents(root & fileName), [Delimiter = ",", Columns = columnCount, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true])
+		in
+		    Promoted
+
+	annotation PBI_ResultType = Function
+
+/// Staging (not loaded): themes with Root Theme / Sub Theme resolved by
+/// walking parent_id to the topmost ancestor (494 rows, chains are short).
+expression ThemesResolved =
+		let
+		    Source = fnCsv("themes.csv", 3),
+		    Typed = Table.TransformColumnTypes(Source, {{"id", Int64.Type}, {"name", type text}, {"parent_id", Int64.Type}}),
+		    ids = List.Buffer(Typed[id]),
+		    names = List.Buffer(Typed[name]),
+		    parents = List.Buffer(Typed[parent_id]),
+		    chainOf = (tid as number) as list =>
+		        List.Generate(() => tid, (t) => t <> null, (t) => parents{List.PositionOf(ids, t)}),
+		    WithChain = Table.AddColumn(Typed, "chain", each chainOf([id]), type list),
+		    WithRoot = Table.AddColumn(WithChain, "Root Theme", each names{List.PositionOf(ids, List.Last([chain]))}, type text),
+		    WithSub = Table.AddColumn(WithRoot, "Sub Theme", each
+		        let c = [chain] in
+		        if List.Count(c) = 1 then null else names{List.PositionOf(ids, c{List.Count(c) - 2})}, type text),
+		    Slim = Table.RemoveColumns(WithSub, {"chain"})
+		in
+		    Slim
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): version-1 inventories only — inventory_id -> set_num.
+/// The v1 filter lives here so both facts inherit it by construction (M-002).
+expression V1Inventories =
+		let
+		    Source = fnCsv("inventories.csv", 3),
+		    Typed = Table.TransformColumnTypes(Source, {{"id", Int64.Type}, {"version", Int64.Type}, {"set_num", type text}}),
+		    V1 = Table.SelectRows(Typed, each [version] = 1),
+		    Slim = Table.RemoveColumns(V1, {"version"}),
+		    Renamed = Table.RenameColumns(Slim, {{"id", "inventory_id"}})
+		in
+		    Renamed
+
+	annotation PBI_ResultType = Table

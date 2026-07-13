@@ -27,6 +27,6 @@ synonyms: "Gray Share, % Grayscale"
 conflicts_checked: true
 
 implementation:
-  measure_name: ""
-  display_folder: ""
-  format_string: ""
+  measure_name: "Grayscale Share %"
+  display_folder: "02 Color"
+  format_string: "0.0%"

@@ -1,0 +1,66 @@
+/// One row per Rebrickable color. Hex drives every true-color conditional-
+/// formatting rule; IsGrayscale implements the M-005 name rule as data.
+table DimColors
+
+	column id
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: id
+
+	column 'Color Name'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Color Name
+
+	column Hex
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Hex
+
+	column is_trans
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: is_trans
+
+	column IsGrayscale
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: IsGrayscale
+
+	column IsPseudoColor
+		dataType: boolean
+		isHidden
+		summarizeBy: none
+		sourceColumn: IsPseudoColor
+
+	column y1
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: y1
+
+	column y2
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: y2
+
+	partition DimColors = m
+		mode: import
+		source =
+				let
+				    Source = fnCsv("colors.csv", 8),
+				    Typed = Table.TransformColumnTypes(Source, {{"id", Int64.Type}, {"name", type text}, {"rgb", type text}, {"is_trans", type logical}, {"num_parts", Int64.Type}, {"num_sets", Int64.Type}, {"y1", Int64.Type}, {"y2", Int64.Type}}),
+				    WithHex = Table.AddColumn(Typed, "Hex", each "#" & [rgb], type text),
+				    WithGray = Table.AddColumn(WithHex, "IsGrayscale", each
+				        let n = Text.Lower([name])
+				        in Text.Contains(n, "gray") or Text.Contains(n, "grey") or Text.Contains(n, "black") or Text.Contains(n, "white"), type logical),
+				    WithPseudo = Table.AddColumn(WithGray, "IsPseudoColor", each [id] = -1 or [id] = 9999, type logical),
+				    Renamed = Table.RenameColumns(WithPseudo, {{"name", "Color Name"}}),
+				    Removed = Table.RemoveColumns(Renamed, {"rgb", "num_parts", "num_sets"})
+				in
+				    Removed

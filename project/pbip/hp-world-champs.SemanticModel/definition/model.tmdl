@@ -1,0 +1,17 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+ref table DimSets
+ref table DimColors
+ref table DimParts
+ref table DimMinifigures
+ref table DimYear
+ref table FactPartsInSets
+ref table FactMinifigsInSets
+ref table QuizQuestions
+ref table _Measures

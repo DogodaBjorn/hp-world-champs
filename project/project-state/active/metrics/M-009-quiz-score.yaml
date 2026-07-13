@@ -25,6 +25,6 @@ synonyms: "Score, Matches Correct"
 conflicts_checked: true
 
 implementation:
-  measure_name: ""
-  display_folder: ""
-  format_string: ""
+  measure_name: "Quiz Questions (metadata; live score internal to hpSortingQuiz — fallback DAX score authored at s6 only if the Jul-16 fallback triggers)"
+  display_folder: "04 Quiz (scenario logic)"
+  format_string: "0"

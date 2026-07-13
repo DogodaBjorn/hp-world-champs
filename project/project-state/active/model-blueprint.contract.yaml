@@ -35,7 +35,7 @@ dimensions:
     attributes: ["fig_num (key)", "name", "Character (text before first ',' or '(', trimmed — M-007 heuristic)", "num_parts", "img_url (Image URL)"]
   - name: "DimYear"
     grain: "one row means one calendar year, contiguous 1949–2027"
-    source: "calculated table"
+    source: "generated in Power Query (M List.Numbers) — amended at s4 from 'calculated table': avoids unverifiable calculated-table TMDL column syntax (research-first conservative option); identical content"
     attributes: ["Year (int)", "Year Start Date (hidden date column — candidate for date-table marking, verified against TMDL schema at stage 4)"]
   - name: "QuizQuestions"
     grain: "one row means one curated quiz question (10 rows) — DISCONNECTED, deliberately relationship-free"

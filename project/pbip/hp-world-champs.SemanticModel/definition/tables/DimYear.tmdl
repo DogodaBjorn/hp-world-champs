@@ -1,0 +1,36 @@
+/// Contiguous year dimension 1949–2027 (dataset horizon). Period dimension of
+/// this model: no facts carry dates below year grain. IsHiatusYear drives the
+/// P1 gap annotation (stage-1 business flag).
+table DimYear
+	dataCategory: Time
+
+	column Year
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: Year
+
+	column 'Year Start Date'
+		dataType: dateTime
+		isHidden
+		isKey
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: Year Start Date
+
+	column IsHiatusYear
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: IsHiatusYear
+
+	partition DimYear = m
+		mode: import
+		source =
+				let
+				    Years = List.Numbers(1949, 79),
+				    T = Table.FromList(Years, Splitter.SplitByNothing(), {"Year"}),
+				    Typed = Table.TransformColumnTypes(T, {{"Year", Int64.Type}}),
+				    WithDate = Table.AddColumn(Typed, "Year Start Date", each #date([Year], 1, 1), type date),
+				    WithHiatus = Table.AddColumn(WithDate, "IsHiatusYear", each [Year] >= 2012 and [Year] <= 2017, type logical)
+				in
+				    WithHiatus

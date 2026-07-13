@@ -24,6 +24,6 @@ synonyms: "Minifigs, Unique Figs"
 conflicts_checked: true
 
 implementation:
-  measure_name: ""
-  display_folder: ""
-  format_string: ""
+  measure_name: "Unique Minifigures"
+  display_folder: "03 Minifigures"
+  format_string: "#,0"
