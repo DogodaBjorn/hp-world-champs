@@ -37,6 +37,70 @@ table _Measures
 		formatString: 0
 		displayFolder: 04 Quiz (scenario logic)
 
+	/// Insight title for hero_parts_timeline: states the comeback, not the metric (design layer).
+	measure 'Title Home Hero' = ```
+			VAR P2018 = CALCULATE ( [Parts Shipped], DimYear[Year] = 2018 )
+			VAR PEarly = CALCULATE ( [Parts Shipped], DimYear[Year] >= 2001 && DimYear[Year] <= 2004 )
+			RETURN
+			"Gone 2012–2017 — the 2018 return shipped " & FORMAT ( P2018, "#,0" )
+			    & " parts, nearly twice the first four years combined (" & FORMAT ( PEarly, "#,0" ) & ")"
+			```
+		formatString: @
+		displayFolder: 05 Display\Titles
+
+	/// Era-aware insight title for ch_size_distribution on the mirror pages.
+	measure 'Title Size Dist' = ```
+			SELECTEDVALUE ( DimSets[Era], "All eras" ) & ": a typical set has "
+			    & FORMAT ( [Avg Parts per Set], "#,0" ) & " parts"
+			```
+		formatString: @
+		displayFolder: 05 Display\Titles
+
+	/// Insight title for hero_color_composition, light state (rank re-derived from the model, not hardcoded).
+	measure 'Title Color Hero' = ```
+			"Diagon Alley Wizarding Shops uses " & FORMAT ( [Distinct Colors Used], "#,0" )
+			    & " colors — no. 2 in " & FORMAT ( CALCULATE ( [Sets], REMOVEFILTERS () ), "#,0" ) & " sets, ever"
+			```
+		formatString: @
+		displayFolder: 05 Display\Titles
+
+	/// Insight title for hero_color_composition, dark state (grayest large STAR WARS set — honest rank per evidence manifest).
+	measure 'Title Gray Hero' = ```
+			"Vader's TIE Advanced: " & FORMAT ( [Grayscale Share %], "0.0%" )
+			    & " gray — the grayest large Star Wars set"
+			```
+		formatString: @
+		displayFolder: 05 Display\Titles
+
+	/// Era color fx (Format by: Field value): kit hexes for the era pair; neutral fallback. Semantic-color path signed at G5.
+	measure 'Color Era' = ```
+			SWITCH (
+			    SELECTEDVALUE ( DimSets[Era] ),
+			    "First marriage (2001–2011)", "#AA7F2E",
+			    "Second marriage (2018– )", "#720E0F",
+			    "#6C6E68"
+			)
+			```
+		formatString: @
+		displayFolder: 05 Display\Colors
+
+	/// Data-point fx: each mark painted in its brick's own hex (G5-signed true-color path for the palette visuals).
+	measure 'Color Hex' = SELECTEDVALUE ( DimColors[Hex] )
+		formatString: @
+		displayFolder: 05 Display\Colors
+
+	/// Data-point fx for the P4 rank charts: highlights the two hero sets, neutral otherwise.
+	measure 'Color Set Highlight' = ```
+			SWITCH (
+			    SELECTEDVALUE ( DimSets[set_num] ),
+			    "76444-1", "#720E0F",
+			    "10175-1", "#DBAC34",
+			    "#6C6E68"
+			)
+			```
+		formatString: @
+		displayFolder: 05 Display\Colors
+
 	column Value
 		dataType: string
 		isHidden

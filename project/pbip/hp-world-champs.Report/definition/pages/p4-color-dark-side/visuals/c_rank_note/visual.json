@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "c_rank_note",
+  "position": {
+    "x": 832,
+    "y": 556,
+    "z": 100,
+    "height": 100,
+    "width": 424,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Five mosaic sculptures are 100% gray — Vader's TIE is the grayest large ",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "12pt",
+                      "color": "#6C6E68",
+                      "fontStyle": "italic"
+                    }
+                  },
+                  {
+                    "value": "Star Wars",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "12pt",
+                      "color": "#6C6E68",
+                      "fontWeight": "bold",
+                      "fontStyle": "italic"
+                    }
+                  },
+                  {
+                    "value": " set. Honest ranks only.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "12pt",
+                      "color": "#6C6E68",
+                      "fontStyle": "italic"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Note: five mosaic sculptures are 100 percent gray; Vader''s TIE Advanced is the grayest large Star Wars set.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "name": "bm_p4_dark",
+  "displayName": "The dark side",
+  "options": {
+    "targetVisualNames": [
+      "btn_dark_side",
+      "btn_light_side",
+      "btn_nav_1",
+      "btn_nav_1_dark",
+      "btn_nav_2",
+      "btn_nav_2_dark",
+      "btn_nav_3",
+      "btn_nav_3_dark",
+      "btn_nav_4",
+      "btn_nav_4_dark",
+      "btn_nav_5",
+      "btn_nav_5_dark",
+      "c_rank_note",
+      "ch_colorful_rank",
+      "ch_gray_rank",
+      "hero_color_composition",
+      "hero_gray_composition",
+      "img_voldemort",
+      "kpi_theme_grayness",
+      "z_bg_dark",
+      "z_footer",
+      "z_footer_dark",
+      "z_masthead",
+      "z_masthead_dark",
+      "z_rule",
+      "z_rule_dark"
+    ],
+    "suppressData": true,
+    "applyOnlyToTargetVisuals": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "p4-color-dark-side",
+    "sections": {
+      "p4-color-dark-side": {
+        "visualContainers": {
+          "hero_color_composition": {
+            "singleVisual": {
+              "visualType": "barChart",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "ch_colorful_rank": {
+            "singleVisual": {
+              "visualType": "barChart",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "btn_dark_side": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "z_masthead": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "z_rule": {
+            "singleVisual": {
+              "visualType": "shape",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "z_footer": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "btn_nav_1": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "btn_nav_2": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "btn_nav_3": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "btn_nav_4": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "btn_nav_5": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "hero_gray_composition": {
+            "singleVisual": {
+              "visualType": "barChart"
+            }
+          },
+          "ch_gray_rank": {
+            "singleVisual": {
+              "visualType": "barChart"
+            }
+          },
+          "img_voldemort": {
+            "singleVisual": {
+              "visualType": "pivotTable"
+            }
+          },
+          "btn_light_side": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          },
+          "z_bg_dark": {
+            "singleVisual": {
+              "visualType": "shape"
+            }
+          },
+          "z_masthead_dark": {
+            "singleVisual": {
+              "visualType": "textbox"
+            }
+          },
+          "z_rule_dark": {
+            "singleVisual": {
+              "visualType": "shape"
+            }
+          },
+          "z_footer_dark": {
+            "singleVisual": {
+              "visualType": "textbox"
+            }
+          },
+          "btn_nav_1_dark": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          },
+          "btn_nav_2_dark": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          },
+          "btn_nav_3_dark": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          },
+          "btn_nav_4_dark": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          },
+          "btn_nav_5_dark": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          },
+          "kpi_theme_grayness": {
+            "singleVisual": {
+              "visualType": "pivotTable"
+            }
+          },
+          "c_rank_note": {
+            "singleVisual": {
+              "visualType": "textbox"
+            }
+          }
+        }
+      }
+    }
+  }
+}

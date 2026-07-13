@@ -1,0 +1,32 @@
+{
+  "name": "hp-bricks — The Illuminated Storybook",
+  "dataColors": ["#AA7F2E", "#720E0F", "#184632", "#0A3463", "#AA7D55", "#6C6E68"],
+  "good": "#184632",
+  "bad": "#A95500",
+  "neutral": "#6C6E68",
+  "background": "#FFFFFF",
+  "foreground": "#05131D",
+  "tableAccent": "#720E0F",
+  "textClasses": {
+    "callout": { "fontSize": 28, "fontFace": "Georgia", "color": "#05131D" },
+    "title": { "fontSize": 14, "fontFace": "Georgia", "color": "#05131D" },
+    "header": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#05131D" },
+    "label": { "fontSize": 10, "fontFace": "Segoe UI", "color": "#6C6E68" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#DCD2BD" } }, "radius": 8 }],
+        "title": [{ "show": true, "fontColor": { "solid": { "color": "#05131D" } }, "fontFamily": "Georgia", "fontSize": 14 }],
+        "visualHeader": [{ "show": false }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#F7F1E3" } }, "transparency": 0 }],
+        "outspace": [{ "color": { "solid": { "color": "#F7F1E3" } }, "transparency": 0 }]
+      }
+    }
+  }
+}

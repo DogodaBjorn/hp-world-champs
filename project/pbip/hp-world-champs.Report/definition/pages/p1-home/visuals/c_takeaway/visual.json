@@ -1,0 +1,62 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "c_takeaway",
+  "position": {
+    "x": 24,
+    "y": 96,
+    "z": 100,
+    "height": 116,
+    "width": 792,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "L",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "28pt",
+                      "color": "#720E0F",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "EGO Harry Potter vanished for seven years. It returned in 2018 at nearly triple the scale — bigger sets, more colors, aimed at the readers who grew up. Two marriages, one franchise, told in 576 minifigures.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "12pt",
+                      "color": "#05131D"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Key takeaway: LEGO Harry Potter vanished for seven years and returned in 2018 at nearly triple the scale — bigger sets, more colors, aimed at the readers who grew up. Two marriages, one franchise, told in 576 minifigures.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}
