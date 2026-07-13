@@ -1,7 +1,7 @@
 # pbi-atelier project state — schema: lifecycle/status.schema.yaml
 project: hp-world-champs
 template_version: 0.3.1
-current_stage: 2
+current_stage: 3
 updated: 2026-07-12
 stages:
   s0_intake:
@@ -13,11 +13,11 @@ stages:
     evidence: "project-state/active/01-requirements.md"
     gate_note: "G1: all requirements trace to judge/entrant decisions; 10 CSV schemas verified; 5 open questions, none blocking"
   s2_metrics:
-    status: in_progress
-    evidence: ""
-    gate_note: ""
+    status: passed
+    evidence: "project-state/active/02-metrics.md"
+    gate_note: "G2: user signed glossary as written 2026-07-12 (9 contracts; gray-set, M-003 source, pseudo-color decisions explicit)"
   s3_model_design:
-    status: pending
+    status: in_progress
     evidence: ""
     gate_note: ""
   s4_model_build:

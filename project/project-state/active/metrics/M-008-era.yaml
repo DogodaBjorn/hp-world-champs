@@ -1,0 +1,30 @@
+contract: metric
+metric_id: "M-008"
+name: "Era"
+date: "2026-07-12"
+
+definition:
+  plain_language: "Which of Harry Potter's two LEGO 'marriages' a set belongs to — the original 2001–2011 run, the 2012–2017 hiatus, or the 2018+ return."
+  formula_in_words: "Attribute on DimSets, from year: ≤2011 → 'First marriage (2001–2011)'; ≥2018 → 'Second marriage (2018– )'; 2012–2017 → 'Hiatus'. Only meaningful where Root Theme = Harry Potter; every other theme gets 'n/a'. Boundaries inclusive."
+  grain: "set (dimension attribute, not a measure)"
+  filters: "n/a — but visuals sliced by Era must also filter Root Theme = Harry Potter, otherwise 'n/a' floods the axis"
+  unit: "category"
+  direction_is_good: "n/a"
+
+edge_cases:
+  - "HP sets dated before 2001 would fall into 'First marriage' by the ≤2011 rule — stage 4 verifies none exist (E1 says the line starts 2001)"
+  - "'Hiatus' should contain zero HP sets (E3) — if re-derivation finds any, the story premise itself is challenged and goes back to the user"
+  - "The quiz's era answer key uses this same attribute — one definition everywhere"
+
+targets:
+  exists: false
+  source: "n/a"
+
+owner: "entrant (definition steward)"
+synonyms: "Marriage, Period"
+conflicts_checked: true
+
+implementation:
+  measure_name: ""
+  display_folder: ""
+  format_string: ""

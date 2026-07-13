@@ -1,0 +1,29 @@
+contract: metric
+metric_id: "M-001"
+name: "Sets"
+date: "2026-07-12"
+
+definition:
+  plain_language: "How many LEGO sets were released, in whatever slice is on screen."
+  formula_in_words: "Count of rows in DimSets within the current filter context."
+  grain: "set; meaningful at any roll-up (year, era, theme)"
+  filters: "none standing — the model loads all themes (ranking/comparison requirements R5/R6 need the full universe)"
+  unit: "count"
+  direction_is_good: "context-dependent (bigger era ≠ better; it is the story)"
+
+edge_cases:
+  - "Sets with no v1 inventory still count as sets (they exist in sets.csv); parts-based metrics may show blank for them"
+  - "Accessory/book items with 1 part (e.g. 0003977811-1) count as sets — the dataset's own definition of a set is the contract"
+
+targets:
+  exists: false
+  source: "n/a"
+
+owner: "entrant (definition steward)"
+synonyms: "Number of Sets, Sets Released"
+conflicts_checked: true
+
+implementation:
+  measure_name: ""
+  display_folder: ""
+  format_string: ""

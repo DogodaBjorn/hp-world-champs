@@ -1,0 +1,29 @@
+contract: metric
+metric_id: "M-004"
+name: "Distinct Colors Used"
+date: "2026-07-12"
+
+definition:
+  plain_language: "How many different LEGO colors appear across the parts of the sets in view."
+  formula_in_words: "Distinct count of color_id on the parts-in-sets fact, excluding the pseudo-colors [Unknown] (-1) and [No Color/Any Color] (9999)."
+  grain: "fact (set, part, color); reported per era, per theme, and PER SET (the E6 'most colorful set' ranking is this metric at set grain)"
+  filters: "v1/no-spares by fact construction; color_id not in {-1, 9999}"
+  unit: "count"
+  direction_is_good: "up (in this report's narrative: more colors = the thesis)"
+
+edge_cases:
+  - "Pseudo-colors -1/9999 excluded — they are placeholders, not palette. Stage-4 re-derivation of E5 (67 vs 80) and E6 (55 colors) must note whether the exclusion changed the prior numbers"
+  - "Transparent variants count as their own colors (Trans-Red ≠ Red) — Rebrickable's palette is the contract"
+
+targets:
+  exists: false
+  source: "n/a"
+
+owner: "entrant (definition steward)"
+synonyms: "Colors, Palette Size, Colors per Set (set grain)"
+conflicts_checked: true
+
+implementation:
+  measure_name: ""
+  display_folder: ""
+  format_string: ""

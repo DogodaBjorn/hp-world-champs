@@ -1,0 +1,30 @@
+contract: metric
+metric_id: "M-007"
+name: "Minifig Variants per Character"
+date: "2026-07-12"
+
+definition:
+  plain_language: "How many different minifigure designs exist of one character (e.g. Harry Potter has been redesigned dozens of times)."
+  formula_in_words: "Distinct count of fig_num, grouped by Character — where Character is the minifig name truncated before its first comma or opening parenthesis, trimmed."
+  grain: "character (derived attribute on DimMinifigures)"
+  filters: "v1 inventories by fact construction when counted through sets; character extraction happens in Power Query"
+  unit: "count"
+  direction_is_good: "context-dependent"
+
+edge_cases:
+  - "Character extraction is heuristic: 'Harry Potter, Gryffindor Robe' → 'Harry Potter'; names without comma/paren pass through unchanged"
+  - "Known trap: prefixed or misspelled base names split into separate characters — the E9 re-derivation (Harry 22 old / 59 new; 44 characters in both eras) validates the heuristic; material mismatches are recorded, not patched silently"
+  - "Different characters sharing a first token (e.g. 'Harry Potter' vs 'Harry') stay distinct only if their pre-comma text differs — accepted limitation, noted in the quiz curation step"
+
+targets:
+  exists: false
+  source: "n/a"
+
+owner: "entrant (definition steward)"
+synonyms: "Fig Variants, Character Variants"
+conflicts_checked: true
+
+implementation:
+  measure_name: ""
+  display_folder: ""
+  format_string: ""

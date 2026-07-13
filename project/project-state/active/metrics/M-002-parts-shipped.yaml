@@ -1,0 +1,30 @@
+contract: metric
+metric_id: "M-002"
+name: "Parts Shipped"
+date: "2026-07-12"
+
+definition:
+  plain_language: "How many physical parts LEGO put in the boxes of the sets in view — spare parts excluded."
+  formula_in_words: "Sum of part quantity over the parts-in-sets fact, which is built ONLY from version-1 inventories with spare parts excluded. The exclusions are the contract."
+  grain: "(set, part, color) fact rows; meaningful at any roll-up"
+  filters: "inventories.version = 1 and is_spare = false — enforced in the fact query itself, not in the measure"
+  unit: "count"
+  direction_is_good: "context-dependent"
+
+edge_cases:
+  - "Sets without a v1 inventory contribute nothing — verify at stage 4 whether any HP set lacks v1 and record the count in the evidence manifest"
+  - "color_id -1 [Unknown] and 9999 [No Color/Any Color] rows still count as shipped parts (they are physical parts; only color analytics exclude them)"
+  - "NOT the same number as Rebrickable's sets.num_parts (see M-003 ambiguity note)"
+
+targets:
+  exists: false
+  source: "n/a"
+
+owner: "entrant (definition steward)"
+synonyms: "Parts, Total Parts — the starter model's 'Parts' measure is this metric with the v1 filter done in DAX instead of the query"
+conflicts_checked: true
+
+implementation:
+  measure_name: ""
+  display_folder: ""
+  format_string: ""

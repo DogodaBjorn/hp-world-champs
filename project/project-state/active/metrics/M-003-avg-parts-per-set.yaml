@@ -1,0 +1,29 @@
+contract: metric
+metric_id: "M-003"
+name: "Avg Parts per Set"
+date: "2026-07-12"
+
+definition:
+  plain_language: "The typical size of a set in the current slice, using Rebrickable's own per-set part count."
+  formula_in_words: "Average of DimSets.num_parts over the sets in the current filter context."
+  grain: "set; reported at era/year/theme roll-ups"
+  filters: "none standing"
+  unit: "count (parts)"
+  direction_is_good: "context-dependent (the era contrast is the story)"
+
+edge_cases:
+  - "AMBIGUITY RESOLVED (Q2): source is sets.num_parts (Rebrickable's official set size), NOT Parts Shipped ÷ Sets. The two can differ because num_parts is Rebrickable's canonical count while Parts Shipped sums v1 no-spare inventory rows. E1/E2 (avg 267 vs 731) were derived from sets.num_parts — re-verification must use the same source."
+  - "Sets with num_parts = 0 or 1 (books, gear) are included; if HP-era averages are visibly distorted by them at stage 4, any exclusion becomes a recorded contract change, not a silent filter"
+
+targets:
+  exists: false
+  source: "n/a"
+
+owner: "entrant (definition steward)"
+synonyms: "Average Set Size"
+conflicts_checked: true
+
+implementation:
+  measure_name: ""
+  display_folder: ""
+  format_string: ""

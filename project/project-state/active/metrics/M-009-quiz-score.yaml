@@ -1,0 +1,30 @@
+contract: metric
+metric_id: "M-009"
+name: "Quiz Score"
+date: "2026-07-12"
+
+definition:
+  plain_language: "SCENARIO LOGIC — how many of the Sorting Quiz's questions the reader has matched correctly. Not a fact about LEGO; a game mechanic."
+  formula_in_words: "Count of correctly matched questions out of 10 curated questions (QuizQuestions disconnected table)."
+  grain: "quiz question (disconnected from the star schema — no relationships, by design)"
+  filters: "none — deliberately outside the model's filter graph"
+  unit: "score (0–10)"
+  direction_is_good: "up"
+
+edge_cases:
+  - "DUAL MODE, labeled: (a) custom-visual mode — live score state lives INSIDE hpSortingQuiz; the DAX score card beside it shows quiz metadata (questions available, era mix) because DAX cannot see visual-internal state; (b) fallback mode (native pattern, decision 2026-07-16) — score IS a DAX measure counting matches between disconnected slicer selections and the answer key"
+  - "QuizQuestions is curated data (entered/CSV): characters present in both eras, ≥1 yellow-vs-flesh same-character pair (E10) — curation recorded at stage 4"
+  - "Labeled 'scenario logic' wherever the score appears (invariant 5)"
+
+targets:
+  exists: false
+  source: "scenario logic — label as such"
+
+owner: "entrant (definition steward)"
+synonyms: "Score, Matches Correct"
+conflicts_checked: true
+
+implementation:
+  measure_name: ""
+  display_folder: ""
+  format_string: ""

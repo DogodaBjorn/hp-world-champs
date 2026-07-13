@@ -1,0 +1,29 @@
+contract: metric
+metric_id: "M-006"
+name: "Unique Minifigures"
+date: "2026-07-12"
+
+definition:
+  plain_language: "How many different minifigure designs appear in the sets in view."
+  formula_in_words: "Distinct count of fig_num on the minifigs-in-sets fact (v1 inventories)."
+  grain: "(set, minifig) fact; meaningful per era, theme, character, or overall"
+  filters: "v1 inventories by fact construction"
+  unit: "count"
+  direction_is_good: "context-dependent"
+
+edge_cases:
+  - "The same fig in two sets counts once (distinct), but the same character as two designs counts twice — that distinction is M-007's job"
+  - "E9's '576 unique HP figs, all with img_url' is re-derived at stage 4; if any img_url is empty, the count and the gallery/quiz pool note it in the evidence manifest"
+
+targets:
+  exists: false
+  source: "n/a"
+
+owner: "entrant (definition steward)"
+synonyms: "Minifigs, Unique Figs"
+conflicts_checked: true
+
+implementation:
+  measure_name: ""
+  display_folder: ""
+  format_string: ""

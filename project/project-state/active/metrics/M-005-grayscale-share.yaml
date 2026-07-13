@@ -1,0 +1,32 @@
+contract: metric
+metric_id: "M-005"
+name: "Grayscale Share %"
+date: "2026-07-12"
+
+definition:
+  plain_language: "What share of the parts in view are gray, black, or white bricks."
+  formula_in_words: "Parts Shipped where the color is in the grayscale set, divided by total Parts Shipped."
+  grain: "fact roll-ups; reported per era, per root theme (E8), and per set with a ≥1,000-parts visual threshold for the E7 'grayest large set' ranking"
+  filters: "grayscale set = DimColors.IsGrayscale (Power Query column, rule below); denominator is all Parts Shipped in context"
+  unit: "percentage"
+  direction_is_good: "context-dependent (SW high vs HP low IS the punchline)"
+
+edge_cases:
+  - "GRAY-SET RULE (Q1 resolved): color name contains 'Gray', 'Grey', 'Black', or 'White' (case-insensitive) — 34 of 275 colors qualify"
+  - "INCLUDED by decision: 'Glow in Dark White' (it is a white brick that glows), 'Trans-Black' and 'Trans-Black IR Lens' (smoke-tinted = achromatic), Speckle Black-*, Modulex/HO/Pearl/Chrome gray-black-white variants"
+  - "EXCLUDED by decision: metallic silvers and titaniums (Metallic/Flat/Chrome/Two-tone Silver, Pearl/HO Titanium) — finish reads as material, not palette gray; including them would also break comparability with the prior analysis (E7/E8) this build re-verifies"
+  - "Pseudo-colors -1/9999 fail the name rule, so they sit in the denominator only — consistent with M-002"
+  - "Zero denominator (no parts in context) → blank, never 0%"
+
+targets:
+  exists: false
+  source: "n/a"
+
+owner: "entrant (definition steward)"
+synonyms: "Gray Share, % Grayscale"
+conflicts_checked: true
+
+implementation:
+  measure_name: ""
+  display_folder: ""
+  format_string: ""
