@@ -1,0 +1,126 @@
+# Model blueprint contract — filled at stage 3. Grain first.
+
+contract: model-blueprint
+project: "hp-world-champs"
+date: "2026-07-13"
+
+facts:
+  - name: "FactPartsInSets"
+    grain: "ONE ROW MEANS: this many copies of one part in one color were included in the version-1 inventory of one set, spare parts excluded"
+    source: "inventory_parts joined to inventories (version=1) via DataFolder parameter; is_spare=false; img_url dropped; grouped by (set_num, part_num, color_id) summing quantity in case a set's v1 inventory repeats a (part,color)"
+    date_keys: []                  # no date below year grain; year reaches facts through DimSets
+    expected_rows: "~1M (from ~1.5M raw inventory_parts rows before v1/no-spare filter)"
+  - name: "FactMinifigsInSets"
+    grain: "ONE ROW MEANS: this many copies of one minifigure design were included in the version-1 inventory of one set"
+    source: "inventory_minifigs joined to inventories (version=1); grouped by (set_num, fig_num) summing quantity"
+    date_keys: []
+    expected_rows: "~20k"
+
+dimensions:
+  - name: "DimSets"
+    grain: "one row means one LEGO set (all themes — R5/R6 need the full universe)"
+    source: "sets.csv + themes.csv flattened in Power Query"
+    attributes: ["set_num (key)", "name", "year", "num_parts (M-003 source)", "Root Theme (recursive parent_id flatten to topmost ancestor)", "Sub Theme", "Era (M-008 rule; only for Root Theme = Harry Potter, else n/a)", "img_url (data category Image URL)"]
+  - name: "DimColors"
+    grain: "one row means one Rebrickable color"
+    source: "colors.csv"
+    attributes: ["id (key)", "name", "Hex = '#' & rgb (drives field-value conditional formatting)", "is_trans", "IsGrayscale (M-005 name rule, Power Query)", "IsPseudoColor (id in {-1, 9999})", "y1", "y2"]
+  - name: "DimParts"
+    grain: "one row means one part design"
+    source: "parts.csv merged with part_categories.csv (category name as one text column)"
+    attributes: ["part_num (key)", "name", "Part Category", "part_material"]
+  - name: "DimMinifigures"
+    grain: "one row means one minifigure design"
+    source: "minifigs.csv"
+    attributes: ["fig_num (key)", "name", "Character (text before first ',' or '(', trimmed — M-007 heuristic)", "num_parts", "img_url (Image URL)"]
+  - name: "DimYear"
+    grain: "one row means one calendar year, contiguous 1949–2027"
+    source: "calculated table"
+    attributes: ["Year (int)", "Year Start Date (hidden date column — candidate for date-table marking, verified against TMDL schema at stage 4)"]
+  - name: "QuizQuestions"
+    grain: "one row means one curated quiz question (10 rows) — DISCONNECTED, deliberately relationship-free"
+    source: "entered data / small CSV curated at stage 4 from E9/E10 verification"
+    attributes: ["question_no", "fig_num", "img_url", "character", "era", "set_num", "set_name", "distractor lists"]
+
+date_dimension:
+  marked: true                     # via hidden Year Start Date column if schema-verified at s4; otherwise recorded deviation — no date-keyed facts exist in this dataset
+  range: "1949–2027 fixed (dataset max year is 2027; no extension logic needed for a one-shot contest snapshot)"
+  business_flags: ["IsHiatusYear (2012–2017) — drives the P1 gap annotation"]
+
+relationships:
+  - from: "FactPartsInSets[set_num]"
+    to: "DimSets[set_num]"
+    cardinality: many-to-one
+    cross_filter: single
+    justification: ""
+  - from: "FactPartsInSets[color_id]"
+    to: "DimColors[id]"
+    cardinality: many-to-one
+    cross_filter: single
+    justification: ""
+  - from: "FactPartsInSets[part_num]"
+    to: "DimParts[part_num]"
+    cardinality: many-to-one
+    cross_filter: single
+    justification: ""
+  - from: "FactMinifigsInSets[set_num]"
+    to: "DimSets[set_num]"
+    cardinality: many-to-one
+    cross_filter: single
+    justification: ""
+  - from: "FactMinifigsInSets[fig_num]"
+    to: "DimMinifigures[fig_num]"
+    cardinality: many-to-one
+    cross_filter: single
+    justification: ""
+  - from: "DimSets[year]"
+    to: "DimYear[Year]"
+    cardinality: many-to-one
+    cross_filter: single
+    justification: "WRITTEN OUTRIGGER JUSTIFICATION (star-schema rule): year must filter DimSets itself because M-001 counts sets that may lack v1 inventory rows — a year key on the facts could not serve M-001, and a contiguous year axis is required to keep the 2012–2017 hiatus visible (R1). Single-direction DimYear→DimSets→facts; no bidirectional anywhere."
+
+measure_table:
+  name: "_Measures"
+  folder_taxonomy: "01 Scale (Sets, Parts Shipped, Avg Parts per Set) / 02 Color (Distinct Colors Used, Grayscale Share %) / 03 Minifigures (Unique Minifigures, Variants per Character) / 04 Quiz — scenario logic (Quiz Score et al.) / 05 Display helpers (titles, labels, SVG)"
+
+metric_map:
+  - metric_id: "M-001"
+    path: "COUNTROWS(DimSets)"
+  - metric_id: "M-002"
+    path: "SUM(FactPartsInSets[quantity]) — v1/no-spares by fact construction"
+  - metric_id: "M-003"
+    path: "AVERAGE(DimSets[num_parts])"
+  - metric_id: "M-004"
+    path: "DISTINCTCOUNT(FactPartsInSets[color_id]) excluding DimColors[IsPseudoColor]"
+  - metric_id: "M-005"
+    path: "DIVIDE(CALCULATE([Parts Shipped], DimColors[IsGrayscale]=TRUE), [Parts Shipped])"
+  - metric_id: "M-006"
+    path: "DISTINCTCOUNT(FactMinifigsInSets[fig_num])"
+  - metric_id: "M-007"
+    path: "[Unique Minifigures] evaluated at DimMinifigures[Character] grain"
+  - metric_id: "M-008"
+    path: "column DimSets[Era] (Power Query, M-008 rule)"
+  - metric_id: "M-009"
+    path: "scenario logic over disconnected QuizQuestions; dual mode per contract (visual-internal live score / fallback DAX count)"
+
+not_available:
+  - metric_or_field: "Revenue, retail price, units sold, box office"
+    reason: "no commercial columns anywhere in the Rebrickable schema"
+    nearest_honest_proxy: "Parts Shipped as a physical-scale proxy — caveat: measures plastic, not money; stated as such in narrative only"
+  - metric_or_field: "Why the hiatus happened (film franchise end, licensing)"
+    reason: "not data; real-world context"
+    nearest_honest_proxy: "narrative text, visually separated from data claims (mission §2)"
+  - metric_or_field: "Set retirement dates / availability windows"
+    reason: "not in the dataset (only release year)"
+    nearest_honest_proxy: "none"
+  - metric_or_field: "Canonical character identity for minifigs"
+    reason: "only free-text names exist; Character is a heuristic split"
+    nearest_honest_proxy: "M-007 name-prefix heuristic — caveat recorded in its contract; quiz pool hand-curated to dodge misparses"
+  - metric_or_field: "Set bundles composition"
+    reason: "inventory_sets is out of scope by mission §3"
+    nearest_honest_proxy: "none needed"
+
+gate_g3:
+  every_metric_mapped: true
+  grains_declared_first: true
+  user_accepted: true              # 2026-07-13 in-session: blueprint + not-available list accepted; scope decision = STRICT (HP = root-246 subtree; advent/CMF look-alikes excluded, counts recorded at s4)

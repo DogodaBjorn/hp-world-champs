@@ -1,8 +1,8 @@
 # pbi-atelier project state — schema: lifecycle/status.schema.yaml
 project: hp-world-champs
 template_version: 0.3.1
-current_stage: 3
-updated: 2026-07-12
+current_stage: 4
+updated: 2026-07-13
 stages:
   s0_intake:
     status: passed
@@ -17,11 +17,11 @@ stages:
     evidence: "project-state/active/02-metrics.md"
     gate_note: "G2: user signed glossary as written 2026-07-12 (9 contracts; gray-set, M-003 source, pseudo-color decisions explicit)"
   s3_model_design:
-    status: in_progress
-    evidence: ""
-    gate_note: ""
+    status: passed
+    evidence: "project-state/active/03-model-blueprint.md"
+    gate_note: "G3: user accepted 2026-07-13; strict HP scope (root-246 subtree); starter audit verified 3 bidis; justified DimYear outrigger; zero bidirectional in design"
   s4_model_build:
-    status: pending
+    status: in_progress
     evidence: ""
     gate_note: ""
   s5_design:
