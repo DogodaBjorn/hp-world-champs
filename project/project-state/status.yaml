@@ -1,8 +1,8 @@
 # pbi-atelier project state — schema: lifecycle/status.schema.yaml
 project: hp-world-champs
 template_version: 0.3.1
-current_stage: 7
-updated: 2026-07-13
+current_stage: 6
+updated: 2026-07-14
 stages:
   s0_intake:
     status: passed
@@ -26,13 +26,13 @@ stages:
     gate_note: "G4: strict validators clean; inventory=blueprint (all diffs explained); E1-E10 re-derived (evidence-manifest.md); implementation blocks filled; Desktop follow-ups in BUILD_LOG"
   s5_design:
     status: passed
-    evidence: "project-state/active/05-design.md"
-    gate_note: "G5: user chose D1 Illuminated Storybook + signed 3 deviations (true-hex palettes, Hex fx path, definitions-as-tooltips); quartet complete; contrast all-PASS both states"
+    evidence: "../../design_handoff_powerbi/README.md"
+    gate_note: "G5 re-signed 2026-07-14: user rejected the rendered v1 ('this looks ridiculous') and its storybook uplift, and supplied a complete external design handoff (design_handoff_powerbi/ — HTML hi-fi prototypes as visual truth + per-page specs + theme + data model). That bundle IS the v2 design contract; user decisions: Georgia substitutes Crimson Pro (font not installable on judges' machines), clean-room rebuild as two-marriages-v2. Prior 05-design.md kept for v1 history."
   s6_report_build:
-    status: passed
-    evidence: "project-state/active/06-build.md"
-    gate_note: "G6: pbir validate 0 errors; strict TMDL clean; fidelity review passed with 5 recorded deviations (none reopen G5); hpSortingQuiz packaged lint-clean; Desktop steps D1-D11 in BUILD_LOG"
-  s7_delivery:
     status: in_progress
+    evidence: "project-state/active/06-build.md"
+    gate_note: "G6 REOPENED 2026-07-14 for the two-marriages-v2 clean-room rebuild per CLAUDE_CODE_PROMPT.md brief: pixel-perfect vs measured prototype rects (Playwright), Deneb charts, new model per data_model.md, new sorting-quiz-v2 visual. v1 report/model frozen as reference, not patched. Prior v1 G6 pass note: pbir validate 0 errors; fidelity review 5 recorded deviations; hpSortingQuiz packaged."
+  s7_delivery:
+    status: pending
     evidence: "project-state/active/07-delivery.md"
-    gate_note: "G7 agent-side complete 2026-07-13: sweeps green, ax-audit run (F1/F2 fixed), compliance sweep done, UAT + evidence manifest delivered; gate closes on user Desktop verification (D1-D11) + .pbix export + recorded acceptance"
+    gate_note: "Reset 2026-07-14 by the v2 rebuild (was: agent-side complete for v1). G7 re-runs on the delivered v2 state; user Desktop verification + .pbix export + acceptance remain the closing conditions before the 2026-07-19 deadline."

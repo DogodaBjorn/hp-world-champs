@@ -71,3 +71,28 @@
   Desktop-dependent (D6) ✅ · BUILD_LOG current with D1–D11 ✅
 
 Rendered confirmation of D6–D11 lands in the s7 sweep (user runs Desktop).
+
+## 2026-07-14 — G6 reopened: two-marriages-v2 clean-room rebuild
+
+Brief (`CLAUDE_CODE_PROMPT.md`, user-supplied): rebuild from scratch as
+`project/pbip/two-marriages-v2.*`, treating the v1 attempt as untrusted.
+Order S1→S2→S3→S4a→S4b→T1→S5; per-page DoD from the
+`powerbi-pixel-perfect` skill; [TK]s logged in `TK_GAPS.md`.
+
+### Model blueprint addendum (grains declared before build)
+
+| table | 1 row means | source |
+|---|---|---|
+| Sets | one HP set (2001–2026) | sets.csv, root-246 subtree (v1-verified filter) |
+| Minifigs | one minifig appearance in one set | inventory_minifigs × minifigs, v1 inventories |
+| SetColors | one (set × color) with its part count | inventory_parts aggregated to set×color |
+| Colors | one LEGO color | colors.csv |
+| DimYear | one year 2001–2026, marked date table | generated |
+| QuizPool | one curated quiz round (10 rows) | curated fig_nums from v1 evidence |
+
+Metric formulas follow `design_handoff_powerbi/data_model.md` (set-catalog
+grain: Parts per Year = SUM(Sets[num_parts]) — deliberately NOT the v1
+inventory-based Parts Shipped; the two disagree, e.g. 2018: 15,234 vs
+15,053, and the handoff wins for v2). M layer reuses the v1 firewall-proof
+staging architecture (Raw* expressions only touch File.Contents; loaded
+tables are references-only).

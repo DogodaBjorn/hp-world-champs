@@ -51,6 +51,8 @@ adopt a new idea into it, add its source here in the same change
 | **[Rebrickable](https://rebrickable.com/)** | The LEGO database the entire entry is built on — every set, part, color, and minifigure, plus the image CDN the report renders from. Attribution appears on every report page. | semantic model, all pages |
 | **Stephanie Bruno** | The Round 2 starter model the contest provided; consulted as read-only modeling reference. | stage-3 audit, gallery-post credit |
 | **Power BI Dataviz World Champs organizers** (Fabric community) | The Round 2 brief whose constraints and judging criteria shape the whole build. | intake contract, stage-7 compliance sweep |
+| **Bjorn (requester) — `design_handoff_powerbi/` bundle** | The v2 hi-fi HTML prototypes, per-page specs, theme, and Playwright measurement tooling that the two-marriages-v2 pixel-perfect rebuild reproduces. | design_handoff_powerbi/, two-marriages-v2 |
+| **Daniel Marsh-Patrick** ([Deneb](https://deneb-viz.github.io/)) | Already credited above as a tool; lands concretely in v2: every brick chart, palette strip, and composition bar. | two-marriages-v2 report, deneb-specs |
 
 ## Built with
 

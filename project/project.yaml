@@ -14,3 +14,4 @@ modules:
   - a11y-studio
   - table-studio
   - canvas-studio
+  - deneb-studio  # enabled 2026-07-14: v2 pixel-perfect handoff mandates Deneb for brick charts/palette strips/composition bars

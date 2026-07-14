@@ -68,3 +68,25 @@ worst passing text pair 4.58:1 (ink_secondary on canvas), dark-state floor
 - None blocking. s6 build notes carried in the handoff (Desktop-only binning,
   show-items-with-no-data behavior, .pbiviz import); fallback decision date
   2026-07-16 stands.
+
+## 2026-07-14 — v2 pivot: external pixel-perfect handoff supersedes the quartet
+
+The user rejected the rendered v1 report ("not even worth being called a
+first draft") and, after one abandoned in-repo uplift attempt (storybook,
+archived in git), supplied a **complete external design handoff**:
+`design_handoff_powerbi/` — HTML hi-fi prototypes (visual truth), per-page
+specs S1/S2/S3/S4a/S4b/S5/T1, theme.json, data_model.md, brick-chart recipe,
+Deneb starting specs, quiz-visual spec, and Playwright measurement tools.
+
+That bundle is now the stage-5 design contract for the v2 build
+(`two-marriages-v2`). Decisions recorded:
+
+- **Font:** Crimson Pro is not installed and Power BI cannot embed fonts —
+  judges would hit silent fallback. User chose the handoff's own documented
+  fallback: **Georgia everywhere** (flagged, per README §Typography).
+- **Positions are measured, never eyeballed** — `tools/extract_layout.mjs`
+  output is normative; page-spec tables are cross-checks.
+- **Deneb** (free, certified AppSource visual) renders all brick charts,
+  palette strips, and composition bars → `deneb-studio` module enabled.
+- v1 report, model, and hpSortingQuiz stay frozen as reference. The v1
+  quartet and its G5 sign-offs remain valid history for v1 only.
