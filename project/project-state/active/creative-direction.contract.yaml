@@ -97,6 +97,16 @@ chosen_because: >
   ship as metric-contract tooltips (contest 5-page cap).
 user_decided: true
 
+user_directed_uplift: >
+  2026-07-14, after first Desktop render: user judged the v1 build "not even
+  worth being called a first draft" and directed, verbatim intent: "a high
+  end almost web application like look and feel that breathes Harry Potter
+  Lego". D1's story voice stands; the visual system is re-specified as
+  "Storybook App" (design-brief v2): dark app-bar chrome, designed per-page
+  background art with painted card wells, soft shadows + radius 12 (token
+  amendment), cardVisual KPIs, decluttered charts, product-grade quiz UI.
+  Regeneration authorized without preserving Desktop edits.
+
 fidelity_checklist:              # stage 6 is judged against these
   - "Chapter numerals I–V present on every page header; attribution footer on every page"
   - "Ornament budget: drop cap (P1 takeaway) + chapter hairline rule + italic margin annotations ONLY — no texture images, no flourishes beyond these"

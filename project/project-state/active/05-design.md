@@ -1,5 +1,13 @@
 # 05 · Creative direction & design contract — hp-world-champs
 
+> **v2 changelog (2026-07-14):** user-directed uplift after first rendered
+> review — "high-end, almost web-application look and feel that breathes
+> Harry Potter LEGO". Design-brief tokens amended (radius 12, soft baked
+> shadows, dark app-bar chrome); design-handoff carries the v2 addendum with
+> background-art wireframes; story, page map, metric bindings, and all G5
+> signed deviations unchanged. Recorded in creative-direction.contract.yaml
+> → user_directed_uplift.
+
 **Date:** 2026-07-13 · **Direction:** D1 "The Illuminated Storybook" (user pick)
 **Contracts:** [creative-direction](creative-direction.contract.yaml) ·
 [design-brief](design-brief.contract.yaml) · [pages/](pages/) (6 page-purpose files)

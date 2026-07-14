@@ -3,6 +3,70 @@
 Direction: **D1 · The Illuminated Storybook** (creative-direction contract, user-chosen 2026-07-13)
 Canvas: 1280×720 · Theme: `theme.json` · Brand kit: `hp-bricks` (dataset-derived)
 
+---
+
+# v2 ADDENDUM — "Storybook App" (2026-07-14, user-directed uplift; SUPERSEDES the v1 chrome and layout tables below)
+
+**Intent (user, verbatim):** "a high end almost web application like look and
+feel that breathes Harry Potter Lego." Story, page map, metric bindings, alt
+text, tab-order rules and all G5 deviations stand; the *visual system* is
+replaced.
+
+## System
+
+1. **Designed background art per page** (canvas-studio doctrine): one PNG
+   @2x per page from SVG sources in `deliverables/canvas/` — dark app bar
+   (72px, #05131D) with brick-stud dot strip, faint oversized Georgia
+   chapter-numeral watermark, pre-painted white card wells (radius 12, soft
+   baked shadow #E9E0CC offset), footer hairline, and the current page's
+   gold nav underline. Furniture only — no data, no text besides the
+   watermark numeral.
+2. **Normative geometry:** `project/analysis/layout.py` — single source
+   shared by `gen_canvas.py` (wells) and `gen_report.py` (visuals). Charts
+   inset 16px inside their wells with transparent backgrounds; cardVisuals
+   float directly on the field carrying their own surface + dropShadow
+   (radius 12).
+3. **App-bar chrome per page:** numeral (Georgia 26pt, #DBAC34) + title
+   (Georgia 22pt, #F5F1E6) + kicker (Segoe UI 10pt, #A0A5A9); nav chips I–V
+   right-aligned, white 12pt on transparent buttons (active page = baked
+   gold underline). Footer: attribution 10pt #6C6E68 (unchanged text).
+4. **KPI slots → `cardVisual`** (new card): callout = era-2 value,
+   reference labels = era-1 value + ×delta (new 05 Display\Cards measures);
+   white surface, radius 12, dropShadow Outer 90D, no title (recorded hide —
+   the card's own labels carry meaning).
+5. **Chart declutter:** no axis titles, axis labels 10pt #6C6E68, legends
+   off (insight titles carry the series meaning), gridlines via theme
+   (#EFE6D0); bar/column data labels on via theme visualStyles.
+6. **Galleries/matrices:** transparent over wells; headers styled
+   (#6C6E68 on transparent, no vertical grid, rowPadding 6, textSize 11);
+   image columns sized via columnWidth.
+7. **Quiz visual:** product-grade CSS (tile cards radius 12 + soft shadow +
+   hover lift, fig images ≥48px, gold score pill, Georgia column headings,
+   animated locked-line draw). Same data roles and a11y contract.
+
+## v2 wireframes (slot → well; exact rects in layout.py)
+
+- **P1** — takeaway well (24,96,792,132) · hero well (24,244,792,424) ·
+  KPI rail: 3 cardVisuals (832, y=96/232/368, 424×120) · quote card well
+  (832,504,424,164) hosting the "seven silent years" note (Georgia italic
+  16pt) — replaces the chart overlay note.
+- **P2/P3 (mirror)** — 4 cardVisuals (y96, 296×104, x=24/336/648/960) ·
+  fig-gallery well (24,216,400,404; ~64px images) · top-sets well
+  (440,216,816,244) · palette-strip well (440,476,816,72) · size-dist well
+  (440,564,816,120).
+- **P4** — hero well (24,96,660,560) · theme-grayness cardVisual
+  (700,96,556,120) · rank well (700,232,556,236) · state button
+  (700,484,556,56) · rank-note well (700,556,380,100) · Voldemort image
+  (1096,540,160,116, dark only) · dark state = full-bleed designed dark PNG
+  (image visual, bookmark-toggled).
+- **P5** — quiz well (24,96,792,572) · quiz-questions cardVisual
+  (832,96,424,104) · era-legend well (832,216,424,88) · how-to-play well
+  (832,320,424,180) · fact-card well (832,516,424,152) with a verified
+  evidence line.
+- **tt-definitions** — 320×200 mini background, one well (8,8,304,184).
+
+---
+
 ## Reading me
 
 - Visual ids follow `design/naming-conventions.md` and match `measures.dax`.
