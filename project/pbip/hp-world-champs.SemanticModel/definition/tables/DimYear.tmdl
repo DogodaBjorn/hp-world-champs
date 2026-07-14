@@ -2,11 +2,13 @@
 /// this model: no facts carry dates below year grain. IsHiatusYear drives the
 /// P1 gap annotation (stage-1 business flag).
 table DimYear
+	lineageTag: 0c9bfb59-60f0-4a19-aa1c-bb00ace38180
 	dataCategory: Time
 
 	column Year
 		dataType: int64
 		formatString: 0
+		lineageTag: dcfa0907-d819-47c6-8ba1-ca48614fb6eb
 		summarizeBy: none
 		sourceColumn: Year
 
@@ -15,11 +17,15 @@ table DimYear
 		isHidden
 		isKey
 		formatString: yyyy-mm-dd
+		lineageTag: 0a1590f2-6b54-4579-9474-9d94fb1254a2
 		summarizeBy: none
 		sourceColumn: Year Start Date
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column IsHiatusYear
 		dataType: boolean
+		lineageTag: 12e03271-6ef9-437d-b399-849b8ac915ab
 		summarizeBy: none
 		sourceColumn: IsHiatusYear
 
@@ -34,3 +40,4 @@ table DimYear
 				    WithHiatus = Table.AddColumn(WithDate, "IsHiatusYear", each [Year] >= 2012 and [Year] <= 2017, type logical)
 				in
 				    WithHiatus
+

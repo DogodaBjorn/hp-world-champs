@@ -1,8 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
-  "name": "bm_p4_light",
   "displayName": "The light side",
+  "name": "bm_p4_light",
   "options": {
+    "applyOnlyToTargetVisuals": true,
     "targetVisualNames": [
       "btn_dark_side",
       "btn_light_side",
@@ -31,11 +32,10 @@
       "z_rule",
       "z_rule_dark"
     ],
-    "suppressData": true,
-    "applyOnlyToTargetVisuals": true
+    "suppressData": true
   },
   "explorationState": {
-    "version": "1.3",
+    "version": "1.0",
     "activeSection": "p4-color-dark-side",
     "sections": {
       "p4-color-dark-side": {

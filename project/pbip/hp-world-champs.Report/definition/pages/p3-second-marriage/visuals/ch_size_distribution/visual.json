@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "DimSets.num_parts",
-              "nativeQueryRef": "num_parts"
+              "nativeQueryRef": "num_parts",
+              "active": true
             }
           ]
         },
@@ -187,7 +188,6 @@
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": false
+    }
   }
 }

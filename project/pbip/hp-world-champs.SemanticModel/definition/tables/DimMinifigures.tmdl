@@ -2,20 +2,24 @@
 /// (name before first comma or paren) — known artifacts documented in the
 /// evidence manifest; the quiz is hand-curated by fig_num, never by Character.
 table DimMinifigures
+	lineageTag: 223c61bb-f9d5-48a6-86af-0771831247e2
 
 	column fig_num
 		dataType: string
 		isHidden
+		lineageTag: 70a379bb-e8b1-4098-a8c1-da7bcb8abc4b
 		summarizeBy: none
 		sourceColumn: fig_num
 
 	column 'Minifig Name'
 		dataType: string
+		lineageTag: 16a72456-42af-4a4c-a881-a0627ac3f665
 		summarizeBy: none
 		sourceColumn: Minifig Name
 
 	column Character
 		dataType: string
+		lineageTag: 3dccf40d-6d24-455a-90a6-73712d4257c9
 		summarizeBy: none
 		sourceColumn: Character
 
@@ -23,15 +27,17 @@ table DimMinifigures
 		dataType: int64
 		isHidden
 		formatString: 0
+		lineageTag: abb175f4-9390-489e-91fb-a9f524384997
 		summarizeBy: none
 		sourceColumn: num_parts
 
 	column img_url
 		dataType: string
 		isHidden
+		lineageTag: 6e70913f-98bc-4d05-b11e-d61df0de584c
+		dataCategory: ImageUrl
 		summarizeBy: none
 		sourceColumn: img_url
-		dataCategory: ImageUrl
 
 	partition DimMinifigures = m
 		mode: import
@@ -54,3 +60,4 @@ table DimMinifigures
 				    Renamed = Table.RenameColumns(WithCharacter, {{"name", "Minifig Name"}})
 				in
 				    Renamed
+

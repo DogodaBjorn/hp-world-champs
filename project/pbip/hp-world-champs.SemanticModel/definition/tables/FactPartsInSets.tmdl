@@ -2,16 +2,19 @@
 /// inventory of one set, spares excluded. Filters live HERE, not in DAX
 /// (M-002: the exclusions are the contract). img_url dropped (blueprint).
 table FactPartsInSets
+	lineageTag: e4f1163a-2c6a-46c5-89ed-6d5c25742796
 
 	column set_num
 		dataType: string
 		isHidden
+		lineageTag: 1eab57e2-1c72-4be9-a638-3810d8d8c547
 		summarizeBy: none
 		sourceColumn: set_num
 
 	column part_num
 		dataType: string
 		isHidden
+		lineageTag: 85f89d1c-bc7e-4a9e-a179-10b686668935
 		summarizeBy: none
 		sourceColumn: part_num
 
@@ -19,6 +22,7 @@ table FactPartsInSets
 		dataType: int64
 		isHidden
 		formatString: 0
+		lineageTag: ec18d4d9-074f-4fdd-aff3-27ee8d90c5c2
 		summarizeBy: none
 		sourceColumn: color_id
 
@@ -26,6 +30,7 @@ table FactPartsInSets
 		dataType: int64
 		isHidden
 		formatString: #,0
+		lineageTag: 10b75cbb-1b59-4989-adc2-c7e731dff412
 		summarizeBy: sum
 		sourceColumn: quantity
 
@@ -43,3 +48,4 @@ table FactPartsInSets
 				    Grouped = Table.Group(WithSet, {"set_num", "part_num", "color_id"}, {{"quantity", each List.Sum([quantity]), Int64.Type}})
 				in
 				    Grouped
+

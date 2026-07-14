@@ -1,41 +1,49 @@
 /// One row per LEGO set (full universe — ranking needs all themes).
 table DimSets
+	lineageTag: 1217e7ac-d3a6-41bb-9b4e-91e8b7140a61
 
 	column set_num
 		dataType: string
 		isHidden
+		lineageTag: 0b199e4a-b2a8-42f8-a223-bd79fb861589
 		summarizeBy: none
 		sourceColumn: set_num
 
 	column 'Set Name'
 		dataType: string
+		lineageTag: 2ef07f0e-5278-45f2-9c47-77933b5f1d29
 		summarizeBy: none
 		sourceColumn: Set Name
 
 	column year
 		dataType: int64
 		formatString: 0
+		lineageTag: 3dff54d8-f01b-4e05-b0c1-4a2257d38a3c
 		summarizeBy: none
 		sourceColumn: year
 
 	column num_parts
 		dataType: int64
 		formatString: #,0
+		lineageTag: 0a798b6c-8036-4682-9b11-16e6be968b95
 		summarizeBy: none
 		sourceColumn: num_parts
 
 	column 'Root Theme'
 		dataType: string
+		lineageTag: eb99d767-a04a-4fcb-b0a7-f83f48d4182a
 		summarizeBy: none
 		sourceColumn: Root Theme
 
 	column 'Sub Theme'
 		dataType: string
+		lineageTag: 3bb7d082-e993-435d-9559-3de12f22c0ca
 		summarizeBy: none
 		sourceColumn: Sub Theme
 
 	column Era
 		dataType: string
+		lineageTag: e8855f28-bbf0-4d26-b15e-f61d3929e5d9
 		summarizeBy: none
 		sourceColumn: Era
 		sortByColumn: EraSort
@@ -44,15 +52,17 @@ table DimSets
 		dataType: int64
 		isHidden
 		formatString: 0
+		lineageTag: b4fd6812-16cf-471f-a62b-f1904ae7327b
 		summarizeBy: none
 		sourceColumn: EraSort
 
 	column img_url
 		dataType: string
 		isHidden
+		lineageTag: b64d2c58-2096-4d13-aa4a-422158fb97b8
+		dataCategory: ImageUrl
 		summarizeBy: none
 		sourceColumn: img_url
-		dataCategory: ImageUrl
 
 	partition DimSets = m
 		mode: import
@@ -78,3 +88,4 @@ table DimSets
 				    Removed = Table.RemoveColumns(Renamed, {"theme_id"})
 				in
 				    Removed
+

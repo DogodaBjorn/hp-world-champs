@@ -1,37 +1,44 @@
 /// One row per Rebrickable color. Hex drives every true-color conditional-
 /// formatting rule; IsGrayscale implements the M-005 name rule as data.
 table DimColors
+	lineageTag: b20ff7c9-3280-44fd-8afd-59dde79e7a73
 
 	column id
 		dataType: int64
 		isHidden
 		formatString: 0
+		lineageTag: 61788474-cf15-4974-a761-5543de5e3b41
 		summarizeBy: none
 		sourceColumn: id
 
 	column 'Color Name'
 		dataType: string
+		lineageTag: 373e465e-2335-469e-9c51-631007ad034d
 		summarizeBy: none
 		sourceColumn: Color Name
 
 	column Hex
 		dataType: string
+		lineageTag: 6eae6267-9923-4641-b4e8-54f5bf868730
 		summarizeBy: none
 		sourceColumn: Hex
 
 	column is_trans
 		dataType: boolean
+		lineageTag: a8c482f6-1aa4-42dc-bdfd-5f3ffbae2a31
 		summarizeBy: none
 		sourceColumn: is_trans
 
 	column IsGrayscale
 		dataType: boolean
+		lineageTag: 44b0efec-220d-49e2-9739-7a7627184b8b
 		summarizeBy: none
 		sourceColumn: IsGrayscale
 
 	column IsPseudoColor
 		dataType: boolean
 		isHidden
+		lineageTag: 92e067b0-11b9-4bf8-a7cc-9834045a9d1a
 		summarizeBy: none
 		sourceColumn: IsPseudoColor
 
@@ -39,6 +46,7 @@ table DimColors
 		dataType: int64
 		isHidden
 		formatString: 0
+		lineageTag: 3c4be2eb-bb7c-44dc-a9c9-300c7bd45563
 		summarizeBy: none
 		sourceColumn: y1
 
@@ -46,6 +54,7 @@ table DimColors
 		dataType: int64
 		isHidden
 		formatString: 0
+		lineageTag: 80872ac3-39ca-4260-a251-ec3b4ce139b8
 		summarizeBy: none
 		sourceColumn: y2
 
@@ -65,3 +74,4 @@ table DimColors
 				    Removed = Table.RemoveColumns(Renamed, {"rgb", "num_parts", "num_sets"})
 				in
 				    Removed
+

@@ -1,16 +1,19 @@
 /// GRAIN: one row = n copies of one minifigure design in the version-1
 /// inventory of one set. v1 filter inherited from the V1Inventories staging.
 table FactMinifigsInSets
+	lineageTag: 256d0e95-38f5-4c73-9a0c-567e4c5d731d
 
 	column set_num
 		dataType: string
 		isHidden
+		lineageTag: 0777db76-4690-4e3b-8da5-3ff0ef86bc83
 		summarizeBy: none
 		sourceColumn: set_num
 
 	column fig_num
 		dataType: string
 		isHidden
+		lineageTag: 073c4b95-cbf0-446d-9da4-45493c73e398
 		summarizeBy: none
 		sourceColumn: fig_num
 
@@ -18,6 +21,7 @@ table FactMinifigsInSets
 		dataType: int64
 		isHidden
 		formatString: #,0
+		lineageTag: d54fa0a6-eeb5-44f1-a3e9-72eb8e2fa190
 		summarizeBy: sum
 		sourceColumn: quantity
 
@@ -33,3 +37,4 @@ table FactMinifigsInSets
 				    Grouped = Table.Group(WithSet, {"set_num", "fig_num"}, {{"quantity", each List.Sum([quantity]), Int64.Type}})
 				in
 				    Grouped
+

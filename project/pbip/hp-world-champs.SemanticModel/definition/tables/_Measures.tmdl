@@ -1,109 +1,119 @@
 /// Measure home. Folder taxonomy per blueprint: 01 Scale / 02 Color /
 /// 03 Minifigures / 04 Quiz (scenario logic) / 05 Display helpers (s6).
 table _Measures
+	lineageTag: 26f7163f-489a-4778-b5a3-aab279859ba5
 
 	/// How many LEGO sets were released in the current slice (M-001).
 	measure Sets = COUNTROWS ( DimSets )
 		formatString: #,0
 		displayFolder: 01 Scale
+		lineageTag: 6b76e579-b371-4810-b276-e770c88cda99
 
 	/// Physical parts in the boxes of the sets in view — v1 inventories, spares excluded by fact construction (M-002).
 	measure 'Parts Shipped' = SUM ( FactPartsInSets[quantity] )
 		formatString: #,0
 		displayFolder: 01 Scale
+		lineageTag: fd4221d7-b82d-477a-8294-8a57b66b7bd4
 
 	/// Typical set size: mean of Rebrickable's own per-set part count — deliberately NOT Parts Shipped / Sets (M-003).
 	measure 'Avg Parts per Set' = AVERAGE ( DimSets[num_parts] )
 		formatString: #,0
 		displayFolder: 01 Scale
+		lineageTag: b458d81e-4e26-4b8d-9b2b-634cb06dcec6
 
 	/// Different LEGO colors across the parts in view, pseudo-colors [Unknown]/[No Color] excluded (M-004).
 	measure 'Distinct Colors Used' = CALCULATE ( DISTINCTCOUNT ( FactPartsInSets[color_id] ), KEEPFILTERS ( DimColors[IsPseudoColor] = FALSE () ) )
 		formatString: #,0
 		displayFolder: 02 Color
+		lineageTag: f3e63ced-976c-4d77-b5d6-76996426792c
 
 	/// Share of parts whose color is gray, black, or white by the contracted name rule (M-005); blank when no parts in context.
 	measure 'Grayscale Share %' = DIVIDE ( CALCULATE ( [Parts Shipped], KEEPFILTERS ( DimColors[IsGrayscale] = TRUE () ) ), [Parts Shipped] )
 		formatString: 0.0%
 		displayFolder: 02 Color
+		lineageTag: 979c5f78-c3d2-45a3-9db4-4fd07c3b7bf0
 
 	/// Different minifigure designs appearing in the sets in view, via v1 inventories (M-006; at Character grain this is M-007).
 	measure 'Unique Minifigures' = DISTINCTCOUNT ( FactMinifigsInSets[fig_num] )
 		formatString: #,0
 		displayFolder: 03 Minifigures
+		lineageTag: 4ccb12d3-04f7-4575-a808-81df1e33488e
 
 	/// SCENARIO LOGIC: number of curated Sorting Quiz questions (M-009 metadata; live score is internal to the custom visual).
 	measure 'Quiz Questions' = COUNTROWS ( QuizQuestions )
 		formatString: 0
 		displayFolder: 04 Quiz (scenario logic)
+		lineageTag: e789926a-e60f-40dc-8b0c-934b7dfc20b9
 
 	/// Insight title for hero_parts_timeline: states the comeback, not the metric (design layer).
-	measure 'Title Home Hero' = ```
+	measure 'Title Home Hero' =
 			VAR P2018 = CALCULATE ( [Parts Shipped], DimYear[Year] = 2018 )
 			VAR PEarly = CALCULATE ( [Parts Shipped], DimYear[Year] >= 2001 && DimYear[Year] <= 2004 )
 			RETURN
 			"Gone 2012–2017 — the 2018 return shipped " & FORMAT ( P2018, "#,0" )
 			    & " parts, nearly twice the first four years combined (" & FORMAT ( PEarly, "#,0" ) & ")"
-			```
 		formatString: @
 		displayFolder: 05 Display\Titles
+		lineageTag: b032de1b-0dea-4b19-9eeb-6ba159803e80
 
 	/// Era-aware insight title for ch_size_distribution on the mirror pages.
-	measure 'Title Size Dist' = ```
+	measure 'Title Size Dist' =
 			SELECTEDVALUE ( DimSets[Era], "All eras" ) & ": a typical set has "
 			    & FORMAT ( [Avg Parts per Set], "#,0" ) & " parts"
-			```
 		formatString: @
 		displayFolder: 05 Display\Titles
+		lineageTag: 157e4e1d-8f74-4213-bdb9-c10a56d400f3
 
 	/// Insight title for hero_color_composition, light state (rank re-derived from the model, not hardcoded).
-	measure 'Title Color Hero' = ```
+	measure 'Title Color Hero' =
 			"Diagon Alley Wizarding Shops uses " & FORMAT ( [Distinct Colors Used], "#,0" )
 			    & " colors — no. 2 in " & FORMAT ( CALCULATE ( [Sets], REMOVEFILTERS () ), "#,0" ) & " sets, ever"
-			```
 		formatString: @
 		displayFolder: 05 Display\Titles
+		lineageTag: 4817c615-bb52-4fdc-986e-a32596562002
 
 	/// Insight title for hero_color_composition, dark state (grayest large STAR WARS set — honest rank per evidence manifest).
-	measure 'Title Gray Hero' = ```
+	measure 'Title Gray Hero' =
 			"Vader's TIE Advanced: " & FORMAT ( [Grayscale Share %], "0.0%" )
 			    & " gray — the grayest large Star Wars set"
-			```
 		formatString: @
 		displayFolder: 05 Display\Titles
+		lineageTag: fe52ed25-1b3d-4c13-9c54-41296b27517b
 
 	/// Era color fx (Format by: Field value): kit hexes for the era pair; neutral fallback. Semantic-color path signed at G5.
-	measure 'Color Era' = ```
+	measure 'Color Era' =
 			SWITCH (
 			    SELECTEDVALUE ( DimSets[Era] ),
 			    "First marriage (2001–2011)", "#AA7F2E",
 			    "Second marriage (2018– )", "#720E0F",
 			    "#6C6E68"
 			)
-			```
 		formatString: @
 		displayFolder: 05 Display\Colors
+		lineageTag: 5ac59298-30c0-41b4-bc71-080ff1edaa6c
 
 	/// Data-point fx: each mark painted in its brick's own hex (G5-signed true-color path for the palette visuals).
 	measure 'Color Hex' = SELECTEDVALUE ( DimColors[Hex] )
 		formatString: @
 		displayFolder: 05 Display\Colors
+		lineageTag: a3a9c022-284f-4725-92d2-785d9123e0d8
 
 	/// Data-point fx for the P4 rank charts: highlights the two hero sets, neutral otherwise.
-	measure 'Color Set Highlight' = ```
+	measure 'Color Set Highlight' =
 			SWITCH (
 			    SELECTEDVALUE ( DimSets[set_num] ),
 			    "76444-1", "#720E0F",
 			    "10175-1", "#DBAC34",
 			    "#6C6E68"
 			)
-			```
 		formatString: @
 		displayFolder: 05 Display\Colors
+		lineageTag: 671aba53-3443-435c-af1d-0a850bf523ea
 
 	column Value
 		dataType: string
 		isHidden
+		lineageTag: b8b90bbe-982e-40e2-8d16-24ee1cf9b0aa
 		summarizeBy: none
 		sourceColumn: Value
 
@@ -114,3 +124,4 @@ table _Measures
 				    Source = #table(type table [Value = text], {})
 				in
 				    Source
+

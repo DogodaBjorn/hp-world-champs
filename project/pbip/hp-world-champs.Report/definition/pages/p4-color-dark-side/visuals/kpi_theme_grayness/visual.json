@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "DimSets.Root Theme",
-              "nativeQueryRef": "Root Theme"
+              "nativeQueryRef": "Root Theme",
+              "active": true
             }
           ]
         },
@@ -179,8 +180,7 @@
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": false
+    }
   },
   "filterConfig": {
     "filters": [

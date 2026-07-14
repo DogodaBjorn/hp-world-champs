@@ -4,49 +4,58 @@
 /// same-character yellow-vs-flesh teaching pairs (Harry, Hermione — E10).
 /// Era strings match DimSets[Era] exactly (M-008: one definition everywhere).
 table QuizQuestions
+	lineageTag: f6a26947-6374-4b24-9bc0-c3936f57b2f3
 
 	column question_no
 		dataType: int64
 		formatString: 0
+		lineageTag: b28b26f9-59d9-4887-a3f6-b973c6680f95
 		summarizeBy: none
 		sourceColumn: question_no
 
 	column fig_num
 		dataType: string
+		lineageTag: 4eb0356a-8a1d-460b-aaa2-0dba9f4200ad
 		summarizeBy: none
 		sourceColumn: fig_num
 
 	column fig_img_url
 		dataType: string
+		lineageTag: f514f39d-3169-45a5-b5fa-d7d39accaffb
+		dataCategory: ImageUrl
 		summarizeBy: none
 		sourceColumn: fig_img_url
-		dataCategory: ImageUrl
 
 	column character
 		dataType: string
+		lineageTag: bcb594f2-68c2-4d28-a11c-a9832a67d955
 		summarizeBy: none
 		sourceColumn: character
 
 	column era
 		dataType: string
+		lineageTag: 546190c8-276c-4788-bdc5-a79a79429ad6
 		summarizeBy: none
 		sourceColumn: era
 
 	column set_num
 		dataType: string
+		lineageTag: 1a9cc60f-e77a-4b1c-a85f-296abd9a8977
 		summarizeBy: none
 		sourceColumn: set_num
 
 	column set_name
 		dataType: string
+		lineageTag: 0471798a-1db5-4db6-accc-298438936469
 		summarizeBy: none
 		sourceColumn: set_name
 
 	column set_img_url
 		dataType: string
+		lineageTag: 2f671cbe-8f4f-4d66-a570-87abba4c958c
+		dataCategory: ImageUrl
 		summarizeBy: none
 		sourceColumn: set_img_url
-		dataCategory: ImageUrl
 
 	partition QuizQuestions = m
 		mode: import
@@ -68,3 +77,4 @@ table QuizQuestions
 				        })
 				in
 				    Source
+

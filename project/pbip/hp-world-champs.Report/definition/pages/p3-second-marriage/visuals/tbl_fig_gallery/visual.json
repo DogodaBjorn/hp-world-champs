@@ -42,7 +42,8 @@
                 }
               },
               "queryRef": "DimMinifigures.Character",
-              "nativeQueryRef": "Character"
+              "nativeQueryRef": "Character",
+              "active": false
             }
           ]
         },
@@ -180,8 +181,7 @@
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": false
+    }
   },
   "filterConfig": {
     "filters": [

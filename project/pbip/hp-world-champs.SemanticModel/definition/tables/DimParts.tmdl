@@ -1,25 +1,30 @@
 /// One row per part design, with its category flattened in (blueprint: one
 /// text column, no snowflake to part_categories).
 table DimParts
+	lineageTag: 5dbf0985-acea-4a74-9509-09f09a9b6ef0
 
 	column part_num
 		dataType: string
 		isHidden
+		lineageTag: cba1b9f4-fc6f-4d54-b852-871b0ec98d9c
 		summarizeBy: none
 		sourceColumn: part_num
 
 	column 'Part Name'
 		dataType: string
+		lineageTag: d61425a0-2344-4e83-a5e6-60cb40c7685d
 		summarizeBy: none
 		sourceColumn: Part Name
 
 	column 'Part Category'
 		dataType: string
+		lineageTag: 76e9c19a-57db-443a-bc09-36d436167df0
 		summarizeBy: none
 		sourceColumn: Part Category
 
 	column part_material
 		dataType: string
+		lineageTag: f2ae7bd9-e479-42ef-9f5c-b263b630e834
 		summarizeBy: none
 		sourceColumn: part_material
 
@@ -38,3 +43,8 @@ table DimParts
 				    Removed = Table.RemoveColumns(Renamed, {"part_cat_id"})
 				in
 				    Removed
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Exception
+

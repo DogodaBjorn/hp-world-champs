@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "DimSets.Set Name",
-              "nativeQueryRef": "Set Name"
+              "nativeQueryRef": "Set Name",
+              "active": true
             }
           ]
         },
@@ -67,6 +68,42 @@
           }
         ]
       }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {}
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "Color Set Highlight"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -179,43 +216,6 @@
                 }
               }
             }
-          }
-        }
-      ]
-    },
-    "drillFilterOtherVisuals": false,
-    "objects": {
-      "dataPoint": [
-        {
-          "properties": {}
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "Color Set Highlight"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
           }
         }
       ]

@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "DimMinifigures.img_url",
-              "nativeQueryRef": "img_url"
+              "nativeQueryRef": "img_url",
+              "active": true
             }
           ]
         },
@@ -165,8 +166,7 @@
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": false
+    }
   },
   "filterConfig": {
     "filters": [

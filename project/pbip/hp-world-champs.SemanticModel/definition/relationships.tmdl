@@ -21,3 +21,4 @@ relationship FactMinifigsInSets_DimMinifigures
 relationship DimSets_DimYear
 	fromColumn: DimSets.year
 	toColumn: DimYear.Year
+
