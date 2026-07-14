@@ -1,0 +1,14 @@
+{
+  "name": "design_handoff_powerbi",
+  "version": "1.0.0",
+  "description": "local tooling for the pixel-perfect handoff (Playwright measurement)",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "private": true,
+  "devDependencies": {
+    "playwright": "^1.61.1"
+  }
+}

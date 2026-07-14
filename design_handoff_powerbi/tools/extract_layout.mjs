@@ -1,1 +1,38 @@
-// tools/extract_layout.mjs - dump exact element rects from the HTML prototype\n// usage: node tools/extract_layout.mjs <html file> > layout.json\nimport { chromium } from 'playwright';\nimport { pathToFileURL } from 'url';\nimport { resolve } from 'path';\nconst file = process.argv[2];\nif (!file) { console.error('usage: node extract_layout.mjs <html file>'); process.exit(1); }\nconst browser = await chromium.launch();\nconst page = await browser.newPage({ viewport: { width: 1600, height: 1200 } });\nawait page.goto(pathToFileURL(resolve(file)).href);\nawait page.waitForTimeout(4000); // let DC runtime + fonts render\nconst data = await page.evaluate(() => {\n  const out = {};\n  const r2 = (n) => Math.round(n * 10) / 10;\n  for (const screen of document.querySelectorAll('[data-screen-label]')) {\n    const sr = screen.getBoundingClientRect();\n    const els = [];\n    for (const el of screen.querySelectorAll('*')) {\n      const r = el.getBoundingClientRect();\n      if (r.width < 2 || r.height < 2) continue;\n      const cs = getComputedStyle(el);\n      const ownText = [...el.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent.trim()).join(' ').trim();\n      els.push({\n        tag: el.tagName.toLowerCase(),\n        text: ownText.slice(0, 80) || undefined,\n        rect: { x: r2(r.x - sr.x), y: r2(r.y - sr.y), w: r2(r.width), h: r2(r.height) },\n        font: ownText ? { family: cs.fontFamily, size: cs.fontSize, weight: cs.fontWeight, color: cs.color, letterSpacing: cs.letterSpacing, transform: cs.textTransform } : undefined,\n        bg: cs.backgroundColor !== 'rgba(0, 0, 0, 0)' ? cs.backgroundColor : undefined,\n        bgImage: cs.backgroundImage !== 'none' ? cs.backgroundImage : undefined,\n        border: cs.borderTopWidth !== '0px' ? cs.borderTopWidth + ' ' + cs.borderTopStyle + ' ' + cs.borderTopColor : undefined,\n      });\n    }\n    out[screen.dataset.screenLabel] = { size: { w: r2(sr.width), h: r2(sr.height) }, elements: els };\n  }\n  return out;\n});\nconsole.log(JSON.stringify(data, null, 1));\nawait browser.close();\n
+// tools/extract_layout.mjs - dump exact element rects from the HTML prototype
+// usage: node tools/extract_layout.mjs <html file> > layout.json
+import { chromium } from 'playwright';
+import { pathToFileURL } from 'url';
+import { resolve } from 'path';
+const file = process.argv[2];
+if (!file) { console.error('usage: node extract_layout.mjs <html file>'); process.exit(1); }
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1600, height: 1200 } });
+await page.goto(pathToFileURL(resolve(file)).href);
+await page.waitForTimeout(4000); // let DC runtime + fonts render
+const data = await page.evaluate(() => {
+  const out = {};
+  const r2 = (n) => Math.round(n * 10) / 10;
+  for (const screen of document.querySelectorAll('[data-screen-label]')) {
+    const sr = screen.getBoundingClientRect();
+    const els = [];
+    for (const el of screen.querySelectorAll('*')) {
+      const r = el.getBoundingClientRect();
+      if (r.width < 2 || r.height < 2) continue;
+      const cs = getComputedStyle(el);
+      const ownText = [...el.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent.trim()).join(' ').trim();
+      els.push({
+        tag: el.tagName.toLowerCase(),
+        text: ownText.slice(0, 80) || undefined,
+        rect: { x: r2(r.x - sr.x), y: r2(r.y - sr.y), w: r2(r.width), h: r2(r.height) },
+        font: ownText ? { family: cs.fontFamily, size: cs.fontSize, weight: cs.fontWeight, color: cs.color, letterSpacing: cs.letterSpacing, transform: cs.textTransform } : undefined,
+        bg: cs.backgroundColor !== 'rgba(0, 0, 0, 0)' ? cs.backgroundColor : undefined,
+        bgImage: cs.backgroundImage !== 'none' ? cs.backgroundImage : undefined,
+        border: cs.borderTopWidth !== '0px' ? cs.borderTopWidth + ' ' + cs.borderTopStyle + ' ' + cs.borderTopColor : undefined,
+      });
+    }
+    out[screen.dataset.screenLabel] = { size: { w: r2(sr.width), h: r2(sr.height) }, elements: els };
+  }
+  return out;
+});
+console.log(JSON.stringify(data, null, 1));
+await browser.close();

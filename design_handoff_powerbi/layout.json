@@ -1,0 +1,9723 @@
+{
+ "S1 Home": {
+  "size": {
+   "w": 1280,
+   "h": 720
+  },
+  "elements": [
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 1,
+     "w": 1278,
+     "h": 689
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 1,
+     "w": 356,
+     "h": 689
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 29,
+     "y": 27,
+     "w": 299,
+     "h": 30
+    }
+   },
+   {
+    "tag": "svg",
+    "rect": {
+     "x": 29,
+     "y": 27,
+     "w": 66,
+     "h": 30
+    }
+   },
+   {
+    "tag": "circle",
+    "rect": {
+     "x": 36,
+     "y": 35,
+     "w": 20,
+     "h": 20
+    }
+   },
+   {
+    "tag": "circle",
+    "rect": {
+     "x": 66,
+     "y": 35,
+     "w": 20,
+     "h": 20
+    }
+   },
+   {
+    "tag": "path",
+    "rect": {
+     "x": 56,
+     "y": 43,
+     "w": 10,
+     "h": 2
+    }
+   },
+   {
+    "tag": "path",
+    "rect": {
+     "x": 57,
+     "y": 28,
+     "w": 6,
+     "h": 14
+    }
+   },
+   {
+    "tag": "svg",
+    "rect": {
+     "x": 109,
+     "y": 28.5,
+     "w": 46,
+     "h": 27
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 110.2,
+     "y": 37.8,
+     "w": 43.6,
+     "h": 16.6
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 115.4,
+     "y": 30.6,
+     "w": 12.5,
+     "h": 7.3
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 136.2,
+     "y": 30.6,
+     "w": 12.5,
+     "h": 7.3
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 29,
+     "y": 71,
+     "w": 299,
+     "h": 160.8
+    }
+   },
+   {
+    "tag": "div",
+    "text": "A LEGO Retrospective · 2001–2026",
+    "rect": {
+     "x": 29,
+     "y": 71,
+     "w": 299,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "1.82px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "The Boy Who Came Back",
+    "rect": {
+     "x": 29,
+     "y": 96,
+     "w": 299,
+     "h": 99.8
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "48px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 29,
+     "y": 209.8,
+     "w": 299,
+     "h": 22
+    }
+   },
+   {
+    "tag": "svg",
+    "rect": {
+     "x": 29,
+     "y": 209.8,
+     "w": 54,
+     "h": 22
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 29.8,
+     "y": 217.8,
+     "w": 52.5,
+     "h": 13.3
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 35,
+     "y": 210.6,
+     "w": 14,
+     "h": 7.3
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 63,
+     "y": 210.6,
+     "w": 14,
+     "h": 7.3
+    }
+   },
+   {
+    "tag": "svg",
+    "rect": {
+     "x": 87,
+     "y": 209.8,
+     "w": 54,
+     "h": 22
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 87.8,
+     "y": 217.8,
+     "w": 52.5,
+     "h": 13.3
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 93,
+     "y": 210.6,
+     "w": 14,
+     "h": 7.3
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 121,
+     "y": 210.6,
+     "w": 14,
+     "h": 7.3
+    }
+   },
+   {
+    "tag": "div",
+    "text": "LEGO Harry Potter vanished for seven years. It returned in 2018 at nearly triple",
+    "rect": {
+     "x": 29,
+     "y": 245.8,
+     "w": 299,
+     "h": 190.2
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "15px",
+     "weight": "400",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "text": "Key Takeaway",
+    "rect": {
+     "x": 46,
+     "y": 262.8,
+     "w": 265,
+     "h": 16.9
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "600",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "1.38px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 29,
+     "y": 450,
+     "w": 299,
+     "h": 47
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 29,
+     "y": 450,
+     "w": 93,
+     "h": 47
+    },
+    "border": "2px solid rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "text": "67 → 142",
+    "rect": {
+     "x": 29,
+     "y": 459,
+     "w": 93,
+     "h": 23
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "20px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "sets",
+    "rect": {
+     "x": 29,
+     "y": 482,
+     "w": 93,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 132,
+     "y": 450,
+     "w": 93,
+     "h": 47
+    },
+    "border": "2px solid rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "text": "267 → 731",
+    "rect": {
+     "x": 132,
+     "y": 459,
+     "w": 93,
+     "h": 23
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "20px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "avg parts",
+    "rect": {
+     "x": 132,
+     "y": 482,
+     "w": 93,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 235,
+     "y": 450,
+     "w": 93,
+     "h": 47
+    },
+    "border": "2px solid rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "text": "67 → 80",
+    "rect": {
+     "x": 235,
+     "y": 459,
+     "w": 93,
+     "h": 23
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "20px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "colors",
+    "rect": {
+     "x": 235,
+     "y": 482,
+     "w": 93,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 29,
+     "y": 552,
+     "w": 299,
+     "h": 122
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 29,
+     "y": 552,
+     "w": 144.5,
+     "h": 56
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(33, 27, 20)"
+   },
+   {
+    "tag": "svg",
+    "rect": {
+     "x": 41,
+     "y": 574,
+     "w": 15.5,
+     "h": 12
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 41.6,
+     "y": 578.3,
+     "w": 14.3,
+     "h": 6.3
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 43.6,
+     "y": 575.5,
+     "w": 3.9,
+     "h": 2.8
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 50.1,
+     "y": 575.5,
+     "w": 3.9,
+     "h": 2.8
+    }
+   },
+   {
+    "tag": "span",
+    "text": "I · The Yellow Years",
+    "rect": {
+     "x": 65.5,
+     "y": 563,
+     "w": 96,
+     "h": 34
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 183.5,
+     "y": 552,
+     "w": 144.5,
+     "h": 56
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(33, 27, 20)"
+   },
+   {
+    "tag": "svg",
+    "rect": {
+     "x": 195.5,
+     "y": 574,
+     "w": 11.8,
+     "h": 12
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 196,
+     "y": 578.7,
+     "w": 10.9,
+     "h": 4.8
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 197.5,
+     "y": 576.5,
+     "w": 3,
+     "h": 2.1
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 202.4,
+     "y": 576.5,
+     "w": 3,
+     "h": 2.1
+    }
+   },
+   {
+    "tag": "span",
+    "text": "II · The Boy Who Grew Up",
+    "rect": {
+     "x": 216.3,
+     "y": 563,
+     "w": 99.7,
+     "h": 34
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 29,
+     "y": 618,
+     "w": 144.5,
+     "h": 56
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(33, 27, 20)"
+   },
+   {
+    "tag": "svg",
+    "rect": {
+     "x": 41,
+     "y": 640,
+     "w": 13.4,
+     "h": 12
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 41.6,
+     "y": 644.5,
+     "w": 12.3,
+     "h": 5.4
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 43.2,
+     "y": 642.1,
+     "w": 3.3,
+     "h": 2.4
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 48.8,
+     "y": 642.1,
+     "w": 3.3,
+     "h": 2.4
+    }
+   },
+   {
+    "tag": "span",
+    "text": "III · Chamber of Colors",
+    "rect": {
+     "x": 63.4,
+     "y": 629,
+     "w": 98.1,
+     "h": 34
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 183.5,
+     "y": 618,
+     "w": 144.5,
+     "h": 56
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(33, 27, 20)"
+   },
+   {
+    "tag": "svg",
+    "rect": {
+     "x": 195.5,
+     "y": 640,
+     "w": 11.6,
+     "h": 12
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 196,
+     "y": 644.7,
+     "w": 10.6,
+     "h": 4.7
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 197.4,
+     "y": 642.6,
+     "w": 2.9,
+     "h": 2.1
+    }
+   },
+   {
+    "tag": "rect",
+    "rect": {
+     "x": 202.3,
+     "y": 642.6,
+     "w": 2.9,
+     "h": 2.1
+    }
+   },
+   {
+    "tag": "span",
+    "text": "IV · The Sorting Ceremony",
+    "rect": {
+     "x": 216.1,
+     "y": 629,
+     "w": 99.9,
+     "h": 34
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 357,
+     "y": 1,
+     "w": 922,
+     "h": 689
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 389,
+     "y": 31,
+     "w": 858,
+     "h": 17
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Parts shipped per year",
+    "rect": {
+     "x": 389,
+     "y": 31,
+     "w": 187.8,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "1.56px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 897,
+     "y": 31,
+     "w": 350,
+     "h": 16
+    }
+   },
+   {
+    "tag": "span",
+    "text": "First marriage 2001–2011",
+    "rect": {
+     "x": 897,
+     "y": 31,
+     "w": 157.1,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12.5px",
+     "weight": "400",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "span",
+    "rect": {
+     "x": 897,
+     "y": 33,
+     "w": 12,
+     "h": 12
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "span",
+    "text": "Second marriage 2018–2026",
+    "rect": {
+     "x": 1072.2,
+     "y": 31,
+     "w": 174.8,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12.5px",
+     "weight": "400",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "span",
+    "rect": {
+     "x": 1072.2,
+     "y": 33,
+     "w": 12,
+     "h": 12
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 389,
+     "y": 48,
+     "w": 858,
+     "h": 605
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 389,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 392.5,
+     "y": 559.3,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 392.5,
+     "y": 559.3,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 404.5,
+     "y": 559.3,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 389,
+     "y": 564.3,
+     "w": 26.9,
+     "h": 54.7
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 387.5,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2001",
+    "rect": {
+     "x": 395.5,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 421.9,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 425.4,
+     "y": 557,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 425.4,
+     "y": 557,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 437.4,
+     "y": 557,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 421.9,
+     "y": 562,
+     "w": 26.9,
+     "h": 57
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 420.4,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2002",
+    "rect": {
+     "x": 428.4,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 454.9,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 454.9,
+     "y": 610,
+     "w": 26.9,
+     "h": 9
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 453.3,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2003",
+    "rect": {
+     "x": 461.3,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487.8,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 488.5,
+     "y": 513.5,
+     "w": 25.4,
+     "h": 16
+    }
+   },
+   {
+    "tag": "span",
+    "text": "3,591",
+    "rect": {
+     "x": 488.5,
+     "y": 513.5,
+     "w": 25.4,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 491.3,
+     "y": 529.5,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 491.3,
+     "y": 529.5,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 503.3,
+     "y": 529.5,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487.8,
+     "y": 534.5,
+     "w": 26.9,
+     "h": 84.5
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 486.2,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2004",
+    "rect": {
+     "x": 494.2,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 520.7,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 524.2,
+     "y": 564.3,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 524.2,
+     "y": 564.3,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 536.2,
+     "y": 564.3,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 520.7,
+     "y": 569.3,
+     "w": 26.9,
+     "h": 49.8
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 519.2,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2005",
+    "rect": {
+     "x": 527.2,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 553.6,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 557.1,
+     "y": 555,
+     "w": 20.1,
+     "h": 16
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 557.1,
+     "y": 555,
+     "w": 20.1,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 553.6,
+     "y": 571,
+     "w": 26.9,
+     "h": 48
+    },
+    "bgImage": "repeating-linear-gradient(45deg, rgb(216, 207, 188), rgb(216, 207, 188) 4px, rgb(245, 239, 227) 4px, rgb(245, 239, 227) 8px)",
+    "border": "1px dashed rgb(181, 171, 149)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 552.1,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2006",
+    "rect": {
+     "x": 560.1,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 586.6,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 590,
+     "y": 591.8,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 590,
+     "y": 591.8,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 602,
+     "y": 591.8,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 586.6,
+     "y": 596.8,
+     "w": 26.9,
+     "h": 22.3
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 585,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2007",
+    "rect": {
+     "x": 593,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 619.5,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 622.9,
+     "y": 555,
+     "w": 20.1,
+     "h": 16
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 622.9,
+     "y": 555,
+     "w": 20.1,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 619.5,
+     "y": 571,
+     "w": 26.9,
+     "h": 48
+    },
+    "bgImage": "repeating-linear-gradient(45deg, rgb(216, 207, 188), rgb(216, 207, 188) 4px, rgb(245, 239, 227) 4px, rgb(245, 239, 227) 8px)",
+    "border": "1px dashed rgb(181, 171, 149)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 618,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2008",
+    "rect": {
+     "x": 626,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 652.4,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 655.8,
+     "y": 555,
+     "w": 20.1,
+     "h": 16
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 655.8,
+     "y": 555,
+     "w": 20.1,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 652.4,
+     "y": 571,
+     "w": 26.9,
+     "h": 48
+    },
+    "bgImage": "repeating-linear-gradient(45deg, rgb(216, 207, 188), rgb(216, 207, 188) 4px, rgb(245, 239, 227) 4px, rgb(245, 239, 227) 8px)",
+    "border": "1px dashed rgb(181, 171, 149)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 650.9,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2009",
+    "rect": {
+     "x": 658.9,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 685.4,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 688.8,
+     "y": 539.2,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 688.8,
+     "y": 539.2,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 700.8,
+     "y": 539.2,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 685.4,
+     "y": 544.2,
+     "w": 26.9,
+     "h": 74.8
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 683.8,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2010",
+    "rect": {
+     "x": 691.8,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 718.3,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 721.8,
+     "y": 544.4,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 721.8,
+     "y": 544.4,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 733.8,
+     "y": 544.4,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 718.3,
+     "y": 549.4,
+     "w": 26.9,
+     "h": 69.6
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 716.8,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2011",
+    "rect": {
+     "x": 724.8,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 751.2,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 751.2,
+     "y": 617,
+     "w": 26.9,
+     "h": 2
+    },
+    "bg": "rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 749.7,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2012",
+    "rect": {
+     "x": 757.7,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 784.2,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 784.2,
+     "y": 617,
+     "w": 26.9,
+     "h": 2
+    },
+    "bg": "rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 782.6,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2013",
+    "rect": {
+     "x": 790.6,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 817.1,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 817.1,
+     "y": 617,
+     "w": 26.9,
+     "h": 2
+    },
+    "bg": "rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 815.5,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2014",
+    "rect": {
+     "x": 823.5,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 850,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 850,
+     "y": 617,
+     "w": 26.9,
+     "h": 2
+    },
+    "bg": "rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 848.5,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2015",
+    "rect": {
+     "x": 856.5,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 883,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 883,
+     "y": 617,
+     "w": 26.9,
+     "h": 2
+    },
+    "bg": "rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 881.4,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2016",
+    "rect": {
+     "x": 889.4,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 915.9,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 915.9,
+     "y": 617,
+     "w": 26.9,
+     "h": 2
+    },
+    "bg": "rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 914.4,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2017",
+    "rect": {
+     "x": 922.4,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 948.8,
+     "y": 100,
+     "w": 31.8,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 948.8,
+     "y": 239.6,
+     "w": 31.8,
+     "h": 16
+    }
+   },
+   {
+    "tag": "span",
+    "text": "15,234",
+    "rect": {
+     "x": 948.8,
+     "y": 239.6,
+     "w": 31.8,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(110, 43, 37)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 954.7,
+     "y": 255.6,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 954.7,
+     "y": 255.6,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 966.7,
+     "y": 255.6,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 948.8,
+     "y": 260.6,
+     "w": 31.8,
+     "h": 358.4
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 949.7,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2018",
+    "rect": {
+     "x": 957.7,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 986.6,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 990,
+     "y": 546.6,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 990,
+     "y": 546.6,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1002,
+     "y": 546.6,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 986.6,
+     "y": 551.6,
+     "w": 26.9,
+     "h": 67.4
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 985,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2019",
+    "rect": {
+     "x": 993,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1019.5,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1023,
+     "y": 382.2,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1023,
+     "y": 382.2,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1035,
+     "y": 382.2,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1019.5,
+     "y": 387.2,
+     "w": 26.9,
+     "h": 231.8
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1018,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2020",
+    "rect": {
+     "x": 1026,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1052.5,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1055.9,
+     "y": 372.8,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1055.9,
+     "y": 372.8,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1067.9,
+     "y": 372.8,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1052.5,
+     "y": 377.8,
+     "w": 26.9,
+     "h": 241.2
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1050.9,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2021",
+    "rect": {
+     "x": 1058.9,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1085.4,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1088.9,
+     "y": 338,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1088.9,
+     "y": 338,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1100.9,
+     "y": 338,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1085.4,
+     "y": 343,
+     "w": 26.9,
+     "h": 276
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1083.9,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2022",
+    "rect": {
+     "x": 1091.9,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1118.3,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1121.8,
+     "y": 274.7,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1121.8,
+     "y": 274.7,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1133.8,
+     "y": 274.7,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1118.3,
+     "y": 279.7,
+     "w": 26.9,
+     "h": 339.3
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1116.8,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2023",
+    "rect": {
+     "x": 1124.8,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1151.3,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1154.7,
+     "y": 347.7,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1154.7,
+     "y": 347.7,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1166.7,
+     "y": 347.7,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1151.3,
+     "y": 352.7,
+     "w": 26.9,
+     "h": 266.3
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1149.7,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2024",
+    "rect": {
+     "x": 1157.7,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1184.2,
+     "y": 100,
+     "w": 29.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1184.2,
+     "y": 218,
+     "w": 29.9,
+     "h": 16
+    }
+   },
+   {
+    "tag": "span",
+    "text": "16,150",
+    "rect": {
+     "x": 1184.2,
+     "y": 218,
+     "w": 29.9,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(110, 43, 37)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1189.1,
+     "y": 234,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1189.1,
+     "y": 234,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1201.1,
+     "y": 234,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1184.2,
+     "y": 239,
+     "w": 29.9,
+     "h": 380
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1184.1,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2025",
+    "rect": {
+     "x": 1192.1,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1220.1,
+     "y": 100,
+     "w": 26.9,
+     "h": 553
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1223.5,
+     "y": 331.8,
+     "w": 20,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1223.5,
+     "y": 331.8,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1235.5,
+     "y": 331.8,
+     "w": 8,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1220.1,
+     "y": 336.8,
+     "w": 26.9,
+     "h": 282.2
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1218.5,
+     "y": 626.7,
+     "w": 30,
+     "h": 22.6
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2026",
+    "rect": {
+     "x": 1226.5,
+     "y": 626.7,
+     "w": 14,
+     "h": 22.6
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 719.3,
+     "y": 158,
+     "w": 171.6,
+     "h": 54
+    }
+   },
+   {
+    "tag": "div",
+    "text": "seven silent years",
+    "rect": {
+     "x": 719.3,
+     "y": 158,
+     "w": 171.6,
+     "h": 27
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "24px",
+     "weight": "400",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "2012–2017 · zero sets",
+    "rect": {
+     "x": 719.3,
+     "y": 187,
+     "w": 171.6,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 389,
+     "y": 655,
+     "w": 858,
+     "h": 21
+    },
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "text": "First marriage",
+    "rect": {
+     "x": 389,
+     "y": 661,
+     "w": 362.9,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "the silence",
+    "rect": {
+     "x": 751.9,
+     "y": 661,
+     "w": 197.3,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Second marriage",
+    "rect": {
+     "x": 949.3,
+     "y": 661,
+     "w": 297.7,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 690,
+     "w": 1278,
+     "h": 29
+    },
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "span",
+    "text": "Source: Rebrickable LEGO Database (rebrickable.com)",
+    "rect": {
+     "x": 33,
+     "y": 697.5,
+     "w": 270.7,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Home · 1 of 5 · 2006, 2008, 2009 totals [TK]",
+    "rect": {
+     "x": 1029.9,
+     "y": 697.5,
+     "w": 217.1,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   }
+  ]
+ },
+ "S2 Chapter I": {
+  "size": {
+   "w": 1280,
+   "h": 720
+  },
+  "elements": [
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 1,
+     "w": 1278,
+     "h": 83
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 27,
+     "w": 546.4,
+     "h": 42
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Chapter I",
+    "rect": {
+     "x": 33,
+     "y": 47,
+     "w": 79.7,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "1.82px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "span",
+    "text": "The Yellow Years · 2001–2011",
+    "rect": {
+     "x": 126.7,
+     "y": 27,
+     "w": 452.7,
+     "h": 42
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "38px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "A modest toy line in classic yellow.",
+    "rect": {
+     "x": 1010,
+     "y": 44,
+     "w": 237,
+     "h": 21
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "19px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 84,
+     "w": 1278,
+     "h": 89
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 100,
+     "w": 223.6,
+     "h": 57
+    },
+    "border": "2px solid rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 109,
+     "w": 223.6,
+     "h": 33
+    }
+   },
+   {
+    "tag": "span",
+    "text": "67",
+    "rect": {
+     "x": 33,
+     "y": 109,
+     "w": 29,
+     "h": 33
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "30px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 142,
+     "w": 223.6,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "sets",
+    "rect": {
+     "x": 33,
+     "y": 142,
+     "w": 19.7,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 280.6,
+     "y": 100,
+     "w": 223.6,
+     "h": 57
+    },
+    "border": "2px solid rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 280.6,
+     "y": 109,
+     "w": 223.6,
+     "h": 33
+    }
+   },
+   {
+    "tag": "span",
+    "text": "267",
+    "rect": {
+     "x": 280.6,
+     "y": 109,
+     "w": 43.9,
+     "h": 33
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "30px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 280.6,
+     "y": 142,
+     "w": 223.6,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "avg parts per set",
+    "rect": {
+     "x": 280.6,
+     "y": 142,
+     "w": 84.5,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 528.2,
+     "y": 100,
+     "w": 223.6,
+     "h": 57
+    },
+    "border": "2px solid rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 528.2,
+     "y": 109,
+     "w": 223.6,
+     "h": 33
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2,029",
+    "rect": {
+     "x": 528.2,
+     "y": 109,
+     "w": 70.6,
+     "h": 33
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "30px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 528.2,
+     "y": 142,
+     "w": 223.6,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "largest set (parts)",
+    "rect": {
+     "x": 528.2,
+     "y": 142,
+     "w": 87.6,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 775.8,
+     "y": 100,
+     "w": 223.6,
+     "h": 57
+    },
+    "border": "2px solid rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 775.8,
+     "y": 109,
+     "w": 223.6,
+     "h": 33
+    }
+   },
+   {
+    "tag": "span",
+    "text": "67",
+    "rect": {
+     "x": 775.8,
+     "y": 109,
+     "w": 29,
+     "h": 33
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "30px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 775.8,
+     "y": 142,
+     "w": 223.6,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "distinct colors",
+    "rect": {
+     "x": 775.8,
+     "y": 142,
+     "w": 70.4,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1023.4,
+     "y": 100,
+     "w": 223.6,
+     "h": 57
+    },
+    "border": "2px solid rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1023.4,
+     "y": 109,
+     "w": 223.6,
+     "h": 33
+    }
+   },
+   {
+    "tag": "span",
+    "text": "51%",
+    "rect": {
+     "x": 1023.4,
+     "y": 109,
+     "w": 47.9,
+     "h": 33
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "30px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1023.4,
+     "y": 142,
+     "w": 223.6,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "grayscale bricks",
+    "rect": {
+     "x": 1023.4,
+     "y": 142,
+     "w": 79.6,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 173,
+     "w": 1278,
+     "h": 288
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 173,
+     "w": 430,
+     "h": 288
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Sets by size — parts per set",
+    "rect": {
+     "x": 33,
+     "y": 177,
+     "w": 430,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "1.38px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 204,
+     "w": 430,
+     "h": 253
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 204,
+     "w": 78,
+     "h": 253
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 63,
+     "y": 204,
+     "w": 17.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 63,
+     "y": 204,
+     "w": 17.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 60.5,
+     "y": 221,
+     "w": 23,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 60.5,
+     "y": 221,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 74.5,
+     "y": 221,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 226,
+     "w": 78,
+     "h": 214
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 58,
+     "y": 443,
+     "w": 27.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "1–100",
+    "rect": {
+     "x": 58,
+     "y": 443,
+     "w": 27.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 121,
+     "y": 204,
+     "w": 78,
+     "h": 253
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 151,
+     "y": 261.1,
+     "w": 17.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 151,
+     "y": 261.1,
+     "w": 17.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 148.5,
+     "y": 278.1,
+     "w": 23,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 148.5,
+     "y": 278.1,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 162.5,
+     "y": 278.1,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 121,
+     "y": 283.1,
+     "w": 78,
+     "h": 156.9
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 140.4,
+     "y": 443,
+     "w": 39.2,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "101–300",
+    "rect": {
+     "x": 140.4,
+     "y": 443,
+     "w": 39.2,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 209,
+     "y": 204,
+     "w": 78,
+     "h": 253
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 239,
+     "y": 332,
+     "w": 17.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 239,
+     "y": 332,
+     "w": 17.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 236.5,
+     "y": 349,
+     "w": 23,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 236.5,
+     "y": 349,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 250.5,
+     "y": 349,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 209,
+     "y": 354,
+     "w": 78,
+     "h": 86
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 228.4,
+     "y": 443,
+     "w": 39.2,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "301–700",
+    "rect": {
+     "x": 228.4,
+     "y": 443,
+     "w": 39.2,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 297,
+     "y": 204,
+     "w": 78,
+     "h": 253
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 327,
+     "y": 382.6,
+     "w": 17.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 327,
+     "y": 382.6,
+     "w": 17.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 324.5,
+     "y": 399.6,
+     "w": 23,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 324.5,
+     "y": 399.6,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 338.5,
+     "y": 399.6,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 297,
+     "y": 404.6,
+     "w": 78,
+     "h": 35.4
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 319.4,
+     "y": 443,
+     "w": 33.1,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "701–2k",
+    "rect": {
+     "x": 319.4,
+     "y": 443,
+     "w": 33.1,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 385,
+     "y": 204,
+     "w": 78,
+     "h": 253
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 415,
+     "y": 407.9,
+     "w": 17.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 415,
+     "y": 407.9,
+     "w": 17.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 412.5,
+     "y": 424.9,
+     "w": 23,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 412.5,
+     "y": 424.9,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 426.5,
+     "y": 424.9,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(140, 122, 91)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 385,
+     "y": 429.9,
+     "w": 78,
+     "h": 10.1
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(140, 122, 91) 0px, rgb(140, 122, 91) 15px, rgb(160, 142, 108) 15px, rgb(160, 142, 108) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 415,
+     "y": 443,
+     "w": 18.1,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2k+",
+    "rect": {
+     "x": 415,
+     "y": 443,
+     "w": 18.1,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487,
+     "y": 173,
+     "w": 760,
+     "h": 288
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487,
+     "y": 177,
+     "w": 760,
+     "h": 16
+    }
+   },
+   {
+    "tag": "div",
+    "text": "The era palette — 67 colors, each bar its true brick hex",
+    "rect": {
+     "x": 487,
+     "y": 178,
+     "w": 415.6,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "1.38px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "grayscale",
+    "rect": {
+     "x": 1170.4,
+     "y": 177,
+     "w": 76.6,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "b",
+    "text": "51%",
+    "rect": {
+     "x": 1170.4,
+     "y": 177,
+     "w": 24.2,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "700",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487,
+     "y": 205,
+     "w": 760,
+     "h": 230
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487,
+     "y": 205,
+     "w": 10.3,
+     "h": 230
+    },
+    "bg": "rgb(5, 19, 29)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 498.3,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(5, 19, 29)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 509.7,
+     "y": 205,
+     "w": 10.3,
+     "h": 230
+    },
+    "bg": "rgb(5, 19, 29)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 521,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(43, 43, 43)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 532.4,
+     "y": 205,
+     "w": 10.3,
+     "h": 230
+    },
+    "bg": "rgb(43, 43, 43)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 543.8,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(43, 43, 43)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 555.1,
+     "y": 205,
+     "w": 10.3,
+     "h": 230
+    },
+    "bg": "rgb(62, 60, 57)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 566.5,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(62, 60, 57)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 577.8,
+     "y": 205,
+     "w": 10.3,
+     "h": 230
+    },
+    "bg": "rgb(87, 88, 87)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 589.2,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(87, 88, 87)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 600.5,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(87, 88, 87)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 611.9,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(108, 110, 104)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 623.2,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(108, 110, 104)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 634.6,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(108, 110, 104)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 646,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(137, 135, 136)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 657.3,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(137, 135, 136)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 668.7,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(155, 161, 157)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 680,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(155, 161, 157)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 691.4,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(155, 161, 157)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 702.8,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(160, 165, 169)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 714.1,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(160, 165, 169)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 725.5,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(171, 173, 172)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 736.8,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(171, 173, 172)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 748.2,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(171, 173, 172)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 759.5,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(196, 196, 196)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 770.9,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(196, 196, 196)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 782.3,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(196, 196, 196)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 793.6,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(230, 227, 224)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 805,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(230, 227, 224)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 816.3,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(244, 244, 244)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 827.7,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(244, 244, 244)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 839.1,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(244, 244, 244)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 850.4,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(255, 255, 255)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 861.8,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(255, 255, 255)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 873.1,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(114, 14, 15)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 884.5,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(201, 26, 9)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 895.9,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(244, 92, 64)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 907.2,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(254, 138, 24)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 918.6,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(248, 187, 61)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 929.9,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(242, 205, 55)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 941.3,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(223, 238, 165)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 952.7,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(75, 159, 74)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 964,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(35, 120, 65)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 975.4,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(24, 70, 50)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 986.7,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(7, 139, 201)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 998.1,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(0, 85, 191)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1009.5,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(10, 52, 99)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1020.8,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(90, 147, 219)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1032.2,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(129, 0, 123)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1043.5,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(146, 57, 120)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1054.9,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(252, 151, 172)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1066.3,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(88, 42, 18)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1077.6,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(124, 80, 58)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1089,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(149, 138, 115)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1100.3,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(179, 16, 4)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1111.7,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(206, 144, 33)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1123,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(63, 54, 145)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1134.4,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(200, 112, 160)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1145.8,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(172, 120, 186)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1157.1,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(121, 136, 161)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1168.5,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(100, 90, 76)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1179.8,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(114, 14, 15)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1191.2,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(201, 26, 9)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1202.6,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(244, 92, 64)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1213.9,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(254, 138, 24)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1225.3,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(248, 187, 61)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1236.6,
+     "y": 205,
+     "w": 10.4,
+     "h": 230
+    },
+    "bg": "rgb(242, 205, 55)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487,
+     "y": 439,
+     "w": 760,
+     "h": 18
+    }
+   },
+   {
+    "tag": "div",
+    "text": "grayscale · 51%",
+    "rect": {
+     "x": 487,
+     "y": 439,
+     "w": 387.6,
+     "h": 18
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    "border": "2px solid rgb(33, 27, 20)"
+   },
+   {
+    "tag": "div",
+    "text": "color · 49%",
+    "rect": {
+     "x": 874.6,
+     "y": 439,
+     "w": 372.4,
+     "h": 18
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    "border": "2px solid rgb(138, 106, 33)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 461,
+     "w": 1278,
+     "h": 229
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 477,
+     "w": 201,
+     "h": 195
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 44,
+     "y": 488,
+     "w": 179,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 44,
+     "y": 488,
+     "w": 179,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 44,
+     "y": 614,
+     "w": 179,
+     "h": 17
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Hogwarts Castle",
+    "rect": {
+     "x": 44,
+     "y": 614,
+     "w": 96.3,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 44,
+     "y": 631,
+     "w": 179,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2001 · [TK] parts",
+    "rect": {
+     "x": 44,
+     "y": 631,
+     "w": 81.8,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 254,
+     "y": 477,
+     "w": 201,
+     "h": 195
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 265,
+     "y": 488,
+     "w": 179,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 265,
+     "y": 488,
+     "w": 179,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 265,
+     "y": 614,
+     "w": 179,
+     "h": 17
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Diagon Alley",
+    "rect": {
+     "x": 265,
+     "y": 614,
+     "w": 75.3,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 265,
+     "y": 631,
+     "w": 179,
+     "h": 30
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2011 · 2,029 parts — the era’s largest",
+    "rect": {
+     "x": 265,
+     "y": 631,
+     "w": 150.2,
+     "h": 30
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 475,
+     "y": 477,
+     "w": 201,
+     "h": 195
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 486,
+     "y": 488,
+     "w": 179,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 486,
+     "y": 488,
+     "w": 179,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 486,
+     "y": 614,
+     "w": 179,
+     "h": 17
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK set]",
+    "rect": {
+     "x": 486,
+     "y": 614,
+     "w": 44.5,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 486,
+     "y": 631,
+     "w": 179,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK] · [TK] parts",
+    "rect": {
+     "x": 486,
+     "y": 631,
+     "w": 76.6,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 696,
+     "y": 477,
+     "w": 201,
+     "h": 195
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 707,
+     "y": 488,
+     "w": 179,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 707,
+     "y": 488,
+     "w": 179,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 707,
+     "y": 614,
+     "w": 179,
+     "h": 17
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK set]",
+    "rect": {
+     "x": 707,
+     "y": 614,
+     "w": 44.5,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 707,
+     "y": 631,
+     "w": 179,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK] · [TK] parts",
+    "rect": {
+     "x": 707,
+     "y": 631,
+     "w": 76.6,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 917,
+     "y": 477,
+     "w": 330,
+     "h": 195
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "text": "The yellow years — classic faces",
+    "rect": {
+     "x": 928,
+     "y": 488,
+     "w": 308,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "1.32px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 928,
+     "y": 511,
+     "w": 308,
+     "h": 127
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 928,
+     "y": 511,
+     "w": 71,
+     "h": 127
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 928,
+     "y": 511,
+     "w": 71,
+     "h": 96
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 928,
+     "y": 610,
+     "w": 71,
+     "h": 28
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Harry · 22 variants",
+    "rect": {
+     "x": 941.2,
+     "y": 610,
+     "w": 44.5,
+     "h": 28
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1007,
+     "y": 511,
+     "w": 71,
+     "h": 127
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1007,
+     "y": 511,
+     "w": 71,
+     "h": 96
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1007,
+     "y": 610,
+     "w": 71,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Hermione · 9",
+    "rect": {
+     "x": 1012.8,
+     "y": 610,
+     "w": 59.5,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1086,
+     "y": 511,
+     "w": 71,
+     "h": 127
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1086,
+     "y": 511,
+     "w": 71,
+     "h": 96
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1086,
+     "y": 610,
+     "w": 71,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Ron · [TK]",
+    "rect": {
+     "x": 1099.5,
+     "y": 610,
+     "w": 44,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1165,
+     "y": 511,
+     "w": 71,
+     "h": 127
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1165,
+     "y": 511,
+     "w": 71,
+     "h": 96
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1165,
+     "y": 610,
+     "w": 71,
+     "h": 28
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Dumbledore · [TK]",
+    "rect": {
+     "x": 1168.9,
+     "y": 610,
+     "w": 63.2,
+     "h": 28
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 690,
+     "w": 1278,
+     "h": 29
+    },
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "span",
+    "text": "Source: Rebrickable LEGO Database (rebrickable.com)",
+    "rect": {
+     "x": 33,
+     "y": 697.5,
+     "w": 270.7,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Chapter I · 2 of 5",
+    "rect": {
+     "x": 1162.8,
+     "y": 697.5,
+     "w": 84.2,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   }
+  ]
+ },
+ "S3 Chapter II": {
+  "size": {
+   "w": 1280,
+   "h": 720
+  },
+  "elements": [
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 1,
+     "w": 1278,
+     "h": 83
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 27,
+     "w": 574.6,
+     "h": 42
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Chapter II",
+    "rect": {
+     "x": 33,
+     "y": 47,
+     "w": 85.3,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "1.82px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "span",
+    "text": "The Boy Who Grew Up · 2018–",
+    "rect": {
+     "x": 132.3,
+     "y": 27,
+     "w": 475.3,
+     "h": 42
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "38px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "It came back for the grown-ups.",
+    "rect": {
+     "x": 1027.2,
+     "y": 44,
+     "w": 219.8,
+     "h": 21
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "19px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 84,
+     "w": 1278,
+     "h": 89
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 100,
+     "w": 223.6,
+     "h": 57
+    },
+    "border": "2px solid rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 109,
+     "w": 223.6,
+     "h": 33
+    }
+   },
+   {
+    "tag": "span",
+    "text": "142",
+    "rect": {
+     "x": 33,
+     "y": 109,
+     "w": 41.1,
+     "h": 33
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "30px",
+     "weight": "600",
+     "color": "rgb(110, 43, 37)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 142,
+     "w": 223.6,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "sets",
+    "rect": {
+     "x": 33,
+     "y": 142,
+     "w": 19.7,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 280.6,
+     "y": 100,
+     "w": 223.6,
+     "h": 57
+    },
+    "border": "2px solid rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 280.6,
+     "y": 109,
+     "w": 223.6,
+     "h": 33
+    }
+   },
+   {
+    "tag": "span",
+    "text": "731",
+    "rect": {
+     "x": 280.6,
+     "y": 109,
+     "w": 39.1,
+     "h": 33
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "30px",
+     "weight": "600",
+     "color": "rgb(110, 43, 37)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 280.6,
+     "y": 142,
+     "w": 223.6,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "avg parts per set · 2.7×",
+    "rect": {
+     "x": 280.6,
+     "y": 142,
+     "w": 116.1,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 528.2,
+     "y": 100,
+     "w": 223.6,
+     "h": 57
+    },
+    "border": "2px solid rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 528.2,
+     "y": 109,
+     "w": 223.6,
+     "h": 33
+    }
+   },
+   {
+    "tag": "span",
+    "text": "6,020",
+    "rect": {
+     "x": 528.2,
+     "y": 109,
+     "w": 73.3,
+     "h": 33
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "30px",
+     "weight": "600",
+     "color": "rgb(110, 43, 37)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 528.2,
+     "y": 142,
+     "w": 223.6,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "largest set (parts)",
+    "rect": {
+     "x": 528.2,
+     "y": 142,
+     "w": 87.6,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 775.8,
+     "y": 100,
+     "w": 223.6,
+     "h": 57
+    },
+    "border": "2px solid rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 775.8,
+     "y": 109,
+     "w": 223.6,
+     "h": 33
+    }
+   },
+   {
+    "tag": "span",
+    "text": "80",
+    "rect": {
+     "x": 775.8,
+     "y": 109,
+     "w": 34.7,
+     "h": 33
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "30px",
+     "weight": "600",
+     "color": "rgb(110, 43, 37)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 775.8,
+     "y": 142,
+     "w": 223.6,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "distinct colors",
+    "rect": {
+     "x": 775.8,
+     "y": 142,
+     "w": 70.4,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1023.4,
+     "y": 100,
+     "w": 223.6,
+     "h": 57
+    },
+    "border": "2px solid rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1023.4,
+     "y": 109,
+     "w": 223.6,
+     "h": 33
+    }
+   },
+   {
+    "tag": "span",
+    "text": "41%",
+    "rect": {
+     "x": 1023.4,
+     "y": 109,
+     "w": 49.4,
+     "h": 33
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "30px",
+     "weight": "600",
+     "color": "rgb(110, 43, 37)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1023.4,
+     "y": 142,
+     "w": 223.6,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "grayscale bricks",
+    "rect": {
+     "x": 1023.4,
+     "y": 142,
+     "w": 79.6,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 173,
+     "w": 1278,
+     "h": 303
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 173,
+     "w": 430,
+     "h": 303
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Sets by size — same bins, heavier tail",
+    "rect": {
+     "x": 33,
+     "y": 177,
+     "w": 430,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "1.38px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 204,
+     "w": 430,
+     "h": 268
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 204,
+     "w": 78,
+     "h": 268
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 63,
+     "y": 261.5,
+     "w": 17.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 63,
+     "y": 261.5,
+     "w": 17.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 60.5,
+     "y": 278.5,
+     "w": 23,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 60.5,
+     "y": 278.5,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 74.5,
+     "y": 278.5,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 283.5,
+     "w": 78,
+     "h": 171.5
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 58,
+     "y": 458,
+     "w": 27.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "1–100",
+    "rect": {
+     "x": 58,
+     "y": 458,
+     "w": 27.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 121,
+     "y": 204,
+     "w": 78,
+     "h": 268
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 151,
+     "y": 204,
+     "w": 17.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 151,
+     "y": 204,
+     "w": 17.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 148.5,
+     "y": 221,
+     "w": 23,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 148.5,
+     "y": 221,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 162.5,
+     "y": 221,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 121,
+     "y": 226,
+     "w": 78,
+     "h": 229
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 140.4,
+     "y": 458,
+     "w": 39.2,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "101–300",
+    "rect": {
+     "x": 140.4,
+     "y": 458,
+     "w": 39.2,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 209,
+     "y": 204,
+     "w": 78,
+     "h": 268
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 239,
+     "y": 277.6,
+     "w": 17.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 239,
+     "y": 277.6,
+     "w": 17.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 236.5,
+     "y": 294.6,
+     "w": 23,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 236.5,
+     "y": 294.6,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 250.5,
+     "y": 294.6,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 209,
+     "y": 299.6,
+     "w": 78,
+     "h": 155.4
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 228.4,
+     "y": 458,
+     "w": 39.2,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "301–700",
+    "rect": {
+     "x": 228.4,
+     "y": 458,
+     "w": 39.2,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 297,
+     "y": 204,
+     "w": 78,
+     "h": 268
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 327,
+     "y": 336.5,
+     "w": 17.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 327,
+     "y": 336.5,
+     "w": 17.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 324.5,
+     "y": 353.5,
+     "w": 23,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 324.5,
+     "y": 353.5,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 338.5,
+     "y": 353.5,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 297,
+     "y": 358.5,
+     "w": 78,
+     "h": 96.5
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 319.4,
+     "y": 458,
+     "w": 33.1,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "701–2k",
+    "rect": {
+     "x": 319.4,
+     "y": 458,
+     "w": 33.1,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 385,
+     "y": 204,
+     "w": 78,
+     "h": 268
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 415,
+     "y": 384.8,
+     "w": 17.9,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK]",
+    "rect": {
+     "x": 415,
+     "y": 384.8,
+     "w": 17.9,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 412.5,
+     "y": 401.8,
+     "w": 23,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 412.5,
+     "y": 401.8,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 426.5,
+     "y": 401.8,
+     "w": 9,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 385,
+     "y": 406.8,
+     "w": 78,
+     "h": 48.2
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 415,
+     "y": 458,
+     "w": 18.1,
+     "h": 14
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2k+",
+    "rect": {
+     "x": 415,
+     "y": 458,
+     "w": 18.1,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487,
+     "y": 173,
+     "w": 760,
+     "h": 303
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487,
+     "y": 177,
+     "w": 760,
+     "h": 16
+    }
+   },
+   {
+    "tag": "div",
+    "text": "The era palette — 80 colors, each bar its true brick hex",
+    "rect": {
+     "x": 487,
+     "y": 178,
+     "w": 415.8,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "1.38px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "grayscale",
+    "rect": {
+     "x": 1170.4,
+     "y": 177,
+     "w": 76.6,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "b",
+    "text": "41%",
+    "rect": {
+     "x": 1170.4,
+     "y": 177,
+     "w": 24.2,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "700",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487,
+     "y": 205,
+     "w": 760,
+     "h": 245
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(5, 19, 29)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 496.5,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(5, 19, 29)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 506,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(5, 19, 29)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 515.5,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(43, 43, 43)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 525,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(43, 43, 43)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 534.5,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(43, 43, 43)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 544,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(62, 60, 57)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 553.5,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(62, 60, 57)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 563.1,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(87, 88, 87)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 572.6,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(87, 88, 87)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 582.1,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(87, 88, 87)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 591.6,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(108, 110, 104)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 601.1,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(108, 110, 104)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 610.6,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(137, 135, 136)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 620.1,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(137, 135, 136)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 629.6,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(137, 135, 136)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 639.1,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(155, 161, 157)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 648.6,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(155, 161, 157)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 658.1,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(160, 165, 169)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 667.6,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(160, 165, 169)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 677.2,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(160, 165, 169)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 686.7,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(171, 173, 172)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 696.2,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(171, 173, 172)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 705.7,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(196, 196, 196)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 715.2,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(196, 196, 196)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 724.7,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(196, 196, 196)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 734.2,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(230, 227, 224)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 743.7,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(230, 227, 224)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 753.2,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(244, 244, 244)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 762.7,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(244, 244, 244)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 772.2,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(244, 244, 244)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 781.7,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(255, 255, 255)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 791.3,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(255, 255, 255)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 800.8,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(114, 14, 15)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 810.3,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(201, 26, 9)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 819.8,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(244, 92, 64)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 829.3,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(254, 138, 24)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 838.8,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(248, 187, 61)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 848.3,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(242, 205, 55)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 857.9,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(223, 238, 165)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 867.4,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(75, 159, 74)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 876.9,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(35, 120, 65)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 886.4,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(24, 70, 50)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 895.9,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(7, 139, 201)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 905.4,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(0, 85, 191)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 915,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(10, 52, 99)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 924.5,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(90, 147, 219)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 934,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(129, 0, 123)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 943.5,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(146, 57, 120)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 953,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(252, 151, 172)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 962.5,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(88, 42, 18)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 972,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(124, 80, 58)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 981.6,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(149, 138, 115)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 991.1,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(179, 16, 4)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1000.6,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(206, 144, 33)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1010.1,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(63, 54, 145)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1019.6,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(200, 112, 160)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1029.1,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(172, 120, 186)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1038.7,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(121, 136, 161)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1048.2,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(100, 90, 76)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1057.7,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(114, 14, 15)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1067.2,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(201, 26, 9)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1076.7,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(244, 92, 64)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1086.2,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(254, 138, 24)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1095.8,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(248, 187, 61)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1105.3,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(242, 205, 55)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1114.8,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(223, 238, 165)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1124.3,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(75, 159, 74)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1133.8,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(35, 120, 65)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1143.3,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(24, 70, 50)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1152.8,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(7, 139, 201)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1162.4,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(0, 85, 191)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1171.9,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(10, 52, 99)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1181.4,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(90, 147, 219)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1190.9,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(129, 0, 123)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1200.4,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(146, 57, 120)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1209.9,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(252, 151, 172)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1219.5,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(88, 42, 18)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1229,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(124, 80, 58)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1238.5,
+     "y": 205,
+     "w": 8.5,
+     "h": 245
+    },
+    "bg": "rgb(149, 138, 115)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 487,
+     "y": 454,
+     "w": 760,
+     "h": 18
+    }
+   },
+   {
+    "tag": "div",
+    "text": "grayscale · 41%",
+    "rect": {
+     "x": 487,
+     "y": 454,
+     "w": 311.6,
+     "h": 18
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    "border": "2px solid rgb(33, 27, 20)"
+   },
+   {
+    "tag": "div",
+    "text": "color · 59%",
+    "rect": {
+     "x": 798.6,
+     "y": 454,
+     "w": 448.4,
+     "h": 18
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    "border": "2px solid rgb(138, 106, 33)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 476,
+     "w": 1278,
+     "h": 214
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 492,
+     "w": 258,
+     "h": 180
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 44,
+     "y": 503,
+     "w": 236,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 44,
+     "y": 503,
+     "w": 236,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 44,
+     "y": 629,
+     "w": 236,
+     "h": 17
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Hogwarts Castle",
+    "rect": {
+     "x": 44,
+     "y": 629,
+     "w": 96.3,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 44,
+     "y": 646,
+     "w": 236,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2018 · 6,020 parts — the era’s largest",
+    "rect": {
+     "x": 44,
+     "y": 646,
+     "w": 187.5,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 311,
+     "y": 492,
+     "w": 258,
+     "h": 180
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 322,
+     "y": 503,
+     "w": 236,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 322,
+     "y": 503,
+     "w": 236,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 322,
+     "y": 629,
+     "w": 236,
+     "h": 17
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Diagon Alley Wizarding Shops",
+    "rect": {
+     "x": 322,
+     "y": 629,
+     "w": 178.4,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 322,
+     "y": 646,
+     "w": 236,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "2025 · 55 colors",
+    "rect": {
+     "x": 322,
+     "y": 646,
+     "w": 79.6,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 589,
+     "y": 492,
+     "w": 258,
+     "h": 180
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 600,
+     "y": 503,
+     "w": 236,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 600,
+     "y": 503,
+     "w": 236,
+     "h": 118
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 600,
+     "y": 629,
+     "w": 236,
+     "h": 17
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK set]",
+    "rect": {
+     "x": 600,
+     "y": 629,
+     "w": 44.5,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 600,
+     "y": 646,
+     "w": 236,
+     "h": 15
+    }
+   },
+   {
+    "tag": "span",
+    "text": "[TK] · [TK] parts",
+    "rect": {
+     "x": 600,
+     "y": 646,
+     "w": 76.6,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 867,
+     "y": 492,
+     "w": 380,
+     "h": 180
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(138, 106, 33)"
+   },
+   {
+    "tag": "div",
+    "text": "Old vs new — Hermione · 9 old, 33 new",
+    "rect": {
+     "x": 878,
+     "y": 503,
+     "w": 358,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "1.32px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 878,
+     "y": 526,
+     "w": 358,
+     "h": 113
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 878,
+     "y": 526,
+     "w": 121,
+     "h": 113
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 878,
+     "y": 526,
+     "w": 121,
+     "h": 96
+    }
+   },
+   {
+    "tag": "div",
+    "text": "2001 · yellow skin",
+    "rect": {
+     "x": 878,
+     "y": 625,
+     "w": 121,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1009,
+     "y": 526,
+     "w": 121,
+     "h": 113
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1009,
+     "y": 526,
+     "w": 121,
+     "h": 96
+    }
+   },
+   {
+    "tag": "div",
+    "text": "2026 · flesh tone",
+    "rect": {
+     "x": 1009,
+     "y": 625,
+     "w": 121,
+     "h": 14
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "22 old vs 59 new Harrys · 44 characters span both eras",
+    "rect": {
+     "x": 1140,
+     "y": 550.6,
+     "w": 96,
+     "h": 63.8
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 690,
+     "w": 1278,
+     "h": 29
+    },
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "span",
+    "text": "Source: Rebrickable LEGO Database (rebrickable.com)",
+    "rect": {
+     "x": 33,
+     "y": 697.5,
+     "w": 270.7,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Chapter II · 3 of 5",
+    "rect": {
+     "x": 1159.8,
+     "y": 697.5,
+     "w": 87.3,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   }
+  ]
+ },
+ "S4a Most Colorful": {
+  "size": {
+   "w": 1280,
+   "h": 720
+  },
+  "elements": [
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 1,
+     "w": 1278,
+     "h": 549
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 33,
+     "w": 440,
+     "h": 485
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Chapter III · The Chamber of Colors",
+    "rect": {
+     "x": 33,
+     "y": 33,
+     "w": 440,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "1.82px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "55",
+    "rect": {
+     "x": 33,
+     "y": 64,
+     "w": 440,
+     "h": 149.6
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "170px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "distinct colors in one set",
+    "rect": {
+     "x": 33,
+     "y": 227.6,
+     "w": 440,
+     "h": 31
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "28px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "(2025) is the [TK parts] parts across 55 real brick colors.",
+    "rect": {
+     "x": 33,
+     "y": 272.6,
+     "w": 380,
+     "h": 67.5
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "15px",
+     "weight": "400",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "b",
+    "text": "Diagon Alley Wizarding Shops",
+    "rect": {
+     "x": 33,
+     "y": 273.6,
+     "w": 213.5,
+     "h": 20
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "15px",
+     "weight": "700",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "b",
+    "text": "#2 most colorful LEGO set ever made — of any theme, ever.",
+    "rect": {
+     "x": 33,
+     "y": 273.6,
+     "w": 359.8,
+     "h": 42.5
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "15px",
+     "weight": "700",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Prefer the least colorful? Come to the dark side →",
+    "rect": {
+     "x": 33,
+     "y": 476,
+     "w": 333.8,
+     "h": 42
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13.5px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(33, 27, 20)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 505,
+     "y": 33,
+     "w": 742,
+     "h": 485
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 505,
+     "y": 33,
+     "w": 742,
+     "h": 485
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 550,
+     "w": 1278,
+     "h": 140
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 550,
+     "w": 1214,
+     "h": 16
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Color composition — all 55 marks in true hex, ordered by part count",
+    "rect": {
+     "x": 33,
+     "y": 551,
+     "w": 522.8,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "1.38px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "segment width binds to part count per color",
+    "rect": {
+     "x": 1012.8,
+     "y": 550,
+     "w": 234.2,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 574,
+     "w": 1214,
+     "h": 100
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 574,
+     "w": 112.8,
+     "h": 100
+    },
+    "bg": "rgb(62, 60, 57)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 146.8,
+     "y": 574,
+     "w": 112.8,
+     "h": 100
+    },
+    "bg": "rgb(87, 88, 87)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 260.6,
+     "y": 574,
+     "w": 112.8,
+     "h": 100
+    },
+    "bg": "rgb(108, 110, 104)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 374.4,
+     "y": 574,
+     "w": 56.4,
+     "h": 100
+    },
+    "bg": "rgb(137, 135, 136)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 431.8,
+     "y": 574,
+     "w": 56.4,
+     "h": 100
+    },
+    "bg": "rgb(155, 161, 157)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 489.2,
+     "y": 574,
+     "w": 56.4,
+     "h": 100
+    },
+    "bg": "rgb(160, 165, 169)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 546.5,
+     "y": 574,
+     "w": 56.4,
+     "h": 100
+    },
+    "bg": "rgb(114, 14, 15)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 603.9,
+     "y": 574,
+     "w": 56.4,
+     "h": 100
+    },
+    "bg": "rgb(201, 26, 9)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 661.3,
+     "y": 574,
+     "w": 22.5,
+     "h": 100
+    },
+    "bg": "rgb(244, 92, 64)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 684.9,
+     "y": 574,
+     "w": 22.6,
+     "h": 100
+    },
+    "bg": "rgb(254, 138, 24)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 708.4,
+     "y": 574,
+     "w": 22.5,
+     "h": 100
+    },
+    "bg": "rgb(248, 187, 61)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 732,
+     "y": 574,
+     "w": 22.6,
+     "h": 100
+    },
+    "bg": "rgb(242, 205, 55)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 755.5,
+     "y": 574,
+     "w": 22.5,
+     "h": 100
+    },
+    "bg": "rgb(223, 238, 165)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 779.1,
+     "y": 574,
+     "w": 22.6,
+     "h": 100
+    },
+    "bg": "rgb(75, 159, 74)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 802.7,
+     "y": 574,
+     "w": 22.5,
+     "h": 100
+    },
+    "bg": "rgb(35, 120, 65)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 826.2,
+     "y": 574,
+     "w": 22.5,
+     "h": 100
+    },
+    "bg": "rgb(24, 70, 50)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 849.8,
+     "y": 574,
+     "w": 22.5,
+     "h": 100
+    },
+    "bg": "rgb(7, 139, 201)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 873.3,
+     "y": 574,
+     "w": 22.5,
+     "h": 100
+    },
+    "bg": "rgb(0, 85, 191)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 896.8,
+     "y": 574,
+     "w": 22.5,
+     "h": 100
+    },
+    "bg": "rgb(10, 52, 99)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 920.4,
+     "y": 574,
+     "w": 22.5,
+     "h": 100
+    },
+    "bg": "rgb(90, 147, 219)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 943.9,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(129, 0, 123)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 952.6,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(146, 57, 120)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 961.3,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(252, 151, 172)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 970,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(88, 42, 18)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 978.7,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(124, 80, 58)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 987.4,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(149, 138, 115)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 996.1,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(179, 16, 4)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1004.8,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(206, 144, 33)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1013.4,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(63, 54, 145)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1022.1,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(200, 112, 160)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1030.8,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(172, 120, 186)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1039.5,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(121, 136, 161)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1048.2,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(100, 90, 76)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1056.9,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(62, 60, 57)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1065.6,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(87, 88, 87)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1074.3,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(108, 110, 104)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1082.9,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(137, 135, 136)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1091.6,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(155, 161, 157)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1100.3,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(160, 165, 169)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1109,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(114, 14, 15)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1117.7,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(201, 26, 9)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1126.4,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(244, 92, 64)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1135.1,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(254, 138, 24)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1143.8,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(248, 187, 61)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1152.4,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(242, 205, 55)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1161.1,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(223, 238, 165)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1169.8,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(75, 159, 74)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1178.5,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(35, 120, 65)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1187.2,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(24, 70, 50)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1195.9,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(7, 139, 201)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1204.6,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(0, 85, 191)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1213.3,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(10, 52, 99)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1221.9,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(90, 147, 219)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1230.6,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(129, 0, 123)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1239.3,
+     "y": 574,
+     "w": 7.7,
+     "h": 100
+    },
+    "bg": "rgb(146, 57, 120)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 690,
+     "w": 1278,
+     "h": 29
+    },
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "span",
+    "text": "Source: Rebrickable LEGO Database (rebrickable.com)",
+    "rect": {
+     "x": 33,
+     "y": 697.5,
+     "w": 270.7,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Chapter III · 4 of 5",
+    "rect": {
+     "x": 1156.7,
+     "y": 697.5,
+     "w": 90.3,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   }
+  ]
+ },
+ "S4b Dark State": {
+  "size": {
+   "w": 1280,
+   "h": 720
+  },
+  "elements": [
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 1,
+     "w": 1278,
+     "h": 549
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 33,
+     "w": 440,
+     "h": 485
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Chapter III · The Chamber of Grays",
+    "rect": {
+     "x": 33,
+     "y": 33,
+     "w": 440,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(217, 95, 75)",
+     "letterSpacing": "1.82px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "97.9%",
+    "rect": {
+     "x": 33,
+     "y": 64,
+     "w": 440,
+     "h": 132
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "150px",
+     "weight": "600",
+     "color": "rgb(207, 201, 190)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "grayscale bricks",
+    "rect": {
+     "x": 33,
+     "y": 210,
+     "w": 440,
+     "h": 31
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "28px",
+     "weight": "600",
+     "color": "rgb(207, 201, 190)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "(2006), from Star Wars — LEGO’s grayest theme. Harry Potter is its most colorful",
+    "rect": {
+     "x": 33,
+     "y": 255,
+     "w": 380,
+     "h": 45
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "15px",
+     "weight": "400",
+     "color": "rgb(207, 201, 190)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "b",
+    "text": "Vader’s TIE Advanced",
+    "rect": {
+     "x": 33,
+     "y": 256,
+     "w": 150.3,
+     "h": 20
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "15px",
+     "weight": "700",
+     "color": "rgb(207, 201, 190)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 320,
+     "w": 440,
+     "h": 83
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 320,
+     "w": 130,
+     "h": 83
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Star Wars gray",
+    "rect": {
+     "x": 33,
+     "y": 320,
+     "w": 130,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "400",
+     "color": "rgb(207, 201, 190)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "b",
+    "text": "~72%",
+    "rect": {
+     "x": 86,
+     "y": 320,
+     "w": 32.7,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "700",
+     "color": "rgb(207, 201, 190)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 340,
+     "w": 130,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 47,
+     "y": 340,
+     "w": 14,
+     "h": 5
+    },
+    "bg": "rgb(148, 141, 128)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 69,
+     "y": 340,
+     "w": 14,
+     "h": 5
+    },
+    "bg": "rgb(148, 141, 128)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 345,
+     "w": 130,
+     "h": 58
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(148, 141, 128) 0px, rgb(148, 141, 128) 15px, rgb(168, 161, 148) 15px, rgb(168, 161, 148) 16px)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 177,
+     "y": 344,
+     "w": 130,
+     "h": 59
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Harry Potter gray",
+    "rect": {
+     "x": 177,
+     "y": 344,
+     "w": 130,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "400",
+     "color": "rgb(207, 201, 190)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "b",
+    "text": "~42%",
+    "rect": {
+     "x": 244.3,
+     "y": 344,
+     "w": 32.7,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "700",
+     "color": "rgb(207, 201, 190)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 177,
+     "y": 364,
+     "w": 130,
+     "h": 5
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 191,
+     "y": 364,
+     "w": 14,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 213,
+     "y": 364,
+     "w": 14,
+     "h": 5
+    },
+    "bg": "rgb(110, 43, 37)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 177,
+     "y": 369,
+     "w": 130,
+     "h": 34
+    },
+    "bgImage": "repeating-linear-gradient(to top, rgb(110, 43, 37) 0px, rgb(110, 43, 37) 15px, rgb(132, 68, 61) 15px, rgb(132, 68, 61) 16px)"
+   },
+   {
+    "tag": "div",
+    "text": "← Back to the light",
+    "rect": {
+     "x": 33,
+     "y": 476,
+     "w": 149.8,
+     "h": 42
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13.5px",
+     "weight": "600",
+     "color": "rgb(207, 201, 190)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    "border": "1px solid rgb(207, 201, 190)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 505,
+     "y": 33,
+     "w": 540,
+     "h": 485
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 505,
+     "y": 33,
+     "w": 540,
+     "h": 485
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1077,
+     "y": 33,
+     "w": 170,
+     "h": 485
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1077,
+     "y": 163.5,
+     "w": 170,
+     "h": 200
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Curator of the gray collection",
+    "rect": {
+     "x": 1077,
+     "y": 371.5,
+     "w": 170,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "15px",
+     "weight": "400",
+     "color": "rgb(148, 141, 128)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 550,
+     "w": 1278,
+     "h": 140
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 550,
+     "w": 1214,
+     "h": 16
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Color composition — almost entirely gray, true hex",
+    "rect": {
+     "x": 33,
+     "y": 551,
+     "w": 391.9,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "600",
+     "color": "rgb(148, 141, 128)",
+     "letterSpacing": "1.38px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "2.1% of parts are any color at all",
+    "rect": {
+     "x": 1077.3,
+     "y": 550,
+     "w": 169.7,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "400",
+     "color": "rgb(148, 141, 128)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 574,
+     "w": 1214,
+     "h": 100
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 574,
+     "w": 399,
+     "h": 100
+    },
+    "bg": "rgb(108, 110, 104)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 433,
+     "y": 574,
+     "w": 350.6,
+     "h": 100
+    },
+    "bg": "rgb(160, 165, 169)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 784.6,
+     "y": 574,
+     "w": 290.2,
+     "h": 100
+    },
+    "bg": "rgb(5, 19, 29)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1075.8,
+     "y": 574,
+     "w": 90.7,
+     "h": 100
+    },
+    "bg": "rgb(230, 227, 224)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1167.4,
+     "y": 574,
+     "w": 53.2,
+     "h": 100
+    },
+    "bg": "rgb(87, 88, 87)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1221.6,
+     "y": 574,
+     "w": 25.4,
+     "h": 100
+    },
+    "bg": "rgb(201, 26, 9)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 690,
+     "w": 1278,
+     "h": 29
+    },
+    "border": "1px solid rgb(58, 52, 43)"
+   },
+   {
+    "tag": "span",
+    "text": "Source: Rebrickable LEGO Database (rebrickable.com)",
+    "rect": {
+     "x": 33,
+     "y": 697.5,
+     "w": 270.7,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(148, 141, 128)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Chapter III · 4 of 5 · after closing time",
+    "rect": {
+     "x": 1059.8,
+     "y": 697.5,
+     "w": 187.2,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(148, 141, 128)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   }
+  ]
+ },
+ "S5 Sorting Quiz": {
+  "size": {
+   "w": 1280,
+   "h": 720
+  },
+  "elements": [
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 1,
+     "w": 1278,
+     "h": 83
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 27,
+     "w": 456.5,
+     "h": 42
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Chapter IV",
+    "rect": {
+     "x": 33,
+     "y": 47,
+     "w": 89.9,
+     "h": 17
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13px",
+     "weight": "600",
+     "color": "rgb(46, 89, 65)",
+     "letterSpacing": "1.82px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "span",
+    "text": "The Sorting Ceremony",
+    "rect": {
+     "x": 136.9,
+     "y": 27,
+     "w": 352.7,
+     "h": 42
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "38px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Click a minifig, then its name, then its era — match all ten.",
+    "rect": {
+     "x": 902,
+     "y": 46,
+     "w": 345,
+     "h": 18
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 84,
+     "w": 1278,
+     "h": 606
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 33,
+     "y": 102,
+     "w": 900,
+     "h": 570
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(46, 89, 65)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 58,
+     "y": 123,
+     "w": 130,
+     "h": 528
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Minifigure",
+    "rect": {
+     "x": 58,
+     "y": 123,
+     "w": 130,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "1.32px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 58,
+     "y": 148,
+     "w": 76,
+     "h": 80
+    },
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 59,
+     "y": 149,
+     "w": 74,
+     "h": 78
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 58,
+     "y": 238,
+     "w": 76,
+     "h": 80
+    },
+    "border": "2px solid rgb(201, 162, 39)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 60,
+     "y": 240,
+     "w": 72,
+     "h": 76
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 58,
+     "y": 328,
+     "w": 76,
+     "h": 80
+    },
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 59,
+     "y": 329,
+     "w": 74,
+     "h": 78
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 58,
+     "y": 418,
+     "w": 76,
+     "h": 80
+    },
+    "border": "2px solid rgb(201, 162, 39)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 60,
+     "y": 420,
+     "w": 72,
+     "h": 76
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 58,
+     "y": 508,
+     "w": 76,
+     "h": 80
+    },
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 59,
+     "y": 509,
+     "w": 74,
+     "h": 78
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 188,
+     "y": 123,
+     "w": 380,
+     "h": 528
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Character",
+    "rect": {
+     "x": 228,
+     "y": 231.5,
+     "w": 340,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "1.32px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 228,
+     "y": 266.5,
+     "w": 340,
+     "h": 26
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Hermione Granger",
+    "rect": {
+     "x": 228,
+     "y": 266.5,
+     "w": 170.6,
+     "h": 26
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "23px",
+     "weight": "400",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 228,
+     "y": 326.5,
+     "w": 340,
+     "h": 31
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Rubeus Hagrid ✓",
+    "rect": {
+     "x": 228,
+     "y": 330.5,
+     "w": 162,
+     "h": 26
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "23px",
+     "weight": "600",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 228,
+     "y": 391.5,
+     "w": 340,
+     "h": 26
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Severus Snape",
+    "rect": {
+     "x": 228,
+     "y": 391.5,
+     "w": 131,
+     "h": 26
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "23px",
+     "weight": "400",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 228,
+     "y": 451.5,
+     "w": 340,
+     "h": 31
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Luna Lovegood ✓",
+    "rect": {
+     "x": 228,
+     "y": 455.5,
+     "w": 166.4,
+     "h": 26
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "23px",
+     "weight": "600",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 228,
+     "y": 516.5,
+     "w": 340,
+     "h": 26
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Draco Malfoy",
+    "rect": {
+     "x": 228,
+     "y": 516.5,
+     "w": 123.3,
+     "h": 26
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "23px",
+     "weight": "400",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 568,
+     "y": 123,
+     "w": 340,
+     "h": 528
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Era · Set",
+    "rect": {
+     "x": 568,
+     "y": 242.5,
+     "w": 340,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "1.32px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 568,
+     "y": 279.5,
+     "w": 340,
+     "h": 20
+    }
+   },
+   {
+    "tag": "span",
+    "text": "First marriage · 2004",
+    "rect": {
+     "x": 568,
+     "y": 279.5,
+     "w": 130,
+     "h": 20
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "14.5px",
+     "weight": "400",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 568,
+     "y": 337.5,
+     "w": 340,
+     "h": 20
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Second marriage · 2021 ✓",
+    "rect": {
+     "x": 568,
+     "y": 337.5,
+     "w": 167.5,
+     "h": 20
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "14.5px",
+     "weight": "600",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 568,
+     "y": 395.5,
+     "w": 340,
+     "h": 20
+    }
+   },
+   {
+    "tag": "span",
+    "text": "First marriage · 2001",
+    "rect": {
+     "x": 568,
+     "y": 395.5,
+     "w": 130,
+     "h": 20
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "14.5px",
+     "weight": "400",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 568,
+     "y": 453.5,
+     "w": 340,
+     "h": 20
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Second marriage · 2022 ✓",
+    "rect": {
+     "x": 568,
+     "y": 453.5,
+     "w": 169.7,
+     "h": 20
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "14.5px",
+     "weight": "600",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 568,
+     "y": 511.5,
+     "w": 340,
+     "h": 20
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Second marriage · 2018",
+    "rect": {
+     "x": 568,
+     "y": 511.5,
+     "w": 150.5,
+     "h": 20
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "14.5px",
+     "weight": "400",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "svg",
+    "rect": {
+     "x": 158,
+     "y": 103,
+     "w": 38,
+     "h": 568
+    }
+   },
+   {
+    "tag": "line",
+    "rect": {
+     "x": 158,
+     "y": 399.3,
+     "w": 38,
+     "h": 111.1
+    }
+   },
+   {
+    "tag": "line",
+    "rect": {
+     "x": 158,
+     "y": 399.3,
+     "w": 38,
+     "h": 111.1
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 957,
+     "y": 102,
+     "w": 290,
+     "h": 570
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 957,
+     "y": 102,
+     "w": 290,
+     "h": 133
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "div",
+    "text": "Score",
+    "rect": {
+     "x": 974,
+     "y": 119,
+     "w": 256,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "1.32px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "7 / 10",
+    "rect": {
+     "x": 974,
+     "y": 134,
+     "w": 256,
+     "h": 64
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "64px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "576 minifigures in the archive",
+    "rect": {
+     "x": 974,
+     "y": 202,
+     "w": 256,
+     "h": 16
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Reveal answers",
+    "rect": {
+     "x": 957,
+     "y": 251,
+     "w": 290,
+     "h": 42
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13.5px",
+     "weight": "600",
+     "color": "rgb(245, 239, 227)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    "bg": "rgb(46, 89, 65)",
+    "border": "1px solid rgb(46, 89, 65)"
+   },
+   {
+    "tag": "div",
+    "text": "Reset",
+    "rect": {
+     "x": 957,
+     "y": 309,
+     "w": 290,
+     "h": 42
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "13.5px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    "bg": "rgb(252, 249, 241)",
+    "border": "1px solid rgb(33, 27, 20)"
+   },
+   {
+    "tag": "div",
+    "text": "idle — 1.5px dashed Rule #B5AB95 locked — 3px Gold-bright #C9A227 wrong — 3px da",
+    "rect": {
+     "x": 957,
+     "y": 367,
+     "w": 290,
+     "h": 100.1
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "b",
+    "text": "Line tokens for the TS build",
+    "rect": {
+     "x": 957,
+     "y": 379,
+     "w": 148.7,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "700",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 1,
+     "y": 690,
+     "w": 1278,
+     "h": 29
+    },
+    "border": "1px solid rgb(216, 207, 188)"
+   },
+   {
+    "tag": "span",
+    "text": "Source: Rebrickable LEGO Database (rebrickable.com)",
+    "rect": {
+     "x": 33,
+     "y": 697.5,
+     "w": 270.7,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "span",
+    "text": "Chapter IV · 5 of 5",
+    "rect": {
+     "x": 1155.7,
+     "y": 697.5,
+     "w": 91.3,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   }
+  ]
+ },
+ "T1 Tooltip": {
+  "size": {
+   "w": 320,
+   "h": 240
+  },
+  "elements": [
+   {
+    "tag": "div",
+    "rect": {
+     "x": 15,
+     "y": 15,
+     "w": 104,
+     "h": 210
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 15,
+     "y": 15,
+     "w": 104,
+     "h": 140
+    }
+   },
+   {
+    "tag": "div",
+    "rect": {
+     "x": 131,
+     "y": 15,
+     "w": 174,
+     "h": 210
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Hermione Granger",
+    "rect": {
+     "x": 131,
+     "y": 15,
+     "w": 174,
+     "h": 23.1
+    },
+    "font": {
+     "family": "\"Crimson Pro\", serif",
+     "size": "21px",
+     "weight": "600",
+     "color": "rgb(33, 27, 20)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Second marriage",
+    "rect": {
+     "x": 131,
+     "y": 42.1,
+     "w": 174,
+     "h": 15
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "11px",
+     "weight": "600",
+     "color": "rgb(138, 106, 33)",
+     "letterSpacing": "1.1px",
+     "transform": "uppercase"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "First appeared 2001 · yellow Latest 2026 · flesh tone 33 variants in era II",
+    "rect": {
+     "x": 131,
+     "y": 65.1,
+     "w": 174,
+     "h": 56.3
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "12.5px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   },
+   {
+    "tag": "div",
+    "text": "Rebrickable LEGO Database",
+    "rect": {
+     "x": 131,
+     "y": 205,
+     "w": 174,
+     "h": 20
+    },
+    "font": {
+     "family": "\"Segoe UI\", system-ui, sans-serif",
+     "size": "10px",
+     "weight": "400",
+     "color": "rgb(92, 83, 70)",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    "border": "1px solid rgb(216, 207, 188)"
+   }
+  ]
+ }
+}
