@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs><filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#05131D" flood-opacity="0.12"/></filter></defs>
+  <g id="field"><rect width="1280" height="720" fill="#F7F1E3"/></g>
+  <g id="appbar">
+  <rect width="1280" height="72" fill="#05131D"/>
+  <text x="896" y="60" font-family="Georgia" font-size="64" font-style="italic" fill="#16222E" text-anchor="end">I</text>
+  <rect x="0" y="70" width="1280" height="2" fill="#DBAC34"/>
+  <g id="studs"><circle cx="24" cy="60" r="3" fill="#16222E"/>
+    <circle cx="44" cy="60" r="3" fill="#16222E"/>
+    <circle cx="64" cy="60" r="3" fill="#16222E"/>
+    <circle cx="84" cy="60" r="3" fill="#16222E"/>
+    <circle cx="104" cy="60" r="3" fill="#16222E"/>
+    <circle cx="124" cy="60" r="3" fill="#16222E"/>
+    <circle cx="144" cy="60" r="3" fill="#16222E"/>
+    <circle cx="164" cy="60" r="3" fill="#16222E"/>
+    <circle cx="184" cy="60" r="3" fill="#16222E"/>
+    <circle cx="204" cy="60" r="3" fill="#16222E"/>
+    <circle cx="224" cy="60" r="3" fill="#16222E"/>
+    <circle cx="244" cy="60" r="3" fill="#16222E"/>
+    <circle cx="264" cy="60" r="3" fill="#16222E"/>
+    <circle cx="284" cy="60" r="3" fill="#16222E"/>
+    <circle cx="304" cy="60" r="3" fill="#16222E"/>
+    <circle cx="324" cy="60" r="3" fill="#16222E"/>
+    <circle cx="344" cy="60" r="3" fill="#16222E"/>
+    <circle cx="364" cy="60" r="3" fill="#16222E"/>
+    <circle cx="384" cy="60" r="3" fill="#16222E"/>
+    <circle cx="404" cy="60" r="3" fill="#16222E"/>
+    <circle cx="424" cy="60" r="3" fill="#16222E"/>
+    <circle cx="444" cy="60" r="3" fill="#16222E"/>
+    <circle cx="464" cy="60" r="3" fill="#16222E"/>
+    <circle cx="484" cy="60" r="3" fill="#16222E"/>
+    <circle cx="504" cy="60" r="3" fill="#16222E"/>
+    <circle cx="524" cy="60" r="3" fill="#16222E"/>
+    <circle cx="544" cy="60" r="3" fill="#16222E"/>
+    <circle cx="564" cy="60" r="3" fill="#16222E"/>
+    <circle cx="584" cy="60" r="3" fill="#16222E"/>
+    <circle cx="604" cy="60" r="3" fill="#16222E"/>
+    <circle cx="624" cy="60" r="3" fill="#16222E"/>
+    <circle cx="644" cy="60" r="3" fill="#16222E"/>
+    <circle cx="664" cy="60" r="3" fill="#16222E"/>
+    <circle cx="684" cy="60" r="3" fill="#16222E"/>
+    <circle cx="704" cy="60" r="3" fill="#16222E"/>
+    <circle cx="724" cy="60" r="3" fill="#16222E"/>
+    <circle cx="744" cy="60" r="3" fill="#16222E"/>
+    <circle cx="764" cy="60" r="3" fill="#16222E"/>
+    <circle cx="784" cy="60" r="3" fill="#16222E"/>
+    <circle cx="804" cy="60" r="3" fill="#16222E"/>
+    <circle cx="824" cy="60" r="3" fill="#16222E"/>
+    <circle cx="844" cy="60" r="3" fill="#16222E"/>
+    <circle cx="864" cy="60" r="3" fill="#16222E"/>
+    <circle cx="884" cy="60" r="3" fill="#16222E"/>
+    <circle cx="904" cy="60" r="3" fill="#16222E"/>
+    <circle cx="924" cy="60" r="3" fill="#16222E"/>
+    <circle cx="944" cy="60" r="3" fill="#16222E"/>
+    <circle cx="964" cy="60" r="3" fill="#16222E"/>
+    <circle cx="984" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1004" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1024" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1044" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1064" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1084" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1104" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1124" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1144" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1164" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1184" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1204" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1224" cy="60" r="3" fill="#16222E"/>
+    <circle cx="1244" cy="60" r="3" fill="#16222E"/></g>
+  <rect x="954" y="56" width="36" height="4" rx="2" fill="#DBAC34"/>
+  </g>
+  <g id="wells">
+  <!-- c_takeaway -->
+  <rect x="24" y="96" width="792" height="132" rx="12" fill="#FFFFFF" stroke="#DCD2BD" stroke-width="1" filter="url(#soft)" />
+  <!-- hero_parts_timeline -->
+  <rect x="24" y="244" width="792" height="424" rx="12" fill="#FFFFFF" stroke="#DCD2BD" stroke-width="1" filter="url(#soft)" />
+  <!-- c_note_hiatus -->
+  <rect x="832" y="504" width="424" height="164" rx="12" fill="#FFFFFF" stroke="#DCD2BD" stroke-width="1" filter="url(#soft)" />
+  </g>
+  <g id="footer"><rect x="24" y="684" width="1232" height="1" fill="#DCD2BD"/></g>
+  </svg>

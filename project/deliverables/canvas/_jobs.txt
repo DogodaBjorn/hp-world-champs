@@ -1,0 +1,7 @@
+p1-home.svg	p1-home.png	2
+p2-first-marriage.svg	p2-first-marriage.png	2
+p3-second-marriage.svg	p3-second-marriage.png	2
+p4-color-dark-side.svg	p4-color-dark-side.png	2
+p5-sorting-quiz.svg	p5-sorting-quiz.png	2
+p4-dark.svg	p4-dark.png	2
+tt-definitions.svg	tt-definitions.png	2

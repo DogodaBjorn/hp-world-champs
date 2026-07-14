@@ -58,6 +58,16 @@ Maintained continuously during stages 4 and 6 (never retroactively).
   carries attribution only (page-role text dropped). "Show items with no
   data" could not be encoded schema-safely → Desktop step D6.
 
+## 2026-07-14 — accepted validator finding: DataFolder current value
+
+Desktop serializes the parameter's CURRENT VALUE into `expressions.tmdl` on
+save — since the user set `DataFolder` to the real CSV folder (D1),
+`validate_tmdl --strict` now reports one machine-path error on that line.
+**Accepted deviation** (user's own Desktop action; reverting would break
+refresh and Desktop would re-write it on every save). The path contains no
+client-identifiable content. Port-back to template: the validator should
+exempt a parameter expression's current value. All other files stay 0-error.
+
 ## 2026-07-13 — D1 finding: Formula.Firewall fix
 
 User's first refresh hit `Formula.Firewall` on several queries: any query

@@ -110,6 +110,71 @@ table _Measures
 		displayFolder: 05 Display\Colors
 		lineageTag: 671aba53-3443-435c-af1d-0a850bf523ea
 
+	/// Card callout (v2 uplift): sets released in the second marriage.
+	measure 'Sets · 2018–now' = CALCULATE ( [Sets], DimSets[Era] = "Second marriage (2018– )" )
+		formatString: #,0
+		displayFolder: 05 Display\Cards
+
+	/// Card reference (v2 uplift): sets released in the first marriage.
+	measure 'Sets · 2001–2011' = CALCULATE ( [Sets], DimSets[Era] = "First marriage (2001–2011)" )
+		formatString: #,0
+		displayFolder: 05 Display\Cards
+
+	/// Card callout (v2): average set size, second marriage.
+	measure 'Avg Size · 2018–now' = CALCULATE ( [Avg Parts per Set], DimSets[Era] = "Second marriage (2018– )" )
+		formatString: #,0
+		displayFolder: 05 Display\Cards
+
+	/// Card reference (v2): average set size, first marriage.
+	measure 'Avg Size · 2001–2011' = CALCULATE ( [Avg Parts per Set], DimSets[Era] = "First marriage (2001–2011)" )
+		formatString: #,0
+		displayFolder: 05 Display\Cards
+
+	/// Card callout (v2): distinct colors, second marriage.
+	measure 'Colors · 2018–now' = CALCULATE ( [Distinct Colors Used], DimSets[Era] = "Second marriage (2018– )" )
+		formatString: #,0
+		displayFolder: 05 Display\Cards
+
+	/// Card reference (v2): distinct colors, first marriage.
+	measure 'Colors · 2001–2011' = CALCULATE ( [Distinct Colors Used], DimSets[Era] = "First marriage (2001–2011)" )
+		formatString: #,0
+		displayFolder: 05 Display\Cards
+
+	/// Card reference text (v2): era-2 vs era-1 set-count multiple.
+	measure 'Sets Delta ×' = "×" & FORMAT ( DIVIDE ( [Sets · 2018–now], [Sets · 2001–2011] ), "0.0" )
+		formatString: @
+		displayFolder: 05 Display\Cards
+
+	/// Card reference text (v2): era-2 vs era-1 set-size multiple ("nearly triple" claim, re-derived live).
+	measure 'Size Delta ×' = "×" & FORMAT ( DIVIDE ( [Avg Size · 2018–now], [Avg Size · 2001–2011] ), "0.0" )
+		formatString: @
+		displayFolder: 05 Display\Cards
+
+	/// Card reference text (v2): palette growth between the marriages.
+	measure 'Colors Delta +' = "+" & FORMAT ( [Colors · 2018–now] - [Colors · 2001–2011], "0" ) & " colors"
+		formatString: @
+		displayFolder: 05 Display\Cards
+
+	/// Card callout (v2, P4): Harry Potter grayscale share (most colorful license).
+	measure 'Gray share · Harry Potter' = CALCULATE ( [Grayscale Share %], DimSets[Root Theme] = "Harry Potter" )
+		formatString: 0.0%
+		displayFolder: 05 Display\Cards
+
+	/// Card reference (v2, P4): Star Wars grayscale share (grayest major theme).
+	measure 'Gray share · Star Wars' = CALCULATE ( [Grayscale Share %], DimSets[Root Theme] = "Star Wars" )
+		formatString: 0.0%
+		displayFolder: 05 Display\Cards
+
+	/// Card reference (v2, P4): HP lifetime distinct colors.
+	measure 'Colors · Harry Potter' = CALCULATE ( [Distinct Colors Used], DimSets[Root Theme] = "Harry Potter" )
+		formatString: #,0
+		displayFolder: 05 Display\Cards
+
+	/// Card reference (v2, P5): unique HP minifigure designs (the quiz pool universe).
+	measure 'Minifigs · Harry Potter' = CALCULATE ( [Unique Minifigures], DimSets[Root Theme] = "Harry Potter" )
+		formatString: #,0
+		displayFolder: 05 Display\Cards
+
 	column Value
 		dataType: string
 		isHidden

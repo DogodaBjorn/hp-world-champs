@@ -1,0 +1,10 @@
+{
+  "name": "hp-canvas-tools",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SVG->PNG export for the canvas-studio backgrounds (local dep, never global)",
+  "type": "module",
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}
