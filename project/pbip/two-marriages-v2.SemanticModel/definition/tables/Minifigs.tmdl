@@ -1,0 +1,81 @@
+/// One row per minifig appearance in one HP set (fig_num × set_num, v1
+/// inventories). character_name = minifig name up to the first comma or
+/// parenthesis (v1-verified parse). skin is DERIVED, not sourced: LEGO
+/// moved licensed lines to flesh tones in 2004, so year <= 2003 = "yellow",
+/// otherwise "flesh" — documented derivation (TK_GAPS #skin), not Rebrickable data.
+table Minifigs
+
+	column fig_num
+		dataType: string
+		summarizeBy: none
+		sourceColumn: fig_num
+
+	column set_num
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: set_num
+
+	column character_name
+		dataType: string
+		summarizeBy: none
+		sourceColumn: character_name
+
+	column 'Minifig Name'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Minifig Name
+
+	column year
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: year
+
+	column Era
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Era
+
+	column skin
+		dataType: string
+		summarizeBy: none
+		sourceColumn: skin
+
+	column img_url
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: img_url
+		dataCategory: ImageUrl
+
+	partition Minifigs = m
+		mode: import
+		source =
+				let
+				    // References only (RawInventoryMinifigs + V1Inventories + Sets + RawMinifigs).
+				    Source = RawInventoryMinifigs,
+				    Typed = Table.TransformColumnTypes(Source, {{"inventory_id", Int64.Type}, {"fig_num", type text}, {"quantity", Int64.Type}}),
+				    V1 = Table.NestedJoin(Typed, {"inventory_id"}, V1Inventories, {"inventory_id"}, "inv", JoinKind.Inner),
+				    WithSet = Table.ExpandTableColumn(V1, "inv", {"set_num"}),
+				    Grouped = Table.Group(WithSet, {"set_num", "fig_num"}, {{"quantity", each List.Sum([quantity]), Int64.Type}}),
+				    HPOnly = Table.NestedJoin(Grouped, {"set_num"}, Sets, {"set_num"}, "s", JoinKind.Inner),
+				    WithYear = Table.ExpandTableColumn(HPOnly, "s", {"year", "Era"}),
+				    WithFig = Table.NestedJoin(WithYear, {"fig_num"}, RawMinifigs, {"fig_num"}, "f", JoinKind.LeftOuter),
+				    WithFigCols = Table.ExpandTableColumn(WithFig, "f", {"name", "img_url"}),
+				    WithCharacter = Table.AddColumn(WithFigCols, "character_name", each
+				        let
+				            n = [name],
+				            pc = Text.PositionOf(n, ","),
+				            pp = Text.PositionOf(n, "("),
+				            cut = if pc = -1 and pp = -1 then Text.Length(n)
+				                  else if pc = -1 then pp
+				                  else if pp = -1 then pc
+				                  else List.Min({pc, pp})
+				        in
+				            Text.Trim(Text.Start(n, cut)), type text),
+				    WithSkin = Table.AddColumn(WithCharacter, "skin", each if [year] <= 2003 then "yellow" else "flesh", type text),
+				    Renamed = Table.RenameColumns(WithSkin, {{"name", "Minifig Name"}}),
+				    Slim = Table.RemoveColumns(Renamed, {"quantity"})
+				in
+				    Slim

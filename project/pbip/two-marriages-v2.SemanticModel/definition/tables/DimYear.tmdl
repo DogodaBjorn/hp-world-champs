@@ -1,0 +1,36 @@
+/// Contiguous year dimension 2001–2026 (the retrospective's horizon),
+/// marked as date table. The hero chart binds Year so the 2012–2017
+/// silence renders as empty columns even though no HP set exists there.
+table DimYear
+	dataCategory: Time
+
+	column Year
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: Year
+
+	column 'Year Start Date'
+		dataType: dateTime
+		isHidden
+		isKey
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: Year Start Date
+
+	column IsSilenceYear
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: IsSilenceYear
+
+	partition DimYear = m
+		mode: import
+		source =
+				let
+				    Years = List.Numbers(2001, 26),
+				    T = Table.FromList(Years, Splitter.SplitByNothing(), {"Year"}),
+				    Typed = Table.TransformColumnTypes(T, {{"Year", Int64.Type}}),
+				    WithDate = Table.AddColumn(Typed, "Year Start Date", each #date([Year], 1, 1), type date),
+				    WithSilence = Table.AddColumn(WithDate, "IsSilenceYear", each [Year] >= 2012 and [Year] <= 2017, type logical)
+				in
+				    WithSilence

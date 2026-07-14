@@ -1,0 +1,85 @@
+/// Folder containing the contest CSVs. Set once in Desktop (Transform data >
+/// Edit parameters). Ships as a placeholder on purpose: machine paths are a
+/// validator error in this repo; imported data travels inside the .pbix.
+expression DataFolder = "SET-ME - folder containing the Round 2 CSVs" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+
+	annotation PBI_ResultType = Text
+
+/// Reads one contest CSV: UTF-8, quote-aware (QuoteStyle.None mis-splits
+/// quoted set names containing commas), headers promoted.
+expression fnCsv =
+		(fileName as text, columnCount as number) =>
+		let
+		    root = if Text.EndsWith(DataFolder, "\") or Text.EndsWith(DataFolder, "/") then DataFolder else DataFolder & "\",
+		    Source = Csv.Document(File.Contents(root & fileName), [Delimiter = ",", Columns = columnCount, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true])
+		in
+		    Promoted
+
+	annotation PBI_ResultType = Function
+
+/// Staging (not loaded): raw sets.csv. Exists so Sets contains query
+/// REFERENCES only — a query that both reads a file and references another
+/// query trips the Formula.Firewall ("rebuild this data combination").
+expression RawSets =
+		fnCsv("sets.csv", 6)
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): raw inventory_parts.csv (firewall split for SetColors).
+expression RawInventoryParts =
+		fnCsv("inventory_parts.csv", 6)
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): raw inventory_minifigs.csv (firewall split for Minifigs).
+expression RawInventoryMinifigs =
+		fnCsv("inventory_minifigs.csv", 3)
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): raw colors.csv (firewall split for Colors).
+expression RawColors =
+		fnCsv("colors.csv", 8)
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): raw minifigs.csv (firewall split for Minifigs).
+expression RawMinifigs =
+		fnCsv("minifigs.csv", 4)
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): themes with Root Theme resolved by walking
+/// parent_id to the topmost ancestor (chains are short).
+expression ThemesResolved =
+		let
+		    Source = fnCsv("themes.csv", 3),
+		    Typed = Table.TransformColumnTypes(Source, {{"id", Int64.Type}, {"name", type text}, {"parent_id", Int64.Type}}),
+		    ids = List.Buffer(Typed[id]),
+		    names = List.Buffer(Typed[name]),
+		    parents = List.Buffer(Typed[parent_id]),
+		    chainOf = (tid as number) as list =>
+		        List.Generate(() => tid, (t) => t <> null, (t) => parents{List.PositionOf(ids, t)}),
+		    WithChain = Table.AddColumn(Typed, "chain", each chainOf([id]), type list),
+		    WithRoot = Table.AddColumn(WithChain, "Root Theme", each names{List.PositionOf(ids, List.Last([chain]))}, type text),
+		    Slim = Table.RemoveColumns(WithRoot, {"chain"})
+		in
+		    Slim
+
+	annotation PBI_ResultType = Table
+
+/// Staging (not loaded): version-1 inventories only — inventory_id -> set_num.
+/// The v1 filter lives here so every downstream table inherits it by
+/// construction (same convention the v1 model verified against Rebrickable).
+expression V1Inventories =
+		let
+		    Source = fnCsv("inventories.csv", 3),
+		    Typed = Table.TransformColumnTypes(Source, {{"id", Int64.Type}, {"version", Int64.Type}, {"set_num", type text}}),
+		    V1 = Table.SelectRows(Typed, each [version] = 1),
+		    Slim = Table.RemoveColumns(V1, {"version"}),
+		    Renamed = Table.RenameColumns(Slim, {{"id", "inventory_id"}})
+		in
+		    Renamed
+
+	annotation PBI_ResultType = Table

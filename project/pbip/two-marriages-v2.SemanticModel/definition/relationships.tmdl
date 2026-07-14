@@ -1,0 +1,15 @@
+relationship SetColors_Sets
+	fromColumn: SetColors.set_num
+	toColumn: Sets.set_num
+
+relationship SetColors_Colors
+	fromColumn: SetColors.color_id
+	toColumn: Colors.color_id
+
+relationship Minifigs_Sets
+	fromColumn: Minifigs.set_num
+	toColumn: Sets.set_num
+
+relationship Sets_DimYear
+	fromColumn: Sets.year
+	toColumn: DimYear.Year

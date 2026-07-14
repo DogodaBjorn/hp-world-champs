@@ -1,0 +1,57 @@
+/// One row per (set × color) across the HP sets' v1 inventories, spares
+/// excluded. part_count = physical parts of that color in that set's box.
+/// Hex and IsGrayscale are denormalized onto the grain for the Deneb marks
+/// (palette strips, composition bars read hex per row). Pseudo-colors are
+/// excluded at load so Distinct Colors needs no extra filter.
+table SetColors
+
+	column set_num
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: set_num
+
+	column color_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: color_id
+
+	column part_count
+		dataType: int64
+		formatString: #,0
+		summarizeBy: sum
+		sourceColumn: part_count
+
+	column color_hex
+		dataType: string
+		summarizeBy: none
+		sourceColumn: color_hex
+
+	column is_grayscale
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: is_grayscale
+
+	partition SetColors = m
+		mode: import
+		source =
+				let
+				    // References only (RawInventoryParts + V1Inventories + Sets + Colors) —
+				    // the uniform firewall-safe pattern; no direct file access here.
+				    Source = RawInventoryParts,
+				    Typed = Table.TransformColumnTypes(Source, {{"inventory_id", Int64.Type}, {"part_num", type text}, {"color_id", Int64.Type}, {"quantity", Int64.Type}, {"is_spare", type logical}}),
+				    NoSpares = Table.SelectRows(Typed, each not [is_spare]),
+				    V1 = Table.NestedJoin(NoSpares, {"inventory_id"}, V1Inventories, {"inventory_id"}, "inv", JoinKind.Inner),
+				    WithSet = Table.ExpandTableColumn(V1, "inv", {"set_num"}),
+				    HPOnly = Table.NestedJoin(WithSet, {"set_num"}, Sets, {"set_num"}, "s", JoinKind.Inner),
+				    NoJoinCol = Table.RemoveColumns(HPOnly, {"s"}),
+				    Grouped = Table.Group(NoJoinCol, {"set_num", "color_id"}, {{"part_count", each List.Sum([quantity]), Int64.Type}}),
+				    WithColor = Table.NestedJoin(Grouped, {"color_id"}, Colors, {"color_id"}, "c", JoinKind.Inner),
+				    Expanded = Table.ExpandTableColumn(WithColor, "c", {"Hex", "IsGrayscale", "IsPseudoColor"}),
+				    RealColors = Table.SelectRows(Expanded, each not [IsPseudoColor]),
+				    Renamed = Table.RenameColumns(RealColors, {{"Hex", "color_hex"}, {"IsGrayscale", "is_grayscale"}}),
+				    Slim = Table.RemoveColumns(Renamed, {"IsPseudoColor"})
+				in
+				    Slim

@@ -96,3 +96,16 @@ inventory-based Parts Shipped; the two disagree, e.g. 2018: 15,234 vs
 15,053, and the handoff wins for v2). M layer reuses the v1 firewall-proof
 staging architecture (Raw* expressions only touch File.Contents; loaded
 tables are references-only).
+
+### v2 model built (2026-07-14)
+
+`two-marriages-v2.SemanticModel`: 7 tables per the blueprint addendum, 4
+single-direction relationships, 11 measures (8 core per data_model.md + 3
+T1 tooltip texts). Strict TMDL clean. All expected values re-derived from
+the CSVs before build — every data_model.md number confirmed except the
+era color counts, **corrected 67/80 → 66/79** (pseudo-color inflation;
+TK_GAPS #9), and 2006/08/09 which are genuinely zero-set years (TK_GAPS
+#1). Deviation: Minifig Variants uses DISTINCTCOUNT(fig_num), not
+data_model.md's COUNTROWS — at fig × set grain COUNTROWS counts
+appearances, not variants (22/59 Harry check only passes with
+DISTINCTCOUNT).
