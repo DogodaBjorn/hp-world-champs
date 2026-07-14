@@ -144,3 +144,23 @@ Deviations (recorded for fidelity review):
 - S4b hero "97.9%", duo chart, and gray composition are static verified
   values (Star Wars data is outside the HP-scoped v2 model; sourced from
   the v1 evidence manifest, quoted in the handoff spec).
+
+### v2 quiz visual + ax-audit (2026-07-14)
+
+`sorting-quiz-v2` packaged lint-clean (GUID sortingQuizV2D76FC5E4…,
+2.0.0.0); chain interaction, waves, built-in score/reveal/reset, keyboard +
+ARIA. Contrast audit: 13 pairs measured, 11 PASS. Two review findings, both
+spec-contractual hexes (pixel-perfect brief says never approximate) —
+**user acceptance requested**:
+
+- **F-v2-1 (major):** gold `#8A6A21` eyebrow text on page bg `#F5EFE3` =
+  4.40:1 (needs 4.5 at 10pt bold; the same gold on card bg passes 4.79).
+  Affected: S1/S2/S3/S4a eyebrows, S1 "KEY TAKEAWAY". Fix would be a
+  slightly darker gold (e.g. #7A5D1D) — a one-token generator change.
+- **F-v2-2 (minor):** gold-bright `#C9A227` quiz focus ring / locked lines
+  on `#FCF9F1` = 2.30:1 (non-text needs 3.0). Mitigation already in place:
+  state is never color-alone (locked = bold + " ✓" + solid vs dashed
+  pattern); finding covers the focus indicator specifically.
+
+The "seven silent years" annotation (18pt italic ≈ large text, 3.0 floor)
+passes at 4.40. Wrong-flash red `#B33A2B` passes 5.61.

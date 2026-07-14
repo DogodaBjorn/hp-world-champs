@@ -31,7 +31,7 @@ stages:
   s6_report_build:
     status: in_progress
     evidence: "project-state/active/06-build.md"
-    gate_note: "G6 REOPENED 2026-07-14 for the two-marriages-v2 clean-room rebuild per CLAUDE_CODE_PROMPT.md brief: pixel-perfect vs measured prototype rects (Playwright), Deneb charts, new model per data_model.md, new sorting-quiz-v2 visual. v1 report/model frozen as reference, not patched. Prior v1 G6 pass note: pbir validate 0 errors; fidelity review 5 recorded deviations; hpSortingQuiz packaged."
+    gate_note: "G6 rework agent-side COMPLETE 2026-07-14: two-marriages-v2 built (7 pages, 206 visuals, all rects measured from layout.json; pbir validate 0 errors; strict TMDL clean; sorting-quiz-v2 packaged lint-clean; contrast 11/13 PASS with F-v2-1/F-v2-2 awaiting user decision). Gate closes on the user Desktop pass V1-V11 (BUILD_LOG) + the +-2px diff review against reference_screenshots."
   s7_delivery:
     status: pending
     evidence: "project-state/active/07-delivery.md"

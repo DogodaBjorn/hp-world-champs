@@ -98,3 +98,52 @@ the old definition in memory and saving would overwrite the fix).
 | D9 | Import `hpSortingQuiz…pbiviz` from file on page V; replace the hero_quiz placeholder in the same slot; bind all 7 QuizQuestions roles; verify CDN images render (visual README has the exact steps) | pending |
 | D10 | Verify bookmark flip: btn_dark_side/btn_light_side swap states incl. dark chrome; tab order sensible in both states | pending |
 | D11 | Sort `tbl_fig_gallery` rows by fig_num and hide the Unique Minifigures value column if Desktop shows it (binding requires one measure) | pending |
+
+## 2026-07-14 — v2 clean-room rebuild: two-marriages-v2 (pixel-perfect)
+
+User supplied `design_handoff_powerbi/` (HTML hi-fi prototypes + per-page
+specs + theme + tools) and the CLAUDE_CODE_PROMPT brief: rebuild from
+scratch, prototype is the single source of truth, positions measured never
+eyeballed. v1 (hp-world-champs.*) is FROZEN as reference — do not open,
+patch, or refresh it; the submission candidate is now
+`project/pbip/two-marriages-v2.pbip`.
+
+- **Measured truth:** tools/*.mjs shipped as one-line comments (silent
+  no-op) — fixed; Playwright (local dev-dep) produced `layout.json` +
+  7 reference screenshots @2x. All 7 screens exactly 1280×720 / 320×240.
+- **Model:** 7 tables per data_model.md (HP-scoped star, firewall-proof
+  staging M reused from v1), 14 measures. Every spec value re-derived from
+  the CSVs first: all confirmed except era colors **corrected 67/80 →
+  66/79** (prototype counted pseudo-color `[No Color/Any Color]`; its own
+  "55 colors" for Diagon Alley uses the excluded rule) and 2006/08/09 =
+  genuinely **zero-set years**, not missing data. Full ledger: TK_GAPS.md.
+- **Report:** 7 pages, 206 visuals, `pbir validate --all` **0 errors**
+  (424 warnings, all intended classes; textbox-height floor warnings are
+  chrome micro-labels — see V9). Deneb (certified, AppSource) renders all
+  brick charts/palette strips/composition bars incl. mortar courses + stud
+  caps; specs in `project/deliverables/deneb-specs/` are the source of
+  truth. Georgia substitutes Crimson Pro (user decision; the README's own
+  documented fallback — flagged). Deviations list: 06-build.md.
+- **Quiz:** `sorting-quiz-v2` packaged lint-clean; spans the full S5
+  content band (score/reveal/reset are inside the visual — PBIR buttons
+  cannot drive custom-visual state). Import steps: its README.
+- **Contrast:** 11/13 pairs PASS; F-v2-1 (gold eyebrows 4.40:1) and
+  F-v2-2 (gold-bright focus ring 2.30:1) await user accept-or-recolor —
+  both hexes are contractual in the handoff.
+
+### Manual steps in Desktop (v2 checklist — replaces D1–D11 for v2)
+
+| # | Step | Status |
+|---|---|---|
+| V1 | Open `two-marriages-v2.pbip`; set `DataFolder` to the CSV folder; refresh (M is firewall-proof; no privacy prompts expected) | pending |
+| V2 | Spot-check: 67/142 sets · 267/731 avg · 2,029/6,020 largest · 66/79 colors · 51%/41% gray · Diagon Alley 55 colors & 2,750 parts · 576 figs · bins 29/19/14/4/1 and 24/32/40/33/13 | pending |
+| V3 | Deneb: visuals auto-fetch from AppSource via publicCustomVisuals on first open (needs sign-in). If placeholders show: import Deneb from AppSource once — same GUID, visuals rebind | pending |
+| V4 | Import `sorting-quiz-v2/dist/sortingQuizV2….pbiviz`; swap into the S5 slot per the visual README (delete placeholder + frame); bind 4 QuizPool roles; verify CDN images | pending |
+| V5 | Fig matrices (S2 ×4, S3 ×2, T1 ×1): Format → Image size → fill the cell (~96px); hide the "Minifig Variants" value column if Desktop shows it | pending |
+| V6 | Assign T1 as report-page tooltip to the 6 fig matrices (Format → Properties → Tooltips) | pending |
+| V7 | Verify bookmark flip S4a ↔ S4b (buttons on both pages; S4b is hidden so tabs still show 5 pages) | pending |
+| V8 | Confirm "Mark as date table" took effect on DimYear | pending |
+| V9 | Chrome textbox pass: 81 validator warnings say some 18–24px-tall micro-labels sit below the ~34px comfort floor — nudge any that visibly clip | pending |
+| V10 | Decide findings F-v2-1/F-v2-2 (accept the contractual golds, or ask for the darker-gold regen) | pending |
+| V11 | Capture per-page PNGs at 100% zoom → `project/deliverables/diff-report/rendered/` → agent assembles the ±2px side-by-side diff | pending |
+| V12 | After diff sign-off: export .pbix for submission (deadline 2026-07-19 23:59 PT) | pending |
