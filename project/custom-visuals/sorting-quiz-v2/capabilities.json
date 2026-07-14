@@ -1,0 +1,41 @@
+{
+  "privileges": [
+    {
+      "name": "WebAccess",
+      "essential": true,
+      "parameters": ["https://cdn.rebrickable.com"]
+    }
+  ],
+  "dataRoles": [
+    { "name": "matchKey", "displayName": "Match key (fig_num)", "kind": "Grouping" },
+    { "name": "figImage", "displayName": "Minifig image URL", "kind": "Grouping" },
+    { "name": "characterName", "displayName": "Character name", "kind": "Grouping" },
+    { "name": "eraLabel", "displayName": "Era label", "kind": "Grouping" }
+  ],
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "matchKey": { "max": 1 },
+          "figImage": { "max": 1 },
+          "characterName": { "max": 1 },
+          "eraLabel": { "max": 1 }
+        }
+      ],
+      "table": {
+        "rows": {
+          "select": [
+            { "for": { "in": "matchKey" } },
+            { "for": { "in": "figImage" } },
+            { "for": { "in": "characterName" } },
+            { "for": { "in": "eraLabel" } }
+          ],
+          "dataReductionAlgorithm": { "top": { "count": 100 } }
+        }
+      }
+    }
+  ],
+  "supportsLandingPage": false,
+  "supportsEmptyDataView": true,
+  "suppressDefaultTitle": true
+}

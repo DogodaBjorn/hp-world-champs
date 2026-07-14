@@ -1,0 +1,205 @@
+/* The Sorting Ceremony — tokens verbatim from the handoff (README.md +
+ * custom_visual_quiz.md + S5 prototype). Serif = Georgia (user-approved
+ * Crimson Pro fallback). Line states: idle 1.5px dashed #B5AB95 (3 5),
+ * locked 3px #C9A227, wrong 3px dashed #B33A2B (7 6) 400ms flash,
+ * focus ring 2px #C9A227 offset 2px. */
+
+@ink: #211B14;
+@muted: #5C5346;
+@rule: #D8CFBC;
+@card: #FCF9F1;
+@page: #F5EFE3;
+@green: #2E5941;
+@green-hover: #254A36;
+@gold-bright: #C9A227;
+@hover: #F0E8D6;
+
+.sq2-root {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+    color: @ink;
+    overflow: hidden;
+}
+
+.sq2-panel {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    display: flex;
+    border: 1px solid @green;
+    background: @card;
+    padding: 20px 24px;
+    box-sizing: border-box;
+}
+
+.sq2-col {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.sq2-col-figs { width: 130px; flex: none; }
+.sq2-col-names { flex: 1; padding-left: 40px; min-width: 0; }
+.sq2-col-eras { flex: 1; min-width: 0; }
+
+.sq2-colhead {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: @muted;
+    margin-bottom: 10px;
+}
+
+.sq2-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 0;
+}
+
+.sq2-figs { gap: 10px; justify-content: flex-start; }
+
+.sq2-tile {
+    width: 76px;
+    height: 80px;
+    border: 1px solid @rule;
+    box-sizing: border-box;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 120ms ease, transform 120ms ease;
+
+    img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+    &:hover { transform: translateY(-1px); }
+    &.sel { border: 2px solid @gold-bright; }
+    &.done { border: 2px solid @gold-bright; cursor: default; opacity: 0.95; }
+    &:focus-visible { outline: 2px solid @gold-bright; outline-offset: 2px; }
+}
+
+.sq2-name {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: @ink;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.sel { color: @gold-bright; }
+    &.done { font-weight: 600; color: #8A6A21; cursor: default; }
+    &:focus-visible { outline: 2px solid @gold-bright; outline-offset: 2px; }
+}
+
+.sq2-era {
+    font-size: 14.5px;
+    font-weight: 400;
+    color: @ink;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.done { font-weight: 600; color: #8A6A21; cursor: default; }
+    &:focus-visible { outline: 2px solid @gold-bright; outline-offset: 2px; }
+}
+
+.sq2-gutter {
+    position: absolute;
+    left: 124px;
+    top: 0;
+    width: 38px;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.sq2-line-locked {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: sq2-draw 260ms ease-out forwards;
+}
+
+@keyframes sq2-draw {
+    to { stroke-dashoffset: 0; }
+}
+
+.sq2-side {
+    width: 290px;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sq2-score {
+    border: 1px solid @rule;
+    background: @card;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.sq2-score-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: @muted;
+}
+
+.sq2-score-value {
+    font-family: Georgia, serif;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1;
+    color: @ink;
+}
+
+.sq2-score-note {
+    font-size: 12px;
+    color: @muted;
+    margin-top: 4px;
+}
+
+.sq2-btn {
+    padding: 11px 14px;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 120ms ease;
+
+    &:focus-visible { outline: 2px solid @gold-bright; outline-offset: 2px; }
+}
+
+.sq2-btn-reveal {
+    border: 1px solid @green;
+    background: @green;
+    color: @page;
+
+    &:hover { background: @green-hover; }
+}
+
+.sq2-btn-reset {
+    border: 1px solid @ink;
+    background: @card;
+    color: @ink;
+
+    &:hover { background: @hover; }
+}
+
+.sq2-live {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}

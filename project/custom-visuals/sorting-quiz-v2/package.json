@@ -1,0 +1,22 @@
+{
+  "name": "sorting-quiz-v2",
+  "description": "Sorting Ceremony matching quiz for the Two Marriages retrospective (Dataviz World Champs BCN Round 2)",
+  "version": "2.0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "pbiviz": "pbiviz",
+    "start": "pbiviz start",
+    "package": "pbiviz package",
+    "lint": "npx eslint ."
+  },
+  "dependencies": {
+    "powerbi-visuals-api": "~5.3.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "eslint": "^9.11.1",
+    "eslint-plugin-powerbi-visuals": "^1.0.0",
+    "powerbi-visuals-tools": "^7.1.1",
+    "typescript": "5.5.4"
+  }
+}
