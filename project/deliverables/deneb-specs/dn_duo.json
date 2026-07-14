@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "S4b mini brick-bar duo: Star Wars ~72% gray (58px column) vs Harry Potter ~42% gray (34px column), static verified values per the handoff spec. Plot is 63px tall so pixel heights map 1:1 to domain units. Labels are separate textboxes.",
+  "width": "container",
+  "height": "container",
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "transparent",
+  "data": {
+    "values": [
+      { "k": "sw", "h": 58, "c": "#948D80", "m": "#A8A194" },
+      { "k": "hp", "h": 34, "c": "#6E2B25", "m": "#84443D" }
+    ]
+  },
+  "transform": [{ "calculate": "datum.h + 5", "as": "studTop" }],
+  "encoding": {
+    "x": { "field": "k", "type": "ordinal", "sort": ["sw", "hp"], "scale": { "paddingInner": 0.097, "paddingOuter": 0 }, "axis": null },
+    "y": { "type": "quantitative", "scale": { "domain": [0, 63], "nice": false }, "axis": null }
+  },
+  "layer": [
+    { "mark": { "type": "bar" }, "encoding": { "y": { "field": "h" }, "color": { "field": "c", "scale": null } } },
+    {
+      "mark": { "type": "bar" },
+      "transform": [
+        { "calculate": "sequence(15, datum.h, 15)", "as": "lv" },
+        { "flatten": ["lv"] },
+        { "calculate": "datum.lv + 1", "as": "lv2" }
+      ],
+      "encoding": { "y": { "field": "lv" }, "y2": { "field": "lv2" }, "color": { "field": "m", "scale": null } }
+    },
+    { "mark": { "type": "bar", "width": 14, "xOffset": -11, "cornerRadiusTopLeft": 2, "cornerRadiusTopRight": 2 }, "encoding": { "y": { "field": "h" }, "y2": { "field": "studTop" }, "color": { "field": "c", "scale": null } } },
+    { "mark": { "type": "bar", "width": 14, "xOffset": 11, "cornerRadiusTopLeft": 2, "cornerRadiusTopRight": 2 }, "encoding": { "y": { "field": "h" }, "y2": { "field": "studTop" }, "color": { "field": "c", "scale": null } } }
+  ]
+}

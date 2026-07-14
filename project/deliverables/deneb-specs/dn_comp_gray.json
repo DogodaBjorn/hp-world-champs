@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "S4b color composition: Vader's-TIE-Advanced gray composition, static verified shares from the handoff spec (S4b_dark_state.md, v1-evidence-checked). Inline data; no model binding by design.",
+  "width": "container",
+  "height": "container",
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "transparent",
+  "data": {
+    "values": [
+      { "hex": "#6C6E68", "share": 33.0, "idx": 1 },
+      { "hex": "#A0A5A9", "share": 29.0, "idx": 2 },
+      { "hex": "#05131D", "share": 24.0, "idx": 3 },
+      { "hex": "#E6E3E0", "share": 7.5, "idx": 4 },
+      { "hex": "#575857", "share": 4.4, "idx": 5 },
+      { "hex": "#C91A09", "share": 2.1, "idx": 6 }
+    ]
+  },
+  "mark": { "type": "bar", "stroke": "#15120E", "strokeWidth": 1 },
+  "encoding": {
+    "x": { "field": "share", "type": "quantitative", "stack": "normalize", "axis": null },
+    "color": { "field": "hex", "type": "nominal", "scale": null, "legend": null },
+    "order": { "field": "idx", "sort": "ascending" }
+  }
+}

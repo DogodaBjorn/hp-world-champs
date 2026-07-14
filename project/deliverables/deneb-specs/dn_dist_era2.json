@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "S3 distribution brick chart (era II). Dataset fields: Size Bin (Sets), Total Sets (measure). Max bin 40 sets renders at 88% of the 265px plot (domain 45.5). Era-II fill #6E2B25, mortar #84443D.",
+  "width": "container",
+  "height": "container",
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "transparent",
+  "data": { "name": "dataset" },
+  "transform": [
+    { "calculate": "datum['Total Sets']", "as": "n" },
+    { "calculate": "datum.n + 0.86", "as": "studTop" }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Size Bin", "type": "ordinal",
+      "sort": ["1–100", "101–300", "301–700", "701–2k", "2k+"],
+      "scale": { "paddingInner": 0.114, "paddingOuter": 0 },
+      "axis": { "labelAngle": 0, "labelFontSize": 10.5, "labelColor": "#5C5346", "labelPadding": 5, "title": null, "domain": false, "ticks": false, "grid": false }
+    },
+    "y": { "type": "quantitative", "scale": { "domain": [0, 45.5], "nice": false }, "axis": null }
+  },
+  "layer": [
+    { "mark": { "type": "bar" }, "encoding": { "y": { "field": "n" }, "color": { "value": "#6E2B25" } } },
+    {
+      "mark": { "type": "bar" },
+      "transform": [
+        { "calculate": "sequence(2.57, datum.n, 2.57)", "as": "lv" },
+        { "flatten": ["lv"] },
+        { "calculate": "datum.lv + 0.171", "as": "lv2" }
+      ],
+      "encoding": { "y": { "field": "lv" }, "y2": { "field": "lv2" }, "color": { "value": "#84443D" } }
+    },
+    { "mark": { "type": "bar", "width": 9, "xOffset": -7, "cornerRadiusTopLeft": 2, "cornerRadiusTopRight": 2 }, "encoding": { "y": { "field": "n" }, "y2": { "field": "studTop" }, "color": { "value": "#6E2B25" } } },
+    { "mark": { "type": "bar", "width": 9, "xOffset": 7, "cornerRadiusTopLeft": 2, "cornerRadiusTopRight": 2 }, "encoding": { "y": { "field": "n" }, "y2": { "field": "studTop" }, "color": { "value": "#6E2B25" } } },
+    { "mark": { "type": "text", "fontSize": 10.5, "font": "Segoe UI", "dy": -6 }, "encoding": { "y": { "field": "studTop" }, "text": { "field": "n", "format": ",d" }, "color": { "value": "#5C5346" } } }
+  ]
+}

@@ -32,6 +32,13 @@ table Colors
 		summarizeBy: none
 		sourceColumn: IsPseudoColor
 
+	column Luminance
+		dataType: double
+		isHidden
+		formatString: 0.0
+		summarizeBy: none
+		sourceColumn: Luminance
+
 	partition Colors = m
 		mode: import
 		source =
@@ -44,7 +51,15 @@ table Colors
 				        let n = Text.Lower([name])
 				        in Text.Contains(n, "gray") or Text.Contains(n, "grey") or Text.Contains(n, "black") or Text.Contains(n, "white"), type logical),
 				    WithPseudo = Table.AddColumn(WithGray, "IsPseudoColor", each [id] = -1 or [id] = 9999, type logical),
-				    Renamed = Table.RenameColumns(WithPseudo, {{"id", "color_id"}, {"name", "Color Name"}}),
-				    Slim = Table.SelectColumns(Renamed, {"color_id", "Color Name", "Hex", "IsGrayscale", "IsPseudoColor"})
+				    // Perceptual luminance from the hex; sort key for the palette strips
+				    // (grayscale dark->light first, then colors dark->light).
+				    hexVal = (h as text) as number =>
+				        let d = (c as text) as number => Text.PositionOf("0123456789ABCDEF", Text.Upper(c))
+				        in d(Text.At(h, 0)) * 16 + d(Text.At(h, 1)),
+				    WithLum = Table.AddColumn(WithPseudo, "Luminance", each
+				        let r = hexVal(Text.Range([rgb], 0, 2)), g = hexVal(Text.Range([rgb], 2, 2)), b = hexVal(Text.Range([rgb], 4, 2))
+				        in 0.299 * r + 0.587 * g + 0.114 * b, type number),
+				    Renamed = Table.RenameColumns(WithLum, {{"id", "color_id"}, {"name", "Color Name"}}),
+				    Slim = Table.SelectColumns(Renamed, {"color_id", "Color Name", "Hex", "IsGrayscale", "IsPseudoColor", "Luminance"})
 				in
 				    Slim

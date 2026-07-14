@@ -1,0 +1,167 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "dn_palette",
+  "position": {
+    "x": 487,
+    "y": 205,
+    "z": 340,
+    "height": 230,
+    "width": 761,
+    "tabOrder": 25000
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\":\"https://vega.github.io/schema/vega-lite/v5.json\",\"description\":\"S2/S3 era palette strip (era comes from the page filter). Dataset fields: Hex, IsGrayscale, Luminance (Colors) + Color Parts (measure). Equal-width vertical cells with 1px-equivalent gaps, grayscale cells first sorted dark-to-light, then colors dark-to-light, each cell its true brick hex.\",\"width\":\"container\",\"height\":\"container\",\"autosize\":{\"type\":\"fit\",\"contains\":\"padding\"},\"background\":\"transparent\",\"data\":{\"name\":\"dataset\"},\"transform\":[{\"filter\":\"isValid(datum[''Color Parts'']) && datum[''Color Parts''] > 0\"},{\"calculate\":\"(datum.IsGrayscale ? 0 : 1000) + datum.Luminance\",\"as\":\"sortKey\"},{\"window\":[{\"op\":\"rank\",\"as\":\"ord\"}],\"sort\":[{\"field\":\"sortKey\",\"order\":\"ascending\"}]}],\"mark\":{\"type\":\"bar\"},\"encoding\":{\"x\":{\"field\":\"ord\",\"type\":\"ordinal\",\"scale\":{\"paddingInner\":0.09,\"paddingOuter\":0},\"axis\":null},\"y\":{\"datum\":0,\"type\":\"quantitative\",\"scale\":{\"domain\":[0,1],\"nice\":false},\"axis\":null},\"y2\":{\"datum\":1},\"color\":{\"field\":\"Hex\",\"type\":\"nominal\",\"scale\":null}}}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vegaLite'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'The era palette: one vertical cell per distinct brick color used in the first marriage era, grayscale cells first sorted dark to light, each cell filled with its true brick hex.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Colors"
+                    }
+                  },
+                  "Property": "Hex"
+                }
+              },
+              "queryRef": "Colors.Hex",
+              "nativeQueryRef": "Hex",
+              "displayName": "Hex"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Colors"
+                    }
+                  },
+                  "Property": "IsGrayscale"
+                }
+              },
+              "queryRef": "Colors.IsGrayscale",
+              "nativeQueryRef": "IsGrayscale",
+              "displayName": "IsGrayscale"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Colors"
+                    }
+                  },
+                  "Property": "Luminance"
+                }
+              },
+              "queryRef": "Colors.Luminance",
+              "nativeQueryRef": "Luminance",
+              "displayName": "Luminance"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Color Parts"
+                }
+              },
+              "queryRef": "_Measures.Color Parts",
+              "nativeQueryRef": "Color Parts",
+              "displayName": "Color Parts"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

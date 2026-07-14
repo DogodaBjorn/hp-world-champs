@@ -1,0 +1,21 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "S2/S3 era palette strip (era comes from the page filter). Dataset fields: Hex, IsGrayscale, Luminance (Colors) + Color Parts (measure). Equal-width vertical cells with 1px-equivalent gaps, grayscale cells first sorted dark-to-light, then colors dark-to-light, each cell its true brick hex.",
+  "width": "container",
+  "height": "container",
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "transparent",
+  "data": { "name": "dataset" },
+  "transform": [
+    { "filter": "isValid(datum['Color Parts']) && datum['Color Parts'] > 0" },
+    { "calculate": "(datum.IsGrayscale ? 0 : 1000) + datum.Luminance", "as": "sortKey" },
+    { "window": [{ "op": "rank", "as": "ord" }], "sort": [{ "field": "sortKey", "order": "ascending" }] }
+  ],
+  "mark": { "type": "bar" },
+  "encoding": {
+    "x": { "field": "ord", "type": "ordinal", "scale": { "paddingInner": 0.09, "paddingOuter": 0 }, "axis": null },
+    "y": { "datum": 0, "type": "quantitative", "scale": { "domain": [0, 1], "nice": false }, "axis": null },
+    "y2": { "datum": 1 },
+    "color": { "field": "Hex", "type": "nominal", "scale": null }
+  }
+}

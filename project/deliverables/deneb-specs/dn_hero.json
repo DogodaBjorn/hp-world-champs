@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "S1 hero brick chart. Dataset fields: Year (DimYear), Parts per Year (measure). Era derived by year. Brick treatment per brick_chart_recipe.md: era fill, 1px mortar course every 15px-equivalent, two stud caps on columns > 500 parts, value labels on 2004/2018/2025, zero years as 2px slivers. 2006/08/09 verified zero-set years (TK_GAPS #1) so they render as slivers, not hatch.",
+  "width": "container",
+  "height": "container",
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "transparent",
+  "data": { "name": "dataset" },
+  "transform": [
+    { "impute": "Parts per Year", "key": "Year", "keyvals": { "start": 2001, "stop": 2027 }, "value": 0 },
+    { "calculate": "datum['Parts per Year']", "as": "p" },
+    { "calculate": "datum.Year <= 2011 ? 'first' : datum.Year < 2018 ? 'silence' : 'second'", "as": "era" },
+    { "calculate": "datum.p + 212", "as": "studTop" }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Year", "type": "ordinal",
+      "scale": { "paddingInner": 0.18, "paddingOuter": 0.01 },
+      "axis": {
+        "labelAngle": -90, "labelFontSize": 10.5, "labelColor": "#5C5346",
+        "labelPadding": 6, "title": null, "domain": false, "ticks": false, "grid": false
+      }
+    },
+    "y": {
+      "type": "quantitative",
+      "scale": { "domain": [0, 17638], "nice": false },
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": { "type": "bar" },
+      "transform": [{ "filter": "datum.p > 0" }],
+      "encoding": {
+        "y": { "field": "p" },
+        "color": {
+          "condition": { "test": "datum.era === 'first'", "value": "#8C7A5B" },
+          "value": "#6E2B25"
+        }
+      }
+    },
+    {
+      "mark": { "type": "bar" },
+      "transform": [
+        { "filter": "datum.p > 0" },
+        { "calculate": "sequence(637, datum.p, 637)", "as": "lv" },
+        { "flatten": ["lv"] },
+        { "calculate": "datum.lv + 42", "as": "lv2" }
+      ],
+      "encoding": {
+        "y": { "field": "lv" },
+        "y2": { "field": "lv2" },
+        "color": {
+          "condition": { "test": "datum.era === 'first'", "value": "#A08E6C" },
+          "value": "#84443D"
+        }
+      }
+    },
+    {
+      "mark": { "type": "bar", "width": 8, "xOffset": -6, "cornerRadiusTopLeft": 2, "cornerRadiusTopRight": 2 },
+      "transform": [{ "filter": "datum.p > 500" }],
+      "encoding": {
+        "y": { "field": "p" }, "y2": { "field": "studTop" },
+        "color": { "condition": { "test": "datum.era === 'first'", "value": "#8C7A5B" }, "value": "#6E2B25" }
+      }
+    },
+    {
+      "mark": { "type": "bar", "width": 8, "xOffset": 6, "cornerRadiusTopLeft": 2, "cornerRadiusTopRight": 2 },
+      "transform": [{ "filter": "datum.p > 500" }],
+      "encoding": {
+        "y": { "field": "p" }, "y2": { "field": "studTop" },
+        "color": { "condition": { "test": "datum.era === 'first'", "value": "#8C7A5B" }, "value": "#6E2B25" }
+      }
+    },
+    {
+      "mark": { "type": "bar" },
+      "transform": [{ "filter": "datum.p === 0" }],
+      "encoding": { "y": { "datum": 0 }, "y2": { "datum": 85 }, "color": { "value": "#D8CFBC" } }
+    },
+    {
+      "mark": { "type": "text", "fontSize": 11, "fontWeight": 600, "font": "Segoe UI", "dy": -8 },
+      "transform": [{ "filter": "datum.Year === 2004 || datum.Year === 2018 || datum.Year === 2025" }],
+      "encoding": {
+        "y": { "field": "studTop" },
+        "text": { "field": "p", "format": ",d" },
+        "color": { "condition": { "test": "datum.era === 'first'", "value": "#211B14" }, "value": "#6E2B25" }
+      }
+    }
+  ]
+}

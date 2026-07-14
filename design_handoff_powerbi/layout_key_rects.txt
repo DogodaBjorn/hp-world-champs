@@ -1,0 +1,128 @@
+--- S1 Home :: hero bars tall (3)
+    div {'x': 948.8, 'y': 260.6, 'w': 31.8, 'h': 358.4} |  | bg= | bgI=repeating-linear-gradient(to top, rgb(11 | bd=
+    div {'x': 1118.3, 'y': 279.7, 'w': 26.9, 'h': 339.3} |  | bg= | bgI=repeating-linear-gradient(to top, rgb(11 | bd=
+    div {'x': 1184.2, 'y': 239, 'w': 29.9, 'h': 380} |  | bg= | bgI=repeating-linear-gradient(to top, rgb(11 | bd=
+--- S1 Home :: zero slivers (6)
+    div {'x': 751.2, 'y': 617, 'w': 26.9, 'h': 2} |  | bg=rgb(216, 207, 188) | bgI= | bd=
+    div {'x': 784.2, 'y': 617, 'w': 26.9, 'h': 2} |  | bg=rgb(216, 207, 188) | bgI= | bd=
+    div {'x': 817.1, 'y': 617, 'w': 26.9, 'h': 2} |  | bg=rgb(216, 207, 188) | bgI= | bd=
+    div {'x': 850, 'y': 617, 'w': 26.9, 'h': 2} |  | bg=rgb(216, 207, 188) | bgI= | bd=
+    div {'x': 883, 'y': 617, 'w': 26.9, 'h': 2} |  | bg=rgb(216, 207, 188) | bgI= | bd=
+    div {'x': 915.9, 'y': 617, 'w': 26.9, 'h': 2} |  | bg=rgb(216, 207, 188) | bgI= | bd=
+--- S1 Home :: nav1 (1)
+    span {'x': 65.5, 'y': 563, 'w': 96, 'h': 34} | I · The Yellow Years | bg= | bgI= | bd=
+--- S1 Home :: nav2 (1)
+    span {'x': 216.3, 'y': 563, 'w': 99.7, 'h': 34} | II · The Boy Who Grew Up | bg= | bgI= | bd=
+--- S1 Home :: nav3 (1)
+    span {'x': 63.4, 'y': 629, 'w': 98.1, 'h': 34} | III · Chamber of Colors | bg= | bgI= | bd=
+--- S1 Home :: nav4 (1)
+    span {'x': 216.1, 'y': 629, 'w': 99.9, 'h': 34} | IV · The Sorting Ceremony | bg= | bgI= | bd=
+--- S1 Home :: kpi1v (1)
+    div {'x': 29, 'y': 459, 'w': 93, 'h': 23} | 67 → 142 | bg= | bgI= | bd=
+--- S1 Home :: kpi1l (1)
+    div {'x': 29, 'y': 482, 'w': 93, 'h': 15} | sets | bg= | bgI= | bd=
+--- S1 Home :: kpi2v (1)
+    div {'x': 132, 'y': 459, 'w': 93, 'h': 23} | 267 → 731 | bg= | bgI= | bd=
+--- S1 Home :: kpi3v (1)
+    div {'x': 235, 'y': 459, 'w': 93, 'h': 23} | 67 → 80 | bg= | bgI= | bd=
+--- S1 Home :: svgs (8)
+    svg {'x': 29, 'y': 27, 'w': 66, 'h': 30} |  | bg= | bgI= | bd=
+    svg {'x': 109, 'y': 28.5, 'w': 46, 'h': 27} |  | bg= | bgI= | bd=
+    svg {'x': 29, 'y': 209.8, 'w': 54, 'h': 22} |  | bg= | bgI= | bd=
+    svg {'x': 87, 'y': 209.8, 'w': 54, 'h': 22} |  | bg= | bgI= | bd=
+    svg {'x': 41, 'y': 574, 'w': 15.5, 'h': 12} |  | bg= | bgI= | bd=
+    svg {'x': 195.5, 'y': 574, 'w': 11.8, 'h': 12} |  | bg= | bgI= | bd=
+    svg {'x': 41, 'y': 640, 'w': 13.4, 'h': 12} |  | bg= | bgI= | bd=
+    svg {'x': 195.5, 'y': 640, 'w': 11.6, 'h': 12} |  | bg= | bgI= | bd=
+--- S1 Home :: footerR (1)
+    span {'x': 1029.9, 'y': 697.5, 'w': 217.1, 'h': 15} | Home · 1 of 5 · 2006, 2008, 2009 totals [TK] | bg= | bgI= | bd=
+--- S1 Home :: hairlines-h (0)
+--- S2 Chapter I :: eyebrow (1)
+    span {'x': 33, 'y': 47, 'w': 79.7, 'h': 17} | Chapter I | bg= | bgI= | bd=
+--- S2 Chapter I :: title (1)
+    span {'x': 126.7, 'y': 27, 'w': 452.7, 'h': 42} | The Yellow Years · 2001–2011 | bg= | bgI= | bd=
+--- S2 Chapter I :: subtitle (1)
+    div {'x': 1010, 'y': 44, 'w': 237, 'h': 21} | A modest toy line in classic yellow. | bg= | bgI= | bd=
+--- S2 Chapter I :: kpi values (5)
+    span {'x': 33, 'y': 109, 'w': 29, 'h': 33} | 67 | bg= | bgI= | bd=
+    span {'x': 280.6, 'y': 109, 'w': 43.9, 'h': 33} | 267 | bg= | bgI= | bd=
+    span {'x': 528.2, 'y': 109, 'w': 70.6, 'h': 33} | 2,029 | bg= | bgI= | bd=
+    span {'x': 775.8, 'y': 109, 'w': 29, 'h': 33} | 67 | bg= | bgI= | bd=
+    span {'x': 1023.4, 'y': 109, 'w': 47.9, 'h': 33} | 51% | bg= | bgI= | bd=
+--- S2 Chapter I :: kpi labels (7)
+    span {'x': 33, 'y': 142, 'w': 19.7, 'h': 15} | sets | bg= | bgI= | bd=
+    span {'x': 280.6, 'y': 142, 'w': 84.5, 'h': 15} | avg parts per set | bg= | bgI= | bd=
+    span {'x': 528.2, 'y': 142, 'w': 87.6, 'h': 15} | largest set (parts) | bg= | bgI= | bd=
+    span {'x': 775.8, 'y': 142, 'w': 70.4, 'h': 15} | distinct colors | bg= | bgI= | bd=
+    span {'x': 1023.4, 'y': 142, 'w': 79.6, 'h': 15} | grayscale bricks | bg= | bgI= | bd=
+    div {'x': 33, 'y': 177, 'w': 430, 'h': 15} | Sets by size — parts per set | bg= | bgI= | bd=
+    div {'x': 487, 'y': 178, 'w': 415.6, 'h': 15} | The era palette — 67 colors, each bar its true b | bg= | bgI= | bd=
+--- S2 Chapter I :: dist title (1)
+    div {'x': 33, 'y': 177, 'w': 430, 'h': 15} | Sets by size — parts per set | bg= | bgI= | bd=
+--- S2 Chapter I :: palette title (1)
+    div {'x': 487, 'y': 178, 'w': 415.6, 'h': 15} | The era palette — 67 colors, each bar its true b | bg= | bgI= | bd=
+--- S2 Chapter I :: pct (1)
+    div {'x': 1170.4, 'y': 177, 'w': 76.6, 'h': 16} | grayscale | bg= | bgI= | bd=
+--- S2 Chapter I :: strip cells (67)
+    div {'x': 487, 'y': 205, 'w': 10.3, 'h': 230} |  | bg=rgb(5, 19, 29) | bgI= | bd=
+    div {'x': 498.3, 'y': 205, 'w': 10.4, 'h': 230} |  | bg=rgb(5, 19, 29) | bgI= | bd=
+    div {'x': 509.7, 'y': 205, 'w': 10.3, 'h': 230} |  | bg=rgb(5, 19, 29) | bgI= | bd=
+    div {'x': 521, 'y': 205, 'w': 10.4, 'h': 230} |  | bg=rgb(43, 43, 43) | bgI= | bd=
+    div {'x': 532.4, 'y': 205, 'w': 10.3, 'h': 230} |  | bg=rgb(43, 43, 43) | bgI= | bd=
+    div {'x': 543.8, 'y': 205, 'w': 10.4, 'h': 230} |  | bg=rgb(43, 43, 43) | bgI= | bd=
+    div {'x': 555.1, 'y': 205, 'w': 10.3, 'h': 230} |  | bg=rgb(62, 60, 57) | bgI= | bd=
+    div {'x': 566.5, 'y': 205, 'w': 10.4, 'h': 230} |  | bg=rgb(62, 60, 57) | bgI= | bd=
+    div {'x': 577.8, 'y': 205, 'w': 10.3, 'h': 230} |  | bg=rgb(87, 88, 87) | bgI= | bd=
+    div {'x': 589.2, 'y': 205, 'w': 10.4, 'h': 230} |  | bg=rgb(87, 88, 87) | bgI= | bd=
+    div {'x': 600.5, 'y': 205, 'w': 10.4, 'h': 230} |  | bg=rgb(87, 88, 87) | bgI= | bd=
+    div {'x': 611.9, 'y': 205, 'w': 10.4, 'h': 230} |  | bg=rgb(108, 110, 104) | bgI= | bd=
+--- S2 Chapter I :: split rule L (1)
+    div {'x': 487, 'y': 439, 'w': 387.6, 'h': 18} | grayscale · 51% | bg= | bgI= | bd=2px solid rgb(33, 27, 20)
+--- S2 Chapter I :: split rule R (1)
+    div {'x': 874.6, 'y': 439, 'w': 372.4, 'h': 18} | color · 49% | bg= | bgI= | bd=2px solid rgb(138, 106, 33)
+--- S2 Chapter I :: gallery boxes (5)
+    div {'x': 33, 'y': 477, 'w': 201, 'h': 195} |  | bg=rgb(252, 249, 241) | bgI= | bd=1px solid rgb(216, 207, 188)
+    div {'x': 254, 'y': 477, 'w': 201, 'h': 195} |  | bg=rgb(252, 249, 241) | bgI= | bd=1px solid rgb(216, 207, 188)
+    div {'x': 475, 'y': 477, 'w': 201, 'h': 195} |  | bg=rgb(252, 249, 241) | bgI= | bd=1px solid rgb(216, 207, 188)
+    div {'x': 696, 'y': 477, 'w': 201, 'h': 195} |  | bg=rgb(252, 249, 241) | bgI= | bd=1px solid rgb(216, 207, 188)
+    div {'x': 917, 'y': 477, 'w': 330, 'h': 195} |  | bg=rgb(252, 249, 241) | bgI= | bd=1px solid rgb(216, 207, 188)
+--- S2 Chapter I :: gallery names (4)
+    span {'x': 44, 'y': 614, 'w': 96.3, 'h': 17} | Hogwarts Castle | bg= | bgI= | bd=
+    span {'x': 265, 'y': 614, 'w': 75.3, 'h': 17} | Diagon Alley | bg= | bgI= | bd=
+    span {'x': 486, 'y': 614, 'w': 44.5, 'h': 17} | [TK set] | bg= | bgI= | bd=
+    span {'x': 707, 'y': 614, 'w': 44.5, 'h': 17} | [TK set] | bg= | bgI= | bd=
+--- S2 Chapter I :: gallery meta (4)
+    span {'x': 44, 'y': 631, 'w': 81.8, 'h': 15} | 2001 · [TK] parts | bg= | bgI= | bd=
+    span {'x': 265, 'y': 631, 'w': 150.2, 'h': 30} | 2011 · 2,029 parts — the era’s largest | bg= | bgI= | bd=
+    span {'x': 486, 'y': 631, 'w': 76.6, 'h': 15} | [TK] · [TK] parts | bg= | bgI= | bd=
+    span {'x': 707, 'y': 631, 'w': 76.6, 'h': 15} | [TK] · [TK] parts | bg= | bgI= | bd=
+--- S2 Chapter I :: fig captions (4)
+    span {'x': 941.2, 'y': 610, 'w': 44.5, 'h': 28} | Harry · 22 variants | bg= | bgI= | bd=
+    span {'x': 1012.8, 'y': 610, 'w': 59.5, 'h': 14} | Hermione · 9 | bg= | bgI= | bd=
+    span {'x': 1099.5, 'y': 610, 'w': 44, 'h': 14} | Ron · [TK] | bg= | bgI= | bd=
+    span {'x': 1168.9, 'y': 610, 'w': 63.2, 'h': 28} | Dumbledore · [TK] | bg= | bgI= | bd=
+--- S2 Chapter I :: figcard title (1)
+    div {'x': 928, 'y': 488, 'w': 308, 'h': 15} | The yellow years — classic faces | bg= | bgI= | bd=
+--- S2 Chapter I :: dist bars (5)
+    div {'x': 33, 'y': 226, 'w': 78, 'h': 214} |  | bg= | bgI=repeating-linear-gradient(to top, rgb(14 | bd=
+    div {'x': 121, 'y': 283.1, 'w': 78, 'h': 156.9} |  | bg= | bgI=repeating-linear-gradient(to top, rgb(14 | bd=
+    div {'x': 209, 'y': 354, 'w': 78, 'h': 86} |  | bg= | bgI=repeating-linear-gradient(to top, rgb(14 | bd=
+    div {'x': 297, 'y': 404.6, 'w': 78, 'h': 35.4} |  | bg= | bgI=repeating-linear-gradient(to top, rgb(14 | bd=
+    div {'x': 385, 'y': 429.9, 'w': 78, 'h': 10.1} |  | bg= | bgI=repeating-linear-gradient(to top, rgb(14 | bd=
+--- S2 Chapter I :: dist bin labels (8)
+    span {'x': 58, 'y': 443, 'w': 27.9, 'h': 14} | 1–100 | bg= | bgI= | bd=
+    span {'x': 140.4, 'y': 443, 'w': 39.2, 'h': 14} | 101–300 | bg= | bgI= | bd=
+    span {'x': 228.4, 'y': 443, 'w': 39.2, 'h': 14} | 301–700 | bg= | bgI= | bd=
+    span {'x': 319.4, 'y': 443, 'w': 33.1, 'h': 14} | 701–2k | bg= | bgI= | bd=
+    span {'x': 415, 'y': 407.9, 'w': 17.9, 'h': 14} | [TK] | bg= | bgI= | bd=
+    span {'x': 415, 'y': 443, 'w': 18.1, 'h': 14} | 2k+ | bg= | bgI= | bd=
+    div {'x': 487, 'y': 439, 'w': 387.6, 'h': 18} | grayscale · 51% | bg= | bgI= | bd=2px solid rgb(33, 27, 20)
+    div {'x': 874.6, 'y': 439, 'w': 372.4, 'h': 18} | color · 49% | bg= | bgI= | bd=2px solid rgb(138, 106, 33)
+--- S2 Chapter I :: dist counts (5)
+    span {'x': 63, 'y': 204, 'w': 17.9, 'h': 14} | [TK] | bg= | bgI= | bd=
+    span {'x': 151, 'y': 261.1, 'w': 17.9, 'h': 14} | [TK] | bg= | bgI= | bd=
+    span {'x': 239, 'y': 332, 'w': 17.9, 'h': 14} | [TK] | bg= | bgI= | bd=
+    span {'x': 327, 'y': 382.6, 'w': 17.9, 'h': 14} | [TK] | bg= | bgI= | bd=
+    span {'x': 415, 'y': 407.9, 'w': 17.9, 'h': 14} | [TK] | bg= | bgI= | bd=
+--- S2 Chapter I :: footerR (1)
+    span {'x': 1162.8, 'y': 697.5, 'w': 84.2, 'h': 15} | Chapter I · 2 of 5 | bg= | bgI= | bd=

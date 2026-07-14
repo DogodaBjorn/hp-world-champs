@@ -1,0 +1,187 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "Fluent2-CY26SU05",
+      "reportVersionAtImport": {
+        "visual": "2.9.0",
+        "report": "3.3.0",
+        "page": "2.3.1"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "two-marriages.json",
+      "reportVersionAtImport": {
+        "visual": "2.10.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "Fluent2-CY26SU05",
+          "path": "BaseThemes/Fluent2-CY26SU05.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "two-marriages.json",
+          "path": "two-marriages.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "glyph_brick_red.png",
+          "path": "glyph_brick_red.png",
+          "type": "Image"
+        },
+        {
+          "name": "glyph_nav_1.png",
+          "path": "glyph_nav_1.png",
+          "type": "Image"
+        },
+        {
+          "name": "glyph_nav_2.png",
+          "path": "glyph_nav_2.png",
+          "type": "Image"
+        },
+        {
+          "name": "glyph_nav_3.png",
+          "path": "glyph_nav_3.png",
+          "type": "Image"
+        },
+        {
+          "name": "glyph_nav_4.png",
+          "path": "glyph_nav_4.png",
+          "type": "Image"
+        },
+        {
+          "name": "glyph_ornament.png",
+          "path": "glyph_ornament.png",
+          "type": "Image"
+        },
+        {
+          "name": "glyph_spectacles.png",
+          "path": "glyph_spectacles.png",
+          "type": "Image"
+        },
+        {
+          "name": "img_fig_000471.jpg",
+          "path": "img_fig_000471.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_fig_000593.jpg",
+          "path": "img_fig_000593.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_fig_000594.jpg",
+          "path": "img_fig_000594.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_fig_002136.jpg",
+          "path": "img_fig_002136.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_fig_006056.jpg",
+          "path": "img_fig_006056.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_fig_013032.jpg",
+          "path": "img_fig_013032.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_set_10132_1.jpg",
+          "path": "img_set_10132_1.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_set_10175_1.jpg",
+          "path": "img_set_10175_1.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_set_10217_1.jpg",
+          "path": "img_set_10217_1.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_set_4709_1.jpg",
+          "path": "img_set_4709_1.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_set_4842_1.jpg",
+          "path": "img_set_4842_1.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_set_71043_1.jpg",
+          "path": "img_set_71043_1.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_set_75978_1.jpg",
+          "path": "img_set_75978_1.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "img_set_76444_1.jpg",
+          "path": "img_set_76444_1.jpg",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "publicCustomVisuals": [
+    "deneb7E15AEF80B9E4D4F8E12924291ECE89A"
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "useEnhancedTooltips": true
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "dn_hero",
+  "position": {
+    "x": 389,
+    "y": 204,
+    "z": 470,
+    "height": 445,
+    "width": 859,
+    "tabOrder": 38000
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\":\"https://vega.github.io/schema/vega-lite/v5.json\",\"description\":\"S1 hero brick chart. Dataset fields: Year (DimYear), Parts per Year (measure). Era derived by year. Brick treatment per brick_chart_recipe.md: era fill, 1px mortar course every 15px-equivalent, two stud caps on columns > 500 parts, value labels on 2004/2018/2025, zero years as 2px slivers. 2006/08/09 verified zero-set years (TK_GAPS #1) so they render as slivers, not hatch.\",\"width\":\"container\",\"height\":\"container\",\"autosize\":{\"type\":\"fit\",\"contains\":\"padding\"},\"background\":\"transparent\",\"data\":{\"name\":\"dataset\"},\"transform\":[{\"impute\":\"Parts per Year\",\"key\":\"Year\",\"keyvals\":{\"start\":2001,\"stop\":2027},\"value\":0},{\"calculate\":\"datum[''Parts per Year'']\",\"as\":\"p\"},{\"calculate\":\"datum.Year <= 2011 ? ''first'' : datum.Year < 2018 ? ''silence'' : ''second''\",\"as\":\"era\"},{\"calculate\":\"datum.p + 212\",\"as\":\"studTop\"}],\"encoding\":{\"x\":{\"field\":\"Year\",\"type\":\"ordinal\",\"scale\":{\"paddingInner\":0.18,\"paddingOuter\":0.01},\"axis\":{\"labelAngle\":-90,\"labelFontSize\":10.5,\"labelColor\":\"#5C5346\",\"labelPadding\":6,\"title\":null,\"domain\":false,\"ticks\":false,\"grid\":false}},\"y\":{\"type\":\"quantitative\",\"scale\":{\"domain\":[0,17638],\"nice\":false},\"axis\":null}},\"layer\":[{\"mark\":{\"type\":\"bar\"},\"transform\":[{\"filter\":\"datum.p > 0\"}],\"encoding\":{\"y\":{\"field\":\"p\"},\"color\":{\"condition\":{\"test\":\"datum.era === ''first''\",\"value\":\"#8C7A5B\"},\"value\":\"#6E2B25\"}}},{\"mark\":{\"type\":\"bar\"},\"transform\":[{\"filter\":\"datum.p > 0\"},{\"calculate\":\"sequence(637, datum.p, 637)\",\"as\":\"lv\"},{\"flatten\":[\"lv\"]},{\"calculate\":\"datum.lv + 42\",\"as\":\"lv2\"}],\"encoding\":{\"y\":{\"field\":\"lv\"},\"y2\":{\"field\":\"lv2\"},\"color\":{\"condition\":{\"test\":\"datum.era === ''first''\",\"value\":\"#A08E6C\"},\"value\":\"#84443D\"}}},{\"mark\":{\"type\":\"bar\",\"width\":8,\"xOffset\":-6,\"cornerRadiusTopLeft\":2,\"cornerRadiusTopRight\":2},\"transform\":[{\"filter\":\"datum.p > 500\"}],\"encoding\":{\"y\":{\"field\":\"p\"},\"y2\":{\"field\":\"studTop\"},\"color\":{\"condition\":{\"test\":\"datum.era === ''first''\",\"value\":\"#8C7A5B\"},\"value\":\"#6E2B25\"}}},{\"mark\":{\"type\":\"bar\",\"width\":8,\"xOffset\":6,\"cornerRadiusTopLeft\":2,\"cornerRadiusTopRight\":2},\"transform\":[{\"filter\":\"datum.p > 500\"}],\"encoding\":{\"y\":{\"field\":\"p\"},\"y2\":{\"field\":\"studTop\"},\"color\":{\"condition\":{\"test\":\"datum.era === ''first''\",\"value\":\"#8C7A5B\"},\"value\":\"#6E2B25\"}}},{\"mark\":{\"type\":\"bar\"},\"transform\":[{\"filter\":\"datum.p === 0\"}],\"encoding\":{\"y\":{\"datum\":0},\"y2\":{\"datum\":85},\"color\":{\"value\":\"#D8CFBC\"}}},{\"mark\":{\"type\":\"text\",\"fontSize\":11,\"fontWeight\":600,\"font\":\"Segoe UI\",\"dy\":-8},\"transform\":[{\"filter\":\"datum.Year === 2004 || datum.Year === 2018 || datum.Year === 2025\"}],\"encoding\":{\"y\":{\"field\":\"studTop\"},\"text\":{\"field\":\"p\",\"format\":\",d\"},\"color\":{\"condition\":{\"test\":\"datum.era === ''first''\",\"value\":\"#211B14\"},\"value\":\"#6E2B25\"}}}]}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vegaLite'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Brick-style column chart of catalog parts shipped per year, 2001 to 2026. The line vanishes to zero for 2012 through 2017 — the seven silent years — then returns in 2018 at nearly triple the scale.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimYear"
+                    }
+                  },
+                  "Property": "Year"
+                }
+              },
+              "queryRef": "DimYear.Year",
+              "nativeQueryRef": "Year",
+              "displayName": "Year"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Parts per Year"
+                }
+              },
+              "queryRef": "_Measures.Parts per Year",
+              "nativeQueryRef": "Parts per Year",
+              "displayName": "Parts per Year"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

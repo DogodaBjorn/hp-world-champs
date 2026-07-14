@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
+  "pageOrder": [
+    "s1-home",
+    "s2-chapter1",
+    "s3-chapter2",
+    "s4a-most-colorful",
+    "s4b-dark-state",
+    "s5-sorting-quiz",
+    "t1-tooltip"
+  ],
+  "activePageName": "s1-home"
+}

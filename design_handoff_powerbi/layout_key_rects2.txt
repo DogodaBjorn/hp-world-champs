@@ -1,0 +1,132 @@
+--- S3 Chapter II :: kpis (5)
+    span {'x': 33, 'y': 109, 'w': 41.1, 'h': 33} | 142 | 30px/600 | bg= | bd=
+    span {'x': 280.6, 'y': 109, 'w': 39.1, 'h': 33} | 731 | 30px/600 | bg= | bd=
+    span {'x': 528.2, 'y': 109, 'w': 73.3, 'h': 33} | 6,020 | 30px/600 | bg= | bd=
+    span {'x': 775.8, 'y': 109, 'w': 34.7, 'h': 33} | 80 | 30px/600 | bg= | bd=
+    span {'x': 1023.4, 'y': 109, 'w': 49.4, 'h': 33} | 41% | 30px/600 | bg= | bd=
+--- S3 Chapter II :: gallery boxes (4)
+    div {'x': 33, 'y': 492, 'w': 258, 'h': 180} |  | / | bg=rgb(252, 249, 241) | bd=1px solid rgb(216, 207, 188)
+    div {'x': 311, 'y': 492, 'w': 258, 'h': 180} |  | / | bg=rgb(252, 249, 241) | bd=1px solid rgb(216, 207, 188)
+    div {'x': 589, 'y': 492, 'w': 258, 'h': 180} |  | / | bg=rgb(252, 249, 241) | bd=1px solid rgb(216, 207, 188)
+    div {'x': 867, 'y': 492, 'w': 380, 'h': 180} |  | / | bg=rgb(252, 249, 241) | bd=1px solid rgb(138, 106, 33)
+--- S3 Chapter II :: oldnew box (2)
+    div {'x': 798.6, 'y': 454, 'w': 448.4, 'h': 18} | color · 59% | 10.5px/400 | bg= | bd=2px solid rgb(138, 106, 33)
+    div {'x': 867, 'y': 492, 'w': 380, 'h': 180} |  | / | bg=rgb(252, 249, 241) | bd=1px solid rgb(138, 106, 33)
+--- S3 Chapter II :: oldnew title (1)
+    div {'x': 878, 'y': 503, 'w': 358, 'h': 15} | Old vs new — Hermione · 9 old, 33 new | 11px/600 | bg= | bd=
+--- S3 Chapter II :: side note (1)
+    div {'x': 1140, 'y': 550.6, 'w': 96, 'h': 63.8} | 22 old vs 59 new Harrys · 44 characters span | 11px/400 | bg= | bd=
+--- S3 Chapter II :: captions (2)
+    div {'x': 878, 'y': 625, 'w': 121, 'h': 14} | 2001 · yellow skin | 10.5px/400 | bg= | bd=
+    div {'x': 1009, 'y': 625, 'w': 121, 'h': 14} | 2026 · flesh tone | 10.5px/400 | bg= | bd=
+--- S3 Chapter II :: strip cells (80)
+    div {'x': 487, 'y': 205, 'w': 8.5, 'h': 245} |  | / | bg=rgb(5, 19, 29) | bd=
+    div {'x': 496.5, 'y': 205, 'w': 8.5, 'h': 245} |  | / | bg=rgb(5, 19, 29) | bd=
+    div {'x': 506, 'y': 205, 'w': 8.5, 'h': 245} |  | / | bg=rgb(5, 19, 29) | bd=
+    div {'x': 515.5, 'y': 205, 'w': 8.5, 'h': 245} |  | / | bg=rgb(43, 43, 43) | bd=
+    div {'x': 525, 'y': 205, 'w': 8.5, 'h': 245} |  | / | bg=rgb(43, 43, 43) | bd=
+    div {'x': 534.5, 'y': 205, 'w': 8.5, 'h': 245} |  | / | bg=rgb(43, 43, 43) | bd=
+--- S3 Chapter II :: split L (1)
+    div {'x': 487, 'y': 454, 'w': 311.6, 'h': 18} | grayscale · 41% | 10.5px/400 | bg= | bd=2px solid rgb(33, 27, 20)
+--- S3 Chapter II :: split R (1)
+    div {'x': 798.6, 'y': 454, 'w': 448.4, 'h': 18} | color · 59% | 10.5px/400 | bg= | bd=2px solid rgb(138, 106, 33)
+--- S4a Most Colorful :: eyebrow (2)
+    div {'x': 33, 'y': 33, 'w': 440, 'h': 17} | Chapter III · The Chamber of Colors | 13px/600 | bg= | bd=
+    span {'x': 1156.7, 'y': 697.5, 'w': 90.3, 'h': 15} | Chapter III · 4 of 5 | 11.5px/400 | bg= | bd=
+--- S4a Most Colorful :: hero55 (1)
+    div {'x': 33, 'y': 64, 'w': 440, 'h': 149.6} | 55 | 170px/600 | bg= | bd=
+--- S4a Most Colorful :: subhead (1)
+    div {'x': 33, 'y': 227.6, 'w': 440, 'h': 31} | distinct colors in one set | 28px/600 | bg= | bd=
+--- S4a Most Colorful :: body (2)
+    b {'x': 33, 'y': 273.6, 'w': 213.5, 'h': 20} | Diagon Alley Wizarding Shops | 15px/700 | bg= | bd=
+    b {'x': 33, 'y': 273.6, 'w': 359.8, 'h': 42.5} | #2 most colorful LEGO set ever made — of any | 15px/700 | bg= | bd=
+--- S4a Most Colorful :: bodyfull (1)
+    div {'x': 33, 'y': 272.6, 'w': 380, 'h': 67.5} | (2025) is the [TK parts] parts across 55 rea | 15px/400 | bg= | bd=
+--- S4a Most Colorful :: btn (1)
+    div {'x': 33, 'y': 476, 'w': 333.8, 'h': 42} | Prefer the least colorful? Come to the dark  | 13.5px/600 | bg=rgb(252, 249, 241) | bd=1px solid rgb(33, 27, 20)
+--- S4a Most Colorful :: comp title (1)
+    div {'x': 33, 'y': 551, 'w': 522.8, 'h': 15} | Color composition — all 55 marks in true hex | 11.5px/600 | bg= | bd=
+--- S4a Most Colorful :: comp note (1)
+    div {'x': 1012.8, 'y': 550, 'w': 234.2, 'h': 16} | segment width binds to part count per color | 12px/400 | bg= | bd=
+--- S4a Most Colorful :: comp cells (56)
+    div {'x': 33, 'y': 574, 'w': 1214, 'h': 100} |  | / | bg= | bd=
+    div {'x': 33, 'y': 574, 'w': 112.8, 'h': 100} |  | / | bg=rgb(62, 60, 57) | bd=
+    div {'x': 146.8, 'y': 574, 'w': 112.8, 'h': 100} |  | / | bg=rgb(87, 88, 87) | bd=
+    div {'x': 260.6, 'y': 574, 'w': 112.8, 'h': 100} |  | / | bg=rgb(108, 110, 104) | bd=
+    div {'x': 374.4, 'y': 574, 'w': 56.4, 'h': 100} |  | / | bg=rgb(137, 135, 136) | bd=
+    div {'x': 431.8, 'y': 574, 'w': 56.4, 'h': 100} |  | / | bg=rgb(155, 161, 157) | bd=
+--- S4a Most Colorful :: footerR (2)
+    div {'x': 33, 'y': 33, 'w': 440, 'h': 17} | Chapter III · The Chamber of Colors | 13px/600 | bg= | bd=
+    span {'x': 1156.7, 'y': 697.5, 'w': 90.3, 'h': 15} | Chapter III · 4 of 5 | 11.5px/400 | bg= | bd=
+--- S4b Dark State :: eyebrow (2)
+    div {'x': 33, 'y': 33, 'w': 440, 'h': 17} | Chapter III · The Chamber of Grays | 13px/600 | bg= | bd=
+    span {'x': 1059.8, 'y': 697.5, 'w': 187.2, 'h': 15} | Chapter III · 4 of 5 · after closing time | 11.5px/400 | bg= | bd=
+--- S4b Dark State :: hero (1)
+    div {'x': 33, 'y': 64, 'w': 440, 'h': 132} | 97.9% | 150px/600 | bg= | bd=
+--- S4b Dark State :: subhead (1)
+    div {'x': 33, 'y': 210, 'w': 440, 'h': 31} | grayscale bricks | 28px/600 | bg= | bd=
+--- S4b Dark State :: body (1)
+    div {'x': 33, 'y': 255, 'w': 380, 'h': 45} | (2006), from Star Wars — LEGO’s grayest them | 15px/400 | bg= | bd=
+--- S4b Dark State :: sw label (1)
+    div {'x': 33, 'y': 320, 'w': 130, 'h': 16} | Star Wars gray | 12px/400 | bg= | bd=
+--- S4b Dark State :: hp label (1)
+    div {'x': 177, 'y': 344, 'w': 130, 'h': 16} | Harry Potter gray | 12px/400 | bg= | bd=
+--- S4b Dark State :: duo bars (2)
+    div {'x': 33, 'y': 345, 'w': 130, 'h': 58} |  | / | bg= | bd=
+    div {'x': 177, 'y': 369, 'w': 130, 'h': 34} |  | / | bg= | bd=
+--- S4b Dark State :: btn (1)
+    div {'x': 33, 'y': 476, 'w': 149.8, 'h': 42} | ← Back to the light | 13.5px/600 | bg= | bd=1px solid rgb(207, 201, 190)
+--- S4b Dark State :: curator (1)
+    div {'x': 1077, 'y': 371.5, 'w': 170, 'h': 16} | Curator of the gray collection | 15px/400 | bg= | bd=
+--- S4b Dark State :: comp title (1)
+    div {'x': 33, 'y': 551, 'w': 391.9, 'h': 15} | Color composition — almost entirely gray, tr | 11.5px/600 | bg= | bd=
+--- S4b Dark State :: comp note (1)
+    div {'x': 1077.3, 'y': 550, 'w': 169.7, 'h': 16} | 2.1% of parts are any color at all | 12px/400 | bg= | bd=
+--- S4b Dark State :: comp cells (6)
+    div {'x': 33, 'y': 574, 'w': 399, 'h': 100} |  | / | bg=rgb(108, 110, 104) | bd=
+    div {'x': 433, 'y': 574, 'w': 350.6, 'h': 100} |  | / | bg=rgb(160, 165, 169) | bd=
+    div {'x': 784.6, 'y': 574, 'w': 290.2, 'h': 100} |  | / | bg=rgb(5, 19, 29) | bd=
+    div {'x': 1075.8, 'y': 574, 'w': 90.7, 'h': 100} |  | / | bg=rgb(230, 227, 224) | bd=
+    div {'x': 1167.4, 'y': 574, 'w': 53.2, 'h': 100} |  | / | bg=rgb(87, 88, 87) | bd=
+    div {'x': 1221.6, 'y': 574, 'w': 25.4, 'h': 100} |  | / | bg=rgb(201, 26, 9) | bd=
+--- S4b Dark State :: footerR (2)
+    div {'x': 33, 'y': 33, 'w': 440, 'h': 17} | Chapter III · The Chamber of Grays | 13px/600 | bg= | bd=
+    span {'x': 1059.8, 'y': 697.5, 'w': 187.2, 'h': 15} | Chapter III · 4 of 5 · after closing time | 11.5px/400 | bg= | bd=
+--- S5 Sorting Quiz :: eyebrow (1)
+    span {'x': 33, 'y': 47, 'w': 89.9, 'h': 17} | Chapter IV | 13px/600 | bg= | bd=
+--- S5 Sorting Quiz :: title (1)
+    span {'x': 136.9, 'y': 27, 'w': 352.7, 'h': 42} | The Sorting Ceremony | 38px/600 | bg= | bd=
+--- S5 Sorting Quiz :: subtitle (1)
+    div {'x': 902, 'y': 46, 'w': 345, 'h': 18} | Click a minifig, then its name, then its era | 13.5px/400 | bg= | bd=
+--- S5 Sorting Quiz :: quiz panel (2)
+    div {'x': 33, 'y': 102, 'w': 900, 'h': 570} |  | / | bg=rgb(252, 249, 241) | bd=1px solid rgb(46, 89, 65)
+    div {'x': 957, 'y': 251, 'w': 290, 'h': 42} | Reveal answers | 13.5px/600 | bg=rgb(46, 89, 65) | bd=1px solid rgb(46, 89, 65)
+--- S5 Sorting Quiz :: score box (3)
+    div {'x': 33, 'y': 102, 'w': 900, 'h': 570} |  | / | bg=rgb(252, 249, 241) | bd=1px solid rgb(46, 89, 65)
+    div {'x': 957, 'y': 102, 'w': 290, 'h': 133} |  | / | bg=rgb(252, 249, 241) | bd=1px solid rgb(216, 207, 188)
+    div {'x': 957, 'y': 309, 'w': 290, 'h': 42} | Reset | 13.5px/600 | bg=rgb(252, 249, 241) | bd=1px solid rgb(33, 27, 20)
+--- S5 Sorting Quiz :: score (1)
+    div {'x': 974, 'y': 134, 'w': 256, 'h': 64} | 7 / 10 | 64px/600 | bg= | bd=
+--- S5 Sorting Quiz :: score note (1)
+    div {'x': 974, 'y': 202, 'w': 256, 'h': 16} | 576 minifigures in the archive | 12px/400 | bg= | bd=
+--- S5 Sorting Quiz :: reveal (1)
+    div {'x': 957, 'y': 251, 'w': 290, 'h': 42} | Reveal answers | 13.5px/600 | bg=rgb(46, 89, 65) | bd=1px solid rgb(46, 89, 65)
+--- S5 Sorting Quiz :: reset (1)
+    div {'x': 957, 'y': 309, 'w': 290, 'h': 42} | Reset | 13.5px/600 | bg=rgb(252, 249, 241) | bd=1px solid rgb(33, 27, 20)
+--- S5 Sorting Quiz :: legend (1)
+    b {'x': 957, 'y': 379, 'w': 148.7, 'h': 15} | Line tokens for the TS build | 11.5px/700 | bg= | bd=
+--- S5 Sorting Quiz :: colheads (3)
+    div {'x': 58, 'y': 123, 'w': 130, 'h': 15} | Minifigure | 11px/600 | bg= | bd=
+    div {'x': 228, 'y': 231.5, 'w': 340, 'h': 15} | Character | 11px/600 | bg= | bd=
+    div {'x': 568, 'y': 242.5, 'w': 340, 'h': 15} | Era · Set | 11px/600 | bg= | bd=
+--- S5 Sorting Quiz :: footerR (2)
+    span {'x': 33, 'y': 47, 'w': 89.9, 'h': 17} | Chapter IV | 13px/600 | bg= | bd=
+    span {'x': 1155.7, 'y': 697.5, 'w': 91.3, 'h': 15} | Chapter IV · 5 of 5 | 11.5px/400 | bg= | bd=
+--- T1 Tooltip :: all (7)
+    div {'x': 15, 'y': 15, 'w': 104, 'h': 210} |  | / | bg= | bd=
+    div {'x': 15, 'y': 15, 'w': 104, 'h': 140} |  | / | bg= | bd=
+    div {'x': 131, 'y': 15, 'w': 174, 'h': 210} |  | / | bg= | bd=
+    div {'x': 131, 'y': 15, 'w': 174, 'h': 23.1} | Hermione Granger | 21px/600 | bg= | bd=
+    div {'x': 131, 'y': 42.1, 'w': 174, 'h': 15} | Second marriage | 11px/600 | bg= | bd=
+    div {'x': 131, 'y': 65.1, 'w': 174, 'h': 56.3} | First appeared 2001 · yellow Latest 2026 · f | 12.5px/400 | bg= | bd=
+    div {'x': 131, 'y': 205, 'w': 174, 'h': 20} | Rebrickable LEGO Database | 10px/400 | bg= | bd=1px solid rgb(216, 207, 188)

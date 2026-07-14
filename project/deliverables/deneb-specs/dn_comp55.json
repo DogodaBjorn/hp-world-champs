@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "S4a color composition: one horizontal normalized stacked bar of Diagon Alley Wizarding Shops (page filter set_num 76444-1). Dataset fields: color_hex (SetColors) + Color Parts (measure). Segment width = part-count share, true hex fill, 1px page-color gaps, ordered by part count descending.",
+  "width": "container",
+  "height": "container",
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "transparent",
+  "data": { "name": "dataset" },
+  "transform": [{ "filter": "isValid(datum['Color Parts']) && datum['Color Parts'] > 0" }],
+  "mark": { "type": "bar", "stroke": "#F5EFE3", "strokeWidth": 1 },
+  "encoding": {
+    "x": { "field": "Color Parts", "type": "quantitative", "aggregate": "sum", "stack": "normalize", "axis": null },
+    "color": { "field": "color_hex", "type": "nominal", "scale": null, "legend": null },
+    "order": { "field": "Color Parts", "sort": "descending" }
+  }
+}

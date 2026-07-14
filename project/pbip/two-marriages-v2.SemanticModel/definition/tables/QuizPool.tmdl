@@ -48,20 +48,21 @@ table QuizPool
 		source =
 				let
 				    Source = #table(
-				        type table [round_no = Int64.Type, fig_num = text, fig_img_url = text, character_name = text, era = text, set_num = text, set_name = text],
+				        type table [round_no = Int64.Type, fig_num = text, fig_img_url = text, character_name = text, era = text, set_num = text, set_year = Int64.Type],
 				        {
-				            {1, "fig-000471", "https://cdn.rebrickable.com/media/sets/fig-000471.jpg", "Harry Potter", "First marriage", "4701-1", "Sorting Hat"},
-				            {2, "fig-001818", "https://cdn.rebrickable.com/media/sets/fig-001818.jpg", "Harry Potter", "Second marriage", "75954-1", "Hogwarts Great Hall"},
-				            {3, "fig-000593", "https://cdn.rebrickable.com/media/sets/fig-000593.jpg", "Hermione Granger", "First marriage", "4723-1", "Diagon Alley Shops"},
-				            {4, "fig-008935", "https://cdn.rebrickable.com/media/sets/fig-008935.jpg", "Hermione Granger", "Second marriage", "75966-1", "Hogwarts Room of Requirement"},
-				            {5, "fig-000594", "https://cdn.rebrickable.com/media/sets/fig-000594.jpg", "Ron Weasley", "First marriage", "4722-1", "Gryffindor"},
-				            {6, "fig-006056", "https://cdn.rebrickable.com/media/sets/fig-006056.jpg", "Albus Dumbledore", "First marriage", "4707-1", "Hagrid's Hut"},
-				            {7, "fig-006049", "https://cdn.rebrickable.com/media/sets/fig-006049.jpg", "Severus Snape", "First marriage", "4709-1", "Hogwarts Castle"},
-				            {8, "fig-010514", "https://cdn.rebrickable.com/media/sets/fig-010514.jpg", "Draco Malfoy", "Second marriage", "75978-1", "Diagon Alley"},
-				            {9, "fig-002136", "https://cdn.rebrickable.com/media/sets/fig-002136.jpg", "Voldemort", "Second marriage", "75965-1", "The Rise of Voldemort"},
-				            {10, "fig-013042", "https://cdn.rebrickable.com/media/sets/fig-013042.jpg", "Luna Lovegood", "Second marriage", "76405-1", "Hogwarts Express - Collectors' Edition"}
+				            {1, "fig-000471", "https://cdn.rebrickable.com/media/sets/fig-000471.jpg", "Harry Potter", "First marriage", "4701-1", 2001},
+				            {2, "fig-001818", "https://cdn.rebrickable.com/media/sets/fig-001818.jpg", "Harry Potter", "Second marriage", "75954-1", 2018},
+				            {3, "fig-000593", "https://cdn.rebrickable.com/media/sets/fig-000593.jpg", "Hermione Granger", "First marriage", "4723-1", 2001},
+				            {4, "fig-008935", "https://cdn.rebrickable.com/media/sets/fig-008935.jpg", "Hermione Granger", "Second marriage", "75966-1", 2020},
+				            {5, "fig-000594", "https://cdn.rebrickable.com/media/sets/fig-000594.jpg", "Ron Weasley", "First marriage", "4722-1", 2001},
+				            {6, "fig-006056", "https://cdn.rebrickable.com/media/sets/fig-006056.jpg", "Albus Dumbledore", "First marriage", "4707-1", 2001},
+				            {7, "fig-006049", "https://cdn.rebrickable.com/media/sets/fig-006049.jpg", "Severus Snape", "First marriage", "4709-1", 2001},
+				            {8, "fig-010514", "https://cdn.rebrickable.com/media/sets/fig-010514.jpg", "Draco Malfoy", "Second marriage", "75978-1", 2020},
+				            {9, "fig-002136", "https://cdn.rebrickable.com/media/sets/fig-002136.jpg", "Voldemort", "Second marriage", "75965-1", 2019},
+				            {10, "fig-013042", "https://cdn.rebrickable.com/media/sets/fig-013042.jpg", "Luna Lovegood", "Second marriage", "76405-1", 2022}
 				        }),
-				    WithLabel = Table.AddColumn(Source, "era_set_label", each [era] & " · " & [set_name], type text),
-				    Slim = Table.RemoveColumns(WithLabel, {"set_name"})
+				    // Prototype col-3 format: "First marriage · 2004"
+				    WithLabel = Table.AddColumn(Source, "era_set_label", each [era] & " · " & Text.From([set_year]), type text),
+				    Slim = Table.RemoveColumns(WithLabel, {"set_year"})
 				in
 				    Slim

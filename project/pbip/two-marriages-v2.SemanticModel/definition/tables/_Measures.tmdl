@@ -42,26 +42,41 @@ table _Measures
 		formatString: #,0
 		displayFolder: 01 Core
 
-	/// T1 tooltip line 1: first appearance year + skin of the hovered character/fig.
+	/// Physical parts of the color(s) in view — the Deneb strips' and composition bars' width driver.
+	measure 'Color Parts' = SUM ( SetColors[part_count] )
+		formatString: #,0
+		displayFolder: 01 Core
+
+	/// T1 tooltip line 1 (prototype copy): first appearance year + skin of the hovered character/fig.
 	measure 'First Appearance' =
 			VAR y = MIN ( Minifigs[year] )
 			VAR s = CALCULATE ( MIN ( Minifigs[skin] ), Minifigs[year] = y )
 			RETURN
-			IF ( NOT ISBLANK ( y ), "First: " & y & " · " & s )
+			IF ( NOT ISBLANK ( y ), "First appeared " & y & " · " & IF ( s = "flesh", "flesh tone", s ) )
 		formatString: @
 		displayFolder: 02 Display\Tooltip
 
-	/// T1 tooltip line 2: latest appearance year + skin of the hovered character/fig.
+	/// T1 tooltip line 2 (prototype copy): latest appearance year + skin of the hovered character/fig.
 	measure 'Latest Appearance' =
 			VAR y = MAX ( Minifigs[year] )
 			VAR s = CALCULATE ( MIN ( Minifigs[skin] ), Minifigs[year] = y )
 			RETURN
-			IF ( NOT ISBLANK ( y ), "Latest: " & y & " · " & s )
+			IF ( NOT ISBLANK ( y ), "Latest " & y & " · " & IF ( s = "flesh", "flesh tone", s ) )
 		formatString: @
 		displayFolder: 02 Display\Tooltip
 
 	/// T1 tooltip line 3: how many distinct fig designs the hovered character has.
 	measure 'Variants Text' = FORMAT ( [Minifig Variants], "#,0" ) & " variants"
+		formatString: @
+		displayFolder: 02 Display\Tooltip
+
+	/// T1 era eyebrow, uppercased (textboxes/cards have no text-transform in PBIR).
+	measure 'Era Upper' = UPPER ( MAX ( Minifigs[Era] ) )
+		formatString: @
+		displayFolder: 02 Display\Tooltip
+
+	/// T1 headline: the hovered character's name as a card-bindable text measure.
+	measure Character = MAX ( Minifigs[character_name] )
 		formatString: @
 		displayFolder: 02 Display\Tooltip
 

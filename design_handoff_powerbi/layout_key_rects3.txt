@@ -1,0 +1,34 @@
+--- S1 Home :: btn boxes S1 (4)
+    div {'x': 29, 'y': 552, 'w': 144.5, 'h': 56} |  | bd=1px solid rgb(33, 27, 20)
+    div {'x': 183.5, 'y': 552, 'w': 144.5, 'h': 56} |  | bd=1px solid rgb(33, 27, 20)
+    div {'x': 29, 'y': 618, 'w': 144.5, 'h': 56} |  | bd=1px solid rgb(33, 27, 20)
+    div {'x': 183.5, 'y': 618, 'w': 144.5, 'h': 56} |  | bd=1px solid rgb(33, 27, 20)
+--- S3 Chapter II :: S3 dist bars (5)
+    div {'x': 33, 'y': 283.5, 'w': 78, 'h': 171.5} |  | bd=
+    div {'x': 121, 'y': 226, 'w': 78, 'h': 229} |  | bd=
+    div {'x': 209, 'y': 299.6, 'w': 78, 'h': 155.4} |  | bd=
+    div {'x': 297, 'y': 358.5, 'w': 78, 'h': 96.5} |  | bd=
+    div {'x': 385, 'y': 406.8, 'w': 78, 'h': 48.2} |  | bd=
+--- S3 Chapter II :: S3 dist counts (5)
+    span {'x': 63, 'y': 261.5, 'w': 17.9, 'h': 14} | [TK] | bd=
+    span {'x': 151, 'y': 204, 'w': 17.9, 'h': 14} | [TK] | bd=
+    span {'x': 239, 'y': 277.6, 'w': 17.9, 'h': 14} | [TK] | bd=
+    span {'x': 327, 'y': 336.5, 'w': 17.9, 'h': 14} | [TK] | bd=
+    span {'x': 415, 'y': 384.8, 'w': 17.9, 'h': 14} | [TK] | bd=
+--- S3 Chapter II :: S3 bin labels (7)
+    span {'x': 58, 'y': 458, 'w': 27.9, 'h': 14} | 1–100 | bd=
+    span {'x': 140.4, 'y': 458, 'w': 39.2, 'h': 14} | 101–300 | bd=
+    span {'x': 228.4, 'y': 458, 'w': 39.2, 'h': 14} | 301–700 | bd=
+    span {'x': 319.4, 'y': 458, 'w': 33.1, 'h': 14} | 701–2k | bd=
+    span {'x': 415, 'y': 458, 'w': 18.1, 'h': 14} | 2k+ | bd=
+    div {'x': 487, 'y': 454, 'w': 311.6, 'h': 18} | grayscale · 41% | bd=2px solid rgb(33, 27, 20)
+--- S3 Chapter II :: S3 dist title (1)
+    div {'x': 33, 'y': 177, 'w': 430, 'h': 15} | Sets by size — same bins, heavier tail | bd=
+--- S3 Chapter II :: S3 palette title (1)
+    div {'x': 487, 'y': 178, 'w': 415.8, 'h': 15} | The era palette — 80 colors, each bar it | bd=
+--- S3 Chapter II :: S3 image slots (0)
+--- S2 Chapter I :: S2 image slots (0)
+--- S4b Dark State :: S4b image slots (0)
+--- S5 Sorting Quiz :: S5 image slots (0)
+--- S3 Chapter II :: S3 kpi1 (1)
+    span {'x': 33, 'y': 109, 'w': 41.1, 'h': 33} | 142 | bd=
