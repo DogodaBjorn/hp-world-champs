@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_title",
   "position": {
-    "x": 121,
-    "y": 25,
-    "z": 120,
-    "height": 54,
-    "width": 660,
+    "x": 46,
+    "y": 62,
+    "z": 150,
+    "height": 42,
+    "width": 640,
     "tabOrder": 3000
   },
   "visual": {
@@ -19,15 +19,24 @@
               {
                 "textRuns": [
                   {
-                    "value": "The Yellow Years · 2001–2011",
+                    "value": "The Yellow Years",
                     "textStyle": {
                       "fontFamily": "Georgia",
-                      "fontSize": "29pt",
+                      "fontSize": "26pt",
                       "color": "#211B14",
                       "fontWeight": "bold"
                     }
+                  },
+                  {
+                    "value": "  ·  2001–2011",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "26pt",
+                      "color": "#706757"
+                    }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "left"
               }
             ]
           }

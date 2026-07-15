@@ -49,7 +49,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "22D"
+                  "Value": "25D"
                 }
               }
             },
@@ -126,11 +126,11 @@
     }
   },
   "position": {
-    "x": 397,
-    "y": 102,
+    "x": 432,
+    "y": 176,
     "z": 320,
-    "width": 440,
-    "height": 48,
+    "width": 432,
+    "height": 44,
     "tabOrder": 0
   },
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"

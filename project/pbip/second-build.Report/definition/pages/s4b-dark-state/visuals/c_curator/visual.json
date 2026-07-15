@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_curator",
   "position": {
-    "x": 1072,
-    "y": 368,
+    "x": 1044,
+    "y": 326,
     "z": 230,
-    "height": 44,
-    "width": 180,
+    "height": 40,
+    "width": 200,
     "tabOrder": 14000
   },
   "visual": {
@@ -19,16 +19,16 @@
               {
                 "textRuns": [
                   {
-                    "value": "Curator of the gray collection",
+                    "value": "Curator of the grey collection",
                     "textStyle": {
-                      "fontFamily": "Georgia",
-                      "fontSize": "11pt",
-                      "color": "#948D80",
-                      "fontStyle": "italic"
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt",
+                      "color": "#B8AE9C",
+                      "italic": true
                     }
                   }
                 ],
-                "horizontalTextAlignment": "center"
+                "horizontalTextAlignment": "left"
               }
             ]
           }

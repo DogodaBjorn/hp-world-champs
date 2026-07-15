@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_comp_note",
   "position": {
-    "x": 1008,
-    "y": 547,
+    "x": 920,
+    "y": 572,
     "z": 250,
     "height": 20,
-    "width": 240,
+    "width": 292,
     "tabOrder": 16000
   },
   "visual": {
@@ -19,15 +19,16 @@
               {
                 "textRuns": [
                   {
-                    "value": "2.1% of parts are any color at all",
+                    "value": "2.1% of parts carry any colour at all",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "11pt",
-                      "color": "#948D80"
+                      "fontSize": "10pt",
+                      "color": "#9A907E",
+                      "italic": true
                     }
                   }
                 ],
-                "horizontalTextAlignment": "right"
+                "horizontalTextAlignment": "left"
               }
             ]
           }

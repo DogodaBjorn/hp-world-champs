@@ -89,7 +89,50 @@ function renderShape(vc, v) {
   const weight = lit(prop(v.objects, 'outline', 'weight')) ?? 1;
   const show = lit(prop(v.objects, 'outline', 'show'));
   const border = line && show !== false ? `border:${weight}px solid ${line};` : '';
-  return { style: `background:${fill};${border}`, html: '' };
+  // rounded corners: shape.shape.rectangleRoundedCurve (px radius)
+  const curve = lit(prop(v.objects, 'shape', 'rectangleRoundedCurve'));
+  const radius = curve ? `border-radius:${curve}px;` : '';
+  // soft shadow: shape.shadow
+  const shShow = lit(prop(v.objects, 'shadow', 'show'));
+  let shadow = '';
+  if (shShow) {
+    const sc = themeColor(prop(v.objects, 'shadow', 'color')) ?? '#211B14';
+    const blur = lit(prop(v.objects, 'shadow', 'shadowBlur')) ?? 8;
+    const dist = lit(prop(v.objects, 'shadow', 'shadowDistance')) ?? 3;
+    const tr = lit(prop(v.objects, 'shadow', 'transparency')) ?? 80;
+    shadow = `box-shadow:0 ${dist}px ${blur}px ${rgba(sc, (100 - tr) / 100)};`;
+  }
+  return { style: `background:${fill};${border}${radius}${shadow}`, html: '' };
+}
+
+// hex -> rgba() with alpha, for translucent shadows
+function rgba(hex, a) {
+  const h = String(hex).replace('#', '');
+  const n = parseInt(h.length === 3 ? h.split('').map(c => c + c).join('') : h, 16);
+  return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a.toFixed(2)})`;
+}
+
+// container-level chrome (border radius, dropShadow, background) on ANY visual
+function containerChrome(v) {
+  const co = v.visualContainerObjects ?? {};
+  let css = '';
+  const bShow = lit(prop(co, 'border', 'show'));
+  const bRad = lit(prop(co, 'border', 'radius'));
+  const bCol = themeColor(prop(co, 'border', 'color'));
+  if (bShow && bCol) css += `border:1px solid ${bCol};`;
+  if (bRad) css += `border-radius:${bRad}px;`;
+  const bg = themeColor(prop(co, 'background', 'color'));
+  const bgShow = lit(prop(co, 'background', 'show'));
+  if (bg && bgShow !== false) css += `background:${bg};`;
+  const dShow = lit(prop(co, 'dropShadow', 'show'));
+  if (dShow) {
+    const sc = themeColor(prop(co, 'dropShadow', 'color')) ?? '#211B14';
+    const blur = lit(prop(co, 'dropShadow', 'shadowBlur')) ?? 10;
+    const dist = lit(prop(co, 'dropShadow', 'shadowDistance')) ?? 3;
+    const tr = lit(prop(co, 'dropShadow', 'transparency')) ?? 82;
+    css += `box-shadow:0 ${dist}px ${blur}px ${rgba(sc, (100 - tr) / 100)};`;
+  }
+  return css;
 }
 
 function renderButton(vc, v) {
@@ -129,16 +172,21 @@ function renderCard(vc, v) {
 }
 
 function renderImage(vc, v) {
-  const nameNode = prop(v.objects, 'general', 'imageUrl') ?? prop(v.objects, 'imageScaling', 'imageUrl');
-  let url = lit(nameNode);
-  if (url && !/^https?:/.test(url)) {
-    const local = join(RESOURCES, url.replace(/^.*\//, ''));
+  // image visuals store the resource at objects.image[].properties.sourceFile.image.url
+  const imgEntry = v.objects?.image?.[0]?.properties?.sourceFile?.image;
+  let url;
+  const item = imgEntry?.url?.expr?.ResourcePackageItem?.ItemName ?? lit(imgEntry?.name);
+  if (item) {
+    const local = join(RESOURCES, String(item).replace(/^.*\//, ''));
     if (existsSync(local)) url = pathToFileURL(local).href;
   }
-  const rn = nameNode?.expr?.ResourcePackageItem?.ItemName;
-  if (!url && rn) {
-    const local = join(RESOURCES, rn);
-    if (existsSync(local)) url = pathToFileURL(local).href;
+  if (!url) {
+    const nameNode = prop(v.objects, 'general', 'imageUrl') ?? prop(v.objects, 'imageScaling', 'imageUrl');
+    url = lit(nameNode);
+    if (url && !/^https?:/.test(url)) {
+      const local = join(RESOURCES, url.replace(/^.*\//, ''));
+      url = existsSync(local) ? pathToFileURL(local).href : undefined;
+    }
   }
   return {
     style: '',
@@ -187,11 +235,13 @@ function renderPage(pageDir, pageName) {
     else if (type === 'barChart' || type === 'clusteredBarChart' || type === 'columnChart' || type === 'clusteredColumnChart') inner = renderPlaceholder(vc, v, type);
     else if (type === 'group') continue;
     else inner = renderPlaceholder(vc, v, type);
+    // container chrome (radius/shadow/background) layers under type-specific style
+    const chrome = (type === 'shape' || type === 'basicShape') ? '' : containerChrome(v);
     boxes.push({ z: pos.z ?? 0, html:
-      `<div title="${esc(id)}" style="position:absolute;left:${pos.x}px;top:${pos.y}px;width:${pos.width}px;height:${pos.height}px;z-index:${pos.z ?? 0};${inner.style}">${inner.html}</div>` });
+      `<div title="${esc(id)}" style="position:absolute;left:${pos.x}px;top:${pos.y}px;width:${pos.width}px;height:${pos.height}px;z-index:${pos.z ?? 0};box-sizing:border-box;${chrome}${inner.style}">${inner.html}</div>` });
   }
   boxes.sort((a, b) => a.z - b.z);
-  const bg = '#F5EFE3';
+  const bg = themeColor(prop(page.objects, 'background', 'color')) ?? '#F5EFE3';
   return `<!doctype html><meta charset="utf-8"><body style="margin:0"><div id="canvas" style="position:relative;width:${width}px;height:${height}px;background:${bg};overflow:hidden;font-family:Segoe UI">${boxes.map(b => b.html).join('\n')}</div></body>`;
 }
 

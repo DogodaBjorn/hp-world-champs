@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_takeaway_body",
   "position": {
-    "x": 41,
-    "y": 284,
+    "x": 456,
+    "y": 100,
     "z": 190,
-    "height": 145,
-    "width": 275,
+    "height": 104,
+    "width": 748,
     "tabOrder": 10000
   },
   "visual": {
@@ -19,14 +19,29 @@
               {
                 "textRuns": [
                   {
-                    "value": "LEGO Harry Potter vanished for seven years. It returned in 2018 at nearly triple the scale — bigger sets, more colors, aimed at the readers who grew up. Two builds, one franchise, told in 576 minifigures.",
+                    "value": "Seven years dark — back at nearly triple the scale.",
                     "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "11pt",
-                      "color": "#211B14"
+                      "fontFamily": "Georgia",
+                      "fontSize": "21pt",
+                      "color": "#211B14",
+                      "fontWeight": "bold"
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "left"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "LEGO Harry Potter went quiet after 2011, then returned in 2018: bigger sets, more colours, aimed at the kids who had grown up. Two builds of one franchise, told across 576 minifigures.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "13pt",
+                      "color": "#5C5346"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
               }
             ]
           }

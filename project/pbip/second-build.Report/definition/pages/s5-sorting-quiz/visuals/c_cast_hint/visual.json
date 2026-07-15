@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_cast_hint",
   "position": {
-    "x": 875,
-    "y": 534,
-    "z": 340,
-    "height": 80,
-    "width": 372,
+    "x": 932,
+    "y": 540,
+    "z": 330,
+    "height": 100,
+    "width": 276,
     "tabOrder": 26000
   },
   "visual": {
@@ -19,15 +19,16 @@
               {
                 "textRuns": [
                   {
-                    "value": "Click a character in the cast — every panel follows. Minifig photos: Rebrickable (rebrickable.com).",
+                    "value": "Each character's main minifigure. Photos: Rebrickable (rebrickable.com).",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
-                      "color": "#5C5346",
+                      "color": "#706757",
                       "italic": true
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "left"
               }
             ]
           }

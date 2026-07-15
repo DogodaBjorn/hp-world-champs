@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "btn_light_side",
   "position": {
-    "x": 33,
-    "y": 476,
+    "x": 48,
+    "y": 500,
     "z": 900,
-    "height": 42,
-    "width": 150,
+    "height": 44,
+    "width": 404,
     "tabOrder": 11000
   },
   "visual": {
@@ -45,7 +45,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'← Back to the light'"
+                  "Value": "'← Back to the colour'"
                 }
               }
             },
@@ -63,7 +63,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             },
@@ -106,7 +106,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#211B14'"
+                      "Value": "'#241D14'"
                     }
                   }
                 }
@@ -131,7 +131,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3A3228'"
+                      "Value": "'#3A3020'"
                     }
                   }
                 }
@@ -222,7 +222,25 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#C9A227'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }

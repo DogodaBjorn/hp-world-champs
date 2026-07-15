@@ -74,6 +74,18 @@ tier_4_community:                # practitioner blogs - inspiring, verify agains
   - name: Data Goblins (Kurt Buhler)
     url: https://data-goblins.com/
     use_for: "Power BI design & agentic development practice"
+  - name: Lukas Reese
+    url: https://lukasreese.com/
+    use_for: "layout grid, spacing steps, visual-count caps, Z-pattern hierarchy"
+  - name: Draft BI
+    url: https://draftbi.com/
+    use_for: "report layout structure, whitespace discipline, type scale, Gestalt grouping"
+  - name: Numerro
+    url: https://www.numerro.io/
+    use_for: "per-page data-point limits, top/middle/bottom section structure"
+  - name: MoonStory Design
+    url: https://moonstory.design/
+    use_for: "padding values (inner visual padding, titles off borders)"
 
 project_additions:               # per-project sources appended at stage 0
   - name: Rebrickable LEGO Database

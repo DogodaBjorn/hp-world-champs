@@ -186,3 +186,45 @@ det panel + sl_year/sl_size + crd_palette_pct, DataFilter interaction
 overrides so set clicks collapse the Deneb palette); W4 Character Explorer
 (Fig Image measure, cast table + stats + era bar + timeline + portrait).
 Desktop checklist rewritten (W1-W12 in BUILD_LOG).
+
+## Contract amendment v2.2 — 2026-07-15 (design-system redesign)
+
+User rated the v2.1 render still weak: "placement and sizing still don't
+work… a very basic plain 1998 kind of page… too many information on every
+sheet… the key takeaway is very small." Directive: research current best
+practice online (PBI design + data storytelling + high-end UI/UX), then
+rebuild. Scout run logged at `research/log/2026-07-15-dashboard-design-uplift.md`
+(sources: Lukas Reese, Draft BI, Numerro, MoonStory, Cole Nussbaumer Knaflic,
+DataViz WC judging notes; credits added to CREDITS.md + source-register.yaml).
+
+Design system adopted (v22.py library):
+- **Modern card surfaces** — rounded corners (`shape.rectangleRoundedCurve` 14)
+  + soft shadow (`shape.shadow` / container `dropShadow`, transparency ~88), no
+  hard 1px borders. This is the single biggest lever against the "1998" read.
+  Schema verified before authoring (shadow presets, border radius enums).
+- **8px grid** — 40px page margin, 20px gutter, 24px padding.
+- **One hero per page**; restrained type scale (Georgia display + Segoe UI);
+  captions de-emphasised by size + a WCAG-safe tertiary tone.
+- **Density cut** — 206 → 158 visuals. S2/S3 dropped from ~45 to ~28 each:
+  removed the redundant size-distribution chart and the minifig cast strip
+  (that story lives on S5), and cut 5 KPIs → the 3 era-defining ones.
+
+Per page: **S1** Key Takeaway rebuilt as a hero pull-quote (Georgia 21pt
+headline + gold accent bar) on a card; masthead de-cluttered (dead decorative
+strip + axis-band labels + vertical rule removed); nav → rounded pill buttons;
+hero chart carded. **S2/S3** four-card layout (KPI band · explorer · detail ·
+signature palette strip); stale `dn_dist` interactions cleaned so only
+`bar_sets → dn_palette` remains. **S4a** editorial spread — hero number fixed
+(128pt→100pt, no clip), Diagon Alley photo carded, native button, composition
+strip carded. **S4b** dark twin — same in dark chrome, 97.9% hero resized,
+button/strip overlap fixed. **S5** three clean cards (cast · detail · portrait),
+dead quiz frame removed.
+
+Renderer upgraded to draw rounded corners, shadows, container chrome, and
+registered-resource images so authored-render is honest about the new depth.
+
+Verification: `pbir validate` **Valid, 0 errors**; TMDL strict 0 errors (bar
+the accepted DataFolder deviation); **contrast all pairs ≥4.5:1** — tertiary
+tone darkened `#8C8377`→`#706757` (5.30:1 card / 4.87:1 parchment), dark caption
+`#8C8272`→`#9A907E` (5.29:1). Transforms: `project/analysis/authored-render/
+redesign_s1.py`, `redesign_s23.py`, `redesign_s4.py`, `redesign_s5.py`, `v22.py`.

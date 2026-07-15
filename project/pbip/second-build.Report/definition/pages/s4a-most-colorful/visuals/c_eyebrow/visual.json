@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_eyebrow",
   "position": {
-    "x": 28,
-    "y": 30,
+    "x": 48,
+    "y": 44,
     "z": 110,
-    "height": 22,
-    "width": 445,
+    "height": 20,
+    "width": 520,
     "tabOrder": 2000
   },
   "visual": {
@@ -24,10 +24,12 @@
                       "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
                       "color": "#7A5D1D",
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "letterSpacing": 2
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "left"
               }
             ]
           }

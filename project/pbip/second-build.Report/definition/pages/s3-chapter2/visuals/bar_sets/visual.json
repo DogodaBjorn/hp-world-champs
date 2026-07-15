@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "bar_sets",
   "position": {
-    "x": 33,
-    "y": 498,
+    "x": 64,
+    "y": 284,
     "z": 310,
-    "height": 174,
-    "width": 400,
+    "height": 238,
+    "width": 628,
     "tabOrder": 20500
   },
   "visual": {
@@ -217,7 +217,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "11D"
                 }
               }
             },

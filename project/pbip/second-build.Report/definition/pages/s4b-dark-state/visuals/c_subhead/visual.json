@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_subhead",
   "position": {
-    "x": 28,
-    "y": 205,
+    "x": 72,
+    "y": 222,
     "z": 130,
     "height": 40,
-    "width": 445,
+    "width": 368,
     "tabOrder": 4000
   },
   "visual": {
@@ -19,15 +19,16 @@
               {
                 "textRuns": [
                   {
-                    "value": "grayscale bricks",
+                    "value": "of every brick is greyscale",
                     "textStyle": {
                       "fontFamily": "Georgia",
-                      "fontSize": "21pt",
-                      "color": "#CFC9BE",
-                      "fontWeight": "bold"
+                      "fontSize": "15pt",
+                      "color": "#B8AE9C",
+                      "italic": true
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "left"
               }
             ]
           }

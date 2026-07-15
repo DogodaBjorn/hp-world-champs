@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "bar_eras",
   "position": {
-    "x": 397,
-    "y": 254,
+    "x": 432,
+    "y": 320,
     "z": 320,
-    "height": 128,
-    "width": 454,
+    "height": 116,
+    "width": 432,
     "tabOrder": 0
   },
   "visual": {

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_takeaway_eyebrow",
   "position": {
-    "x": 41,
-    "y": 260,
-    "z": 180,
-    "height": 22,
-    "width": 270,
-    "tabOrder": 9000
+    "x": 456,
+    "y": 70,
+    "z": 190,
+    "width": 740,
+    "height": 20,
+    "tabOrder": 25000
   },
   "visual": {
     "visualType": "textbox",
@@ -24,10 +24,12 @@
                       "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
                       "color": "#7A5D1D",
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "letterSpacing": 2
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "left"
               }
             ]
           }
@@ -35,19 +37,6 @@
       ]
     },
     "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "background": [
         {
           "properties": {
@@ -73,20 +62,8 @@
             }
           }
         }
-      ],
-      "general": [
-        {
-          "properties": {
-            "altText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Key takeaway'"
-                }
-              }
-            }
-          }
-        }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": false
   }
 }

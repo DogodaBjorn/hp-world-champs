@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "btn_dark_side",
   "position": {
-    "x": 33,
-    "y": 476,
+    "x": 48,
+    "y": 470,
     "z": 900,
-    "height": 42,
-    "width": 334,
+    "height": 54,
+    "width": 404,
     "tabOrder": 8000
   },
   "visual": {
@@ -45,7 +45,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Come to the dark side →'"
+                  "Value": "'Prefer the least colourful? Enter the dark →'"
                 }
               }
             },
@@ -63,7 +63,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             },
@@ -169,7 +169,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#211B14'"
+                      "Value": "'#EAE2D1'"
                     }
                   }
                 }
@@ -222,7 +222,25 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#EAE2D1'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }

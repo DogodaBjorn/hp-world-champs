@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "lbl_latest",
   "position": {
-    "x": 711,
-    "y": 220,
-    "z": 340,
+    "x": 736,
+    "y": 278,
+    "z": 330,
     "height": 18,
     "width": 150,
     "tabOrder": 26000

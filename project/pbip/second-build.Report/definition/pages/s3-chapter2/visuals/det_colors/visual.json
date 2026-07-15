@@ -49,7 +49,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "21D"
                 }
               }
             },
@@ -98,11 +98,11 @@
     "drillFilterOtherVisuals": true
   },
   "position": {
-    "x": 677,
-    "y": 550,
+    "x": 912,
+    "y": 468,
     "z": 330,
-    "width": 80,
-    "height": 60,
+    "width": 150,
+    "height": 38,
     "tabOrder": 0
   },
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"

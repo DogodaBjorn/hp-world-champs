@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_palette_title",
   "position": {
-    "x": 482,
-    "y": 176,
-    "z": 320,
-    "height": 24,
-    "width": 560,
+    "x": 72,
+    "y": 586,
+    "z": 310,
+    "height": 20,
+    "width": 900,
     "tabOrder": 23000
   },
   "visual": {
@@ -19,15 +19,25 @@
               {
                 "textRuns": [
                   {
-                    "value": "THE PALETTE IN VIEW — EACH BAR ITS TRUE BRICK HEX",
+                    "value": "THE PALETTE IN VIEW",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
                       "color": "#5C5346",
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "letterSpacing": 1
+                    }
+                  },
+                  {
+                    "value": "   — each bar is its true brick hex; pick a set and it collapses to that set's colours",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt",
+                      "color": "#706757"
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "left"
               }
             ]
           }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_kpi_v_1",
   "position": {
-    "x": 24,
-    "y": 455,
+    "x": 48,
+    "y": 318,
     "z": 210,
-    "height": 28,
-    "width": 100,
+    "height": 30,
+    "width": 112,
     "tabOrder": 12000
   },
   "visual": {
@@ -19,15 +19,33 @@
               {
                 "textRuns": [
                   {
-                    "value": "67 → 142",
+                    "value": "67",
                     "textStyle": {
                       "fontFamily": "Georgia",
+                      "fontSize": "20pt",
+                      "color": "#706757",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " → ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
                       "fontSize": "13pt",
+                      "color": "#7A5D1D"
+                    }
+                  },
+                  {
+                    "value": "142",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "20pt",
                       "color": "#211B14",
                       "fontWeight": "bold"
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "left"
               }
             ]
           }

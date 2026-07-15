@@ -144,6 +144,30 @@ the Deneb charts), S5 native Character Explorer (quiz .pbiviz dropped —
 jury machines need zero custom-visual installs beyond certified Deneb).
 Authored-state renders: `project/deliverables/authored-render/*.png`.
 
+### 2026-07-15 v2.2 design-system redesign (contract amendment v2.2)
+
+User rated v2.1 still weak — "placement/sizing off, 1998-plain, too much info
+per sheet, key takeaway too small." Researched current best practice
+(`research/log/2026-07-15-dashboard-design-uplift.md`) and rebuilt every page
+to a modern card system: rounded corners + soft shadows (no flat 1px boxes),
+8px grid, one hero per page, and a hard density cut (**206 → 158 visuals**).
+
+- **S1** — Key Takeaway is now a hero pull-quote (gold-accented card); masthead
+  de-cluttered; nav pills; hero chart carded.
+- **S2/S3** — four-card layout (KPI band · explorer · detail · palette);
+  5 KPIs → 3; removed the redundant size chart + the minifig strip (→ S5).
+- **S4a/S4b** — editorial spreads with carded photos; hero numbers resized so
+  they no longer clip; native buttons; dark twin overlap fixed.
+- **S5** — three clean cards (cast · detail · portrait); dead frame removed.
+- **Contrast** — all pairs ≥4.5:1 (tertiary tone `#8C8377`→`#706757`, dark
+  caption `#8C8272`→`#9A907E`). `pbir validate` 0 errors; TMDL clean bar the
+  accepted DataFolder deviation.
+
+The **W1–W12 Desktop checklist below still applies unchanged** — the redesign
+is authored (positions/text/colours/card chrome), but Desktop still owns the
+data refresh, Deneb auto-fetch, image-fill sizing, interaction spot-checks, and
+.pbix export. Re-capture (W11) reflects the new card layout.
+
 ### Manual steps in Desktop (w-checklist — replaces V1–V12)
 
 | # | Step | Status |

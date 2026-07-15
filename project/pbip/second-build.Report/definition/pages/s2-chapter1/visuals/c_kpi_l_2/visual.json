@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_kpi_l_2",
   "position": {
-    "x": 275.6,
-    "y": 150,
-    "z": 200,
-    "height": 20,
-    "width": 216,
+    "x": 492,
+    "y": 204,
+    "z": 220,
+    "height": 18,
+    "width": 190,
     "tabOrder": 11000
   },
   "visual": {
@@ -22,11 +22,13 @@
                     "value": "avg parts per set",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "11pt",
-                      "color": "#5C5346"
+                      "fontSize": "10pt",
+                      "color": "#5C5346",
+                      "letterSpacing": 0.5
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "left"
               }
             ]
           }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "img_mark_spectacles",
   "position": {
-    "x": 29,
-    "y": 27,
-    "z": 120,
-    "height": 30,
-    "width": 66,
+    "x": 48,
+    "y": 40,
+    "z": 130,
+    "height": 26,
+    "width": 42,
     "tabOrder": 3000
   },
   "visual": {

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_comp_title",
   "position": {
-    "x": 28,
-    "y": 548,
+    "x": 72,
+    "y": 572,
     "z": 240,
     "height": 20,
-    "width": 400,
+    "width": 760,
     "tabOrder": 15000
   },
   "visual": {
@@ -19,15 +19,25 @@
               {
                 "textRuns": [
                   {
-                    "value": "COLOR COMPOSITION — ALMOST ENTIRELY GRAY, TRUE HEX",
+                    "value": "COLOUR COMPOSITION",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
-                      "color": "#948D80",
-                      "fontWeight": "bold"
+                      "color": "#B8AE9C",
+                      "fontWeight": "bold",
+                      "letterSpacing": 1
+                    }
+                  },
+                  {
+                    "value": "   — almost entirely grey, in true hex",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt",
+                      "color": "#9A907E"
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "left"
               }
             ]
           }

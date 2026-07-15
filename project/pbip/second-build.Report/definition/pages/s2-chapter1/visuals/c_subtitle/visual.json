@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_subtitle",
   "position": {
-    "x": 800,
-    "y": 42,
-    "z": 130,
-    "height": 26,
-    "width": 448,
+    "x": 48,
+    "y": 108,
+    "z": 150,
+    "height": 22,
+    "width": 640,
     "tabOrder": 4000
   },
   "visual": {
@@ -19,16 +19,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "A modest toy line in classic yellow.",
+                    "value": "One quiet decade in classic yellow — small sets, few colours.",
                     "textStyle": {
-                      "fontFamily": "Georgia",
-                      "fontSize": "14pt",
-                      "color": "#5C5346",
-                      "fontStyle": "italic"
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "13pt",
+                      "color": "#5C5346"
                     }
                   }
                 ],
-                "horizontalTextAlignment": "right"
+                "horizontalTextAlignment": "left"
               }
             ]
           }

@@ -211,11 +211,11 @@
     }
   },
   "position": {
-    "x": 397,
-    "y": 396,
+    "x": 432,
+    "y": 450,
     "z": 320,
-    "width": 454,
-    "height": 276,
+    "width": 432,
+    "height": 202,
     "tabOrder": 0
   },
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_silence_1",
   "position": {
-    "x": 699.56266982126022,
-    "y": 128.7074176078076,
+    "x": 724,
+    "y": 330,
     "z": 800,
-    "height": 57.539786695255167,
-    "width": 196.846638694294,
+    "height": 30,
+    "width": 210,
     "tabOrder": 39000
   },
   "visual": {

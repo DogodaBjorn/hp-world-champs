@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_duo_sw",
   "position": {
-    "x": 28,
-    "y": 315,
+    "x": 68,
+    "y": 410,
     "z": 150,
     "height": 20,
-    "width": 140,
+    "width": 180,
     "tabOrder": 6000
   },
   "visual": {

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "img_voldemort",
   "position": {
-    "x": 1077,
-    "y": 164,
+    "x": 1060,
+    "y": 110,
     "z": 220,
-    "height": 200,
-    "width": 170,
+    "height": 210,
+    "width": 172,
     "tabOrder": 13000
   },
   "visual": {

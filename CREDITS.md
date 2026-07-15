@@ -29,6 +29,10 @@ adopt a new idea into it, add its source here in the same change
 | **[Reid Havens](https://www.havensconsulting.net/)** (Havens Consulting) | Report-page tooltips as a designed layer, including field-parameter-driven tooltip content. | tooltip-studio |
 | **[Meagan Longoria](https://datasavvy.me/)** | The Power BI accessibility checklist that defined the practice: measured contrast, alt text, tab order, color-never-alone. | a11y-studio |
 | **[Kurt Buhler](https://data-goblins.com/)** (Data Goblins) | Power BI design and agentic-development practice beyond the CLI itself. | source register, scout runs |
+| **[Lukas Reese](https://lukasreese.com/)** | Dashboard layout grid, spacing steps, visual-count caps, Z-pattern hierarchy. | 2026-07-15 scout run, second-build v2.2 |
+| **[Draft BI](https://draftbi.com/)** | Report layout structure, whitespace-before-shrinking discipline, three-level type scale, Gestalt grouping. | 2026-07-15 scout run, second-build v2.2 |
+| **[Numerro](https://www.numerro.io/)** | Per-page data-point limits and top/middle/bottom section structure. | 2026-07-15 scout run, second-build v2.2 |
+| **[MoonStory Design](https://moonstory.design/)** | Concrete padding values — inner visual padding, keeping titles off borders. | 2026-07-15 scout run, second-build v2.2 |
 
 ## Method & standards the doctrine stands on
 

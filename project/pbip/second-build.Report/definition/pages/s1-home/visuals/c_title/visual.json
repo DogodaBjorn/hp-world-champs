@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_title",
   "position": {
-    "x": 24,
-    "y": 92,
+    "x": 44,
+    "y": 104,
     "z": 150,
-    "height": 180,
-    "width": 320,
+    "height": 190,
+    "width": 360,
     "tabOrder": 6000
   },
   "visual": {
@@ -22,12 +22,13 @@
                     "value": "The Boy Who Came Back",
                     "textStyle": {
                       "fontFamily": "Georgia",
-                      "fontSize": "36pt",
+                      "fontSize": "40pt",
                       "color": "#211B14",
                       "fontWeight": "bold"
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "left"
               }
             ]
           }

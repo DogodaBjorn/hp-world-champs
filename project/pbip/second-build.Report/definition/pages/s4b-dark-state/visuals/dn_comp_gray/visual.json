@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "dn_comp_gray",
   "position": {
-    "x": 33,
-    "y": 574,
+    "x": 72,
+    "y": 600,
     "z": 260,
-    "height": 100,
-    "width": 1214,
+    "height": 54,
+    "width": 1136,
     "tabOrder": 17000
   },
   "visual": {
