@@ -27,6 +27,12 @@ table Sets
 		summarizeBy: none
 		sourceColumn: num_parts
 
+	/// Unique display label per set (names repeat across years - 'Hogwarts Castle' x3);
+	/// the explorer bar's category so a click selects exactly one set.
+	column 'Set Label' = Sets[Set Name] & " · " & Sets[year]
+		dataType: string
+		summarizeBy: none
+
 	column Era
 		dataType: string
 		summarizeBy: none

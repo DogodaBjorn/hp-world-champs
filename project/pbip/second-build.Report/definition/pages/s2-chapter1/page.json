@@ -88,5 +88,22 @@
         }
       }
     ]
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "bar_sets",
+      "target": "dn_dist",
+      "type": "DataFilter"
+    },
+    {
+      "source": "bar_sets",
+      "target": "dn_palette",
+      "type": "DataFilter"
+    },
+    {
+      "source": "sl_size",
+      "target": "dn_dist",
+      "type": "DataFilter"
+    }
+  ]
 }

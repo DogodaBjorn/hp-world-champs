@@ -80,6 +80,26 @@ table _Measures
 		formatString: @
 		displayFolder: 02 Display\Tooltip
 
+	/// Explorer: the selected set's label, or the sets-in-view fallback.
+	measure 'Explorer Set Label' = IF ( HASONEVALUE ( Sets[set_num] ), MAX ( Sets[Set Label] ), "All sets in view" )
+		formatString: @
+		displayFolder: 02 Display\Explorer
+
+	/// Explorer: parts total in the current selection (alias of the base sum).
+	measure 'Parts In View' = [Parts per Year]
+		formatString: #,0
+		displayFolder: 02 Display\Explorer
+
+	/// Explorer: selected set's rank by parts within the current view, or the hint.
+	measure 'Explorer Rank Text' = IF ( HASONEVALUE ( Sets[set_num] ), "#" & RANKX ( ALLSELECTED ( Sets ), CALCULATE ( SUM ( Sets[num_parts] ) ) ) & " of " & CALCULATE ( [Total Sets], ALLSELECTED ( Sets ) ) & " by parts", "Click a set to inspect it" )
+		formatString: @
+		displayFolder: 02 Display\Explorer
+
+	/// Explorer: grayscale share as ready-made caption text.
+	measure 'Grayscale Pct Text' = FORMAT ( [Grayscale %], "0%" ) & " grayscale bricks in view"
+		formatString: @
+		displayFolder: 02 Display\Explorer
+
 	column Value
 		dataType: string
 		isHidden
