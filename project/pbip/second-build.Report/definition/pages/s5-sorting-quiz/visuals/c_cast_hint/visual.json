@@ -1,11 +1,12 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_cast_hint",
   "position": {
     "x": 875,
     "y": 534,
     "z": 340,
-    "width": 372,
     "height": 80,
+    "width": 372,
     "tabOrder": 26000
   },
   "visual": {
@@ -60,8 +61,6 @@
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": false
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+    }
+  }
 }

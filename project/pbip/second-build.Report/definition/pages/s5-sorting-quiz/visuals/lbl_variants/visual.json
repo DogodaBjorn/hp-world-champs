@@ -1,11 +1,12 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "lbl_variants",
   "position": {
     "x": 397,
     "y": 220,
     "z": 340,
-    "width": 140,
     "height": 18,
+    "width": 140,
     "tabOrder": 26000
   },
   "visual": {
@@ -59,8 +60,6 @@
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": false
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+    }
+  }
 }

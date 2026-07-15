@@ -6,6 +6,12 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
+annotation PBI_QueryOrder = ["Sets","SetColors","Colors","Minifigs","DimYear","QuizPool","_Measures","DataFolder","fnCsv","RawSets","RawInventoryParts","RawInventoryMinifigs","RawColors","RawMinifigs","ThemesResolved","V1Inventories"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
 ref table Sets
 ref table Colors
 ref table SetColors
@@ -13,3 +19,6 @@ ref table Minifigs
 ref table DimYear
 ref table QuizPool
 ref table _Measures
+
+ref cultureInfo en-US
+

@@ -4,10 +4,12 @@
 /// (palette strips, composition bars read hex per row). Pseudo-colors are
 /// excluded at load so Distinct Colors needs no extra filter.
 table SetColors
+	lineageTag: 6bc737ca-ee51-4d16-9beb-a19f5e8bf71f
 
 	column set_num
 		dataType: string
 		isHidden
+		lineageTag: 99ed01aa-4a5e-4184-94f4-6e6cd872362d
 		summarizeBy: none
 		sourceColumn: set_num
 
@@ -15,22 +17,26 @@ table SetColors
 		dataType: int64
 		isHidden
 		formatString: 0
+		lineageTag: a9c0370f-4aed-4a5f-93e3-0202ada3851b
 		summarizeBy: none
 		sourceColumn: color_id
 
 	column part_count
 		dataType: int64
 		formatString: #,0
+		lineageTag: a85dfd2b-e006-41fc-840e-d57fdd23fbe6
 		summarizeBy: sum
 		sourceColumn: part_count
 
 	column color_hex
 		dataType: string
+		lineageTag: eaea27b7-f491-4887-ab1e-dfe393387e37
 		summarizeBy: none
 		sourceColumn: color_hex
 
 	column is_grayscale
 		dataType: boolean
+		lineageTag: 8c9f6270-f61b-4226-bdeb-687091aa99d6
 		summarizeBy: none
 		sourceColumn: is_grayscale
 
@@ -55,3 +61,8 @@ table SetColors
 				    Slim = Table.RemoveColumns(Renamed, {"IsPseudoColor"})
 				in
 				    Slim
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Exception
+

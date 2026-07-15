@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_silence_1",
   "position": {
-    "x": 714,
-    "y": 152,
+    "x": 699.56266982126022,
+    "y": 128.7074176078076,
     "z": 800,
-    "height": 34,
-    "width": 182,
+    "height": 57.539786695255167,
+    "width": 196.846638694294,
     "tabOrder": 39000
   },
   "visual": {
@@ -22,9 +22,9 @@
                     "value": "seven silent years",
                     "textStyle": {
                       "fontFamily": "Georgia",
+                      "fontStyle": "italic",
                       "fontSize": "18pt",
-                      "color": "#7A5D1D",
-                      "fontStyle": "italic"
+                      "color": "#7a5d1d"
                     }
                   }
                 ],

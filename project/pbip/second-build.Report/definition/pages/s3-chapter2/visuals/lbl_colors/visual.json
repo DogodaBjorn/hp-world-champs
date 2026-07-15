@@ -1,11 +1,12 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "lbl_colors",
   "position": {
     "x": 677,
     "y": 612,
     "z": 340,
-    "width": 80,
     "height": 18,
+    "width": 80,
     "tabOrder": 25000
   },
   "visual": {
@@ -59,8 +60,6 @@
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": false
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+    }
+  }
 }

@@ -1,51 +1,61 @@
 /// Measure home for second-build. Folder taxonomy: 01 Core (the
 /// handoff's data_model.md measures) / 02 Display (T1 tooltip text).
 table _Measures
+	lineageTag: ec43dae1-e465-4aad-8203-12c361722173
 
 	/// How many HP sets in the current slice (data_model.md: era-filtered 67 / 142).
 	measure 'Total Sets' = COUNTROWS ( Sets )
 		formatString: #,0
 		displayFolder: 01 Core
+		lineageTag: a168ea99-a082-428b-bc98-606be1cedfb9
 
 	/// Typical set size: mean of Rebrickable's per-set part count (era-filtered 267 / 731).
 	measure 'Avg Parts' = AVERAGE ( Sets[num_parts] )
 		formatString: #,0
 		displayFolder: 01 Core
+		lineageTag: 3eaece94-cc50-438b-9e61-46a58d7e987b
 
 	/// Biggest single set in the slice, by part count (era-filtered 2,029 / 6,020).
 	measure 'Largest Set' = MAX ( Sets[num_parts] )
 		formatString: #,0
 		displayFolder: 01 Core
+		lineageTag: e12103f9-ab3c-411f-ba96-670e2629bbba
 
 	/// Different real brick colors across the parts in view (pseudo-colors excluded at load; era-filtered 67 / 80, Diagon Alley 55).
 	measure 'Distinct Colors' = DISTINCTCOUNT ( SetColors[color_id] )
 		formatString: #,0
 		displayFolder: 01 Core
+		lineageTag: 38b0cd8f-a5ae-4a5e-a72a-c3ac89eb3f99
 
 	/// Share of parts that are gray, black, or white by the verified name rule (era-filtered 51% / 41%).
 	measure 'Grayscale %' = DIVIDE ( CALCULATE ( SUM ( SetColors[part_count] ), KEEPFILTERS ( Colors[IsGrayscale] = TRUE () ) ), SUM ( SetColors[part_count] ) )
 		formatString: 0%
 		displayFolder: 01 Core
+		lineageTag: 68f0b624-e838-4ae6-8c2f-760eff91f319
 
 	/// Catalog parts shipped per year slice: SUM of Sets[num_parts] (the handoff's hero-chart formula — deliberately NOT the v1 inventory measure).
 	measure 'Parts per Year' = SUM ( Sets[num_parts] )
 		formatString: #,0
 		displayFolder: 01 Core
+		lineageTag: c9bca02f-194a-4d0c-b359-5b9ee22bd114
 
 	/// Distinct minifig designs in the slice — per character this is the "22 old / 59 new" variant count. Deviation from data_model.md's COUNTROWS: at fig × set grain COUNTROWS counts appearances, not variants; recorded in 06-build.
 	measure 'Minifig Variants' = DISTINCTCOUNT ( Minifigs[fig_num] )
 		formatString: #,0
 		displayFolder: 01 Core
+		lineageTag: fbd9a4e0-2fc2-43dc-9ff2-bed78d0784d6
 
 	/// The whole archive, all eras: 576 distinct HP minifig designs (defined slice-independent on purpose).
 	measure 'Total Minifigures' = CALCULATE ( DISTINCTCOUNT ( Minifigs[fig_num] ), REMOVEFILTERS () )
 		formatString: #,0
 		displayFolder: 01 Core
+		lineageTag: 3880e286-0492-4412-a4a5-291069b37262
 
 	/// Physical parts of the color(s) in view — the Deneb strips' and composition bars' width driver.
 	measure 'Color Parts' = SUM ( SetColors[part_count] )
 		formatString: #,0
 		displayFolder: 01 Core
+		lineageTag: 2eadf1b2-b6fd-4889-a3bb-472931c30dcd
 
 	/// T1 tooltip line 1 (prototype copy): first appearance year + skin of the hovered character/fig.
 	measure 'First Appearance' =
@@ -55,6 +65,7 @@ table _Measures
 			IF ( NOT ISBLANK ( y ), "First appeared " & y & " · " & IF ( s = "flesh", "flesh tone", s ) )
 		formatString: @
 		displayFolder: 02 Display\Tooltip
+		lineageTag: 0248b570-4c2c-4797-a249-45682673400e
 
 	/// T1 tooltip line 2 (prototype copy): latest appearance year + skin of the hovered character/fig.
 	measure 'Latest Appearance' =
@@ -64,51 +75,61 @@ table _Measures
 			IF ( NOT ISBLANK ( y ), "Latest " & y & " · " & IF ( s = "flesh", "flesh tone", s ) )
 		formatString: @
 		displayFolder: 02 Display\Tooltip
+		lineageTag: a5f3b987-e37b-468d-be32-93f762b8b4d2
 
 	/// T1 tooltip line 3: how many distinct fig designs the hovered character has.
 	measure 'Variants Text' = FORMAT ( [Minifig Variants], "#,0" ) & " variants"
 		formatString: @
 		displayFolder: 02 Display\Tooltip
+		lineageTag: cdd098a2-ea18-4220-bf5e-f28ddc38e118
 
 	/// T1 era eyebrow, uppercased (textboxes/cards have no text-transform in PBIR).
 	measure 'Era Upper' = UPPER ( MAX ( Minifigs[Era] ) )
 		formatString: @
 		displayFolder: 02 Display\Tooltip
+		lineageTag: bc9a2238-7b45-4d40-9612-33d13c05c3e2
 
 	/// T1 headline: the hovered character's name as a card-bindable text measure.
 	measure Character = MAX ( Minifigs[character_name] )
 		formatString: @
 		displayFolder: 02 Display\Tooltip
+		lineageTag: c0153a47-2e3e-479e-826c-730bca1d57d5
 
 	/// Explorer: the selected set's label, or the sets-in-view fallback.
 	measure 'Explorer Set Label' = IF ( HASONEVALUE ( Sets[set_num] ), MAX ( Sets[Set Label] ), "All sets in view" )
 		formatString: @
 		displayFolder: 02 Display\Explorer
+		lineageTag: 0e7dc0c0-d158-4dda-ab57-ccc757af7808
 
 	/// Explorer: parts total in the current selection (alias of the base sum).
 	measure 'Parts In View' = [Parts per Year]
 		formatString: #,0
 		displayFolder: 02 Display\Explorer
+		lineageTag: e17de688-a90b-4e02-863b-454b6dd91124
 
 	/// Explorer: selected set's rank by parts within the current view, or the hint.
 	measure 'Explorer Rank Text' = IF ( HASONEVALUE ( Sets[set_num] ), "#" & RANKX ( ALLSELECTED ( Sets ), CALCULATE ( SUM ( Sets[num_parts] ) ) ) & " of " & CALCULATE ( [Total Sets], ALLSELECTED ( Sets ) ) & " by parts", "Click a set to inspect it" )
 		formatString: @
 		displayFolder: 02 Display\Explorer
+		lineageTag: cf27dab3-67ac-4eb2-adac-efdfa07d828f
 
 	/// Explorer: grayscale share as ready-made caption text.
 	measure 'Grayscale Pct Text' = FORMAT ( [Grayscale %], "0%" ) & " grayscale bricks in view"
 		formatString: @
 		displayFolder: 02 Display\Explorer
+		lineageTag: af7f9cb4-fe67-41c5-9334-37be19243a02
 
 	/// Cast explorer: representative photo URL for the character in context.
 	measure 'Fig Image' = MIN ( Minifigs[img_url] )
 		formatString: @
-		dataCategory: ImageUrl
 		displayFolder: 02 Display\Explorer
+		lineageTag: 60785905-15ce-44bd-9fe9-46b1ddda4868
+		dataCategory: ImageUrl
 
 	column Value
 		dataType: string
 		isHidden
+		lineageTag: c6f84f67-3120-4094-a8a7-552dcfa73dc3
 		summarizeBy: none
 		sourceColumn: Value
 
@@ -119,3 +140,4 @@ table _Measures
 				    Source = #table(type table [Value = text], {})
 				in
 				    Source
+

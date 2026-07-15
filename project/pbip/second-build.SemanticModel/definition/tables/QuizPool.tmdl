@@ -4,42 +4,50 @@
 /// DISCONNECTED — no relationships, outside the filter graph. era_set_label
 /// is the quiz's column-3 text ("era · set").
 table QuizPool
+	lineageTag: 0d290164-9ca7-4d28-809f-3f6f3ba35dff
 
 	column round_no
 		dataType: int64
 		formatString: 0
+		lineageTag: 301d54bf-9f1e-44fd-a474-8e8141b61f0e
 		summarizeBy: none
 		sourceColumn: round_no
 
 	column fig_num
 		dataType: string
+		lineageTag: e5caed4e-0f3a-4a05-92bf-e103c62e6e39
 		summarizeBy: none
 		sourceColumn: fig_num
 
 	column fig_img_url
 		dataType: string
+		lineageTag: 78781502-c43c-4b6e-9660-a587bd75a929
+		dataCategory: ImageUrl
 		summarizeBy: none
 		sourceColumn: fig_img_url
-		dataCategory: ImageUrl
 
 	column character_name
 		dataType: string
+		lineageTag: 2062b245-a0b1-4649-9a85-db4eabb90c22
 		summarizeBy: none
 		sourceColumn: character_name
 
 	column era
 		dataType: string
+		lineageTag: d5764ea7-8d4f-4ac0-9fb1-0a5715011c98
 		summarizeBy: none
 		sourceColumn: era
 
 	column era_set_label
 		dataType: string
+		lineageTag: 35dd256f-9b9e-4066-b67f-cb2236c91efb
 		summarizeBy: none
 		sourceColumn: era_set_label
 
 	column set_num
 		dataType: string
 		isHidden
+		lineageTag: 93738de5-90a3-48b3-858c-7b41925e5c21
 		summarizeBy: none
 		sourceColumn: set_num
 
@@ -66,3 +74,4 @@ table QuizPool
 				    Slim = Table.RemoveColumns(WithLabel, {"set_year"})
 				in
 				    Slim
+

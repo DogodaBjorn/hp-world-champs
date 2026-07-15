@@ -4,50 +4,59 @@
 /// moved licensed lines to flesh tones in 2004, so year <= 2003 = "yellow",
 /// otherwise "flesh" — documented derivation (TK_GAPS #skin), not Rebrickable data.
 table Minifigs
+	lineageTag: 7c6dcdbd-d0d7-4072-98c9-8c605cea2e7c
 
 	column fig_num
 		dataType: string
+		lineageTag: cb2136f5-b051-44e0-9672-e88afb3918a7
 		summarizeBy: none
 		sourceColumn: fig_num
 
 	column set_num
 		dataType: string
 		isHidden
+		lineageTag: dd886a3d-58b6-456a-abca-672b1cfdfede
 		summarizeBy: none
 		sourceColumn: set_num
 
 	column character_name
 		dataType: string
+		lineageTag: a22834da-ed74-4213-87bc-7a281f59cbbc
 		summarizeBy: none
 		sourceColumn: character_name
 
 	column 'Minifig Name'
 		dataType: string
+		lineageTag: f492d0db-6f1d-4fb3-8b02-b360b10b5ec6
 		summarizeBy: none
 		sourceColumn: Minifig Name
 
 	column year
 		dataType: int64
 		formatString: 0
+		lineageTag: 2c2e3d84-c9ab-4df3-bbf9-16983be9e195
 		summarizeBy: none
 		sourceColumn: year
 
 	column Era
 		dataType: string
+		lineageTag: b04f0309-4b26-41d0-a146-79bda1a9eaf7
 		summarizeBy: none
 		sourceColumn: Era
 
 	column skin
 		dataType: string
+		lineageTag: 928e8b79-f252-4802-b5db-f5f1ce4da51d
 		summarizeBy: none
 		sourceColumn: skin
 
 	column img_url
 		dataType: string
 		isHidden
+		lineageTag: 88a8c2ea-faf1-4565-ba12-31d000b1fd7b
+		dataCategory: ImageUrl
 		summarizeBy: none
 		sourceColumn: img_url
-		dataCategory: ImageUrl
 
 	partition Minifigs = m
 		mode: import
@@ -79,3 +88,4 @@ table Minifigs
 				    Slim = Table.RemoveColumns(Renamed, {"quantity"})
 				in
 				    Slim
+

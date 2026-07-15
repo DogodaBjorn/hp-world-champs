@@ -11,6 +11,44 @@
   },
   "visual": {
     "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SetColors"
+                    }
+                  },
+                  "Property": "color_hex"
+                }
+              },
+              "queryRef": "SetColors.color_hex",
+              "nativeQueryRef": "color_hex",
+              "displayName": "color_hex"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Color Parts"
+                }
+              },
+              "queryRef": "_Measures.Color Parts",
+              "nativeQueryRef": "Color Parts",
+              "displayName": "Color Parts"
+            }
+          ]
+        }
+      }
+    },
     "objects": {
       "vega": [
         {
@@ -33,6 +71,46 @@
               "expr": {
                 "Literal": {
                   "Value": "'vegaLite'"
+                }
+              }
+            },
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'6.4.1'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stateManagement": [
+        {
+          "properties": {
+            "viewportHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "70D"
+                }
+              }
+            },
+            "viewportWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "1182D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "developer": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'1.9.1.0'"
                 }
               }
             }
@@ -94,44 +172,6 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true,
-    "query": {
-      "queryState": {
-        "dataset": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "SetColors"
-                    }
-                  },
-                  "Property": "color_hex"
-                }
-              },
-              "queryRef": "SetColors.color_hex",
-              "nativeQueryRef": "color_hex",
-              "displayName": "color_hex"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Color Parts"
-                }
-              },
-              "queryRef": "_Measures.Color Parts",
-              "nativeQueryRef": "Color Parts",
-              "displayName": "Color Parts"
-            }
-          ]
-        }
-      }
-    }
+    "drillFilterOtherVisuals": true
   }
 }

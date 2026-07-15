@@ -1,9 +1,12 @@
 /// Folder containing the contest CSVs. Set once in Desktop (Transform data >
 /// Edit parameters). Ships as a placeholder on purpose: machine paths are a
 /// validator error in this repo; imported data travels inside the .pbix.
-expression DataFolder = "SET-ME - folder containing the Round 2 CSVs" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+expression DataFolder = "E:\PowerBI Set-up\World Champs Round 2 Data" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 1db7e028-6685-4184-b643-ebaec2f37ad8
 
 	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigatie
 
 /// Reads one contest CSV: UTF-8, quote-aware (QuoteStyle.None mis-splits
 /// quoted set names containing commas), headers promoted.
@@ -15,38 +18,39 @@ expression fnCsv =
 		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true])
 		in
 		    Promoted
+	lineageTag: 7de36586-c9c2-4d3c-8130-8a04b5b58271
 
 	annotation PBI_ResultType = Function
 
 /// Staging (not loaded): raw sets.csv. Exists so Sets contains query
 /// REFERENCES only — a query that both reads a file and references another
 /// query trips the Formula.Firewall ("rebuild this data combination").
-expression RawSets =
-		fnCsv("sets.csv", 6)
+expression RawSets = fnCsv("sets.csv", 6)
+	lineageTag: 30af744d-ddfc-4ce9-82d3-75fe085dcc53
 
 	annotation PBI_ResultType = Table
 
 /// Staging (not loaded): raw inventory_parts.csv (firewall split for SetColors).
-expression RawInventoryParts =
-		fnCsv("inventory_parts.csv", 6)
+expression RawInventoryParts = fnCsv("inventory_parts.csv", 6)
+	lineageTag: c29f25dd-c8e0-4903-b4bb-b67f448e51e1
 
 	annotation PBI_ResultType = Table
 
 /// Staging (not loaded): raw inventory_minifigs.csv (firewall split for Minifigs).
-expression RawInventoryMinifigs =
-		fnCsv("inventory_minifigs.csv", 3)
+expression RawInventoryMinifigs = fnCsv("inventory_minifigs.csv", 3)
+	lineageTag: 02516a1c-ec89-4e85-80fc-6bba359231f8
 
 	annotation PBI_ResultType = Table
 
 /// Staging (not loaded): raw colors.csv (firewall split for Colors).
-expression RawColors =
-		fnCsv("colors.csv", 8)
+expression RawColors = fnCsv("colors.csv", 8)
+	lineageTag: ea57a941-2f6f-432f-a5c5-7fe1ac93ddc7
 
 	annotation PBI_ResultType = Table
 
 /// Staging (not loaded): raw minifigs.csv (firewall split for Minifigs).
-expression RawMinifigs =
-		fnCsv("minifigs.csv", 4)
+expression RawMinifigs = fnCsv("minifigs.csv", 4)
+	lineageTag: f132b359-9075-4910-8d50-e30c7febaf8d
 
 	annotation PBI_ResultType = Table
 
@@ -66,6 +70,7 @@ expression ThemesResolved =
 		    Slim = Table.RemoveColumns(WithRoot, {"chain"})
 		in
 		    Slim
+	lineageTag: f3aa7c86-4d3c-4fca-92a9-40e89b95c76c
 
 	annotation PBI_ResultType = Table
 
@@ -81,5 +86,7 @@ expression V1Inventories =
 		    Renamed = Table.RenameColumns(Slim, {{"id", "inventory_id"}})
 		in
 		    Renamed
+	lineageTag: 946cf001-bd70-419f-99ab-d6c41cb8100c
 
 	annotation PBI_ResultType = Table
+

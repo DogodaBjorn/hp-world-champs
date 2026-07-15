@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "img_char",
+  "position": {
+    "x": 875,
+    "y": 102,
+    "z": 320,
+    "height": 420,
+    "width": 372,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "tableEx",
     "query": {
@@ -7,7 +16,6 @@
         "Values": {
           "projections": [
             {
-              "queryRef": "_Measures.Fig Image",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -18,6 +26,7 @@
                   "Property": "Fig Image"
                 }
               },
+              "queryRef": "_Measures.Fig Image",
               "nativeQueryRef": "Fig Image"
             }
           ]
@@ -45,15 +54,7 @@
     "objects": {
       "columnHeaders": [
         {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "grid": [
@@ -78,14 +79,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "position": {
-    "x": 875,
-    "y": 102,
-    "z": 320,
-    "width": 372,
-    "height": 420,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+  }
 }

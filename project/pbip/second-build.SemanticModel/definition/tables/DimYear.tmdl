@@ -2,11 +2,13 @@
 /// marked as date table. The hero chart binds Year so the 2012–2017
 /// silence renders as empty columns even though no HP set exists there.
 table DimYear
+	lineageTag: 1b2d1ca2-624c-427d-ae10-3d805b642899
 	dataCategory: Time
 
 	column Year
 		dataType: int64
 		formatString: 0
+		lineageTag: 6378cb13-98b4-452a-9ac9-0db1f7180232
 		summarizeBy: none
 		sourceColumn: Year
 
@@ -15,11 +17,15 @@ table DimYear
 		isHidden
 		isKey
 		formatString: yyyy-mm-dd
+		lineageTag: 379c385f-3bf4-4f4a-8fa4-12a244f6bb9a
 		summarizeBy: none
 		sourceColumn: Year Start Date
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column IsSilenceYear
 		dataType: boolean
+		lineageTag: 9ffe8380-57ec-4681-aa96-41548b7020c2
 		summarizeBy: none
 		sourceColumn: IsSilenceYear
 
@@ -34,3 +40,4 @@ table DimYear
 				    WithSilence = Table.AddColumn(WithDate, "IsSilenceYear", each [Year] >= 2012 and [Year] <= 2017, type logical)
 				in
 				    WithSilence
+

@@ -13,3 +13,4 @@ relationship Minifigs_Sets
 relationship Sets_DimYear
 	fromColumn: Sets.year
 	toColumn: DimYear.Year
+

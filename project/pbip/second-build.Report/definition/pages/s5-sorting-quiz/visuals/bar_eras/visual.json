@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "bar_eras",
+  "position": {
+    "x": 397,
+    "y": 254,
+    "z": 320,
+    "height": 128,
+    "width": 454,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "barChart",
     "query": {
@@ -7,7 +16,6 @@
         "Category": {
           "projections": [
             {
-              "queryRef": "Minifigs.Era",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,15 @@
                   "Property": "Era"
                 }
               },
-              "nativeQueryRef": "Era"
+              "queryRef": "Minifigs.Era",
+              "nativeQueryRef": "Era",
+              "active": true
             }
           ]
         },
         "Y": {
           "projections": [
             {
-              "queryRef": "_Measures.Minifig Variants",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -36,6 +45,7 @@
                   "Property": "Minifig Variants"
                 }
               },
+              "queryRef": "_Measures.Minifig Variants",
               "nativeQueryRef": "Minifig Variants"
             }
           ]
@@ -168,7 +178,6 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -222,15 +231,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 397,
-    "y": 254,
-    "z": 320,
-    "width": 454,
-    "height": 128,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

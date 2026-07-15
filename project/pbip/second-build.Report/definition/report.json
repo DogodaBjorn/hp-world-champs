@@ -48,6 +48,9 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "deneb7E15AEF80B9E4D4F8E12924291ECE89A"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",
@@ -65,33 +68,8 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "second-build.json",
-          "path": "second-build.json",
-          "type": "CustomTheme"
-        },
-        {
           "name": "glyph_brick_red.png",
           "path": "glyph_brick_red.png",
-          "type": "Image"
-        },
-        {
-          "name": "glyph_nav_1.png",
-          "path": "glyph_nav_1.png",
-          "type": "Image"
-        },
-        {
-          "name": "glyph_nav_2.png",
-          "path": "glyph_nav_2.png",
-          "type": "Image"
-        },
-        {
-          "name": "glyph_nav_3.png",
-          "path": "glyph_nav_3.png",
-          "type": "Image"
-        },
-        {
-          "name": "glyph_nav_4.png",
-          "path": "glyph_nav_4.png",
           "type": "Image"
         },
         {
@@ -105,38 +83,8 @@
           "type": "Image"
         },
         {
-          "name": "img_fig_000471.jpg",
-          "path": "img_fig_000471.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "img_fig_000593.jpg",
-          "path": "img_fig_000593.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "img_fig_000594.jpg",
-          "path": "img_fig_000594.jpg",
-          "type": "Image"
-        },
-        {
           "name": "img_fig_002136.jpg",
           "path": "img_fig_002136.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "img_fig_006056.jpg",
-          "path": "img_fig_006056.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "img_fig_013032.jpg",
-          "path": "img_fig_013032.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "img_set_10132_1.jpg",
-          "path": "img_set_10132_1.jpg",
           "type": "Image"
         },
         {
@@ -145,40 +93,17 @@
           "type": "Image"
         },
         {
-          "name": "img_set_10217_1.jpg",
-          "path": "img_set_10217_1.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "img_set_4709_1.jpg",
-          "path": "img_set_4709_1.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "img_set_4842_1.jpg",
-          "path": "img_set_4842_1.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "img_set_71043_1.jpg",
-          "path": "img_set_71043_1.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "img_set_75978_1.jpg",
-          "path": "img_set_75978_1.jpg",
-          "type": "Image"
-        },
-        {
           "name": "img_set_76444_1.jpg",
           "path": "img_set_76444_1.jpg",
           "type": "Image"
+        },
+        {
+          "name": "second-build.json",
+          "path": "second-build.json",
+          "type": "CustomTheme"
         }
       ]
     }
-  ],
-  "publicCustomVisuals": [
-    "deneb7E15AEF80B9E4D4F8E12924291ECE89A"
   ],
   "settings": {
     "useStylableVisualContainerHeader": true,

@@ -3,32 +3,38 @@
 /// metric contract verified; pseudo-colors ([Unknown] -1, [No Color] 9999)
 /// are flagged here and excluded from SetColors at load.
 table Colors
+	lineageTag: e82cefd8-00f8-4b17-b634-bd39fb171619
 
 	column color_id
 		dataType: int64
 		isHidden
 		formatString: 0
+		lineageTag: ecd1b98c-f1bb-42aa-8423-4c42ae576987
 		summarizeBy: none
 		sourceColumn: color_id
 
 	column 'Color Name'
 		dataType: string
+		lineageTag: 504ce5a5-6f4d-405c-ad43-dc0d8e1a27b4
 		summarizeBy: none
 		sourceColumn: Color Name
 
 	column Hex
 		dataType: string
+		lineageTag: 5582f071-f509-437f-ae5a-f089c07e02d8
 		summarizeBy: none
 		sourceColumn: Hex
 
 	column IsGrayscale
 		dataType: boolean
+		lineageTag: cc6a4c98-648c-420f-96a5-6d12c78b59f0
 		summarizeBy: none
 		sourceColumn: IsGrayscale
 
 	column IsPseudoColor
 		dataType: boolean
 		isHidden
+		lineageTag: 175b7b0f-ea6d-4105-a2f1-509eaec5fb90
 		summarizeBy: none
 		sourceColumn: IsPseudoColor
 
@@ -36,6 +42,7 @@ table Colors
 		dataType: double
 		isHidden
 		formatString: 0.0
+		lineageTag: 36984586-6112-495f-ab80-8bb9d29dc6a2
 		summarizeBy: none
 		sourceColumn: Luminance
 
@@ -63,3 +70,6 @@ table Colors
 				    Slim = Table.SelectColumns(Renamed, {"color_id", "Color Name", "Hex", "IsGrayscale", "IsPseudoColor", "Luminance"})
 				in
 				    Slim
+
+	annotation PBI_ResultType = Table
+

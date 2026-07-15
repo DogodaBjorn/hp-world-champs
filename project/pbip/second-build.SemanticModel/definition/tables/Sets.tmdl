@@ -3,27 +3,32 @@
 /// columns (data_model.md): era splits the two builds around the
 /// 2012–2017 silence; size_bin drives the S2/S3 distribution charts.
 table Sets
+	lineageTag: 0f46bc6f-45ad-4b19-800e-02ab173c1a84
 
 	column set_num
 		dataType: string
 		isHidden
+		lineageTag: 7117ed0e-5183-4bea-b00b-43a58acbf250
 		summarizeBy: none
 		sourceColumn: set_num
 
 	column 'Set Name'
 		dataType: string
+		lineageTag: ab5d45fa-d79a-4abc-a532-51d3af88ac04
 		summarizeBy: none
 		sourceColumn: Set Name
 
 	column year
 		dataType: int64
 		formatString: 0
+		lineageTag: c9b72ddb-ca3c-4a54-b2b6-941e65e30474
 		summarizeBy: none
 		sourceColumn: year
 
 	column num_parts
 		dataType: int64
 		formatString: #,0
+		lineageTag: 4548f0e1-d729-44cb-8602-ef57d1408cf5
 		summarizeBy: none
 		sourceColumn: num_parts
 
@@ -31,10 +36,12 @@ table Sets
 	/// the explorer bar's category so a click selects exactly one set.
 	column 'Set Label' = Sets[Set Name] & " · " & Sets[year]
 		dataType: string
+		lineageTag: 38f6bb00-83ac-470b-bbc3-1362d02beff0
 		summarizeBy: none
 
 	column Era
 		dataType: string
+		lineageTag: b0ddce6c-31ab-47aa-b418-d4158a6b9bc9
 		summarizeBy: none
 		sourceColumn: Era
 		sortByColumn: EraSort
@@ -43,11 +50,13 @@ table Sets
 		dataType: int64
 		isHidden
 		formatString: 0
+		lineageTag: 50000255-fb02-4002-aaf6-1f24b550325f
 		summarizeBy: none
 		sourceColumn: EraSort
 
 	column 'Size Bin'
 		dataType: string
+		lineageTag: c25cd912-0f0c-4bfb-9b4c-76ec36c02a21
 		summarizeBy: none
 		sourceColumn: Size Bin
 		sortByColumn: SizeBinSort
@@ -56,15 +65,17 @@ table Sets
 		dataType: int64
 		isHidden
 		formatString: 0
+		lineageTag: b50acd0c-972b-4106-a528-84ee323bf6e6
 		summarizeBy: none
 		sourceColumn: SizeBinSort
 
 	column img_url
 		dataType: string
 		isHidden
+		lineageTag: 2838fa85-8024-4294-b75d-085890e18600
+		dataCategory: ImageUrl
 		summarizeBy: none
 		sourceColumn: img_url
-		dataCategory: ImageUrl
 
 	partition Sets = m
 		mode: import
@@ -101,3 +112,6 @@ table Sets
 				    Removed = Table.RemoveColumns(Renamed, {"theme_id", "Root Theme"})
 				in
 				    Removed
+
+	annotation PBI_ResultType = Table
+
