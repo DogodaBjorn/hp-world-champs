@@ -5,7 +5,7 @@
     "x": 1009,
     "y": 622,
     "z": 120,
-    "height": 18,
+    "height": 26,
     "width": 121,
     "tabOrder": 47000
   },
@@ -22,7 +22,7 @@
                     "value": "2026 · flesh tone",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "8pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

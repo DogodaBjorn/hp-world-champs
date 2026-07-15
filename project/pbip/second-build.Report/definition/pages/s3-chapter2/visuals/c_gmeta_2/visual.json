@@ -5,7 +5,7 @@
     "x": 317,
     "y": 645,
     "z": 130,
-    "height": 34,
+    "height": 48,
     "width": 246,
     "tabOrder": 37000
   },
@@ -22,7 +22,7 @@
                     "value": "2025 · 55 colors",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

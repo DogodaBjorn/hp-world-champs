@@ -5,7 +5,7 @@
     "x": 39,
     "y": 645,
     "z": 130,
-    "height": 34,
+    "height": 48,
     "width": 246,
     "tabOrder": 33000
   },
@@ -22,7 +22,7 @@
                     "value": "2018 · 6,020 parts — the era's largest",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

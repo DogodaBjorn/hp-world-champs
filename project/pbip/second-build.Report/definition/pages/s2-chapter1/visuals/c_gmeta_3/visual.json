@@ -5,7 +5,7 @@
     "x": 481,
     "y": 630,
     "z": 130,
-    "height": 34,
+    "height": 48,
     "width": 189,
     "tabOrder": 41000
   },
@@ -22,7 +22,7 @@
                     "value": "2004 · 713 parts",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

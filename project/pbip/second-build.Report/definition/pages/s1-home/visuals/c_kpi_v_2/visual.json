@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_kpi_v_2",
   "position": {
-    "x": 127,
+    "x": 132,
     "y": 455,
     "z": 240,
     "height": 28,
-    "width": 103,
+    "width": 100,
     "tabOrder": 15000
   },
   "visual": {
@@ -22,7 +22,7 @@
                     "value": "267 → 731",
                     "textStyle": {
                       "fontFamily": "Georgia",
-                      "fontSize": "15pt",
+                      "fontSize": "13pt",
                       "color": "#211B14",
                       "fontWeight": "bold"
                     }

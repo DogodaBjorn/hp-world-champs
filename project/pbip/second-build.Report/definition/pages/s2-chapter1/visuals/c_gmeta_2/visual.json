@@ -5,7 +5,7 @@
     "x": 260,
     "y": 630,
     "z": 130,
-    "height": 34,
+    "height": 48,
     "width": 189,
     "tabOrder": 37000
   },
@@ -22,7 +22,7 @@
                     "value": "2011 · 2,029 parts — the era's largest",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

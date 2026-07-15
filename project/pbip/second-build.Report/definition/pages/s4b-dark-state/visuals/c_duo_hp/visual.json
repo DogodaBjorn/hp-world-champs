@@ -22,7 +22,7 @@
                     "value": "Harry Potter ",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#CFC9BE"
                     }
                   },
@@ -30,7 +30,7 @@
                     "value": "~42%",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#CFC9BE",
                       "fontWeight": "bold"
                     }
@@ -39,7 +39,7 @@
                     "value": " gray",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#CFC9BE"
                     }
                   }

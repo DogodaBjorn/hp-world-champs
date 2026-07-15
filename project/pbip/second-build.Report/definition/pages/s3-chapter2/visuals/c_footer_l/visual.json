@@ -3,9 +3,9 @@
   "name": "c_footer_l",
   "position": {
     "x": 28,
-    "y": 695,
+    "y": 690,
     "z": 590,
-    "height": 22,
+    "height": 26,
     "width": 520,
     "tabOrder": 50000
   },
@@ -22,7 +22,7 @@
                     "value": "Source: Rebrickable LEGO Database (rebrickable.com)",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

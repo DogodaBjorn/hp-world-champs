@@ -5,7 +5,7 @@
     "x": 923,
     "y": 483,
     "z": 120,
-    "height": 18,
+    "height": 26,
     "width": 315,
     "tabOrder": 47000
   },
@@ -22,7 +22,7 @@
                     "value": "THE YELLOW YEARS — CLASSIC FACES",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "8pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346",
                       "fontWeight": "bold"
                     }

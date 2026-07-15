@@ -22,7 +22,7 @@
                     "value": "■ ",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#8C7A5B"
                     }
                   },
@@ -30,7 +30,7 @@
                     "value": "First Build 2001–2011   ",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#211B14"
                     }
                   },
@@ -38,7 +38,7 @@
                     "value": "■ ",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#6E2B25"
                     }
                   },
@@ -46,7 +46,7 @@
                     "value": "Second Build 2018–2026",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#211B14"
                     }
                   }

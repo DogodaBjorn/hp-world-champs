@@ -5,7 +5,7 @@
     "x": 873,
     "y": 496,
     "z": 120,
-    "height": 18,
+    "height": 26,
     "width": 368,
     "tabOrder": 43000
   },
@@ -22,8 +22,8 @@
                     "value": "OLD VS NEW — HERMIONE · 9 OLD, 33 NEW",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "8pt",
-                      "color": "#8A6A21",
+                      "fontSize": "11pt",
+                      "color": "#7A5D1D",
                       "fontWeight": "bold"
                     }
                   }

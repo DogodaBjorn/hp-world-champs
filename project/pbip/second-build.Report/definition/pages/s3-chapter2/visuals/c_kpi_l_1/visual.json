@@ -3,7 +3,7 @@
   "name": "c_kpi_l_1",
   "position": {
     "x": 28,
-    "y": 139,
+    "y": 150,
     "z": 170,
     "height": 20,
     "width": 216,
@@ -22,7 +22,7 @@
                     "value": "sets",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

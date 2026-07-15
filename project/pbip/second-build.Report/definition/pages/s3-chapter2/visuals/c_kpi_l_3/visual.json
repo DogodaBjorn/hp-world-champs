@@ -3,7 +3,7 @@
   "name": "c_kpi_l_3",
   "position": {
     "x": 523.2,
-    "y": 139,
+    "y": 150,
     "z": 230,
     "height": 20,
     "width": 216,
@@ -22,7 +22,7 @@
                     "value": "largest set (parts)",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

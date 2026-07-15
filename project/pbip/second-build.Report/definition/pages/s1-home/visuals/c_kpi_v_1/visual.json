@@ -6,7 +6,7 @@
     "y": 455,
     "z": 210,
     "height": 28,
-    "width": 103,
+    "width": 100,
     "tabOrder": 12000
   },
   "visual": {
@@ -22,7 +22,7 @@
                     "value": "67 → 142",
                     "textStyle": {
                       "fontFamily": "Georgia",
-                      "fontSize": "15pt",
+                      "fontSize": "13pt",
                       "color": "#211B14",
                       "fontWeight": "bold"
                     }

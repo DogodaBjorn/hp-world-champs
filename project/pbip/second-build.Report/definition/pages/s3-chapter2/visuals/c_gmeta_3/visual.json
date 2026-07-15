@@ -5,7 +5,7 @@
     "x": 595,
     "y": 645,
     "z": 130,
-    "height": 34,
+    "height": 48,
     "width": 246,
     "tabOrder": 41000
   },
@@ -22,7 +22,7 @@
                     "value": "2020 · 5,548 parts",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

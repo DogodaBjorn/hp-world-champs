@@ -22,7 +22,7 @@
                     "value": "Click a minifig, then its name, then its era — match all ten.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "10pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

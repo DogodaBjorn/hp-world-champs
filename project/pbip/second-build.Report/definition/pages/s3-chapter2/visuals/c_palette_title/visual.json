@@ -3,10 +3,10 @@
   "name": "c_palette_title",
   "position": {
     "x": 482,
-    "y": 174,
+    "y": 176,
     "z": 320,
-    "height": 20,
-    "width": 430,
+    "height": 24,
+    "width": 560,
     "tabOrder": 23000
   },
   "visual": {
@@ -22,7 +22,7 @@
                     "value": "THE ERA PALETTE — 79 COLORS, EACH BAR ITS TRUE BRICK HEX",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346",
                       "fontWeight": "bold"
                     }

@@ -16,17 +16,17 @@
   "textClasses": {
     "title": {
       "fontFace": "Georgia",
-      "fontSize": 19,
+      "fontSize": 20,
       "color": "#211B14"
     },
     "header": {
       "fontFace": "Segoe UI",
-      "fontSize": 10,
+      "fontSize": 12,
       "color": "#5C5346"
     },
     "label": {
       "fontFace": "Segoe UI",
-      "fontSize": 9,
+      "fontSize": 11,
       "color": "#5C5346"
     },
     "callout": {

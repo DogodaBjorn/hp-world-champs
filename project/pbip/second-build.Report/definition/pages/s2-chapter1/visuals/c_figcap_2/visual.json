@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_figcap_2",
   "position": {
-    "x": 1001,
+    "x": 998,
     "y": 606,
     "z": 120,
-    "height": 34,
-    "width": 78,
+    "height": 42,
+    "width": 84,
     "tabOrder": 51000
   },
   "visual": {
@@ -22,7 +22,7 @@
                     "value": "Hermione · 9",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "8pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

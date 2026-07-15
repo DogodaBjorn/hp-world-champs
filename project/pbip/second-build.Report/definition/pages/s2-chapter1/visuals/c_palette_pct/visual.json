@@ -3,9 +3,9 @@
   "name": "c_palette_pct",
   "position": {
     "x": 1100,
-    "y": 174,
+    "y": 176,
     "z": 330,
-    "height": 20,
+    "height": 24,
     "width": 148,
     "tabOrder": 24000
   },
@@ -22,7 +22,7 @@
                     "value": "51%",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346",
                       "fontWeight": "bold"
                     }
@@ -31,7 +31,7 @@
                     "value": " grayscale",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

@@ -5,8 +5,8 @@
     "x": 28,
     "y": 44,
     "z": 110,
-    "height": 24,
-    "width": 110,
+    "height": 28,
+    "width": 170,
     "tabOrder": 2000
   },
   "visual": {
@@ -22,8 +22,8 @@
                     "value": "CHAPTER II",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "10pt",
-                      "color": "#8A6A21",
+                      "fontSize": "11pt",
+                      "color": "#7A5D1D",
                       "fontWeight": "bold"
                     }
                   }

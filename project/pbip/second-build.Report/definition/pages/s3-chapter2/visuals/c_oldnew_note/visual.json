@@ -5,8 +5,8 @@
     "x": 1138,
     "y": 545,
     "z": 120,
-    "height": 80,
-    "width": 100,
+    "height": 120,
+    "width": 130,
     "tabOrder": 48000
   },
   "visual": {
@@ -22,7 +22,7 @@
                     "value": "22 old vs 59 new Harrys · 44 characters span both eras",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "8pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

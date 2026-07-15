@@ -3,9 +3,9 @@
   "name": "c_footer_r",
   "position": {
     "x": 700,
-    "y": 695,
+    "y": 690,
     "z": 670,
-    "height": 22,
+    "height": 26,
     "width": 552,
     "tabOrder": 58000
   },
@@ -22,7 +22,7 @@
                     "value": "Chapter I · 2 of 5",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c_kpi_l_2",
   "position": {
-    "x": 127,
+    "x": 132,
     "y": 480,
     "z": 250,
     "height": 20,
-    "width": 103,
+    "width": 100,
     "tabOrder": 16000
   },
   "visual": {
@@ -22,7 +22,7 @@
                     "value": "avg parts",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }

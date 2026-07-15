@@ -3,9 +3,9 @@
   "name": "c_dist_title",
   "position": {
     "x": 28,
-    "y": 174,
+    "y": 176,
     "z": 300,
-    "height": 20,
+    "height": 24,
     "width": 435,
     "tabOrder": 21000
   },
@@ -22,7 +22,7 @@
                     "value": "SETS BY SIZE — SAME BINS, HEAVIER TAIL",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346",
                       "fontWeight": "bold"
                     }

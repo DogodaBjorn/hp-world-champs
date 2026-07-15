@@ -5,7 +5,7 @@
     "x": 1030,
     "y": 442,
     "z": 380,
-    "height": 18,
+    "height": 24,
     "width": 218,
     "tabOrder": 29000
   },
@@ -22,7 +22,7 @@
                     "value": "color · 49%",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "8pt",
+                      "fontSize": "11pt",
                       "color": "#5C5346"
                     }
                   }
