@@ -42,8 +42,8 @@ Title Gray Hero =
 Color Era =
 SWITCH (
     SELECTEDVALUE ( DimSets[Era] ),
-    "First marriage (2001–2011)", "#AA7F2E",
-    "Second marriage (2018– )", "#720E0F",
+    "First Build (2001–2011)", "#AA7F2E",
+    "Second Build (2018– )", "#720E0F",
     "#6C6E68"
 )
 

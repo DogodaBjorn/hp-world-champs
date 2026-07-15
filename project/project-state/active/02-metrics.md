@@ -13,7 +13,7 @@
 | M-005 | Grayscale Share % | Share of Parts Shipped whose color name contains Gray/Grey/Black/White (34 of 275 colors) | context | entrant |
 | M-006 | Unique Minifigures | Distinct `fig_num` through v1 inventories | context | entrant |
 | M-007 | Minifig Variants per Character | Distinct figs per Character (name before first `,` or `(`) | context | entrant |
-| M-008 | Era | Set attribute: First marriage ≤2011 · Hiatus 2012–2017 · Second marriage ≥2018; only for Root Theme = Harry Potter, else `n/a` | n/a | entrant |
+| M-008 | Era | Set attribute: First Build ≤2011 · Hiatus 2012–2017 · Second Build ≥2018; only for Root Theme = Harry Potter, else `n/a` | n/a | entrant |
 | M-009 | Quiz Score | **Scenario logic** — correct matches out of 10 curated questions; disconnected tables; dual mode (visual-internal vs fallback DAX) | up | entrant |
 
 ## Ambiguities hunted and resolved

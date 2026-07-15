@@ -11,8 +11,8 @@ spares excluded, gray = name rule, pseudo-colors excluded from color counts.
 
 | Claim | Verified value | vs mission hypothesis |
 |---|---|---|
-| E1 first marriage 2001–2011 | **67 sets · avg 267 parts · max 2,029** (Diagon Alley 10217) | exact match |
-| E2 second marriage 2018– | **142 sets · avg 731 parts · max 6,020** (Hogwarts Castle 71043) | exact match |
+| E1 First Build 2001–2011 | **67 sets · avg 267 parts · max 2,029** (Diagon Alley 10217) | exact match |
+| E2 Second Build 2018– | **142 sets · avg 731 parts · max 6,020** (Hogwarts Castle 71043) | exact match |
 | E2 era size ratio | avg 731 ÷ 267 = **2.74× bigger sets** ("nearly triple") | confirmed |
 | E3 hiatus | **0 HP sets every year 2012–2017** | exact match — premise holds |
 | E4 relaunch scale | **15,053 parts shipped in 2018** vs **8,141 total 2001–2004** = **1.85×** | 15,053 vs hypothesized 15,234 — use "nearly twice", cite 15,053 |

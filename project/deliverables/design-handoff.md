@@ -108,7 +108,7 @@ replaced.
 
 ## Pages II & III — `p2-first-marriage` / `p3-second-marriage` (mirror twins)
 
-**Questions:** what did each marriage look like? · **3-second:** II *a modest toy line in classic yellow* / III *it came back for the grown-ups.*
+**Questions:** what did each build look like? · **3-second:** II *a modest toy line in classic yellow* / III *it came back for the grown-ups.*
 **Layout (identical grid, both pages):** masthead; KPI band 1232×88; below: left 608px `tbl_top_sets`, right 608px stacked `ch_size_distribution` (over) + `ch_palette_strip` (under); bottom band 1232×160 `tbl_fig_gallery`. Page filter: `Era = <the era>`.
 
 | Id | Visual | Intent | Data | Polish | Explicit properties |
@@ -152,7 +152,7 @@ replaced.
 |---|---|---|---|---|---|
 | `hero_quiz` | **custom visual `hpSortingQuiz`** | matching game (justification gate: native/Deneb cannot hold pair state + draw connections — mission §6 verbatim) | data roles ← `QuizQuestions`: figureImage=fig_img_url, figureId=fig_num, characterOptions=character, eraOptions=era, setOptions=set_name (+set_img_url), answerKey=question_no | — | all colors via format pane defaulted to theme slots (NO hardcoded hex in render path); title bound; keyboard: tab to figure, arrows between options, Enter to connect; ARIA labels "match made: Hermione — 2001, correct"; visible 3:1 focus ring; match-by-value (duplicate characters accept either slot); Reveal/Reset buttons internal |
 | `kpi_quiz_questions` | new card | score slot | `[Quiz Questions]` labeled **"scenario logic — game state lives in the visual"**; fallback mode: becomes live `[Quiz Score]` | 7 | title "The game" hidden (recorded); sub-label carries the scenario note |
-| `c_era_legend` | text box + shapes | era legend | gold chip = First marriage · dark-red chip = Second marriage (chips + text, color never alone) | — | 12pt |
+| `c_era_legend` | text box + shapes | era legend | gold chip = First Build · dark-red chip = Second Build (chips + text, color never alone) | — | 12pt |
 | `c_how_to_play` | text box | rules + keyboard path | 2 sentences + "keyboard: Tab, arrows, Enter" | — | 12pt ink_secondary |
 
 **FALLBACK (pre-approved deviation path — decision by 2026-07-16):** same slots; `hero_quiz` replaced by three disconnected slicers (figure image gallery / character / era) + `[Quiz Score]` DAX validation measure + 10 per-question bookmarks `bm_p5_q01…q10`. No G5 reopen required.

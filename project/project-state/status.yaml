@@ -27,11 +27,11 @@ stages:
   s5_design:
     status: passed
     evidence: "../../design_handoff_powerbi/README.md"
-    gate_note: "G5 re-signed 2026-07-14: user rejected the rendered v1 ('this looks ridiculous') and its storybook uplift, and supplied a complete external design handoff (design_handoff_powerbi/ — HTML hi-fi prototypes as visual truth + per-page specs + theme + data model). That bundle IS the v2 design contract; user decisions: Georgia substitutes Crimson Pro (font not installable on judges' machines), clean-room rebuild as two-marriages-v2. Prior 05-design.md kept for v1 history."
+    gate_note: "G5 re-signed 2026-07-14: user rejected the rendered v1 ('this looks ridiculous') and its storybook uplift, and supplied a complete external design handoff (design_handoff_powerbi/ — HTML hi-fi prototypes as visual truth + per-page specs + theme + data model). That bundle IS the v2 design contract; user decisions: Georgia substitutes Crimson Pro (font not installable on judges' machines), clean-room rebuild as second-build. Prior 05-design.md kept for v1 history."
   s6_report_build:
     status: in_progress
     evidence: "project-state/active/06-build.md"
-    gate_note: "G6 rework agent-side COMPLETE 2026-07-14: two-marriages-v2 built (7 pages, 206 visuals, all rects measured from layout.json; pbir validate 0 errors; strict TMDL clean; sorting-quiz-v2 packaged lint-clean; contrast 11/13 PASS with F-v2-1/F-v2-2 awaiting user decision). Gate closes on the user Desktop pass V1-V11 (BUILD_LOG) + the +-2px diff review against reference_screenshots."
+    gate_note: "G6 rework agent-side COMPLETE 2026-07-14: second-build built (7 pages, 206 visuals, all rects measured from layout.json; pbir validate 0 errors; strict TMDL clean; sorting-quiz-v2 packaged lint-clean; contrast 11/13 PASS with F-v2-1/F-v2-2 awaiting user decision). Gate closes on the user Desktop pass V1-V11 (BUILD_LOG) + the +-2px diff review against reference_screenshots."
   s7_delivery:
     status: pending
     evidence: "project-state/active/07-delivery.md"

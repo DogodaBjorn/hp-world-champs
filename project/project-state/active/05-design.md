@@ -15,7 +15,7 @@
 
 ## Story → pages
 
-The fixed mission story ("two marriages, one franchise") maps to five
+The fixed mission story ("two builds, one franchise") maps to five
 chapters: I resurrection overview · II/III mirror-twin era portraits ·
 IV color superlative with the dark-side flip · V the Sorting Quiz. Every page
 contract carries its 3-second message and 3-minute trust path; definitions
@@ -27,7 +27,7 @@ Three directions different in kind — D1 storybook (nostalgic book language),
 D2 museum retrospective (curatorial minimalism), D3 built-from-bricks
 (toy-forward furniture) — argued honestly against the doctrine in the
 creative-direction contract. **User chose D1** (2026-07-13): the voice
-matches the two-marriages arc; ornament risk is capped by the fidelity
+matches the second-build arc; ornament risk is capped by the fidelity
 checklist (drop cap + chapter rule + margin notes ONLY, serif ≥14pt, flat
 parchment tint, no texture images).
 
@@ -79,7 +79,7 @@ specs S1/S2/S3/S4a/S4b/S5/T1, theme.json, data_model.md, brick-chart recipe,
 Deneb starting specs, quiz-visual spec, and Playwright measurement tools.
 
 That bundle is now the stage-5 design contract for the v2 build
-(`two-marriages-v2`). Decisions recorded:
+(`second-build`). Decisions recorded:
 
 - **Font:** Crimson Pro is not installed and Power BI cannot embed fonts —
   judges would hit silent fallback. User chose the handoff's own documented

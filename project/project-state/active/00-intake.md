@@ -8,7 +8,7 @@
 Contest entry for **Power BI Dataviz World Champs Barcelona, Round 2**, built
 from the requester's mission brief
 [MISSION-hp-world-champs.md](../MISSION-hp-world-champs.md) ("The Boy Who Came
-Back — LEGO and Harry Potter's two marriages"). The mission is the stage-0
+Back — LEGO and Harry Potter's two builds"). The mission is the stage-0
 source of truth and seeds every later stage:
 
 - **Evidence pack (E1–E10)** = hypotheses with high prior; every number must be

@@ -63,13 +63,13 @@ Source: "Power BI Dataviz World Champs Barcelona | Round 2" blog post
 
 ## 2 · The story (stage 0/1 seed)
 
-**Concept: "The Boy Who Came Back — LEGO and Harry Potter's two marriages."**
+**Concept: "The Boy Who Came Back — LEGO and Harry Potter's two builds."**
 
 LEGO Harry Potter ran 2001–2011, disappeared for **seven years**, and returned
 in 2018 at a scale that dwarfs the original: more sets per year, sets ~2.7×
 larger on average, a wider and less-gray palette, aimed at the readers who grew
 up during the hiatus. The report tells this in five acts: the resurrection
-(home), the first marriage, the second marriage, a color deep-dive with a
+(home), the First Build, the Second Build, a color deep-dive with a
 cheeky "dark side" flip to Star Wars, and an interactive minifig matching game.
 
 **Audience & decision (stage 1 framing):** the audience is the panel of
@@ -110,7 +110,7 @@ Grain declarations first, per the star-schema rule:
   inventory_minifigs ⋈ inventories(v1).
 - **DimSets** — one row per set. Enrich in Power Query: `Root Theme` and
   `Sub Theme` (flatten themes' parent_id recursion), and
-  `Era = if year <= 2011 then "First marriage (2001–2011)" else if year >= 2018 then "Second marriage (2018– )" else "Hiatus"`
+  `Era = if year <= 2011 then "First Build (2001–2011)" else if year >= 2018 then "Second Build (2018– )" else "Hiatus"`
   (only meaningful where Root Theme = Harry Potter; other themes get "n/a").
   Keep `img_url` and set its data category to Image URL.
 - **DimColors** — one row per color. Add `Hex = "#" & rgb` (this column drives
@@ -165,18 +165,18 @@ KPI band: sets / avg size / colors, old vs new. Key Takeaway (candidate, 47
 words — re-count after verification):
 > "LEGO Harry Potter vanished for seven years. It returned in 2018 at nearly
 > triple the scale — bigger sets, more colors, aimed at the readers who grew
-> up. Two marriages, one franchise, told in 576 minifigures."
+> up. Two builds, one franchise, told in 576 minifigures."
 Navigation: nav-studio pattern styled as the journey (ticket / footprints),
 plus standard visible nav for accessibility (never icon-only).
 
-**P2 · First marriage (2001–2011).**
+**P2 · First Build (2001–2011).**
 Mirror layout twin of P3 — same grid slots, same visual types, filtered to
 Era 1, so paging between them makes the contrast physical. Content: set-size
 distribution, palette strip (bars colored by the actual `Hex` field), top sets
 as an image-URL matrix (core visual renders images natively), the yellow-skin
 minifig gallery (E10). 3-second message: *a modest toy line in classic yellow.*
 
-**P3 · Second marriage (2018– ).**
+**P3 · Second Build (2018– ).**
 Identical grid, Era 2. Everything is simply *bigger and more colorful* —
 that's the point. Call out max set 6,020 parts, 80 colors, flesh-tone figures.
 3-second message: *it came back for the grown-ups.*

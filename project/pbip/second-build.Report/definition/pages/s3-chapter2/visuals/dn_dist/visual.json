@@ -1,0 +1,137 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "dn_dist",
+  "position": {
+    "x": 33,
+    "y": 190,
+    "z": 310,
+    "height": 282,
+    "width": 430,
+    "tabOrder": 22000
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\":\"https://vega.github.io/schema/vega-lite/v5.json\",\"description\":\"S3 distribution brick chart (era II). Dataset fields: Size Bin (Sets), Total Sets (measure). Max bin 40 sets renders at 88% of the 265px plot (domain 45.5). Era-II fill #6E2B25, mortar #84443D.\",\"width\":\"container\",\"height\":\"container\",\"autosize\":{\"type\":\"fit\",\"contains\":\"padding\"},\"background\":\"transparent\",\"data\":{\"name\":\"dataset\"},\"transform\":[{\"calculate\":\"datum[''Total Sets'']\",\"as\":\"n\"},{\"calculate\":\"datum.n + 0.86\",\"as\":\"studTop\"}],\"encoding\":{\"x\":{\"field\":\"Size Bin\",\"type\":\"ordinal\",\"sort\":[\"1\\u2013100\",\"101\\u2013300\",\"301\\u2013700\",\"701\\u20132k\",\"2k+\"],\"scale\":{\"paddingInner\":0.114,\"paddingOuter\":0},\"axis\":{\"labelAngle\":0,\"labelFontSize\":10.5,\"labelColor\":\"#5C5346\",\"labelPadding\":5,\"title\":null,\"domain\":false,\"ticks\":false,\"grid\":false}},\"y\":{\"type\":\"quantitative\",\"scale\":{\"domain\":[0,45.5],\"nice\":false},\"axis\":null}},\"layer\":[{\"mark\":{\"type\":\"bar\"},\"encoding\":{\"y\":{\"field\":\"n\"},\"color\":{\"value\":\"#6E2B25\"}}},{\"mark\":{\"type\":\"bar\"},\"transform\":[{\"calculate\":\"sequence(2.57, datum.n, 2.57)\",\"as\":\"lv\"},{\"flatten\":[\"lv\"]},{\"calculate\":\"datum.lv + 0.171\",\"as\":\"lv2\"}],\"encoding\":{\"y\":{\"field\":\"lv\"},\"y2\":{\"field\":\"lv2\"},\"color\":{\"value\":\"#84443D\"}}},{\"mark\":{\"type\":\"bar\",\"width\":9,\"xOffset\":-7,\"cornerRadiusTopLeft\":2,\"cornerRadiusTopRight\":2},\"encoding\":{\"y\":{\"field\":\"n\"},\"y2\":{\"field\":\"studTop\"},\"color\":{\"value\":\"#6E2B25\"}}},{\"mark\":{\"type\":\"bar\",\"width\":9,\"xOffset\":7,\"cornerRadiusTopLeft\":2,\"cornerRadiusTopRight\":2},\"encoding\":{\"y\":{\"field\":\"n\"},\"y2\":{\"field\":\"studTop\"},\"color\":{\"value\":\"#6E2B25\"}}},{\"mark\":{\"type\":\"text\",\"fontSize\":10.5,\"font\":\"Segoe UI\",\"dy\":-6},\"encoding\":{\"y\":{\"field\":\"studTop\"},\"text\":{\"field\":\"n\",\"format\":\",d\"},\"color\":{\"value\":\"#5C5346\"}}}]}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vegaLite'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Brick-style column chart: number of sets per size bin for the Second Build era.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sets"
+                    }
+                  },
+                  "Property": "Size Bin"
+                }
+              },
+              "queryRef": "Sets.Size Bin",
+              "nativeQueryRef": "Size Bin",
+              "displayName": "Size Bin"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Total Sets"
+                }
+              },
+              "queryRef": "_Measures.Total Sets",
+              "nativeQueryRef": "Total Sets",
+              "displayName": "Total Sets"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

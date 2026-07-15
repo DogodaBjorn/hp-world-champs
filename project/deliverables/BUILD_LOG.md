@@ -99,14 +99,14 @@ the old definition in memory and saving would overwrite the fix).
 | D10 | Verify bookmark flip: btn_dark_side/btn_light_side swap states incl. dark chrome; tab order sensible in both states | pending |
 | D11 | Sort `tbl_fig_gallery` rows by fig_num and hide the Unique Minifigures value column if Desktop shows it (binding requires one measure) | pending |
 
-## 2026-07-14 — v2 clean-room rebuild: two-marriages-v2 (pixel-perfect)
+## 2026-07-14 — v2 clean-room rebuild: second-build (pixel-perfect)
 
 User supplied `design_handoff_powerbi/` (HTML hi-fi prototypes + per-page
 specs + theme + tools) and the CLAUDE_CODE_PROMPT brief: rebuild from
 scratch, prototype is the single source of truth, positions measured never
 eyeballed. v1 (hp-world-champs.*) is FROZEN as reference — do not open,
 patch, or refresh it; the submission candidate is now
-`project/pbip/two-marriages-v2.pbip`.
+`project/pbip/second-build.pbip`.
 
 - **Measured truth:** tools/*.mjs shipped as one-line comments (silent
   no-op) — fixed; Playwright (local dev-dep) produced `layout.json` +
@@ -135,7 +135,7 @@ patch, or refresh it; the submission candidate is now
 
 | # | Step | Status |
 |---|---|---|
-| V1 | Open `two-marriages-v2.pbip`; set `DataFolder` to the CSV folder; refresh (M is firewall-proof; no privacy prompts expected) | pending |
+| V1 | Open `second-build.pbip`; set `DataFolder` to the CSV folder; refresh (M is firewall-proof; no privacy prompts expected) | pending |
 | V2 | Spot-check: 67/142 sets · 267/731 avg · 2,029/6,020 largest · 66/79 colors · 51%/41% gray · Diagon Alley 55 colors & 2,750 parts · 576 figs · bins 29/19/14/4/1 and 24/32/40/33/13 | pending |
 | V3 | Deneb: visuals auto-fetch from AppSource via publicCustomVisuals on first open (needs sign-in). If placeholders show: import Deneb from AppSource once — same GUID, visuals rebind | pending |
 | V4 | Import `sorting-quiz-v2/dist/sortingQuizV2….pbiviz`; swap into the S5 slot per the visual README (delete placeholder + frame); bind 4 QuizPool roles; verify CDN images | pending |

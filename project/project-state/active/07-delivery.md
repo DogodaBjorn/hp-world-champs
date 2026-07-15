@@ -92,7 +92,7 @@ agreement = pass.
 - **Submission package:** the exported .pbix + gallery post. Suggested post
   description (credits per attribution.md, tag **World Champs BCN**):
 
-  > *The Boy Who Came Back — LEGO Harry Potter's two marriages.* Five
+  > *The Boy Who Came Back — LEGO Harry Potter's two builds.* Five
   > chapters: a seven-year silence made visible, two mirror-image eras, the
   > most colorful set in LEGO history (with a cheeky dark side), and a
   > Sorting Quiz built as a custom visual. Every number re-derived from the

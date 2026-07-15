@@ -11,7 +11,7 @@ directions:
     name: "The Illuminated Storybook"
     concept: >
       A beloved book reread as an adult. Each page is a chapter of the
-      two-marriages tale; annotations behave like handwritten marginalia; the
+      two-builds tale; annotations behave like handwritten marginalia; the
       Key Takeaway opens with a drop cap. Warm parchment light, serif voice,
       gold-and-dark-red accents from the bricks themselves.
     visual_language: >
@@ -71,7 +71,7 @@ directions:
 critique:
   method: "each direction argued against design/design-doctrine.md, per audience (judges scoring the five contest criteria)"
   notes: >
-    D1 strengths: the voice matches the story (marriages, hiatus, return);
+    D1 strengths: the voice matches the story (two builds, hiatus, return);
     marginalia give the 3-minute trust path a natural home; tooltips read as
     footnotes; strongest Storytelling & Communication score. Failure modes:
     ornament creep, serif-at-small-size readability, margin column stealing
@@ -88,7 +88,7 @@ critique:
 chosen: "D1"
 chosen_because: >
   User pick 2026-07-13 (in-session): the storybook voice matches the
-  two-marriages arc and carries the strongest Storytelling & Communication
+  two-builds arc and carries the strongest Storytelling & Communication
   case; ornament risk accepted because the fidelity checklist hard-caps it.
   Signed in the same gate: three rule deviations — (1) true-hex palette
   visuals on P2/P3/P4 exceed the 6-hue cap (color IS the data; cap holds
