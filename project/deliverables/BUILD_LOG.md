@@ -127,23 +127,36 @@ patch, or refresh it; the submission candidate is now
 - **Quiz:** `sorting-quiz-v2` packaged lint-clean; spans the full S5
   content band (score/reveal/reset are inside the visual — PBIR buttons
   cannot drive custom-visual state). Import steps: its README.
-- **Contrast:** 11/13 pairs PASS; F-v2-1 (gold eyebrows 4.40:1) and
-  F-v2-2 (gold-bright focus ring 2.30:1) await user accept-or-recolor —
-  both hexes are contractual in the handoff.
+- **Contrast:** F-v2-1 RESOLVED 2026-07-14 — gold text recolored
+  `#8A6A21` → `#7A5D1D` repo-wide in the W2 uplift (passes 4.5:1 on
+  parchment). F-v2-2 (quiz focus ring) is moot: the quiz custom visual was
+  replaced by the native Character Explorer (user decision, jury-safety).
 
-### Manual steps in Desktop (v2 checklist — replaces D1–D11 for v2)
+### 2026-07-14 uplift (contract amendment v2.1 — readability + interactivity)
+
+User rated the first render 3/10; contract amended: readability and
+interactivity outrank pixel-fidelity to the prototype. Applied agent-side
+(commits W0–W4): rename to `second-build` (era values → First/Second Build),
+type floor 11pt with grown boxes, native single-visual nav buttons with hover
+states, S1 title/KPI fixes, S2/S3 era explorers (clickable set bars + detail
+panel + year/size slicers + dynamic palette share; bar clicks cross-FILTER
+the Deneb charts), S5 native Character Explorer (quiz .pbiviz dropped —
+jury machines need zero custom-visual installs beyond certified Deneb).
+Authored-state renders: `project/deliverables/authored-render/*.png`.
+
+### Manual steps in Desktop (w-checklist — replaces V1–V12)
 
 | # | Step | Status |
 |---|---|---|
-| V1 | Open `second-build.pbip`; set `DataFolder` to the CSV folder; refresh (M is firewall-proof; no privacy prompts expected) | pending |
-| V2 | Spot-check: 67/142 sets · 267/731 avg · 2,029/6,020 largest · 66/79 colors · 51%/41% gray · Diagon Alley 55 colors & 2,750 parts · 576 figs · bins 29/19/14/4/1 and 24/32/40/33/13 | pending |
-| V3 | Deneb: visuals auto-fetch from AppSource via publicCustomVisuals on first open (needs sign-in). If placeholders show: import Deneb from AppSource once — same GUID, visuals rebind | pending |
-| V4 | Import `sorting-quiz-v2/dist/sortingQuizV2….pbiviz`; swap into the S5 slot per the visual README (delete placeholder + frame); bind 4 QuizPool roles; verify CDN images | pending |
-| V5 | Fig matrices (S2 ×4, S3 ×2, T1 ×1): Format → Image size → fill the cell (~96px); hide the "Minifig Variants" value column if Desktop shows it | pending |
-| V6 | Assign T1 as report-page tooltip to the 6 fig matrices (Format → Properties → Tooltips) | pending |
-| V7 | Verify bookmark flip S4a ↔ S4b (buttons on both pages; S4b is hidden so tabs still show 5 pages) | pending |
-| V8 | Confirm "Mark as date table" took effect on DimYear | pending |
-| V9 | Chrome textbox pass: 81 validator warnings say some 18–24px-tall micro-labels sit below the ~34px comfort floor — nudge any that visibly clip | pending |
-| V10 | Decide findings F-v2-1/F-v2-2 (accept the contractual golds, or ask for the darker-gold regen) | pending |
-| V11 | Capture per-page PNGs at 100% zoom → `project/deliverables/diff-report/rendered/` → agent assembles the ±2px side-by-side diff | pending |
-| V12 | After diff sign-off: export .pbix for submission (deadline 2026-07-19 23:59 PT) | pending |
+| W1 | Open `second-build.pbip`; set `DataFolder` to the CSV folder; refresh (M is firewall-proof; no privacy prompts expected) | pending |
+| W2 | Spot-check: 67/142 sets · 267/731 avg · 2,029/6,020 largest · 66/79 colors · 51%/41% gray · Diagon Alley 55 colors & 2,750 parts · 576 figs · bins 29/19/14/4/1 and 24/32/40/33/13 | pending |
+| W3 | Deneb: visuals auto-fetch from AppSource via publicCustomVisuals on first open (needs sign-in). If placeholders show: import Deneb from AppSource once — same GUID, visuals rebind. (Contest rules explicitly allow Deneb; cited in footer) | pending |
+| W4 | Image sizing (Format → Image size → fill the cell): fig strips S2 ×4 / S3 ×2 / T1 ×1 (~96px), NEW set photo `det_img` on S2+S3 (~120px), NEW cast list `tbl_cast` (~48px rows) + big portrait `img_char` (~380px) on S5; hide stray value columns where Desktop shows them | pending |
+| W5 | Explorer spot-check S2/S3: click a bar → KPIs, palette, distribution and detail panel all follow; click again releases; year slider (Between) + size chips filter; multi-select via Ctrl | pending |
+| W6 | Cast spot-check S5: click a character → headline, variants, first/latest, era bar, timeline and portrait follow | pending |
+| W7 | Assign T1 as report-page tooltip to the fig matrices (Format → Properties → Tooltips) | pending |
+| W8 | Verify bookmark flip S4a ↔ S4b (buttons on both pages; S4b hidden so tabs still show 5 pages) | pending |
+| W9 | Confirm "Mark as date table" took effect on DimYear; slicer defaults show full era ranges | pending |
+| W10 | Visual sweep at 100% zoom: any clipped label → nudge height (the 11pt floor + grown boxes should have removed these; report leftovers) | pending |
+| W11 | Capture per-page PNGs at 100% zoom → `project/deliverables/diff-report/rendered/` → agent assembles the review (amended contract: judged on readability/interaction, not ±2px) | pending |
+| W12 | Export .pbix for submission (deadline 2026-07-19 23:59 PT) | pending |

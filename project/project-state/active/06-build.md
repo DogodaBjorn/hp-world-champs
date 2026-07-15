@@ -164,3 +164,25 @@ spec-contractual hexes (pixel-perfect brief says never approximate) —
 
 The "seven silent years" annotation (18pt italic ≈ large text, 3.0 floor)
 passes at 4.40. Wrong-flash red `#B33A2B` passes 5.61.
+
+
+## Contract amendment v2.1 — 2026-07-14 (uplift session)
+
+User rated the first render 3/10 ("buttons/cards unreadable, static, clearly
+Power BI"). Decisions (user, via questions): (1) contract amended — readability
++ interactivity outrank pixel-fidelity to the HTML prototype; (2) S2/S3 =
+click-driven era explorers PLUS header slicers; (3) S5 quiz -> native
+Character Explorer (no private .pbiviz for the jury); (4) custom-visual course
+per contest rules review: Deneb explicitly allowed (certified, auto-loads) ->
+kept; rules confirmed Key Takeaway + Rebrickable citation requirements.
+(5) Naming veto: 'marriage' removed everywhere -> second-build / First Build /
+Second Build; story title 'The Boy Who Came Back'.
+
+Implemented in commits: W0 rename; W1 authored-render tool (PBIR->HTML->
+Playwright PNG review loop, project/analysis/authored-render/); W2 type floor
+11pt + boxes + native buttons + gold recolor #7A5D1D (F-v2-1 resolved);
+W3 era explorers (Sets[Set Label] column, 4 explorer measures, bar_sets +
+det panel + sl_year/sl_size + crd_palette_pct, DataFilter interaction
+overrides so set clicks collapse the Deneb palette); W4 Character Explorer
+(Fig Image measure, cast table + stats + era bar + timeline + portrait).
+Desktop checklist rewritten (W1-W12 in BUILD_LOG).

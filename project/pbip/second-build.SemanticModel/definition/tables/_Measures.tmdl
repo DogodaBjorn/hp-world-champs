@@ -100,6 +100,12 @@ table _Measures
 		formatString: @
 		displayFolder: 02 Display\Explorer
 
+	/// Cast explorer: representative photo URL for the character in context.
+	measure 'Fig Image' = MIN ( Minifigs[img_url] )
+		formatString: @
+		dataCategory: ImageUrl
+		displayFolder: 02 Display\Explorer
+
 	column Value
 		dataType: string
 		isHidden
