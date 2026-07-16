@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Reveal · dementor",
+  "name": "bm_rev_dementor",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "tip_dementor",
+      "tip_yellow_duo",
+      "x_dementor",
+      "x_yellow_duo"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "s2-chapter1",
+    "sections": {
+      "s2-chapter1": {
+        "visualContainers": {
+          "tip_dementor": {
+            "singleVisual": {
+              "visualType": "image"
+            }
+          },
+          "tip_yellow_duo": {
+            "singleVisual": {
+              "visualType": "image",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "x_dementor": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          },
+          "x_yellow_duo": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

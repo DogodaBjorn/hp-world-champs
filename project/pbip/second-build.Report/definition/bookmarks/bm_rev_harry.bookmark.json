@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Reveal · harry",
+  "name": "bm_rev_harry",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "tip_harry",
+      "tip_vold",
+      "x_harry",
+      "x_vold"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "s4a-most-colorful",
+    "sections": {
+      "s4a-most-colorful": {
+        "visualContainers": {
+          "tip_harry": {
+            "singleVisual": {
+              "visualType": "image"
+            }
+          },
+          "tip_vold": {
+            "singleVisual": {
+              "visualType": "image",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "x_harry": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          },
+          "x_vold": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

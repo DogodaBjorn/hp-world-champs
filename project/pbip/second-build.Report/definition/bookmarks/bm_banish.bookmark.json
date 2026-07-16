@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Expecto Patronum — banish",
+  "name": "bm_banish",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "btn_patronus",
+      "btn_patronus_reset",
+      "img_dementor2",
+      "img_patronus_btn",
+      "img_patronus_glow"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "s4b-dark-state",
+    "sections": {
+      "s4b-dark-state": {
+        "visualContainers": {
+          "btn_patronus": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "btn_patronus_reset": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          },
+          "img_dementor2": {
+            "singleVisual": {
+              "visualType": "image",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "img_patronus_btn": {
+            "singleVisual": {
+              "visualType": "image",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "img_patronus_glow": {
+            "singleVisual": {
+              "visualType": "image"
+            }
+          }
+        }
+      }
+    }
+  }
+}

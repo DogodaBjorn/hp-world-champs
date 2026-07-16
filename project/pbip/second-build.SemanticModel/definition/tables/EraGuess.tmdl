@@ -16,3 +16,4 @@ table EraGuess
 				    Source = #table(type table [#"Era Guess" = text], {{"First Build"}, {"Second Build"}})
 				in
 				    Source
+

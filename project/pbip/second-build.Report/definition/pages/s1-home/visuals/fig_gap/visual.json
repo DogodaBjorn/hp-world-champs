@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "fig_gap",
+  "position": {
+    "x": 90,
+    "y": 908,
+    "z": 0,
+    "height": 150,
+    "width": 620,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "clusteredColumnChart",
     "query": {
@@ -7,7 +16,6 @@
         "Category": {
           "projections": [
             {
-              "queryRef": "DimYear.Year",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,15 @@
                   "Property": "Year"
                 }
               },
-              "nativeQueryRef": "Year"
+              "queryRef": "DimYear.Year",
+              "nativeQueryRef": "Year",
+              "active": true
             }
           ]
         },
         "Y": {
           "projections": [
             {
-              "queryRef": "_Measures.Total Sets",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -36,6 +45,7 @@
                   "Property": "Total Sets"
                 }
               },
+              "queryRef": "_Measures.Total Sets",
               "nativeQueryRef": "Total Sets"
             }
           ]
@@ -60,8 +70,6 @@
         "isDefaultSort": true
       }
     },
-    "objects": {},
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -89,15 +97,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 90,
-    "y": 908,
-    "z": 0,
-    "width": 620,
-    "height": 150,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

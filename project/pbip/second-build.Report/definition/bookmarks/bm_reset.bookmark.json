@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Summon the Dementor",
+  "name": "bm_reset",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "btn_patronus",
+      "btn_patronus_reset",
+      "img_dementor2",
+      "img_patronus_btn",
+      "img_patronus_glow"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "s4b-dark-state",
+    "sections": {
+      "s4b-dark-state": {
+        "visualContainers": {
+          "btn_patronus": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          },
+          "btn_patronus_reset": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "img_dementor2": {
+            "singleVisual": {
+              "visualType": "image"
+            }
+          },
+          "img_patronus_btn": {
+            "singleVisual": {
+              "visualType": "image"
+            }
+          },
+          "img_patronus_glow": {
+            "singleVisual": {
+              "visualType": "image",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

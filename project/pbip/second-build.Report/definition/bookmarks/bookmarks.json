@@ -1,4 +1,41 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
-  "items": []
+  "items": [
+    {
+      "name": "bm_hide_s2"
+    },
+    {
+      "name": "bm_rev_yellow_duo"
+    },
+    {
+      "name": "bm_rev_dementor"
+    },
+    {
+      "name": "bm_hide_s3"
+    },
+    {
+      "name": "bm_rev_colour_duo"
+    },
+    {
+      "name": "bm_rev_marge"
+    },
+    {
+      "name": "bm_rev_appearances"
+    },
+    {
+      "name": "bm_hide_s4a"
+    },
+    {
+      "name": "bm_rev_harry"
+    },
+    {
+      "name": "bm_rev_vold"
+    },
+    {
+      "name": "bm_banish"
+    },
+    {
+      "name": "bm_reset"
+    }
+  ]
 }

@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "sl_era_guess",
+  "position": {
+    "x": 490,
+    "y": 240,
+    "z": 0,
+    "height": 120,
+    "width": 336,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "slicer",
     "query": {
@@ -7,7 +16,6 @@
         "Values": {
           "projections": [
             {
-              "queryRef": "EraGuess.Era Guess",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,14 @@
                   "Property": "Era Guess"
                 }
               },
-              "nativeQueryRef": "Era Guess"
+              "queryRef": "EraGuess.Era Guess",
+              "nativeQueryRef": "Era Guess",
+              "active": true
             }
           ]
         }
       }
     },
-    "objects": {},
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -53,15 +61,35 @@
           }
         }
       ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'HorizontalList'"
+                }
+              }
+            }
+          }
+        }
+      ]
     }
-  },
-  "position": {
-    "x": 490,
-    "y": 240,
-    "z": 0,
-    "width": 336,
-    "height": 120,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+  }
 }

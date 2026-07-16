@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "fig_spectrum",
+  "position": {
+    "x": 548,
+    "y": 398,
+    "z": 0,
+    "height": 150,
+    "width": 684,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "hundredPercentStackedBarChart",
     "query": {
@@ -7,7 +16,6 @@
         "Category": {
           "projections": [
             {
-              "queryRef": "Sets.Set Label",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,15 @@
                   "Property": "Set Label"
                 }
               },
-              "nativeQueryRef": "Set Label"
+              "queryRef": "Sets.Set Label",
+              "nativeQueryRef": "Set Label",
+              "active": true
             }
           ]
         },
         "Series": {
           "projections": [
             {
-              "queryRef": "Colors.Color Name",
               "field": {
                 "Column": {
                   "Expression": {
@@ -36,6 +45,7 @@
                   "Property": "Color Name"
                 }
               },
+              "queryRef": "Colors.Color Name",
               "nativeQueryRef": "Color Name"
             }
           ]
@@ -43,7 +53,6 @@
         "Y": {
           "projections": [
             {
-              "queryRef": "_Measures.Color Parts",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -54,6 +63,7 @@
                   "Property": "Color Parts"
                 }
               },
+              "queryRef": "_Measures.Color Parts",
               "nativeQueryRef": "Color Parts"
             }
           ]
@@ -78,8 +88,54 @@
         "isDefaultSort": true
       }
     },
-    "objects": {},
-    "drillFilterOtherVisuals": true,
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -107,15 +163,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 548,
-    "y": 398,
-    "z": 0,
-    "width": 684,
-    "height": 150,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

@@ -68,46 +68,6 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "glyph_brick_red.png",
-          "path": "glyph_brick_red.png",
-          "type": "Image"
-        },
-        {
-          "name": "glyph_ornament.png",
-          "path": "glyph_ornament.png",
-          "type": "Image"
-        },
-        {
-          "name": "glyph_spectacles.png",
-          "path": "glyph_spectacles.png",
-          "type": "Image"
-        },
-        {
-          "name": "img_fig_002136.jpg",
-          "path": "img_fig_002136.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "img_set_10175_1.jpg",
-          "path": "img_set_10175_1.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "img_set_76444_1.jpg",
-          "path": "img_set_76444_1.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "bg_cover.png",
-          "path": "bg_cover.png",
-          "type": "Image"
-        },
-        {
-          "name": "bg_yellow.png",
-          "path": "bg_yellow.png",
-          "type": "Image"
-        },
-        {
           "name": "bg_cameback.png",
           "path": "bg_cameback.png",
           "type": "Image"
@@ -115,6 +75,11 @@
         {
           "name": "bg_colours.png",
           "path": "bg_colours.png",
+          "type": "Image"
+        },
+        {
+          "name": "bg_cover.png",
+          "path": "bg_cover.png",
           "type": "Image"
         },
         {
@@ -128,44 +93,14 @@
           "type": "Image"
         },
         {
-          "name": "bg_sources.png",
-          "path": "bg_sources.png",
+          "name": "bg_yellow.png",
+          "path": "bg_yellow.png",
           "type": "Image"
         },
         {
-          "name": "tip_harry.png",
-          "path": "tip_harry.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_vold.png",
-          "path": "tip_vold.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_dementor.png",
-          "path": "tip_dementor.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_marge.png",
-          "path": "tip_marge.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_yellow_duo.png",
-          "path": "tip_yellow_duo.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_colour_duo.png",
-          "path": "tip_colour_duo.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_appearances.png",
-          "path": "tip_appearances.png",
-          "type": "Image"
+          "name": "second-build.json",
+          "path": "second-build.json",
+          "type": "CustomTheme"
         },
         {
           "name": "cut_dementor2.png",
@@ -183,9 +118,39 @@
           "type": "Image"
         },
         {
-          "name": "second-build.json",
-          "path": "second-build.json",
-          "type": "CustomTheme"
+          "name": "tip_appearances.png",
+          "path": "tip_appearances.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_colour_duo.png",
+          "path": "tip_colour_duo.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_dementor.png",
+          "path": "tip_dementor.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_harry.png",
+          "path": "tip_harry.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_marge.png",
+          "path": "tip_marge.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_vold.png",
+          "path": "tip_vold.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_yellow_duo.png",
+          "path": "tip_yellow_duo.png",
+          "type": "Image"
         }
       ]
     }

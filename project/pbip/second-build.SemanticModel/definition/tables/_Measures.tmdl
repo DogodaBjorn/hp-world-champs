@@ -158,6 +158,25 @@ table _Measures
 		displayFolder: 03 Match Game
 		lineageTag: b95b7250-79cd-4f39-8ee7-7aac2681f8d7
 
+	/// Dark chamber: total real (non-pseudo) parts of a theme, from ThemeGreyscale.
+	measure 'Theme Color Parts' = SUM ( ThemeGreyscale[part_count] )
+		formatString: #,0
+		displayFolder: 04 Themes
+		lineageTag: 6d9e026c-c717-481d-b4e1-54c9b9881fad
+
+	/// Dark chamber: share of a theme's bricks that are greyscale (grey/black/white).
+	measure 'Theme Grayscale %' = DIVIDE ( CALCULATE ( SUM ( ThemeGreyscale[part_count] ), ThemeGreyscale[Is Grayscale] = TRUE () ), SUM ( ThemeGreyscale[part_count] ) )
+		formatString: 0%
+		displayFolder: 04 Themes
+		lineageTag: 45578977-ec2f-4e56-a504-3393e721292b
+
+	/// Total parts in the selected set(s) — reads as "this set's parts" when one
+	/// set is picked in a chapter spread (unlike Parts per Year's time framing).
+	measure 'Set Parts' = SUM ( Sets[num_parts] )
+		formatString: #,0
+		displayFolder: 01 Core
+		lineageTag: 3f5a1c8e-6b2d-4e7a-9c14-2a8f0d6b5e73
+
 	column Value
 		dataType: string
 		isHidden

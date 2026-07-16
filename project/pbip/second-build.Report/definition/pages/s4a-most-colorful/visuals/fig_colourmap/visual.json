@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "fig_colourmap",
+  "position": {
+    "x": 548,
+    "y": 80,
+    "z": 0,
+    "height": 286,
+    "width": 684,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "treemap",
     "query": {
@@ -7,7 +16,6 @@
         "Group": {
           "projections": [
             {
-              "queryRef": "Colors.Color Name",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,15 @@
                   "Property": "Color Name"
                 }
               },
-              "nativeQueryRef": "Color Name"
+              "queryRef": "Colors.Color Name",
+              "nativeQueryRef": "Color Name",
+              "active": true
             }
           ]
         },
         "Values": {
           "projections": [
             {
-              "queryRef": "_Measures.Color Parts",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -36,6 +45,7 @@
                   "Property": "Color Parts"
                 }
               },
+              "queryRef": "_Measures.Color Parts",
               "nativeQueryRef": "Color Parts"
             }
           ]
@@ -60,8 +70,6 @@
         "isDefaultSort": true
       }
     },
-    "objects": {},
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -89,15 +97,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 548,
-    "y": 80,
-    "z": 0,
-    "width": 684,
-    "height": 286,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

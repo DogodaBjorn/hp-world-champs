@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "sl_minifig",
+  "position": {
+    "x": 56,
+    "y": 378,
+    "z": 0,
+    "height": 92,
+    "width": 388,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "slicer",
     "query": {
@@ -7,7 +16,6 @@
         "Values": {
           "projections": [
             {
-              "queryRef": "Minifigs.Minifig Name",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,14 @@
                   "Property": "Minifig Name"
                 }
               },
-              "nativeQueryRef": "Minifig Name"
+              "queryRef": "Minifigs.Minifig Name",
+              "nativeQueryRef": "Minifig Name",
+              "active": true
             }
           ]
         }
       }
     },
-    "objects": {},
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -53,15 +61,35 @@
           }
         }
       ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'VerticalList'"
+                }
+              }
+            }
+          }
+        }
+      ]
     }
-  },
-  "position": {
-    "x": 56,
-    "y": 378,
-    "z": 0,
-    "width": 388,
-    "height": 92,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+  }
 }
