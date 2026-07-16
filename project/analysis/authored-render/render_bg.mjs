@@ -230,8 +230,9 @@ function goldRibbon(x, y, w, text) {
 function minifigTip(cut, phrase, name, accent, figH = 224, sx = 158, sw = 258) {
   return `<img src="${uri(cut)}" style="position:absolute;left:8px;bottom:8px;height:${figH}px;filter:drop-shadow(0 12px 16px rgba(0,0,0,.5))">
   <div style="position:absolute;left:${sx}px;top:18px;width:${sw}px;padding:15px 18px;background:#000 url('${PARCH}') center/cover;border:2px solid ${T.goldLeaf};border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.45)">
-    <div style="font:800 11px Segoe UI;letter-spacing:1.5px;color:${accent};text-transform:uppercase;margin-bottom:6px">${name}</div>
+    <div style="font:800 11px Segoe UI;letter-spacing:1.5px;color:${accent};text-transform:uppercase;margin-bottom:6px;padding-right:16px">${name}</div>
     <div style="font:italic 400 14px Georgia,serif;line-height:1.5;color:${T.ink}">${phrase}</div>
+    ${closeX()}
     <div style="position:absolute;left:-15px;top:64px;width:0;height:0;border-top:9px solid transparent;border-bottom:9px solid transparent;border-right:16px solid ${T.goldLeaf}"></div>
   </div>`;
 }
@@ -243,10 +244,26 @@ function duoTip(cutA, cutB, name, phrase, accent) {
   return `<img src="${uri(cutA)}" style="position:absolute;left:4px;bottom:6px;height:206px;filter:drop-shadow(0 12px 16px rgba(0,0,0,.5))">
   <img src="${uri(cutB)}" style="position:absolute;left:118px;bottom:6px;height:192px;filter:drop-shadow(0 12px 16px rgba(0,0,0,.5))">
   <div style="position:absolute;left:250px;top:14px;width:286px;padding:15px 18px;background:#000 url('${PARCH}') center/cover;border:2px solid ${T.goldLeaf};border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.45)">
-    <div style="font:800 11px Segoe UI;letter-spacing:1.5px;color:${accent};text-transform:uppercase;margin-bottom:6px">${name}</div>
+    <div style="font:800 11px Segoe UI;letter-spacing:1.5px;color:${accent};text-transform:uppercase;margin-bottom:6px;padding-right:16px">${name}</div>
     <div style="font:italic 400 14px Georgia,serif;line-height:1.55;color:${T.ink}">${phrase}</div>
+    ${closeX()}
     <div style="position:absolute;left:-15px;top:72px;width:0;height:0;border-top:9px solid transparent;border-bottom:9px solid transparent;border-right:16px solid ${T.goldLeaf}"></div>
   </div>`;
+}
+// a small ✕ close chip for a popup (an invisible dismiss button sits over it in
+// the report) + the "Expecto Patronum" spell button that banishes the Dementor
+const closeX = () => `<div style="position:absolute;top:-11px;right:-11px;width:26px;height:26px;border-radius:50%;background:${T.leather};border:1.5px solid ${T.goldLeaf};display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.45)"><span style="font:700 12px Georgia,serif;color:${T.goldLeaf};line-height:1">✕</span></div>`;
+function patronusButton() {
+  return `<div style="display:inline-flex;align-items:center;gap:11px;padding:12px 24px;background:linear-gradient(180deg,#2C3E58,#141E2C);border:2px solid #9FC6E8;border-radius:26px;box-shadow:0 0 24px 5px rgba(159,198,232,.55), inset 0 0 12px rgba(159,198,232,.25)">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#DCEBFA" stroke-width="1.7"><path d="M3.5 20.5 L13 11"/><path d="M15.5 2 L16.7 6.3 L21 7.5 L16.7 8.7 L15.5 13 L14.3 8.7 L10 7.5 L14.3 6.3 Z" fill="#DCEBFA" stroke="none"/></svg>
+    <span style="font:800 15px Georgia,serif;letter-spacing:2.5px;color:#EAF4FF;text-shadow:0 0 9px rgba(159,198,232,.85)">EXPECTO PATRONUM</span>
+  </div>`;
+}
+// the silvery Patronus burst that replaces the Dementor once it is banished
+function patronusGlow(cx, cy) {
+  const spark = (dx, dy, s) => `<span style="position:absolute;left:${dx}px;top:${dy}px;font:${s}px Georgia,serif;color:#EAF4FF;text-shadow:0 0 9px rgba(159,198,232,.95)">✦</span>`;
+  return `<div style="position:absolute;left:${cx - 175}px;top:${cy - 175}px;width:350px;height:350px;background:radial-gradient(circle, rgba(220,238,255,.8), rgba(159,198,232,.32) 34%, transparent 66%);border-radius:50%"></div>
+  <div style="position:absolute;left:${cx - 160}px;top:${cy - 160}px;width:320px;height:320px">${spark(24, 44, 28)}${spark(258, 66, 18)}${spark(60, 250, 22)}${spark(232, 236, 28)}${spark(150, 20, 16)}${spark(8, 150, 18)}${spark(288, 168, 22)}${spark(120, 300, 18)}</div>`;
 }
 
 // ================= CHAPTER III: The Chamber of Colours =================
@@ -340,13 +357,13 @@ function sources() {
 const PAGES = { cover, yellow, cameback, colours, dark, explore, sources };
 const SIZES = { cover: { W: CW, H: CH } };   // portrait cover; every other page landscape
 const TIPS = {
-  tip_harry: { w: 462, h: 250, fn: () => minifigTip('cut_harry', "Look closer — this one set hides <b>55</b> real brick colours. There's only one LEGO set ever built that has more colours.", 'Harry Potter', T.red) },
-  tip_vold: { w: 462, h: 250, fn: () => minifigTip('cut_vold', "All this colour… how <i>garish</i>. Come find me in the greys, where <b>97.9%</b> of a set is shadow.", 'Lord Voldemort', '#7A5A1C') },
-  tip_dementor: { w: 462, h: 250, fn: () => minifigTip('cut_dementor', "Seven pieces of pure dread — no minifig in the Yellow Years is built from more.", 'The Dementor · largest of the era', '#4A5A3E') },
-  tip_marge: { w: 528, h: 250, fn: () => minifigTip('cut_marge', "Fourteen pieces and still inflating — no Harry Potter minifig ever built is bigger than me.", 'Aunt Marge · the largest of all', T.red, 200, 232, 250) },
-  tip_yellow_duo: { w: 586, h: 252, fn: () => duoTip('cut_ron_y', 'cut_hermione_y', 'Ron & Hermione · the yellow years', `Back then we were a small cast — just ${nchip('134')} Harry Potter minifigures in the whole Yellow Years, the first of us in classic sunshine yellow.`, '#B8912E') },
-  tip_colour_duo: { w: 586, h: 252, fn: () => duoTip('cut_ron_c', 'cut_hermione_c', 'Ron & Hermione · the colour years', `The return brought ${nchip('442')} minifigures — more than triple the Yellow Years — and every one now wears a real, flesh-toned face.`, '#7C2B22') },
-  tip_appearances: { w: 586, h: 252, fn: () => duoTip('cut_draco', 'cut_harry_og', 'Set-appearance record', `Draco appears in ${nchip('7')} different sets — 2nd-most of any Harry Potter minifig. Only one wizard tops him: the very first yellow-faced Harry, on the right.`, '#2F6B4A') },
+  tip_harry: { w: 476, h: 250, fn: () => minifigTip('cut_harry', "Look closer — this one set hides <b>55</b> real brick colours. There's only one LEGO set ever built that has more colours.", 'Harry Potter', T.red) },
+  tip_vold: { w: 476, h: 250, fn: () => minifigTip('cut_vold', "All this colour… how <i>garish</i>. Come find me in the greys, where <b>97.9%</b> of a set is shadow.", 'Lord Voldemort', '#7A5A1C') },
+  tip_dementor: { w: 476, h: 250, fn: () => minifigTip('cut_dementor', "Seven pieces of pure dread — no minifig in the Yellow Years is built from more.", 'The Dementor · largest of the era', '#4A5A3E') },
+  tip_marge: { w: 542, h: 250, fn: () => minifigTip('cut_marge', "Fourteen pieces and still inflating — no Harry Potter minifig ever built is bigger than me.", 'Aunt Marge · the largest of all', T.red, 200, 232, 250) },
+  tip_yellow_duo: { w: 600, h: 252, fn: () => duoTip('cut_ron_y', 'cut_hermione_y', 'Ron & Hermione · the yellow years', `Back then we were a small cast — just ${nchip('134')} Harry Potter minifigures in the whole Yellow Years, the first of us in classic sunshine yellow.`, '#B8912E') },
+  tip_colour_duo: { w: 600, h: 252, fn: () => duoTip('cut_ron_c', 'cut_hermione_c', 'Ron & Hermione · the colour years', `The return brought ${nchip('442')} minifigures — more than triple the Yellow Years — and every one now wears a real, flesh-toned face.`, '#7C2B22') },
+  tip_appearances: { w: 600, h: 252, fn: () => duoTip('cut_draco', 'cut_harry_og', 'Set-appearance record', `Draco appears in ${nchip('7')} different sets — 2nd-most of any Harry Potter minifig. Only one wizard tops him: the very first yellow-faced Harry, on the right.`, '#2F6B4A') },
 };
 
 // ---- render ----
@@ -378,6 +395,12 @@ if (!only.length || only.includes('tips')) {
     await shoot(html, '#tip', join(RES, `${name}.png`), { omitBackground: true });
     console.log('baked', name, '(transparent)');
   }
+  // Expecto Patronum spell button + Patronus banish glow (standalone Dementor overlays)
+  await bp.setViewportSize({ width: 340, height: 110 });
+  await shoot(`<!doctype html><meta charset="utf-8"><body style="margin:0"><div id="pb" style="position:relative;display:inline-block;padding:34px;font-family:Georgia,serif">${patronusButton()}</div></body>`, '#pb', join(RES, 'patronus_btn.png'), { omitBackground: true });
+  await bp.setViewportSize({ width: 380, height: 380 });
+  await shoot(`<!doctype html><meta charset="utf-8"><body style="margin:0"><div id="pg" style="position:relative;width:360px;height:360px;font-family:Georgia,serif">${patronusGlow(180, 180)}</div></body>`, '#pg', join(RES, 'patronus_glow.png'), { omitBackground: true });
+  console.log('baked patronus_btn + patronus_glow (transparent)');
 }
 
 // QA-only opaque previews: a hidden tale revealed on a page
@@ -393,6 +416,9 @@ if (!only.length || only.includes('qa')) {
   await wrap(cameback(), box(110, 344, TIPS.tip_colour_duo), `_qa_cameback_tip.png`);
   await wrap(cameback(), box(120, 360, TIPS.tip_marge), `_qa_cameback_egg.png`);
   await wrap(cameback(), box(110, 344, TIPS.tip_appearances), `_qa_appearances.png`);
+  // Dementor encounter on the dark page + the Expecto Patronum banish
+  await wrap(dark(), `<img src="${uri('cut_dementor2')}" style="position:absolute;left:566px;top:84px;height:302px;filter:drop-shadow(0 14px 22px rgba(0,0,0,.65))"><div style="position:absolute;left:512px;top:408px;width:372px;text-align:center">${patronusButton()}</div>`, `_qa_dark_dementor.png`);
+  await wrap(dark(), `${patronusGlow(716, 220)}<div style="position:absolute;left:480px;top:452px;width:470px;text-align:center;font:italic 700 20px Georgia,serif;color:#EAF4FF;text-shadow:0 0 12px rgba(159,198,232,.95)">Expecto Patronum!</div><div style="position:absolute;left:480px;top:486px;width:470px;text-align:center;font:italic 400 14px Georgia,serif;color:#B9CBDD">The Dementor flees into the shadows.</div>`, `_qa_dark_banished.png`);
   console.log('baked QA tip previews');
 }
 
