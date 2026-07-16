@@ -1,0 +1,22 @@
+/// SCENARIO LOGIC (disconnected): every set as a guessable option in the
+/// Match-the-Minifig game. Calculated from Sets but held OUT of the filter
+/// graph (no relationship) so guessing doesn't filter the answer.
+table SetGuess
+	lineageTag: ed803aa4-1491-4edb-af90-d0ab683dfa45
+
+	column 'Guess Set'
+		dataType: string
+		lineageTag: d391e870-c36c-47b0-b09a-a417badc4f11
+		summarizeBy: none
+		sourceColumn: Guess Set
+
+	column 'Guess set_num'
+		dataType: string
+		isHidden
+		lineageTag: 77533742-ff28-46d8-8230-b03ca5676a0a
+		summarizeBy: none
+		sourceColumn: Guess set_num
+
+	partition SetGuess = calculated
+		mode: import
+		source = SELECTCOLUMNS ( Sets, "Guess Set", Sets[Set Label], "Guess set_num", Sets[set_num] )

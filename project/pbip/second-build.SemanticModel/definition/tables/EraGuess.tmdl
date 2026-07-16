@@ -1,0 +1,18 @@
+/// SCENARIO LOGIC (disconnected): the two era options the player guesses from
+/// in the Match-the-Minifig game. No relationships — outside the filter graph.
+table EraGuess
+	lineageTag: 86fcd41a-e7c6-4cda-8d71-2411cc42a513
+
+	column 'Era Guess'
+		dataType: string
+		lineageTag: a57a47f8-8d27-4027-a66c-7cce5d81eed9
+		summarizeBy: none
+		sourceColumn: Era Guess
+
+	partition EraGuess = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table ['Era Guess' = text], {{"First Build"}, {"Second Build"}})
+				in
+				    Source

@@ -126,6 +126,38 @@ table _Measures
 		lineageTag: 60785905-15ce-44bd-9fe9-46b1ddda4868
 		dataCategory: ImageUrl
 
+	/// Match game: the era the player guessed, from the disconnected EraGuess slicer.
+	measure 'Era Guess' = SELECTEDVALUE ( EraGuess[Era Guess] )
+		formatString: @
+		displayFolder: 03 Match Game
+		lineageTag: d0bc577f-21f7-4150-98ca-1b2e9b666521
+
+	/// Match game: tick/cross verdict comparing the era guess to the chosen minifig's real era.
+	measure 'Era Result' =
+			VAR actual = SELECTEDVALUE ( Minifigs[Era] )
+			VAR guess = SELECTEDVALUE ( EraGuess[Era Guess] )
+			RETURN
+			IF (
+				ISBLANK ( guess ) || NOT HASONEVALUE ( Minifigs[fig_num] ), "",
+				IF ( guess = actual, "✓  Correct — that's the right era!", "✗  Not that era — try again" )
+			)
+		formatString: @
+		displayFolder: 03 Match Game
+		lineageTag: 2d25b8ea-5b45-4f08-887f-02c33b5be577
+
+	/// Match game: tick/cross verdict on whether the chosen minifig appears in the guessed set.
+	measure 'Set Result' =
+			VAR guessNum = SELECTEDVALUE ( SetGuess[Guess set_num] )
+			VAR figSets = VALUES ( Minifigs[set_num] )
+			RETURN
+			IF (
+				ISBLANK ( guessNum ) || NOT HASONEVALUE ( Minifigs[fig_num] ), "",
+				IF ( guessNum IN figSets, "✓  Yes — this minifig appears here!", "✗  No — not in that set" )
+			)
+		formatString: @
+		displayFolder: 03 Match Game
+		lineageTag: b95b7250-79cd-4f39-8ee7-7aac2681f8d7
+
 	column Value
 		dataType: string
 		isHidden
