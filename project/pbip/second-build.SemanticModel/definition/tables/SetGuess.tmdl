@@ -8,14 +8,14 @@ table SetGuess
 		dataType: string
 		lineageTag: d391e870-c36c-47b0-b09a-a417badc4f11
 		summarizeBy: none
-		sourceColumn: Guess Set
+		sourceColumn: [Guess Set]
 
 	column 'Guess set_num'
 		dataType: string
 		isHidden
 		lineageTag: 77533742-ff28-46d8-8230-b03ca5676a0a
 		summarizeBy: none
-		sourceColumn: Guess set_num
+		sourceColumn: [Guess set_num]
 
 	partition SetGuess = calculated
 		mode: import

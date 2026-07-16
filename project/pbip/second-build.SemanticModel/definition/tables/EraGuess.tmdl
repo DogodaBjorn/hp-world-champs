@@ -13,6 +13,6 @@ table EraGuess
 		mode: import
 		source =
 				let
-				    Source = #table(type table ['Era Guess' = text], {{"First Build"}, {"Second Build"}})
+				    Source = #table(type table [#"Era Guess" = text], {{"First Build"}, {"Second Build"}})
 				in
 				    Source
