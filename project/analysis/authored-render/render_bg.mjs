@@ -182,7 +182,8 @@ function yellow() {
   ${callout(56, 250, '67', 'sets')}
   ${callout(214, 250, '267', 'avg parts')}
   ${plate('yellow', 56, 320, 430, 300)}
-  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate I · the Hogwarts Express leaves the platform</div>
+  ${clue(232, 486)}
+  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate I · the Hogwarts Express · tap the ✦ to meet the yellow cast</div>
   ${fig(512, 60, 720, 300)} ${figCap(528, 74, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect · year & size runes apply')}
   ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from the left')}
   ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · ITS TRUE COLOURS', 'each mark a real brick hex')}
@@ -231,6 +232,19 @@ function minifigTip(cut, phrase, name, accent) {
     <div style="font:800 11px Segoe UI;letter-spacing:1.5px;color:${accent};text-transform:uppercase;margin-bottom:6px">${name}</div>
     <div style="font:italic 400 14px Georgia,serif;line-height:1.5;color:${T.ink}">${phrase}</div>
     <div style="position:absolute;left:-15px;top:64px;width:0;height:0;border-top:9px solid transparent;border-bottom:9px solid transparent;border-right:16px solid ${T.goldLeaf}"></div>
+  </div>`;
+}
+// a live-count slot rendered as a highlighted chip (a real measure fills it in
+// the report; shown here as a placeholder so no number is fabricated in the art)
+const nchip = (t) => `<span style="background:${T.red};color:#F3E3AE;padding:1px 8px;border-radius:5px;font-weight:800;font-family:Georgia,serif">${t}</span>`;
+// two minifigs sharing one speech-scroll (a paired hidden reveal)
+function duoTip(cutA, cutB, name, phrase, accent) {
+  return `<img src="${uri(cutA)}" style="position:absolute;left:4px;bottom:6px;height:206px;filter:drop-shadow(0 12px 16px rgba(0,0,0,.5))">
+  <img src="${uri(cutB)}" style="position:absolute;left:118px;bottom:6px;height:192px;filter:drop-shadow(0 12px 16px rgba(0,0,0,.5))">
+  <div style="position:absolute;left:250px;top:14px;width:286px;padding:15px 18px;background:#000 url('${PARCH}') center/cover;border:2px solid ${T.goldLeaf};border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.45)">
+    <div style="font:800 11px Segoe UI;letter-spacing:1.5px;color:${accent};text-transform:uppercase;margin-bottom:6px">${name}</div>
+    <div style="font:italic 400 14px Georgia,serif;line-height:1.55;color:${T.ink}">${phrase}</div>
+    <div style="position:absolute;left:-15px;top:72px;width:0;height:0;border-top:9px solid transparent;border-bottom:9px solid transparent;border-right:16px solid ${T.goldLeaf}"></div>
   </div>`;
 }
 
@@ -327,6 +341,7 @@ const SIZES = { cover: { W: CW, H: CH } };   // portrait cover; every other page
 const TIPS = {
   tip_harry: () => minifigTip('cut_harry', "Look closer — this one set hides <b>55</b> real brick colours. Only a single LEGO set ever built uses more.", 'Harry Potter', T.red),
   tip_vold: () => minifigTip('cut_vold', "All this colour… how <i>garish</i>. Come find me in the greys, where <b>97.9%</b> of a set is shadow.", 'Lord Voldemort', '#7A5A1C'),
+  tip_yellow_duo: () => duoTip('cut_ron_y', 'cut_hermione_y', 'Ron & Hermione · the yellow years', `We came in classic yellow — every early Harry Potter minifig did. Until LEGO gave the wizards real skin in 2004, all ${nchip('NN')} of us wore the same sunshine face.`, '#B8912E'),
 };
 
 // ---- render ----
@@ -360,13 +375,15 @@ if (!only.length || only.includes('tips')) {
   }
 }
 
-// QA-only opaque preview: a hidden tale revealed on the colours page
+// QA-only opaque previews: a hidden tale revealed on a page
 if (!only.length || only.includes('qa')) {
   await bp.setViewportSize({ width: W, height: H });
-  const tip = `<div style="position:absolute;left:150px;top:250px;width:440px;height:250px">${TIPS.tip_harry()}</div>`;
-  const html = `<!doctype html><meta charset="utf-8"><body style="margin:0"><div style="position:relative;width:${W}px;height:${H}px;overflow:hidden;background:${T.edge};font-family:Georgia,serif">${colours()}${tip}</div></body>`;
-  await shoot(html, 'div', join(HERE, `_qa_colours_tip.png`));
-  console.log('baked QA colours-tip preview');
+  const wrap = (page, tipHtml, out) => shoot(
+    `<!doctype html><meta charset="utf-8"><body style="margin:0"><div style="position:relative;width:${W}px;height:${H}px;overflow:hidden;background:${T.edge};font-family:Georgia,serif">${page}${tipHtml}</div></body>`,
+    'div', join(HERE, out));
+  await wrap(colours(), `<div style="position:absolute;left:150px;top:250px;width:440px;height:250px">${TIPS.tip_harry()}</div>`, `_qa_colours_tip.png`);
+  await wrap(yellow(), `<div style="position:absolute;left:120px;top:346px;width:540px;height:250px">${TIPS.tip_yellow_duo()}</div>`, `_qa_yellow_tip.png`);
+  console.log('baked QA tip previews');
 }
 
 await browser.close();
