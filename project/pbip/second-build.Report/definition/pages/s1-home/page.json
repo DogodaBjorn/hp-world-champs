@@ -3,8 +3,8 @@
   "name": "s1-home",
   "displayName": "Home",
   "displayOption": "FitToPage",
-  "height": 720,
-  "width": 1280,
+  "height": 1200,
+  "width": 800,
   "objects": {
     "background": [
       {
