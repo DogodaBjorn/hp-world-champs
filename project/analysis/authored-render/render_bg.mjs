@@ -207,8 +207,8 @@ function cameback() {
   <div style="position:absolute;left:146px;top:150px;width:340px;font:400 14.5px Georgia,serif;line-height:1.58;color:${T.ink}">fter seven silent years the story returned in ${gink('2018')} — bigger sets, bolder builds, and a burst of colour. Nearly ${gink('triple')} the scale of the yellow years.</div>
   ${callout(56, 250, '142', 'sets')} ${callout(214, 250, '731', 'avg parts')}
   ${plate('cameback', 56, 320, 430, 300)}
-  ${clue(150, 470)} ${clue(398, 556)}
-  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate II · the colour returns · tap a ✦ to meet the new cast</div>
+  ${clue(140, 462)} ${clue(392, 470)} ${clue(250, 578)}
+  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate II · the colour returns · tap a ✦ to uncover three hidden tales</div>
   ${fig(512, 60, 720, 300)} ${figCap(528, 74, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect')}
   ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from the left')}
   ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · FROM YELLOW TO COLOUR', 'the palette blooms to full spectrum')}
@@ -346,6 +346,7 @@ const TIPS = {
   tip_marge: { w: 528, h: 250, fn: () => minifigTip('cut_marge', "Fourteen pieces and still inflating — no Harry Potter minifig ever built is bigger than me.", 'Aunt Marge · the largest of all', T.red, 200, 232, 250) },
   tip_yellow_duo: { w: 586, h: 252, fn: () => duoTip('cut_ron_y', 'cut_hermione_y', 'Ron & Hermione · the yellow years', `Back then we were a small cast — just ${nchip('134')} Harry Potter minifigures in the whole Yellow Years, the first of us in classic sunshine yellow.`, '#B8912E') },
   tip_colour_duo: { w: 586, h: 252, fn: () => duoTip('cut_ron_c', 'cut_hermione_c', 'Ron & Hermione · the colour years', `The return brought ${nchip('442')} minifigures — more than triple the Yellow Years — and every one now wears a real, flesh-toned face.`, '#7C2B22') },
+  tip_appearances: { w: 586, h: 252, fn: () => duoTip('cut_draco', 'cut_harry_og', 'Set-appearance record', `Draco appears in ${nchip('7')} different sets — 2nd-most of any Harry Potter minifig. Only one wizard tops him: the very first yellow-faced Harry, on the right.`, '#2F6B4A') },
 };
 
 // ---- render ----
@@ -391,6 +392,7 @@ if (!only.length || only.includes('qa')) {
   await wrap(yellow(), box(150, 360, TIPS.tip_dementor), `_qa_yellow_egg.png`);
   await wrap(cameback(), box(110, 344, TIPS.tip_colour_duo), `_qa_cameback_tip.png`);
   await wrap(cameback(), box(120, 360, TIPS.tip_marge), `_qa_cameback_egg.png`);
+  await wrap(cameback(), box(110, 344, TIPS.tip_appearances), `_qa_appearances.png`);
   console.log('baked QA tip previews');
 }
 

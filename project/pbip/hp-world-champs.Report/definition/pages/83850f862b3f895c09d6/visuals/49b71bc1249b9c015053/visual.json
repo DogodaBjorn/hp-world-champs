@@ -1,0 +1,357 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "49b71bc1249b9c015053",
+  "position": {
+    "x": 27.23404255319133,
+    "y": 0,
+    "z": 1,
+    "height": 701.27659574468089,
+    "width": 1252.7659574468087,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimSets"
+                    }
+                  },
+                  "Property": "Era"
+                }
+              },
+              "queryRef": "DimSets.Era",
+              "nativeQueryRef": "Era"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimMinifigures"
+                    }
+                  },
+                  "Property": "fig_num"
+                }
+              },
+              "queryRef": "DimMinifigures.fig_num",
+              "nativeQueryRef": "fig_num"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimMinifigures"
+                    }
+                  },
+                  "Property": "Character"
+                }
+              },
+              "queryRef": "DimMinifigures.Character",
+              "nativeQueryRef": "Character"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactMinifigsInSets"
+                        }
+                      },
+                      "Property": "fig_num"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "FactMinifigsInSets.fig_num",
+              "nativeQueryRef": "Totaal van fig_num"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactMinifigsInSets"
+                        }
+                      },
+                      "Property": "quantity"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FactMinifigsInSets.quantity)",
+              "nativeQueryRef": "quantity"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactMinifigsInSets"
+                    }
+                  },
+                  "Property": "set_num"
+                }
+              },
+              "queryRef": "FactMinifigsInSets.set_num",
+              "nativeQueryRef": "set_num"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimMinifigures"
+                    }
+                  },
+                  "Property": "img_url"
+                }
+              },
+              "queryRef": "DimMinifigures.img_url",
+              "nativeQueryRef": "img_url"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "FactMinifigsInSets"
+                      }
+                    },
+                    "Property": "quantity"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e89c5069c4aef7724835",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimSets"
+              }
+            },
+            "Property": "Era"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "DimSets",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "Era"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'First marriage (2001–2011)'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Second marriage (2018– )'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "272a643b23ce167b1ca3",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactMinifigsInSets"
+                  }
+                },
+                "Property": "fig_num"
+              }
+            },
+            "Function": 2
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f089583c5d4563c5ce33",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactMinifigsInSets"
+                  }
+                },
+                "Property": "quantity"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "427cab32497a35678f09",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimMinifigures"
+              }
+            },
+            "Property": "Character"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cfe8a0be09879cd11162",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimMinifigures"
+              }
+            },
+            "Property": "fig_num"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "DimMinifigures",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "fig_num"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'fig-010514'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "d307fd61422adab99366",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimMinifigures"
+              }
+            },
+            "Property": "img_url"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "27674219004402643dd6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FactMinifigsInSets"
+              }
+            },
+            "Property": "set_num"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
