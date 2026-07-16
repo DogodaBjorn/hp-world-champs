@@ -1,0 +1,121 @@
+{
+  "name": "fig_spectrum",
+  "visual": {
+    "visualType": "hundredPercentStackedBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "queryRef": "Sets.Set Label",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sets"
+                    }
+                  },
+                  "Property": "Set Label"
+                }
+              },
+              "nativeQueryRef": "Set Label"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "queryRef": "Colors.Color Name",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Colors"
+                    }
+                  },
+                  "Property": "Color Name"
+                }
+              },
+              "nativeQueryRef": "Color Name"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "queryRef": "_Measures.Color Parts",
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Color Parts"
+                }
+              },
+              "nativeQueryRef": "Color Parts"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Color Parts"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {},
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "position": {
+    "x": 548,
+    "y": 398,
+    "z": 0,
+    "width": 684,
+    "height": 150,
+    "tabOrder": 0
+  },
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+}
