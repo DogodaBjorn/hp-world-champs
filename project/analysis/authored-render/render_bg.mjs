@@ -27,6 +27,10 @@ const T = {
 };
 const uri = (n) => `data:image/png;base64,${readFileSync(join(SCN, `${n}.png`)).toString('base64')}`;
 const PARCH = uri('parchment');
+// real Rebrickable product photos already in the repo (jpg) -> LEGO connection
+const resJpg = (f) => `data:image/jpeg;base64,${readFileSync(join(RES, f)).toString('base64')}`;
+// faint LEGO baseplate stud texture for plot areas
+const STUD = `background-image:radial-gradient(circle at 7px 7px, rgba(120,90,40,.09) 2.6px, transparent 3.2px);background-size:22px 22px`;
 
 // ---- gold filigree corner (SVG) ----
 function filigree(x, y, rot) {
@@ -72,9 +76,20 @@ function plate(scene, x, y, w, h) {
       <div style="position:absolute;inset:0;background:linear-gradient(0deg, rgba(60,35,12,.35), rgba(60,35,12,.1)), radial-gradient(120% 100% at 50% 40%, transparent 55%, rgba(30,15,5,.4))"></div>
     </div></div>`;
 }
-// ink caption for a figure
+// ink caption for a figure — on a faint LEGO baseplate of studs
 function fig(x, y, w, h) {
-  return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:rgba(247,240,222,.5);border:1px solid ${T.inkSoft}88;box-shadow:inset 0 0 24px rgba(120,90,40,.15)"></div>`;
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:rgba(247,240,222,.5);${STUD};border:1px solid ${T.inkSoft}88;box-shadow:inset 0 0 24px rgba(120,90,40,.15)"></div>`;
+}
+// clean LEGO instruction-manual product-shot card (holds a real Rebrickable
+// photo — live in Desktop, or baked). A 2x2 stud tab sits on the corner.
+function productCard(x, y, w, h, caption, imgFile) {
+  const img = imgFile ? `background:#fff url('${resJpg(imgFile)}') center/contain no-repeat;` : 'background:#FBFAF7;';
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;padding:6px;background:linear-gradient(180deg,#FCFBF8,#F2ECDD);border:1.5px solid ${T.ink};box-shadow:0 4px 14px rgba(40,25,8,.28)">
+    <div style="width:100%;height:100%;${img}box-shadow:inset 0 0 0 1px rgba(58,42,20,.15)"></div></div>
+    <div style="position:absolute;left:${x + 10}px;top:${y - 9}px;display:flex;gap:3px">
+      <span style="width:12px;height:8px;background:${T.red};border-radius:2px 2px 0 0;border:1px solid ${T.ink}"></span>
+      <span style="width:12px;height:8px;background:${T.goldBright};border-radius:2px 2px 0 0;border:1px solid ${T.ink}"></span></div>
+    ${caption ? `<div style="position:absolute;left:${x + 4}px;top:${y + h + 8}px;font:italic 400 11px Georgia,serif;color:${T.ink2}">${caption}</div>` : ''}`;
 }
 function figCap(x, y, kick, sub) {
   return `<div style="position:absolute;left:${x}px;top:${y}px;font:700 13px Georgia,serif;letter-spacing:.5px;color:${T.ink}">${kick}${sub ? `<div style="font:italic 400 11px Georgia,serif;color:${T.ink2};margin-top:2px">${sub}</div>` : ''}</div>`;
@@ -112,7 +127,10 @@ function cover() {
   <div style="position:absolute;left:58px;top:172px;font:800 74px Georgia,serif;line-height:1.0;color:#F0E6CE;text-shadow:0 2px 24px rgba(0,0,0,.7)">The Boy<br>Who Came<br><span style="color:${T.goldLeaf}">Back</span></div>
   <div style="position:absolute;left:64px;top:452px;width:150px;height:2px;background:${T.goldBright};box-shadow:0 0 12px ${T.goldBright}"></div>
   <div style="position:absolute;left:64px;top:472px;width:470px;font:italic 400 17px Georgia,serif;line-height:1.5;color:#D9CBAE">A wizarding brick history in five chapters — from the yellow years, through the silence, to the most colourful magic ever built.</div>
-  <div style="position:absolute;left:64px;top:576px;padding:13px 26px;border:1.5px solid ${T.goldBright};border-radius:4px;background:rgba(20,10,4,.5);font:600 14px Georgia,serif;letter-spacing:1px;color:${T.goldLeaf}">❦  Open the book</div>
+  <div style="position:absolute;left:64px;top:558px;display:flex;align-items:center;gap:10px">
+    <svg width="30" height="20" viewBox="0 0 32 22" fill="none" stroke="${T.goldBright}" stroke-width="1.5"><rect x="2" y="6" width="28" height="14" rx="2"/><rect x="7" y="2" width="6" height="4" rx="1"/><rect x="19" y="2" width="6" height="4" rx="1"/></svg>
+    <span style="font:700 12px Segoe UI;letter-spacing:2.5px;color:${T.goldBright}">A LEGO® BRICK HISTORY · 209 SETS · 576 MINIFIGURES · AGES 8–99</span></div>
+  <div style="position:absolute;left:64px;top:596px;padding:13px 26px;border:1.5px solid ${T.goldBright};border-radius:4px;background:rgba(20,10,4,.5);font:600 14px Georgia,serif;letter-spacing:1px;color:${T.goldLeaf}">❦  Open the book</div>
   <div style="position:absolute;left:64px;bottom:22px;font:12px 'Consolas',monospace;color:${T.goldBright}bb">Rebrickable LEGO Database · rebrickable.com</div>`;
 }
 
@@ -167,7 +185,7 @@ function colours() {
   ${dropCap('C', 56, 130)}
   <div style="position:absolute;left:146px;top:132px;width:350px;font:400 14px Georgia,serif;line-height:1.58;color:${T.ink}">olour is the strongest magic in brick. ${gink('Diagon Alley')} (2025) is the #2 most colourful LEGO set ever made — ${gink('2,750')} parts across a riot of real brick hues.</div>
   ${numeral(64, 250, '55', 'distinct colours in a single set')}
-  ${plate('colours', 56, 452, 430, 200)}
+  ${productCard(56, 452, 430, 190, 'the real set · Diagon Alley 76444 (2025)', 'img_set_76444_1.jpg')}
   ${fig(512, 128, 720, 336)} ${figCap(528, 142, 'FIGURE 1 · THE COLOUR MAP', 'every colour to scale, in its true brick hex — sized by parts')}
   ${fig(512, 484, 720, 138)} ${figCap(528, 498, 'FIGURE 2 · THE COLOUR EXPLOSION', 'a relaunch built to dazzle')}
   <div style="position:absolute;right:64px;bottom:52px;padding:12px 22px;border:1.5px solid ${T.red};border-radius:4px;background:rgba(124,43,34,.12);font:600 13px Georgia,serif;color:${T.red}">…or come to the dark side ❦</div>
@@ -192,21 +210,33 @@ function dark() {
   ${pageNo('III')} <div style="position:absolute;right:64px;bottom:16px;font:italic 600 13px Georgia,serif;color:#A89A7E">turn the page ❦</div>`;
 }
 
-// ================= CHAPTER IV: Take the Wand (explore) =================
+// ================= CHAPTER IV: Match the Minifig (game) =================
+// numbered instruction step + a ❋ result seal that live measures flip to ✓/✗
+function numStep(x, y, n) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:34px;height:34px;border-radius:50%;background:${T.leather};border:2px solid ${T.goldBright};display:flex;align-items:center;justify-content:center"><span style="font:800 17px Georgia,serif;color:${T.goldLeaf}">${n}</span></div>`;
+}
+function sealSpot(x, y) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:58px;height:58px;border-radius:50%;border:2px dashed ${T.gold}88;display:flex;align-items:center;justify-content:center"><span style="font:italic 400 11px Georgia,serif;color:${T.ink2}">match?</span></div>`;
+}
 function explore() {
-  const selector = (x, y, title) => `${fig(x, y, 430, 118)}
-    <div style="position:absolute;left:${x}px;top:${y + 14}px;width:430px;text-align:center;font:700 14px Georgia,serif;color:${T.red}">${title}</div>`;
   return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(3)}
   ${step(56, 52, '✦')} ${eyebrow(112, 56, 'The Final Chapter · your turn')}
-  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">Take the Wand</div>
-  <div style="position:absolute;left:56px;top:126px;width:440px;font:italic 400 14px Georgia,serif;line-height:1.55;color:${T.ink2}">You have read the story — now choose your own path. Pick an era, a build size and a favourite character, and the book will find your perfect wizarding set.</div>
-  ${selector(56, 196, 'CHOOSE YOUR ERA')}
-  ${selector(56, 330, 'BUILD SIZE')}
-  ${selector(56, 464, 'FAVOURITE CHARACTER')}
-  ${fig(536, 196, 696, 300)} ${figCap(556, 214, 'YOUR PERFECT SET', 'choose all three to reveal your match')}
-  ${fig(536, 512, 222, 108)} ${figCap(552, 526, 'YEAR')}
-  ${fig(773, 512, 222, 108)} ${figCap(789, 526, 'PARTS')}
-  ${fig(1010, 512, 222, 108)} ${figCap(1026, 526, 'MINIFIGS')}
+  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">Match the Minifig</div>
+  <div style="position:absolute;left:56px;top:126px;width:760px;font:italic 400 14px Georgia,serif;line-height:1.5;color:${T.ink2}">Choose a character and one of their minifigures — then test your wizarding knowledge: guess the era it came from and a set it appears in. The book will seal your answer ✓ or ✗.</div>
+  ${numStep(56, 190, '1')} <div style="position:absolute;left:100px;top:196px;font:700 13px Georgia,serif;color:${T.red}">CHOOSE YOUR CHARACTER</div>
+  ${fig(56, 228, 388, 92)}
+  ${numStep(56, 340, '2')} <div style="position:absolute;left:100px;top:346px;font:700 13px Georgia,serif;color:${T.red}">PICK ONE OF THEIR MINIFIGS</div>
+  ${fig(56, 378, 388, 92)}
+  <div style="position:absolute;left:56px;top:496px;font:700 12px Segoe UI;letter-spacing:1.5px;color:${T.red}">YOUR MINIFIG</div>
+  ${productCard(110, 520, 270, 128, 'the minifig you chose', '')}
+  ${numStep(478, 190, '3')} <div style="position:absolute;left:522px;top:196px;font:700 13px Georgia,serif;color:${T.red}">WHICH ERA IS IT FROM?</div>
+  ${fig(478, 228, 754, 150)}
+  ${figCap(498, 244, 'guess: First Build or Second Build', 'the book reveals if you are right')}
+  ${sealSpot(1150, 274)}
+  ${numStep(478, 398, '4')} <div style="position:absolute;left:522px;top:404px;font:700 13px Georgia,serif;color:${T.red}">WHICH SET DOES IT APPEAR IN?</div>
+  ${fig(478, 436, 754, 204)}
+  ${figCap(498, 452, 'guess a set — does this minifig live there?', 'a sealed ✓ if it does')}
+  ${sealSpot(1150, 500)}
   ${pageNo('IV')} ${turn()}`;
 }
 
