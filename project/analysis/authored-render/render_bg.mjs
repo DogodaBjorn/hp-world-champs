@@ -1,258 +1,243 @@
-// render_bg.mjs — composite the cinematic scenes into page backgrounds.
+// render_bg.mjs — "The Spellbook of the Boy Who Came Back"
+// An illuminated wizarding tome × LEGO instruction booklet. Bakes each page as
+// a parchment spread with gold illumination, framed illustration plates (our
+// Gemini scenes), LEGO part-callout badges, step numbers and ribbon-bookmark
+// nav. Live data (ink-themed charts/KPIs) sits on top in PBIR.
 //
-// Bakes the reliable chrome (cinematic scene + dark scrim + gold magical light +
-// masthead + dark-translucent card panels with gold hairlines + parchment story
-// panels) into one PNG per page. Live visuals (numbers, charts, slicers) sit on
-// top in PBIR with transparent backgrounds, aligned to the same layout the JS
-// emits to layout_v23.json.
-//
-// Output: <Report>/StaticResources/RegisteredResources/bg_<page>.png  @2x
-//         project/analysis/authored-render/layout_v23.json (geometry for PBIR)
-//
-// Usage: node render_bg.mjs [page ...]   (default: all)
+// Output: <Report>/StaticResources/RegisteredResources/bg_<page>.png @2x
+// Usage:  node render_bg.mjs [page ...]
 
 import { createRequire } from 'module';
-import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { dirname, join, resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = resolve(HERE, '..', '..', '..');
-const SCENES = join(HERE, 'scenes');
+const SCN = join(HERE, 'scenes');
 const RES = join(REPO, 'project', 'pbip', 'second-build.Report', 'StaticResources', 'RegisteredResources');
 const require2 = createRequire(join(REPO, 'design_handoff_powerbi', 'package.json'));
 const { chromium } = require2('playwright');
-
 const W = 1280, H = 720;
 
-// ---- tokens ----
 const T = {
-  ink0: '#06090F', midnight: '#0B1020', card: 'rgba(12,17,33,0.68)',
-  cardSolid: '#0E1524', hair: 'rgba(201,162,39,0.55)', hairSoft: 'rgba(201,162,39,0.30)',
-  gold: '#C9A227', goldBright: '#E7C765', white: '#F5F1E6', mut: '#B9B29E',
-  parch: '#F1E4C6', parchInk: '#2A2010',
+  ink: '#3A2A14', ink2: '#5E4A28', inkSoft: '#7A6238', red: '#7C2B22',
+  gold: '#9C7A22', goldBright: '#B8912E', goldLeaf: '#C9A94A',
+  leather: '#4A140F', edge: '#241407',
 };
+const uri = (n) => `data:image/png;base64,${readFileSync(join(SCN, `${n}.png`)).toString('base64')}`;
+const PARCH = uri('parchment');
 
-const dataUri = (p) => `data:image/png;base64,${readFileSync(p).toString('base64')}`;
-
-// ---- reusable pieces ----
-const sparkle = (c = T.goldBright) => `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="${c}" stroke-width="1.6"><path d="M12 2 L13.5 9 L21 12 L13.5 15 L12 22 L10.5 15 L3 12 L10.5 9 Z"/></svg>`;
-const iconBrick = (c = T.goldBright) => `<svg viewBox="0 0 32 24" width="26" height="20" fill="none" stroke="${c}" stroke-width="1.5"><rect x="2" y="7" width="28" height="15" rx="2"/><rect x="7" y="3" width="6" height="4" rx="1.2"/><rect x="19" y="3" width="6" height="4" rx="1.2"/></svg>`;
-const iconStud = (c = T.goldBright) => `<svg viewBox="0 0 28 28" width="24" height="24" fill="none" stroke="${c}" stroke-width="1.5"><rect x="3" y="3" width="22" height="22" rx="3"/><circle cx="14" cy="14" r="5"/></svg>`;
-const iconFig = (c = T.goldBright) => `<svg viewBox="0 0 24 28" width="22" height="24" fill="none" stroke="${c}" stroke-width="1.5"><rect x="8" y="2" width="8" height="6" rx="3"/><path d="M6 9 h12 v7 a3 3 0 0 1-3 3 h-6 a3 3 0 0 1-3-3 Z"/><path d="M9 19 v6 M15 19 v6"/></svg>`;
-
-function card(x, y, w, h, { r = 16, solid = false, glow = true } = {}) {
-  const bg = solid ? T.cardSolid : T.card;
-  const sh = glow ? `box-shadow:0 10px 40px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.04);` : '';
-  return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:${bg};border:1px solid ${T.hair};border-radius:${r}px;${sh}"></div>`;
+// ---- gold filigree corner (SVG) ----
+function filigree(x, y, rot) {
+  return `<svg style="position:absolute;left:${x}px;top:${y}px;transform:rotate(${rot}deg)" width="70" height="70" viewBox="0 0 70 70" fill="none" stroke="${T.gold}" stroke-width="1.4" opacity="0.85">
+    <path d="M4 4 L4 30 M4 4 L30 4"/>
+    <path d="M4 4 C 26 6 30 10 30 30 M4 4 C 6 26 10 30 30 30"/>
+    <circle cx="34" cy="34" r="2.2" fill="${T.gold}" stroke="none"/>
+    <path d="M12 12 c 8 0 14 6 14 14" opacity="0.6"/>
+  </svg>`;
 }
-function parchPanel(x, y, w, h, { r = 12 } = {}) {
-  return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:linear-gradient(160deg,#F3E7C8,#E8D7AE);border:1px solid rgba(120,90,40,.45);border-radius:${r}px;box-shadow:0 10px 34px rgba(0,0,0,.5);"></div>`;
+// double gold rule border inset in a page rect
+function goldBorder(x, y, w, h) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;border:2px solid ${T.gold};box-shadow:inset 0 0 0 4px transparent, inset 0 0 0 5px ${T.goldBright}55;opacity:.9"></div>
+  <div style="position:absolute;left:${x - 5}px;top:${y - 5}px;width:${w + 10}px;height:${h + 10}px;border:1px solid ${T.gold}66"></div>
+  ${filigree(x - 6, y - 6, 0)}${filigree(x + w + 6, y - 6, 90)}${filigree(x + w + 6, y + h + 6, 180)}${filigree(x - 6, y + h + 6, 270)}`;
 }
-// glowing gold horizontal magical-light separator
-function goldLight(x, y, w) {
-  return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:2px;background:linear-gradient(90deg,transparent,${T.gold} 20%,${T.goldBright} 50%,${T.gold} 80%,transparent);box-shadow:0 0 18px 3px rgba(231,199,101,.55);"></div>
-  <div style="position:absolute;left:${x + w * 0.30}px;top:${y - 7}px;width:${w * 0.40}px;height:16px;background:radial-gradient(ellipse at center, rgba(231,199,101,.35), transparent 70%);filter:blur(4px);"></div>`;
+// parchment page filling the canvas + soft book vignette + binding hint
+function parchmentPage() {
+  return `<div style="position:absolute;inset:0;background:#000 url('${PARCH}') center/cover"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(130% 120% at 50% 45%, transparent 55%, rgba(60,35,12,.35) 100%)"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 120px 30px rgba(40,20,7,.45)"></div>`;
 }
-
-// scene layer with a dark scrim; `focus` shifts the cover position
-function sceneLayer(scene, scrim) {
-  const uri = dataUri(join(SCENES, `${scene}.png`));
-  return `<div style="position:absolute;inset:0;background:#000 url('${uri}') center right/cover no-repeat;"></div>
-  <div style="position:absolute;inset:0;background:${scrim};"></div>`;
+// illuminated drop cap
+function dropCap(letter, x, y) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:74px;height:74px;background:linear-gradient(145deg,#6E1E17,#8C2A20);border:2px solid ${T.goldBright};box-shadow:0 2px 10px rgba(0,0,0,.35), inset 0 0 0 4px rgba(201,169,74,.25);display:flex;align-items:center;justify-content:center">
+    <span style="font:700 52px Georgia,serif;color:${T.goldLeaf};text-shadow:0 1px 2px rgba(0,0,0,.4)">${letter}</span></div>`;
 }
-
-// masthead: eyebrow + nav
-function masthead(active) {
-  const items = ['Cover', 'The Story', 'Explore', 'Sources'];
-  const nav = items.map(n => `<span style="padding:6px 14px;border-radius:20px;font:600 12px Segoe UI;letter-spacing:.5px;color:${n === active ? T.ink0 : T.mut};background:${n === active ? T.goldBright : 'transparent'};border:1px solid ${n === active ? T.goldBright : 'rgba(201,162,39,.25)'};">${n}</span>`).join('<span style="width:6px;display:inline-block"></span>');
-  return `<div style="position:absolute;left:48px;top:34px;font:700 12px Segoe UI;letter-spacing:3px;color:${T.gold}">POWER BI DATAVIZ WORLD CHAMPS · ROUND 2 · BRICK BY BRICK
-    <div style="width:120px;height:2px;background:${T.gold};margin-top:8px;box-shadow:0 0 10px ${T.gold}"></div></div>
-  <div style="position:absolute;right:40px;top:30px;display:flex;align-items:center">${nav}</div>`;
+// LEGO part-callout badge
+function callout(x, y, count, label) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;padding:8px 14px;background:rgba(255,250,238,.65);border:1.5px solid ${T.ink};border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.18);display:flex;align-items:center;gap:9px">
+    <svg width="26" height="18" viewBox="0 0 32 22" fill="none" stroke="${T.ink}" stroke-width="1.6"><rect x="2" y="6" width="28" height="14" rx="2"/><rect x="7" y="2" width="6" height="4" rx="1"/><rect x="19" y="2" width="6" height="4" rx="1"/></svg>
+    <span style="font:800 18px Georgia,serif;color:${T.ink}">${count}<span style="font-size:13px">×</span></span>
+    <span style="font:600 10px Segoe UI;letter-spacing:1px;color:${T.ink2};text-transform:uppercase">${label}</span></div>`;
 }
-
-function footer(text) {
-  return `<div style="position:absolute;left:48px;bottom:20px;font:12px 'Consolas',monospace;color:rgba(201,162,39,.8);letter-spacing:.3px">${text}</div>`;
+// circled step number
+function step(x, y, n) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:40px;height:40px;border-radius:50%;background:${T.leather};border:2px solid ${T.goldBright};display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.3)"><span style="font:800 20px Georgia,serif;color:${T.goldLeaf}">${n}</span></div>`;
 }
-
-// ---------- COVER ----------
-function cover() {
-  const scrim = `linear-gradient(90deg, rgba(5,8,16,.94) 0%, rgba(5,8,16,.86) 34%, rgba(5,8,16,.28) 60%, rgba(5,8,16,.5) 100%), radial-gradient(120% 90% at 30% 40%, transparent 40%, rgba(3,5,12,.6) 100%)`;
-  const kpis = [
-    { x: 48, icon: iconBrick(), label: 'SETS' },
-    { x: 240, icon: iconStud(), label: 'PARTS' },
-    { x: 432, icon: iconFig(), label: 'MINIFIGURES' },
-  ];
-  let kpiHtml = '';
-  for (const k of kpis) {
-    kpiHtml += card(k.x, 512, 176, 118, { r: 14 });
-    kpiHtml += `<div style="position:absolute;left:${k.x + 18}px;top:530px">${k.icon}</div>`;
-    // number is a LIVE card in PBIR; bake only label + underline
-    kpiHtml += `<div style="position:absolute;left:${k.x + 18}px;top:600px;font:700 11px Segoe UI;letter-spacing:2px;color:${T.gold}">${k.label}
-      <div style="width:34px;height:2px;background:${T.gold};margin-top:6px"></div></div>`;
-  }
-  return `${sceneLayer('cover', scrim)}
-  ${masthead('Cover')}
-  <div style="position:absolute;left:48px;top:96px;font:700 13px Segoe UI;letter-spacing:4px;color:${T.gold}">A LEGO HARRY POTTER STORY · 2001–2026</div>
-  <div style="position:absolute;left:44px;top:120px;font:800 66px Georgia,serif;line-height:.98;color:${T.white};text-shadow:0 2px 30px rgba(0,0,0,.6)">The Boy Who<br><span style="color:${T.goldBright}">Came Back</span></div>
-  <div style="position:absolute;left:48px;top:290px;width:150px;height:3px;background:${T.goldBright};box-shadow:0 0 12px ${T.goldBright}"></div>
-  <div style="position:absolute;left:48px;top:312px;width:520px;font:400 17px Segoe UI;line-height:1.5;color:${T.mut}">Vanished for seven silent years — then returned in 2018 at nearly triple the scale.</div>
-  ${card(48, 372, 560, 116)}
-  <div style="position:absolute;left:70px;top:392px;display:flex;align-items:center;gap:10px">
-    <span style="width:34px;height:34px;border:1px solid ${T.hair};border-radius:50%;display:flex;align-items:center;justify-content:center">${sparkle()}</span>
-    <span style="font:700 12px Segoe UI;letter-spacing:2px;color:${T.gold}">KEY TAKEAWAY</span></div>
-  <div style="position:absolute;left:70px;top:428px;width:518px;font:400 14px Segoe UI;line-height:1.5;color:${T.white}">LEGO Harry Potter went quiet after 2011, then came back bigger — more sets, more parts, and <span style="color:${T.goldBright};font-weight:700">576 minifigures</span> across two distinct builds of one story.</div>
-  ${kpiHtml}
-  <div style="position:absolute;left:640px;top:600px;padding:12px 26px;border:1px solid ${T.goldBright};border-radius:24px;font:700 13px Segoe UI;letter-spacing:1px;color:${T.goldBright};background:rgba(11,16,32,.5)">Open the book  ▷</div>
-  ${footer('Source: Rebrickable LEGO Database (https://rebrickable.com)')}`;
+// framed illustration plate ("moving photograph"): scene, warmed, gold frame
+function plate(scene, x, y, w, h) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;padding:7px;background:linear-gradient(145deg,${T.goldBright},#8A6A1E);box-shadow:0 6px 20px rgba(30,15,5,.45)">
+    <div style="width:100%;height:100%;background:#000 url('${uri(scene)}') center/cover;box-shadow:inset 0 0 40px rgba(20,10,3,.6);position:relative">
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg, rgba(60,35,12,.35), rgba(60,35,12,.1)), radial-gradient(120% 100% at 50% 40%, transparent 55%, rgba(30,15,5,.4))"></div>
+    </div></div>`;
 }
-
-// baked section title inside a card
-function cardTitle(x, y, kicker, sub) {
-  return `<div style="position:absolute;left:${x}px;top:${y}px;font:700 13px Segoe UI;letter-spacing:1.5px;color:${T.white}">${kicker}${sub ? `<div style="font:600 11px Segoe UI;letter-spacing:.5px;color:${T.gold};margin-top:3px">${sub}</div>` : ''}</div>`;
+// ink caption for a figure
+function fig(x, y, w, h) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:rgba(247,240,222,.5);border:1px solid ${T.inkSoft}88;box-shadow:inset 0 0 24px rgba(120,90,40,.15)"></div>`;
 }
-function chapterHead(active, chap, title, desc) {
-  return `${masthead(active)}
-  ${goldLight(48, 74, 1184)}
-  <div style="position:absolute;left:48px;top:90px;font:700 12px Segoe UI;letter-spacing:3px;color:${T.gold}">${chap}</div>
-  <div style="position:absolute;left:46px;top:106px;font:800 30px Georgia,serif;color:${T.white}">${title}</div>
-  <div style="position:absolute;left:48px;top:150px;width:900px;font:400 13.5px Segoe UI;color:${T.mut}">${desc}</div>`;
+function figCap(x, y, kick, sub) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;font:700 13px Georgia,serif;letter-spacing:.5px;color:${T.ink}">${kick}${sub ? `<div style="font:italic 400 11px Georgia,serif;color:${T.ink2};margin-top:2px">${sub}</div>` : ''}</div>`;
 }
-function prevNext() {
-  return `<div style="position:absolute;right:40px;bottom:18px;display:flex;gap:10px">
-    <span style="padding:8px 16px;border:1px solid ${T.hairSoft};border-radius:20px;font:600 12px Segoe UI;color:${T.mut}">◁ Back</span>
-    <span style="padding:8px 16px;border:1px solid ${T.goldBright};border-radius:20px;font:700 12px Segoe UI;color:${T.goldBright}">Turn the page ▷</span></div>`;
-}
-
-// KPI band with 3 dark cells (icon+label baked, number live on top)
-function kpiBand(x, y, w, h, cells) {
-  let s = card(x, y, w, h);
-  const third = w / 3;
-  cells.forEach((c, i) => {
-    const cx = x + i * third + 30;
-    s += `<div style="position:absolute;left:${cx}px;top:${y + 16}px">${c.icon}</div>`;
-    s += `<div style="position:absolute;left:${cx}px;top:${y + h - 30}px;font:700 11px Segoe UI;letter-spacing:2px;color:${T.gold}">${c.label}<div style="width:30px;height:2px;background:${T.gold};margin-top:5px"></div></div>`;
-    if (i) s += `<div style="position:absolute;left:${x + i * third}px;top:${y + 18}px;width:1px;height:${h - 36}px;background:${T.hairSoft}"></div>`;
+// ribbon bookmark nav on the right edge
+function ribbons(active) {
+  const tabs = ['I', 'II', 'III', '✦', '?'];
+  let s = '';
+  tabs.forEach((t, i) => {
+    const on = i === active;
+    const y = 150 + i * 74;
+    s += `<div style="position:absolute;right:0;top:${y}px;width:${on ? 44 : 34}px;height:52px;background:linear-gradient(90deg,#6E1E17,${on ? '#9C2A20' : '#7C2318'});border:1px solid ${T.goldBright}${on ? '' : '99'};border-right:none;border-radius:6px 0 0 6px;box-shadow:-2px 2px 8px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:flex-start;padding-left:8px">
+      <span style="font:700 15px Georgia,serif;color:${T.goldLeaf}">${t}</span></div>`;
   });
   return s;
 }
+function pageNo(n) {
+  return `<div style="position:absolute;left:0;bottom:20px;width:${W}px;text-align:center;font:italic 400 13px Georgia,serif;color:${T.ink2}">~ ${n} ~</div>`;
+}
+function turn() {
+  return `<div style="position:absolute;right:64px;bottom:16px;font:italic 600 13px Georgia,serif;color:${T.red}">turn the page ❦</div>
+  <div style="position:absolute;left:64px;bottom:16px;font:italic 600 13px Georgia,serif;color:${T.ink2}">❦ back</div>`;
+}
+function eyebrow(x, y, t) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;font:700 12px Segoe UI;letter-spacing:4px;color:${T.gold};text-transform:uppercase">${t}</div>`;
+}
+const gink = (t) => `<span style="color:${T.red};font-weight:700">${t}</span>`;
 
-// ---------- CHAPTER I: The Yellow Years (explorer) ----------
+// ================= COVER (the closed tome) =================
+function cover() {
+  return `<div style="position:absolute;inset:0;background:#000 url('${uri('tome')}') center/cover"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(10,6,3,.86) 0%, rgba(10,6,3,.5) 38%, transparent 62%)"></div>
+  ${eyebrow(64, 70, 'A LEGO Harry Potter Story · 2001–2026')}
+  <div style="position:absolute;left:60px;top:150px;font:700 15px Segoe UI;letter-spacing:2px;color:${T.goldLeaf}">✦ ✦ ✦</div>
+  <div style="position:absolute;left:58px;top:172px;font:800 74px Georgia,serif;line-height:1.0;color:#F0E6CE;text-shadow:0 2px 24px rgba(0,0,0,.7)">The Boy<br>Who Came<br><span style="color:${T.goldLeaf}">Back</span></div>
+  <div style="position:absolute;left:64px;top:452px;width:150px;height:2px;background:${T.goldBright};box-shadow:0 0 12px ${T.goldBright}"></div>
+  <div style="position:absolute;left:64px;top:472px;width:470px;font:italic 400 17px Georgia,serif;line-height:1.5;color:#D9CBAE">A wizarding brick history in five chapters — from the yellow years, through the silence, to the most colourful magic ever built.</div>
+  <div style="position:absolute;left:64px;top:576px;padding:13px 26px;border:1.5px solid ${T.goldBright};border-radius:4px;background:rgba(20,10,4,.5);font:600 14px Georgia,serif;letter-spacing:1px;color:${T.goldLeaf}">❦  Open the book</div>
+  <div style="position:absolute;left:64px;bottom:22px;font:12px 'Consolas',monospace;color:${T.goldBright}bb">Rebrickable LEGO Database · rebrickable.com</div>`;
+}
+
+// ================= CHAPTER I: The Yellow Years =================
 function yellow() {
-  const scrim = `linear-gradient(180deg, rgba(8,7,4,.72) 0%, rgba(8,7,4,.82) 40%, rgba(8,7,4,.9) 100%), radial-gradient(130% 100% at 70% 30%, transparent 30%, rgba(6,5,3,.55) 100%)`;
-  const kb = kpiBand(48, 188, 1184, 84, [
-    { icon: iconBrick(), label: 'SETS' }, { icon: iconStud(), label: 'AVG PARTS' }, { icon: iconFig(), label: 'COLOURS' },
-  ]);
-  return `${sceneLayer('yellow', scrim)}
-  ${chapterHead('The Story', 'CHAPTER I', 'The Yellow Years · 2001–2011', 'One quiet decade in classic yellow — small sets, few colours, the humble beginning of a wizarding brick world.')}
-  ${kb}
-  ${card(48, 284, 620, 300)}
-  ${cardTitle(72, 302, 'EVERY SET IN VIEW', 'tap a bar to inspect · year & size filters apply')}
-  ${card(688, 284, 544, 300)}
-  ${cardTitle(712, 302, 'SELECTED SET', 'click a set on the left')}
-  ${card(48, 598, 1184, 84)}
-  ${cardTitle(72, 612, 'THE PALETTE IN VIEW', 'each bar is a true brick hex — pick a set and it collapses to that set’s colours')}
-  ${footer('Source: Rebrickable LEGO Database (rebrickable.com)')}
-  ${prevNext()}`;
+  return `${parchmentPage()}
+  ${goldBorder(28, 24, 1224, 672)}
+  ${ribbons(0)}
+  ${step(56, 52, 'I')}
+  ${eyebrow(112, 56, 'Bag One · 2001–2011')}
+  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">The Yellow Years</div>
+  ${dropCap('O', 56, 130)}
+  <div style="position:absolute;left:146px;top:132px;width:340px;font:400 14.5px Georgia,serif;line-height:1.6;color:${T.ink}">ne quiet decade, built in classic yellow. Small sets, few colours — the humble first act of a wizarding brick world, before the silence fell in ${gink('2011')}.</div>
+  ${callout(56, 250, '67', 'sets')}
+  ${callout(214, 250, '267', 'avg parts')}
+  ${plate('yellow', 56, 320, 430, 300)}
+  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate I · the Hogwarts Express leaves the platform</div>
+  ${fig(512, 60, 720, 300)} ${figCap(528, 74, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect · year & size runes apply')}
+  ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from the left')}
+  ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · ITS TRUE COLOURS', 'each mark a real brick hex')}
+  ${pageNo('I')} ${turn()}`;
 }
 
-// parchment story text (the "reading a spellbook" moment); {g} wraps gold highlights
-function story(x, y, w, h, html) {
-  return `${parchPanel(x, y, w, h)}
-  <div style="position:absolute;left:${x + 22}px;top:${y + 20}px;width:${w - 44}px;font:400 14.5px Georgia,serif;line-height:1.62;color:${T.parchInk}">${html}</div>`;
+// illuminated hero numeral (for the editorial pages)
+function numeral(x, y, n, sub) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;font:800 108px Georgia,serif;color:${T.goldBright};text-shadow:0 2px 2px rgba(90,20,15,.4)">${n}</div>
+  <div style="position:absolute;left:${x + 4}px;top:${y + 132}px;width:180px;height:2px;background:${T.gold}"></div>
+  <div style="position:absolute;left:${x + 4}px;top:${y + 142}px;width:260px;font:italic 400 15px Georgia,serif;color:${T.ink2}">${sub}</div>`;
 }
-const g = (t) => `<span style="color:#7A5A12;font-weight:700">${t}</span>`;
 
-// ---------- CHAPTER II: …and came back (explorer, colour) ----------
+// ================= CHAPTER II: …and Came Back =================
 function cameback() {
-  const scrim = `linear-gradient(180deg, rgba(6,9,20,.7) 0%, rgba(6,9,20,.82) 45%, rgba(6,9,20,.9) 100%)`;
-  const kb = kpiBand(48, 188, 1184, 84, [
-    { icon: iconBrick(), label: 'SETS' }, { icon: iconStud(), label: 'AVG PARTS' }, { icon: iconFig(), label: 'COLOURS' },
-  ]);
-  return `${sceneLayer('cameback', scrim)}
-  ${chapterHead('The Story', 'CHAPTER II', 'The Boy Who Came Back · 2018–', 'The relaunch that changed everything — bigger sets, bolder builds, and a burst of colour after the silence.')}
-  ${kb}
-  ${card(48, 284, 620, 300)} ${cardTitle(72, 302, 'EVERY SET IN VIEW', 'tap a bar to inspect')}
-  ${card(688, 284, 544, 300)} ${cardTitle(712, 302, 'SELECTED SET', 'click a set on the left')}
-  ${card(48, 598, 1184, 84)} ${cardTitle(72, 612, 'FROM YELLOW TO COLOUR', 'the palette blooms from a narrow yellow band into the full spectrum')}
-  ${footer('Source: Rebrickable LEGO Database (rebrickable.com)')} ${prevNext()}`;
+  return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(1)}
+  ${step(56, 52, 'II')} ${eyebrow(112, 56, 'Bag Two · 2018–today')}
+  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">…and Came Back</div>
+  ${dropCap('A', 56, 130)}
+  <div style="position:absolute;left:146px;top:132px;width:340px;font:400 14.5px Georgia,serif;line-height:1.6;color:${T.ink}">fter seven silent years the story returned in ${gink('2018')} — bigger sets, bolder builds, and a burst of colour. Nearly ${gink('triple')} the scale of the yellow years.</div>
+  ${callout(56, 250, '142', 'sets')} ${callout(214, 250, '731', 'avg parts')}
+  ${plate('cameback', 56, 320, 430, 300)}
+  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate II · fireworks over the returning castle</div>
+  ${fig(512, 60, 720, 300)} ${figCap(528, 74, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect')}
+  ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from the left')}
+  ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · FROM YELLOW TO COLOUR', 'the palette blooms to full spectrum')}
+  ${pageNo('II')} ${turn()}`;
 }
 
-// ---------- CHAPTER III: The Chamber of Colours (editorial) ----------
+// ================= CHAPTER III: The Chamber of Colours =================
 function colours() {
-  const scrim = `linear-gradient(90deg, rgba(6,9,20,.9) 0%, rgba(6,9,20,.7) 42%, rgba(6,9,20,.35) 70%, rgba(6,9,20,.6) 100%)`;
-  return `${sceneLayer('colours', scrim)}
-  ${chapterHead('The Story', 'CHAPTER III', 'The Chamber of Colours', 'Colour is the strongest magic in LEGO — and one wizarding set out-coloured almost everything ever made.')}
-  ${story(48, 200, 360, 250, `Diagon Alley Wizarding Shops (2025) is the ${g('#2 most colourful LEGO set ever made')} — of any theme, ever. ${g('2,750')} parts across ${g('55')} real brick colours, a riot of magic after the yellow years.`)}
-  <div style="position:absolute;left:48px;top:472px;font:800 96px Georgia,serif;color:${T.goldBright};text-shadow:0 0 30px rgba(231,199,101,.4)">55</div>
-  <div style="position:absolute;left:52px;top:600px;font:italic 400 15px Georgia,serif;color:${T.mut}">distinct colours in a single set</div>
-  ${card(432, 200, 800, 360)} ${cardTitle(456, 218, 'LEGO HARRY POTTER COLOUR MAP', 'every colour to scale, in its true brick hex — sized by part count')}
-  ${card(432, 576, 560, 106)} ${cardTitle(456, 594, 'THE COLOUR EXPLOSION', 'a relaunch built to dazzle')}
-  <div style="position:absolute;left:1012px;top:600px;padding:14px 22px;border:1px solid ${T.goldBright};border-radius:24px;font:700 13px Segoe UI;color:${T.goldBright};background:rgba(11,16,32,.6)">…or come to the dark side ▷</div>
-  ${footer('Source: Rebrickable LEGO Database (rebrickable.com)')} ${prevNext()}`;
+  return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(2)}
+  ${step(56, 52, 'III')} ${eyebrow(112, 56, 'Bag Three · The Chamber of Colours')}
+  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">The Chamber of Colours</div>
+  ${dropCap('C', 56, 130)}
+  <div style="position:absolute;left:146px;top:132px;width:350px;font:400 14px Georgia,serif;line-height:1.58;color:${T.ink}">olour is the strongest magic in brick. ${gink('Diagon Alley')} (2025) is the #2 most colourful LEGO set ever made — ${gink('2,750')} parts across a riot of real brick hues.</div>
+  ${numeral(64, 250, '55', 'distinct colours in a single set')}
+  ${plate('colours', 56, 452, 430, 200)}
+  ${fig(512, 128, 720, 336)} ${figCap(528, 142, 'FIGURE 1 · THE COLOUR MAP', 'every colour to scale, in its true brick hex — sized by parts')}
+  ${fig(512, 484, 720, 138)} ${figCap(528, 498, 'FIGURE 2 · THE COLOUR EXPLOSION', 'a relaunch built to dazzle')}
+  <div style="position:absolute;right:64px;bottom:52px;padding:12px 22px;border:1.5px solid ${T.red};border-radius:4px;background:rgba(124,43,34,.12);font:600 13px Georgia,serif;color:${T.red}">…or come to the dark side ❦</div>
+  ${pageNo('III')} ${turn()}`;
 }
 
-// ---------- CHAPTER III (dark twin): come to the dark side ----------
+// ================= CHAPTER III (dark): The Chamber of Greys =================
 function dark() {
-  const scrim = `linear-gradient(90deg, rgba(2,3,6,.92) 0%, rgba(2,3,6,.8) 45%, rgba(2,3,6,.55) 75%, rgba(2,3,6,.8) 100%)`;
-  return `${sceneLayer('dark', scrim)}
-  ${chapterHead('The Story', 'CHAPTER III · THE DARK SIDE', 'The Chamber of Greys', 'Not every set dazzles. Some are built almost entirely from shadow — grey, black and silver, the colour of the dark.')}
-  ${card(48, 200, 384, 250, { solid: true })} ${cardTitle(72, 218, 'THE GREYEST OF ALL', 'near-total absence of colour')}
-  <div style="position:absolute;left:72px;top:262px;font:800 76px Georgia,serif;color:#CFC9BE;text-shadow:0 0 24px rgba(0,0,0,.6)">97.9%</div>
-  <div style="position:absolute;left:74px;top:372px;font:italic 400 14px Georgia,serif;color:${T.mut}">of every brick is greyscale</div>
-  ${card(456, 200, 776, 360, { solid: true })} ${cardTitle(480, 218, 'COLOUR COMPOSITION', 'almost entirely grey — every mark in true hex')}
-  ${card(48, 476, 384, 120, { solid: true })} ${cardTitle(72, 494, 'STAR WARS vs HARRY POTTER', 'the greyest theme meets the most colourful')}
-  <div style="position:absolute;left:48px;bottom:56px;padding:14px 22px;border:1px solid ${T.goldBright};border-radius:24px;font:700 13px Segoe UI;color:${T.goldBright};background:rgba(11,16,32,.6)">◁ back to the colour</div>
-  ${footer('Source: Rebrickable LEGO Database (rebrickable.com)')}`;
+  return `${parchmentPage()}
+  <div style="position:absolute;inset:0;background:radial-gradient(120% 110% at 40% 40%, rgba(10,8,6,.45), rgba(6,5,4,.82) 100%)"></div>
+  ${goldBorder(28, 24, 1224, 672)}
+  <div style="position:absolute;left:56px;top:52px;width:40px;height:40px;border-radius:50%;background:#1A1512;border:2px solid ${T.gold};display:flex;align-items:center;justify-content:center"><span style="font:800 18px Georgia,serif;color:${T.goldLeaf}">☾</span></div>
+  ${eyebrow(112, 56, 'The Restricted Section · after closing time')}
+  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:#D8CBB0">The Chamber of Greys</div>
+  <div style="position:absolute;left:56px;top:132px;width:400px;font:400 14.5px Georgia,serif;line-height:1.6;color:#C7B89A">Not every set dazzles. Some are built almost entirely from shadow — the greyest theme of all is <span style="color:#C97A6A;font-weight:700">Star Wars</span>, where <span style="color:#C97A6A;font-weight:700">97.9%</span> of one set is greyscale.</div>
+  <div style="position:absolute;left:64px;top:240px;font:800 92px Georgia,serif;color:#CFC4A8;text-shadow:0 0 20px rgba(0,0,0,.5)">97.9%</div>
+  <div style="position:absolute;left:68px;top:356px;font:italic 400 15px Georgia,serif;color:#A89A7E">of every brick is greyscale</div>
+  ${plate('dark', 56, 410, 430, 240)}
+  ${fig(512, 60, 720, 340)} ${figCap(528, 74, 'FIGURE 1 · COLOUR COMPOSITION', 'almost entirely grey — every mark in true hex')}
+  ${fig(512, 420, 720, 200)} ${figCap(528, 434, 'FIGURE 2 · GREYEST vs BRIGHTEST', 'the dark side meets the chamber of colours')}
+  <div style="position:absolute;left:64px;bottom:52px;padding:12px 22px;border:1.5px solid ${T.goldBright};border-radius:4px;background:rgba(20,14,6,.5);font:600 13px Georgia,serif;color:${T.goldLeaf}">❦ back to the colour</div>
+  ${pageNo('III')} <div style="position:absolute;right:64px;bottom:16px;font:italic 600 13px Georgia,serif;color:#A89A7E">turn the page ❦</div>`;
 }
 
-// button-slicer group (baked group label + pill hints; live slicer sits on top)
-function slicerGroup(x, y, w, title, pills) {
-  let s = card(x, y, w, 96, { r: 12 });
-  s += `<div style="position:absolute;left:0;top:${y + 14}px;width:${w + 2 * x}px;text-align:center;font:700 13px Georgia,serif;color:${T.goldBright}">${title}</div>`.replace(`width:${w + 2 * x}px`, `left:${x}px;width:${w}px`);
-  return s;
-}
-// ---------- CHAPTER IV: Take the Wand (explore / recommender) ----------
+// ================= CHAPTER IV: Take the Wand (explore) =================
 function explore() {
-  const scrim = `linear-gradient(180deg, rgba(6,9,20,.72) 0%, rgba(6,9,20,.85) 50%, rgba(6,9,20,.92) 100%)`;
-  return `${sceneLayer('explore', scrim)}
-  ${chapterHead('Explore', 'CHAPTER IV', 'Take the Wand', 'You have read the story — now explore it. Choose an era, a build size and a favourite character to find your perfect wizarding set.')}
-  ${card(48, 196, 560, 130, { r: 12 })} <div style="position:absolute;left:48px;top:212px;width:560px;text-align:center;font:700 13px Georgia,serif;color:${T.goldBright}">CHOOSE YOUR ERA</div>
-  ${card(48, 340, 560, 130, { r: 12 })} <div style="position:absolute;left:48px;top:356px;width:560px;text-align:center;font:700 13px Georgia,serif;color:${T.goldBright}">BUILD SIZE</div>
-  ${card(48, 484, 560, 130, { r: 12 })} <div style="position:absolute;left:48px;top:500px;width:560px;text-align:center;font:700 13px Georgia,serif;color:${T.goldBright}">FAVOURITE CHARACTER</div>
-  ${card(648, 196, 584, 300)} ${cardTitle(672, 214, 'YOUR PERFECT SET', 'choose all three to reveal your match')}
-  ${card(648, 512, 180, 100)} ${card(850, 512, 180, 100)} ${card(1052, 512, 180, 100)}
-  <div style="position:absolute;left:672px;top:588px;font:700 11px Segoe UI;letter-spacing:2px;color:${T.gold}">YEAR</div>
-  <div style="position:absolute;left:874px;top:588px;font:700 11px Segoe UI;letter-spacing:2px;color:${T.gold}">PARTS</div>
-  <div style="position:absolute;left:1076px;top:588px;font:700 11px Segoe UI;letter-spacing:2px;color:${T.gold}">MINIFIGS</div>
-  ${footer('Source: Rebrickable LEGO Database (rebrickable.com)')} ${prevNext()}`;
+  const selector = (x, y, title) => `${fig(x, y, 430, 118)}
+    <div style="position:absolute;left:${x}px;top:${y + 14}px;width:430px;text-align:center;font:700 14px Georgia,serif;color:${T.red}">${title}</div>`;
+  return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(3)}
+  ${step(56, 52, '✦')} ${eyebrow(112, 56, 'The Final Chapter · your turn')}
+  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">Take the Wand</div>
+  <div style="position:absolute;left:56px;top:126px;width:440px;font:italic 400 14px Georgia,serif;line-height:1.55;color:${T.ink2}">You have read the story — now choose your own path. Pick an era, a build size and a favourite character, and the book will find your perfect wizarding set.</div>
+  ${selector(56, 196, 'CHOOSE YOUR ERA')}
+  ${selector(56, 330, 'BUILD SIZE')}
+  ${selector(56, 464, 'FAVOURITE CHARACTER')}
+  ${fig(536, 196, 696, 300)} ${figCap(556, 214, 'YOUR PERFECT SET', 'choose all three to reveal your match')}
+  ${fig(536, 512, 222, 108)} ${figCap(552, 526, 'YEAR')}
+  ${fig(773, 512, 222, 108)} ${figCap(789, 526, 'PARTS')}
+  ${fig(1010, 512, 222, 108)} ${figCap(1026, 526, 'MINIFIGS')}
+  ${pageNo('IV')} ${turn()}`;
 }
 
-// ---------- SOURCES ----------
+// ================= SOURCES =================
 function sources() {
-  const scrim = `linear-gradient(180deg, rgba(6,9,16,.82) 0%, rgba(6,9,16,.9) 100%)`;
-  const row = (x, y, w, t, s) => `${card(x, y, w, 92)}<div style="position:absolute;left:${x + 22}px;top:${y + 20}px;font:700 14px Segoe UI;color:${T.white}">${t}</div><div style="position:absolute;left:${x + 22}px;top:${y + 46}px;width:${w - 44}px;font:400 12.5px Segoe UI;color:${T.mut}">${s}</div>`;
-  return `${sceneLayer('sources', scrim)}
-  ${chapterHead('Sources', 'THE FOOTNOTES', 'Sources & Credits', 'Every brick in this story is sourced. Data, tools and trademarks belong to their owners — cited here with thanks.')}
-  ${row(48, 196, 580, 'Rebrickable LEGO Database', 'Every set, part, colour, minifigure and photo — rebrickable.com. The foundation of the entire story.')}
-  ${row(652, 196, 580, 'Deneb (certified AppSource visual)', 'Daniel Marsh-Patrick. Declarative Vega-Lite charts inside Power BI — the true-colour palettes and blooms.')}
-  ${row(48, 308, 580, 'LEGO®', 'LEGO® is a trademark of The LEGO Group, used here for a non-commercial fan data-story. © The LEGO Group.')}
-  ${row(652, 308, 580, 'Harry Potter™ / Wizarding World', 'Trademarks of Warner Bros. Entertainment Inc. Used for a non-commercial fan data-story.')}
-  ${row(48, 420, 580, 'Cinematic artwork', 'Generated with Google Gemini 2.5 Flash Image for this entry — original brick-built wizarding scenes.')}
-  ${row(652, 420, 580, 'Contest', 'Power BI DataViz World Champs · Barcelona · Round 2. Brief and judging by the Microsoft Fabric community.')}
-  ${footer('Source: Rebrickable LEGO Database (rebrickable.com)')} ${prevNext()}`;
+  const rowH = (x, y, w, t, s) => `${fig(x, y, w, 96)}
+    <div style="position:absolute;left:${x + 20}px;top:${y + 18}px;font:700 14px Georgia,serif;color:${T.ink}">${t}</div>
+    <div style="position:absolute;left:${x + 20}px;top:${y + 44}px;width:${w - 40}px;font:400 12.5px Georgia,serif;line-height:1.45;color:${T.ink2}">${s}</div>`;
+  return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(4)}
+  ${step(56, 52, '?')} ${eyebrow(112, 56, 'The Footnotes')}
+  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">Sources & Credits</div>
+  <div style="position:absolute;left:56px;top:126px;width:900px;font:italic 400 13.5px Georgia,serif;color:${T.ink2}">Every brick in this story is sourced. Data, tools and trademarks belong to their owners — cited here with thanks.</div>
+  ${rowH(56, 176, 570, 'Rebrickable LEGO Database', 'Every set, part, colour, minifigure and photo — rebrickable.com. The foundation of the whole story.')}
+  ${rowH(646, 176, 586, 'Deneb (certified AppSource visual)', 'Daniel Marsh-Patrick — declarative Vega-Lite charts inside Power BI. The true-colour maps and blooms.')}
+  ${rowH(56, 288, 570, 'LEGO®', 'A trademark of The LEGO Group, used for a non-commercial fan data-story. © The LEGO Group.')}
+  ${rowH(646, 288, 586, 'Harry Potter™ / Wizarding World', 'Trademarks of Warner Bros. Entertainment Inc. Used for a non-commercial fan data-story.')}
+  ${rowH(56, 400, 570, 'Cinematic artwork', 'Original brick-built wizarding scenes generated with Google Gemini 2.5 Flash Image for this entry.')}
+  ${rowH(646, 400, 586, 'Contest', 'Power BI DataViz World Champs · Barcelona · Round 2. Brief & judging by the Microsoft Fabric community.')}
+  ${plate('sources', 476, 520, 330, 110)}
+  ${pageNo('✦')} ${turn()}`;
 }
 
 const PAGES = { cover, yellow, cameback, colours, dark, explore, sources };
 
-// ---------- render ----------
+// ---- render ----
 const only = process.argv.slice(2);
 mkdirSync(RES, { recursive: true });
 const browser = await chromium.launch();
 const bp = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 2 });
-const targets = Object.keys(PAGES).filter(p => !only.length || only.includes(p));
-for (const name of targets) {
-  const html = `<!doctype html><meta charset="utf-8"><body style="margin:0"><div style="position:relative;width:${W}px;height:${H}px;overflow:hidden;background:${T.ink0};font-family:Segoe UI">${PAGES[name]()}</div></body>`;
+for (const name of Object.keys(PAGES).filter(p => !only.length || only.includes(p))) {
+  const html = `<!doctype html><meta charset="utf-8"><body style="margin:0"><div style="position:relative;width:${W}px;height:${H}px;overflow:hidden;background:${T.edge};font-family:Georgia,serif">${PAGES[name]()}</div></body>`;
   const tmp = join(HERE, `_bg_${name}.html`);
   writeFileSync(tmp, html);
   await bp.goto(pathToFileURL(tmp).href);

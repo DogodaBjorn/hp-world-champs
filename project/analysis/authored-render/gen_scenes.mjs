@@ -46,6 +46,11 @@ const SCENES = {
   explore: `The interior of Ollivanders wand shop built from LEGO, towering shelves of dusty wand boxes receding into shadow, warm golden shafts of light with floating dust motes and magical sparks, a single wand glowing softly, inviting and mysterious, a sense of discovery and choice. Warm gold and deep brown, dark edges, negative space on the right. ${COMMON}`,
 
   sources: `The Hogwarts library at night built from LEGO, towering bookshelves of tiny spellbooks receding into darkness, warm candlelight on a reading table, quiet and scholarly, floating dust and faint gold sparkles, deep shadows. Muted gold and midnight palette, generous dark negative space. ${COMMON}`,
+
+  // --- spellbook textures (not LEGO scenes; override COMMON via full prompt) ---
+  parchment: `A high-resolution flat aged parchment paper texture filling the whole frame. Warm cream and tan tones, subtle brown foxing stains and faint water marks, delicate paper fibres, gently darkened and worn edges with a soft vignette, uneven handmade surface. Even soft lighting, flat top-down lay, completely empty. No text, no writing, no drawings, no objects, no logos, no watermark.`,
+
+  tome: `A closed antique leather-bound wizarding spellbook resting on a dark aged wooden table in warm candlelight. Deep oxblood and umber leather cover with an intricate gold-embossed filigree border, ornate corner flourishes and a central emblem, a dark red wax seal, a frayed silk ribbon bookmark peeking from the pages, brass corner guards, gilded page edges, aged and magical, cinematic shallow depth of field, rich shadows. Centred with dark negative space around it. No text, no letters, no words, no logos, no watermark.`,
 };
 
 const ai = new GoogleGenAI({ apiKey });
