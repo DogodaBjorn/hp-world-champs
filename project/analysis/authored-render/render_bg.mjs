@@ -182,8 +182,8 @@ function yellow() {
   ${callout(56, 250, '67', 'sets')}
   ${callout(214, 250, '267', 'avg parts')}
   ${plate('yellow', 56, 320, 430, 300)}
-  ${clue(232, 486)}
-  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate I · the Hogwarts Express · tap the ✦ to meet the yellow cast</div>
+  ${clue(232, 486)} ${clue(406, 558)}
+  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate I · the Hogwarts Express · tap a ✦ to meet the yellow cast</div>
   ${fig(512, 60, 720, 300)} ${figCap(528, 74, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect · year & size runes apply')}
   ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from the left')}
   ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · ITS TRUE COLOURS', 'each mark a real brick hex')}
@@ -207,7 +207,8 @@ function cameback() {
   <div style="position:absolute;left:146px;top:150px;width:340px;font:400 14.5px Georgia,serif;line-height:1.58;color:${T.ink}">fter seven silent years the story returned in ${gink('2018')} — bigger sets, bolder builds, and a burst of colour. Nearly ${gink('triple')} the scale of the yellow years.</div>
   ${callout(56, 250, '142', 'sets')} ${callout(214, 250, '731', 'avg parts')}
   ${plate('cameback', 56, 320, 430, 300)}
-  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate II · fireworks over the returning castle</div>
+  ${clue(150, 470)} ${clue(398, 556)}
+  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate II · the colour returns · tap a ✦ to meet the new cast</div>
   ${fig(512, 60, 720, 300)} ${figCap(528, 74, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect')}
   ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from the left')}
   ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · FROM YELLOW TO COLOUR', 'the palette blooms to full spectrum')}
@@ -226,9 +227,9 @@ function goldRibbon(x, y, w, text) {
 }
 // a "minifig-tip": a transparent minifig + a parchment speech-scroll (a hidden
 // reveal shown when a clue is tapped). Rendered standalone on transparent bg.
-function minifigTip(cut, phrase, name, accent) {
-  return `<img src="${uri(cut)}" style="position:absolute;left:8px;bottom:8px;height:224px;filter:drop-shadow(0 12px 16px rgba(0,0,0,.5))">
-  <div style="position:absolute;left:158px;top:18px;width:258px;padding:15px 18px;background:#000 url('${PARCH}') center/cover;border:2px solid ${T.goldLeaf};border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.45)">
+function minifigTip(cut, phrase, name, accent, figH = 224, sx = 158, sw = 258) {
+  return `<img src="${uri(cut)}" style="position:absolute;left:8px;bottom:8px;height:${figH}px;filter:drop-shadow(0 12px 16px rgba(0,0,0,.5))">
+  <div style="position:absolute;left:${sx}px;top:18px;width:${sw}px;padding:15px 18px;background:#000 url('${PARCH}') center/cover;border:2px solid ${T.goldLeaf};border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.45)">
     <div style="font:800 11px Segoe UI;letter-spacing:1.5px;color:${accent};text-transform:uppercase;margin-bottom:6px">${name}</div>
     <div style="font:italic 400 14px Georgia,serif;line-height:1.5;color:${T.ink}">${phrase}</div>
     <div style="position:absolute;left:-15px;top:64px;width:0;height:0;border-top:9px solid transparent;border-bottom:9px solid transparent;border-right:16px solid ${T.goldLeaf}"></div>
@@ -339,9 +340,12 @@ function sources() {
 const PAGES = { cover, yellow, cameback, colours, dark, explore, sources };
 const SIZES = { cover: { W: CW, H: CH } };   // portrait cover; every other page landscape
 const TIPS = {
-  tip_harry: () => minifigTip('cut_harry', "Look closer — this one set hides <b>55</b> real brick colours. Only a single LEGO set ever built uses more.", 'Harry Potter', T.red),
-  tip_vold: () => minifigTip('cut_vold', "All this colour… how <i>garish</i>. Come find me in the greys, where <b>97.9%</b> of a set is shadow.", 'Lord Voldemort', '#7A5A1C'),
-  tip_yellow_duo: () => duoTip('cut_ron_y', 'cut_hermione_y', 'Ron & Hermione · the yellow years', `We came in classic yellow — every early Harry Potter minifig did. Until LEGO gave the wizards real skin in 2004, all ${nchip('NN')} of us wore the same sunshine face.`, '#B8912E'),
+  tip_harry: { w: 462, h: 250, fn: () => minifigTip('cut_harry', "Look closer — this one set hides <b>55</b> real brick colours. There's only one LEGO set ever built that has more colours.", 'Harry Potter', T.red) },
+  tip_vold: { w: 462, h: 250, fn: () => minifigTip('cut_vold', "All this colour… how <i>garish</i>. Come find me in the greys, where <b>97.9%</b> of a set is shadow.", 'Lord Voldemort', '#7A5A1C') },
+  tip_dementor: { w: 462, h: 250, fn: () => minifigTip('cut_dementor', "Seven pieces of pure dread — no minifig in the Yellow Years is built from more.", 'The Dementor · largest of the era', '#4A5A3E') },
+  tip_marge: { w: 528, h: 250, fn: () => minifigTip('cut_marge', "Fourteen pieces and still inflating — no Harry Potter minifig ever built is bigger than me.", 'Aunt Marge · the largest of all', T.red, 200, 232, 250) },
+  tip_yellow_duo: { w: 586, h: 252, fn: () => duoTip('cut_ron_y', 'cut_hermione_y', 'Ron & Hermione · the yellow years', `We came in classic yellow — every early Harry Potter minifig did. Until LEGO gave the wizards real skin in 2004, all ${nchip('NN')} of us wore the same sunshine face.`, '#B8912E') },
+  tip_colour_duo: { w: 586, h: 252, fn: () => duoTip('cut_ron_c', 'cut_hermione_c', 'Ron & Hermione · the colour years', `Real skin at last! From 2004 we came in true colour — ${nchip('NN')} Harry Potter minifigs now wear proper faces, not sunshine yellow.`, '#7C2B22') },
 };
 
 // ---- render ----
@@ -367,9 +371,9 @@ for (const name of Object.keys(PAGES).filter(p => !only.length || only.includes(
 
 // transparent minifig-tip reveals (hidden overlay visuals, shown on clue tap)
 if (!only.length || only.includes('tips')) {
-  await bp.setViewportSize({ width: 460, height: 260 });
-  for (const [name, fn] of Object.entries(TIPS)) {
-    const html = `<!doctype html><meta charset="utf-8"><body style="margin:0"><div id="tip" style="position:relative;width:440px;height:250px;font-family:Georgia,serif">${fn()}</div></body>`;
+  for (const [name, t] of Object.entries(TIPS)) {
+    await bp.setViewportSize({ width: t.w + 24, height: t.h + 12 });
+    const html = `<!doctype html><meta charset="utf-8"><body style="margin:0"><div id="tip" style="position:relative;width:${t.w}px;height:${t.h}px;font-family:Georgia,serif">${t.fn()}</div></body>`;
     await shoot(html, '#tip', join(RES, `${name}.png`), { omitBackground: true });
     console.log('baked', name, '(transparent)');
   }
@@ -381,8 +385,12 @@ if (!only.length || only.includes('qa')) {
   const wrap = (page, tipHtml, out) => shoot(
     `<!doctype html><meta charset="utf-8"><body style="margin:0"><div style="position:relative;width:${W}px;height:${H}px;overflow:hidden;background:${T.edge};font-family:Georgia,serif">${page}${tipHtml}</div></body>`,
     'div', join(HERE, out));
-  await wrap(colours(), `<div style="position:absolute;left:150px;top:250px;width:440px;height:250px">${TIPS.tip_harry()}</div>`, `_qa_colours_tip.png`);
-  await wrap(yellow(), `<div style="position:absolute;left:120px;top:346px;width:540px;height:250px">${TIPS.tip_yellow_duo()}</div>`, `_qa_yellow_tip.png`);
+  const box = (x, y, t) => `<div style="position:absolute;left:${x}px;top:${y}px;width:${t.w}px;height:${t.h}px">${t.fn()}</div>`;
+  await wrap(colours(), box(150, 250, TIPS.tip_harry), `_qa_colours_tip.png`);
+  await wrap(yellow(), box(110, 344, TIPS.tip_yellow_duo), `_qa_yellow_tip.png`);
+  await wrap(yellow(), box(150, 360, TIPS.tip_dementor), `_qa_yellow_egg.png`);
+  await wrap(cameback(), box(110, 344, TIPS.tip_colour_duo), `_qa_cameback_tip.png`);
+  await wrap(cameback(), box(120, 360, TIPS.tip_marge), `_qa_cameback_egg.png`);
   console.log('baked QA tip previews');
 }
 
