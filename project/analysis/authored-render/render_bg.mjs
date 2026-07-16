@@ -344,8 +344,8 @@ const TIPS = {
   tip_vold: { w: 462, h: 250, fn: () => minifigTip('cut_vold', "All this colour… how <i>garish</i>. Come find me in the greys, where <b>97.9%</b> of a set is shadow.", 'Lord Voldemort', '#7A5A1C') },
   tip_dementor: { w: 462, h: 250, fn: () => minifigTip('cut_dementor', "Seven pieces of pure dread — no minifig in the Yellow Years is built from more.", 'The Dementor · largest of the era', '#4A5A3E') },
   tip_marge: { w: 528, h: 250, fn: () => minifigTip('cut_marge', "Fourteen pieces and still inflating — no Harry Potter minifig ever built is bigger than me.", 'Aunt Marge · the largest of all', T.red, 200, 232, 250) },
-  tip_yellow_duo: { w: 586, h: 252, fn: () => duoTip('cut_ron_y', 'cut_hermione_y', 'Ron & Hermione · the yellow years', `We came in classic yellow — every early Harry Potter minifig did. Until LEGO gave the wizards real skin in 2004, all ${nchip('NN')} of us wore the same sunshine face.`, '#B8912E') },
-  tip_colour_duo: { w: 586, h: 252, fn: () => duoTip('cut_ron_c', 'cut_hermione_c', 'Ron & Hermione · the colour years', `Real skin at last! From 2004 we came in true colour — ${nchip('NN')} Harry Potter minifigs now wear proper faces, not sunshine yellow.`, '#7C2B22') },
+  tip_yellow_duo: { w: 586, h: 252, fn: () => duoTip('cut_ron_y', 'cut_hermione_y', 'Ron & Hermione · the yellow years', `Back then we were a small cast — just ${nchip('134')} Harry Potter minifigures in the whole Yellow Years, the first of us in classic sunshine yellow.`, '#B8912E') },
+  tip_colour_duo: { w: 586, h: 252, fn: () => duoTip('cut_ron_c', 'cut_hermione_c', 'Ron & Hermione · the colour years', `The return brought ${nchip('442')} minifigures — more than triple the Yellow Years — and every one now wears a real, flesh-toned face.`, '#7C2B22') },
 };
 
 // ---- render ----
