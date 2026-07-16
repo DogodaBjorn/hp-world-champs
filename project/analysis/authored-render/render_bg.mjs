@@ -113,25 +113,39 @@ function turn() {
   return `<div style="position:absolute;right:64px;bottom:16px;font:italic 600 13px Georgia,serif;color:${T.red}">turn the page ❦</div>
   <div style="position:absolute;left:64px;bottom:16px;font:italic 600 13px Georgia,serif;color:${T.ink2}">❦ back</div>`;
 }
+// transparent LEGO cutout floating on the page (no white box)
+function cutImg(n, x, y, w) {
+  return `<img src="${uri(n)}" style="position:absolute;left:${x}px;top:${y}px;width:${w}px;filter:drop-shadow(0 8px 12px rgba(0,0,0,.45))">`;
+}
 function eyebrow(x, y, t) {
   return `<div style="position:absolute;left:${x}px;top:${y}px;font:700 12px Segoe UI;letter-spacing:4px;color:${T.gold};text-transform:uppercase">${t}</div>`;
 }
 const gink = (t) => `<span style="color:${T.red};font-weight:700">${t}</span>`;
 
-// ================= COVER (the closed tome) =================
+// ================= FRONT PAGE (the open title spread) =================
 function cover() {
-  return `<div style="position:absolute;inset:0;background:#000 url('${uri('tome')}') center/cover"></div>
-  <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(10,6,3,.86) 0%, rgba(10,6,3,.5) 38%, transparent 62%)"></div>
-  ${eyebrow(64, 70, 'A LEGO Harry Potter Story · 2001–2026')}
-  <div style="position:absolute;left:60px;top:150px;font:700 15px Segoe UI;letter-spacing:2px;color:${T.goldLeaf}">✦ ✦ ✦</div>
-  <div style="position:absolute;left:58px;top:172px;font:800 74px Georgia,serif;line-height:1.0;color:#F0E6CE;text-shadow:0 2px 24px rgba(0,0,0,.7)">The Boy<br>Who Came<br><span style="color:${T.goldLeaf}">Back</span></div>
-  <div style="position:absolute;left:64px;top:452px;width:150px;height:2px;background:${T.goldBright};box-shadow:0 0 12px ${T.goldBright}"></div>
-  <div style="position:absolute;left:64px;top:472px;width:470px;font:italic 400 17px Georgia,serif;line-height:1.5;color:#D9CBAE">A wizarding brick history in five chapters — from the yellow years, through the silence, to the most colourful magic ever built.</div>
-  <div style="position:absolute;left:64px;top:558px;display:flex;align-items:center;gap:10px">
-    <svg width="30" height="20" viewBox="0 0 32 22" fill="none" stroke="${T.goldBright}" stroke-width="1.5"><rect x="2" y="6" width="28" height="14" rx="2"/><rect x="7" y="2" width="6" height="4" rx="1"/><rect x="19" y="2" width="6" height="4" rx="1"/></svg>
-    <span style="font:700 12px Segoe UI;letter-spacing:2.5px;color:${T.goldBright}">A LEGO® BRICK HISTORY · 209 SETS · 576 MINIFIGURES · AGES 8–99</span></div>
-  <div style="position:absolute;left:64px;top:596px;padding:13px 26px;border:1.5px solid ${T.goldBright};border-radius:4px;background:rgba(20,10,4,.5);font:600 14px Georgia,serif;letter-spacing:1px;color:${T.goldLeaf}">❦  Open the book</div>
-  <div style="position:absolute;left:64px;bottom:22px;font:12px 'Consolas',monospace;color:${T.goldBright}bb">Rebrickable LEGO Database · rebrickable.com</div>`;
+  return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)}
+  <div style="position:absolute;left:56px;top:48px;width:1px;height:0"></div>
+  <!-- LEFT PAGE: title + key takeaway -->
+  <div style="position:absolute;left:64px;top:60px;font:700 15px Segoe UI;letter-spacing:5px;color:${T.gold}">HARRY POTTER LEGO</div>
+  <div style="position:absolute;left:60px;top:84px;font:800 58px Georgia,serif;line-height:.98;color:${T.ink}">The Boy Who<br><span style="color:${T.goldBright}">Came Back</span></div>
+  <div style="position:absolute;left:64px;top:224px;width:150px;height:2px;background:${T.gold}"></div>
+  <div style="position:absolute;left:64px;top:242px;display:flex;align-items:center;gap:9px">
+    <span style="width:30px;height:30px;border:1.5px solid ${T.gold};border-radius:50%;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="${T.red}" stroke-width="1.6"><path d="M12 2 L13.5 9 L21 12 L13.5 15 L12 22 L10.5 15 L3 12 L10.5 9 Z"/></svg></span>
+    <span style="font:700 12px Segoe UI;letter-spacing:2px;color:${T.red}">KEY TAKEAWAY</span></div>
+  ${dropCap('F', 64, 292)}
+  <div style="position:absolute;left:154px;top:294px;width:330px;font:400 14.5px Georgia,serif;line-height:1.62;color:${T.ink}">or seven years, Harry vanished from the brick shelves. The first era ended in ${gink('2011')} — then silence, until ${gink('2018')} brought him back at ${gink('nearly triple')} the scale: bigger sets, more colours, ${gink('576')} minifigures across two builds of one story.</div>
+  <div style="position:absolute;left:64px;top:512px;display:flex;align-items:center;gap:10px">
+    <svg width="28" height="18" viewBox="0 0 32 22" fill="none" stroke="${T.gold}" stroke-width="1.5"><rect x="2" y="6" width="28" height="14" rx="2"/><rect x="7" y="2" width="6" height="4" rx="1"/><rect x="19" y="2" width="6" height="4" rx="1"/></svg>
+    <span style="font:700 11px Segoe UI;letter-spacing:2px;color:${T.gold}">A LEGO® BRICK HISTORY · 2001–2026 · AGES 8–99</span></div>
+  <div style="position:absolute;left:64px;bottom:22px;font:11px 'Consolas',monospace;color:${T.ink2}">Rebrickable LEGO Database · rebrickable.com</div>
+  <!-- RIGHT PAGE: the outstanding gap headline + the gap visual -->
+  <div style="position:absolute;left:520px;top:60px;font:italic 700 13px Georgia,serif;color:${T.ink2}">the whole story, in one number —</div>
+  <div style="position:absolute;left:518px;top:84px;width:720px;font:800 38px Georgia,serif;line-height:1.05;color:${T.ink}">It took <span style="color:${T.red}">seven years</span><br>for Harry to reappear.</div>
+  ${fig(520, 196, 712, 348)}
+  ${figCap(540, 212, 'FIGURE · SETS SHIPPED PER YEAR · 2001–2026', 'the silent years 2012–2017 stand empty on the shelf')}
+  ${callout(520, 566, '209', 'sets')} ${callout(700, 566, '576', 'minifigs')} ${callout(910, 566, '7', 'years silent')}
+  <div style="position:absolute;right:64px;bottom:16px;font:italic 600 13px Georgia,serif;color:${T.red}">open the book ❦</div>`;
 }
 
 // ================= CHAPTER I: The Yellow Years =================
@@ -204,6 +218,7 @@ function dark() {
   <div style="position:absolute;left:64px;top:240px;font:800 92px Georgia,serif;color:#CFC4A8;text-shadow:0 0 20px rgba(0,0,0,.5)">97.9%</div>
   <div style="position:absolute;left:68px;top:356px;font:italic 400 15px Georgia,serif;color:#A89A7E">of every brick is greyscale</div>
   ${plate('dark', 56, 410, 430, 240)}
+  ${cutImg('cut_vold', 300, 344, 168)}
   ${fig(512, 60, 720, 340)} ${figCap(528, 74, 'FIGURE 1 · COLOUR COMPOSITION', 'almost entirely grey — every mark in true hex')}
   ${fig(512, 420, 720, 200)} ${figCap(528, 434, 'FIGURE 2 · GREYEST vs BRIGHTEST', 'the dark side meets the chamber of colours')}
   <div style="position:absolute;left:64px;bottom:52px;padding:12px 22px;border:1.5px solid ${T.goldBright};border-radius:4px;background:rgba(20,14,6,.5);font:600 13px Georgia,serif;color:${T.goldLeaf}">❦ back to the colour</div>
