@@ -163,9 +163,6 @@ function cover() {
   <div style="position:absolute;left:88px;top:796px;width:624px;text-align:center;font:800 30px Georgia,serif;line-height:1.1;color:${T.ink}">It took <span style="color:${T.red}">seven years</span> for Harry to reappear.</div>
   ${figCap(90, 872, 'SETS SHIPPED PER YEAR · 2001–2026', 'the silent years 2012–2017 stand empty on the shelf')}
   ${fig(90, 908, 620, 150)}
-  <!-- highlight the seven silent years: a faint band + label over the empty middle -->
-  <div style="position:absolute;left:300px;top:924px;width:196px;height:112px;background:linear-gradient(180deg, rgba(124,43,34,.12), rgba(124,43,34,.03));border-left:1px dashed rgba(124,43,34,.45);border-right:1px dashed rgba(124,43,34,.45);border-radius:2px"></div>
-  <div style="position:absolute;left:286px;top:1030px;width:224px;text-align:center;font:italic 700 12px Georgia,serif;color:${T.red}">↑ seven silent years ↑</div>
   <div style="position:absolute;left:64px;top:1074px;width:672px;text-align:center;font:700 12px Georgia,serif;color:${T.ink2}">209 sets&nbsp;&nbsp;·&nbsp;&nbsp;576 minifigures&nbsp;&nbsp;·&nbsp;&nbsp;7 silent years</div>
   <!-- footer -->
   <div style="position:absolute;left:0;top:1134px;width:${CW}px;text-align:center;font:italic 600 15px Georgia,serif;color:#E8CF88">open the book ❦</div>`;

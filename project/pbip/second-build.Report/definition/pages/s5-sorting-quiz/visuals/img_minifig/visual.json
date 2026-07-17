@@ -75,23 +75,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "85ea910101e747f10473",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Minifigs"
-              }
-            },
-            "Property": "img_url"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

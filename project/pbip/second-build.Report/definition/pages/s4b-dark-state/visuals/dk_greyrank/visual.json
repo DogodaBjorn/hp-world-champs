@@ -110,7 +110,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -240,6 +240,22 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       ],
@@ -658,7 +674,7 @@
         }
       },
       {
-        "name": "e07357a8ee67a6982d31",
+        "name": "c6afcdae2a64e4ba79ad",
         "field": {
           "Measure": {
             "Expression": {

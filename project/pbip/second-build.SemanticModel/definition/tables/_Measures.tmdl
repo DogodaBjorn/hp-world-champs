@@ -183,6 +183,17 @@ table _Measures
 		displayFolder: 04 Themes
 		lineageTag: d3969b97-7fe3-43f5-9994-56e73a366ddb
 
+	/// Cover chart: a full-height marker over the seven silent years (2012–2017), so the
+	/// gap is highlighted inside the chart (a 2nd series) rather than on the background.
+	measure 'Silent Years' =
+			VAR yr = SELECTEDVALUE ( DimYear[Year] )
+			VAR mx = MAXX ( ALLSELECTED ( DimYear[Year] ), [Total Sets] )
+			RETURN
+			IF ( yr >= 2012 && yr <= 2017, mx, BLANK () )
+		formatString: #,0
+		displayFolder: 02 Display\Cover
+		lineageTag: 7c2b0a41-9d3e-4f6a-8b12-5e9c3a7d1f04
+
 	column Value
 		dataType: string
 		isHidden

@@ -138,23 +138,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "689c6201b673a3168662",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Minifigs"
-              }
-            },
-            "Property": "character_name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

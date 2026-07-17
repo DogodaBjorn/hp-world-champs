@@ -176,37 +176,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "50cdf54250f78d0a8d06",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Colors"
-              }
-            },
-            "Property": "Color Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a9d78e7e4a5941e392cc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Color Parts"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

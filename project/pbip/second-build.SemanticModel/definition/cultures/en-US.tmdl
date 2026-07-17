@@ -6524,6 +6524,90 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "table_measures.theme_colour_parts": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Theme Colour Parts"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Theme Colour Parts": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "themecolors.root_theme": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ThemeColors",
+			          "ConceptualProperty": "Root Theme"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Root Theme": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "themecolors.color_hex": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ThemeColors",
+			          "ConceptualProperty": "color_hex"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color_hex": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "themecolors.is_grayscale": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ThemeColors",
+			          "ConceptualProperty": "Is Grayscale"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Is Grayscale": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {

@@ -25,6 +25,14 @@ table ThemeColors
 		summarizeBy: none
 		sourceColumn: color_hex
 
+	column Luminance
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: 1a6e4b90-8c72-4d3f-b5e1-9f0c2a4d7e63
+		summarizeBy: none
+		sourceColumn: Luminance
+
 	column 'Is Grayscale'
 		dataType: boolean
 		isHidden
@@ -64,9 +72,10 @@ table ThemeColors
 				    PartsInScope = Table.NestedJoin(NoSpares, {"inventory_id"}, InvTheme, {"inventory_id"}, "inv", JoinKind.Inner),
 				    WithThemeCol = Table.ExpandTableColumn(PartsInScope, "inv", {"Root Theme"}),
 				    WithColor = Table.NestedJoin(WithThemeCol, {"color_id"}, Colors, {"color_id"}, "c", JoinKind.Inner),
-				    WithGray = Table.ExpandTableColumn(WithColor, "c", {"Hex", "IsGrayscale", "IsPseudoColor"}),
+				    WithGray = Table.ExpandTableColumn(WithColor, "c", {"Hex", "IsGrayscale", "IsPseudoColor", "Luminance"}),
 				    RealColors = Table.SelectRows(WithGray, each not [IsPseudoColor]),
-				    Grouped = Table.Group(RealColors, {"Root Theme", "color_id"}, {{"part_count", each List.Sum([quantity]), Int64.Type}, {"color_hex", each List.First([Hex]), type text}, {"IsGrayscale", each List.First([IsGrayscale]), type logical}}),
+				    Grouped = Table.Group(RealColors, {"Root Theme", "color_id"}, {{"part_count", each List.Sum([quantity]), Int64.Type}, {"color_hex", each List.First([Hex]), type text}, {"IsGrayscale", each List.First([IsGrayscale]), type logical}, {"Luminance", each List.First([Luminance]), type number}}),
 				    Labeled = Table.AddColumn(Grouped, "Brick Type", each if [IsGrayscale] then "Grey" else "Colour", type text)
 				in
 				    Labeled
+

@@ -47,6 +47,20 @@
               },
               "queryRef": "_Measures.Total Sets",
               "nativeQueryRef": "Total Sets"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Silent Years"
+                }
+              },
+              "queryRef": "_Measures.Silent Years",
+              "nativeQueryRef": "Silent Years"
             }
           ]
         }
@@ -98,26 +112,52 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B8912E'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Total Sets"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D98B80'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Silent Years"
+          }
+        }
+      ]
+    }
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "2b00753487a554ab4eac",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Total Sets"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "bd7cb93f72ebd17a8e5f",
+        "name": "f78140e2eaa39c526f05",
         "field": {
           "Column": {
             "Expression": {
@@ -128,8 +168,7 @@
             "Property": "Year"
           }
         },
-        "type": "Advanced",
-        "howCreated": "User",
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -142,21 +181,45 @@
           "Where": [
             {
               "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 3,
-                  "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "d"
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
+                              }
+                            },
+                            "Property": "Year"
+                          }
                         }
-                      },
-                      "Property": "Year"
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "2026L"
+                            }
+                          }
+                        ]
+                      ]
                     }
-                  },
-                  "Right": {
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
                     "Literal": {
-                      "Value": "'2027'"
+                      "Value": "true"
                     }
                   }
                 }
@@ -164,6 +227,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "3b986253a8e80b92d16d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Total Sets"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

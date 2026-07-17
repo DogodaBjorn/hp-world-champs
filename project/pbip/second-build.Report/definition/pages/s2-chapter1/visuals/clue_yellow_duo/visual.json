@@ -5,7 +5,7 @@
     "x": 230.54187192118226,
     "y": 485.02463054187194,
     "z": 7000,
-    "height": 41.674876847290641,
+    "height": 41.67487684729064,
     "width": 42.5615763546798,
     "tabOrder": 6000
   },
@@ -104,9 +104,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0.6
+                    "Literal": {
+                      "Value": "'#000000'"
                     }
                   }
                 }
@@ -115,7 +114,14 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "54D"
+                  "Value": "100D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -129,7 +135,25 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "55D"
+                  "Value": "100D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
                 }
               }
             }

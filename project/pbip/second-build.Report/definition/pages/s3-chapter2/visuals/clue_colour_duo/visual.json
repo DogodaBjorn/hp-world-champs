@@ -3,10 +3,10 @@
   "name": "clue_colour_duo",
   "position": {
     "x": 139.21182266009853,
-    "y": 461.08374384236453,
+    "y": 461.0837438423645,
     "z": 8000,
-    "height": 41.674876847290641,
-    "width": 41.674876847290641,
+    "height": 41.67487684729064,
+    "width": 41.67487684729064,
     "tabOrder": 7000
   },
   "visual": {
@@ -104,9 +104,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0.6
+                    "Literal": {
+                      "Value": "'#000000'"
                     }
                   }
                 }
@@ -115,7 +114,14 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "54D"
+                  "Value": "100D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -129,7 +135,25 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "55D"
+                  "Value": "100D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
                 }
               }
             }

@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_dementor",
   "position": {
-    "x": 404.33497536945811,
-    "y": 556.84729064039414,
+    "x": 404.3349753694581,
+    "y": 556.8472906403941,
     "z": 6000,
-    "height": 41.674876847290641,
+    "height": 41.67487684729064,
     "width": 42.5615763546798,
     "tabOrder": 5000
   },
@@ -104,9 +104,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0.6
+                    "Literal": {
+                      "Value": "'#000000'"
                     }
                   }
                 }
@@ -115,7 +114,14 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "54D"
+                  "Value": "100D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -129,7 +135,25 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "55D"
+                  "Value": "100D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
                 }
               }
             }

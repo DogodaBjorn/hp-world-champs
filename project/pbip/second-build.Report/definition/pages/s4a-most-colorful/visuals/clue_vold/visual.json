@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_vold",
   "position": {
-    "x": 444.49848024316111,
+    "x": 444.4984802431611,
     "y": 506.74772036474167,
     "z": 6000,
-    "height": 41.823708206686931,
+    "height": 41.82370820668693,
     "width": 42.796352583586625,
     "tabOrder": 5000
   },
@@ -104,9 +104,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0.6
+                    "Literal": {
+                      "Value": "'#000000'"
                     }
                   }
                 }
@@ -115,7 +114,14 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "54D"
+                  "Value": "100D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -129,7 +135,25 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "55D"
+                  "Value": "100D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
                 }
               }
             }

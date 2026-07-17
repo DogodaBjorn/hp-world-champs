@@ -3,10 +3,10 @@
   "name": "clue_appearances",
   "position": {
     "x": 249.16256157635468,
-    "y": 577.24137931034488,
+    "y": 577.2413793103449,
     "z": 7000,
     "height": 42.5615763546798,
-    "width": 41.674876847290641,
+    "width": 41.67487684729064,
     "tabOrder": 6000
   },
   "visual": {
@@ -104,9 +104,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0.6
+                    "Literal": {
+                      "Value": "'#000000'"
                     }
                   }
                 }
@@ -115,7 +114,14 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "54D"
+                  "Value": "100D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -129,7 +135,25 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "55D"
+                  "Value": "100D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
                 }
               }
             }
