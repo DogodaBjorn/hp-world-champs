@@ -194,6 +194,18 @@ table _Measures
 		displayFolder: 02 Display\Cover
 		lineageTag: 7c2b0a41-9d3e-4f6a-8b12-5e9c3a7d1f04
 
+	/// Cast explorer (Chapter IV): how many distinct sets a minifig design appears in — the y-axis of the swarm.
+	measure 'Fig Appearances' = DISTINCTCOUNT ( Minifigs[set_num] )
+		formatString: #,0
+		displayFolder: 05 Cast Explorer
+		lineageTag: 4b7e2c19-8a3d-4f61-9c02-1e5a7d3b6f28
+
+	/// Cast explorer (Chapter IV): the year a minifig design first appeared — the x-axis of the swarm.
+	measure 'Fig First Year' = MIN ( Minifigs[year] )
+		formatString: 0
+		displayFolder: 05 Cast Explorer
+		lineageTag: 9d1f3a4c-6b28-4e57-8a90-2c7e5f1b8d43
+
 	column Value
 		dataType: string
 		isHidden

@@ -315,23 +315,17 @@ function sealSpot(x, y) {
 }
 function explore() {
   return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(3)}
-  ${step(56, 52, '✦')} ${eyebrow(112, 56, 'The Final Chapter · your turn')}
-  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">Match the Minifig</div>
-  <div style="position:absolute;left:56px;top:126px;width:760px;font:italic 400 14px Georgia,serif;line-height:1.5;color:${T.ink2}">Choose a character and one of their minifigures — then test your wizarding knowledge: guess the era it came from and a set it appears in. The book will seal your answer ✓ or ✗.</div>
-  ${numStep(56, 190, '1')} <div style="position:absolute;left:100px;top:196px;font:700 13px Georgia,serif;color:${T.red}">CHOOSE YOUR CHARACTER</div>
-  ${fig(56, 228, 388, 92)}
-  ${numStep(56, 340, '2')} <div style="position:absolute;left:100px;top:346px;font:700 13px Georgia,serif;color:${T.red}">PICK ONE OF THEIR MINIFIGS</div>
-  ${fig(56, 378, 388, 92)}
-  <div style="position:absolute;left:56px;top:496px;font:700 12px Segoe UI;letter-spacing:1.5px;color:${T.red}">YOUR MINIFIG</div>
-  ${productCard(110, 520, 270, 128, 'the minifig you chose', '')}
-  ${numStep(478, 190, '3')} <div style="position:absolute;left:522px;top:196px;font:700 13px Georgia,serif;color:${T.red}">WHICH ERA IS IT FROM?</div>
-  ${fig(478, 228, 754, 150)}
-  ${figCap(498, 244, 'guess: First Build or Second Build', 'the book reveals if you are right')}
-  ${sealSpot(1150, 274)}
-  ${numStep(478, 398, '4')} <div style="position:absolute;left:522px;top:404px;font:700 13px Georgia,serif;color:${T.red}">WHICH SET DOES IT APPEAR IN?</div>
-  ${fig(478, 436, 754, 204)}
-  ${figCap(498, 452, 'guess a set — does this minifig live there?', 'a sealed ✓ if it does')}
-  ${sealSpot(1150, 500)}
+  ${step(56, 52, '✦')} ${eyebrow(112, 56, 'The Final Chapter · the whole cast')}
+  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">The Cast Assembles</div>
+  <div style="position:absolute;left:56px;top:126px;width:1176px;font:italic 400 14px Georgia,serif;line-height:1.5;color:${T.ink2}">Every ${gink('Harry Potter')} minifig design ever made — one dot each, placed by the year it first appeared and how many sets it comes to live in. Watch the cast fall silent through the lost years, then flood back in flesh and colour. ${gink('Hover any wizard')}; pick one on the left to meet them.</div>
+  <!-- left column: find-a-wizard + portrait -->
+  <div style="position:absolute;left:58px;top:188px;font:700 12px Segoe UI;letter-spacing:1.5px;color:${T.red}">FIND A WIZARD</div>
+  ${fig(56, 214, 280, 214)}
+  <div style="position:absolute;left:58px;top:444px;font:700 12px Segoe UI;letter-spacing:1.5px;color:${T.red}">THEIR FACES THROUGH THE YEARS</div>
+  ${fig(56, 470, 280, 158)}
+  <!-- the swarm -->
+  ${fig(360, 200, 872, 428)}
+  ${figCap(376, 214, 'FIGURE · THE CAST, YEAR BY YEAR', 'each dot a minifig design · first appearance year across → sets it appears in ↑ · classic yellow vs modern flesh')}
   ${pageNo('IV')} ${turn()}`;
 }
 

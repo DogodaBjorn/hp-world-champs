@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "img_minifig",
   "position": {
-    "x": 110,
-    "y": 520,
+    "x": 68,
+    "y": 486,
     "z": 3000,
-    "height": 128,
-    "width": 270,
+    "height": 130,
+    "width": 256,
     "tabOrder": 2000
   },
   "visual": {
