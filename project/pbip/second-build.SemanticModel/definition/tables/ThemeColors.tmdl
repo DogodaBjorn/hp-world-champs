@@ -1,0 +1,72 @@
+/// SCENARIO CONTEXT (disconnected): per-theme brick-colour breakdown with the
+/// real hex of every colour, for the dark chamber's true-colour composition
+/// (Star Wars vs Harry Potter — grey stays grey, the colour part a real rainbow).
+/// Additive to ThemeGreyscale; same firewall-safe references. Grain: Root Theme x colour.
+table ThemeColors
+	lineageTag: 1ec90937-97e9-4fcc-84c6-14460dd83562
+
+	column 'Root Theme'
+		dataType: string
+		lineageTag: 7ec5cfb5-5c40-49a5-98a0-caa07dabae10
+		summarizeBy: none
+		sourceColumn: Root Theme
+
+	column color_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b8f0acf7-5dd3-4eac-a84b-0c61814fed2b
+		summarizeBy: none
+		sourceColumn: color_id
+
+	column color_hex
+		dataType: string
+		lineageTag: f2d15b3f-3868-42e4-b07c-bc7806771aac
+		summarizeBy: none
+		sourceColumn: color_hex
+
+	column 'Is Grayscale'
+		dataType: boolean
+		isHidden
+		lineageTag: c9f18f6a-ed3d-4c0e-804a-4010966ce394
+		summarizeBy: none
+		sourceColumn: IsGrayscale
+
+	column 'Brick Type'
+		dataType: string
+		lineageTag: adcfd64d-d1d7-4169-aefc-ef3ceb70cac0
+		summarizeBy: none
+		sourceColumn: Brick Type
+
+	column part_count
+		dataType: int64
+		formatString: #,0
+		lineageTag: d9bc9f35-0c58-442f-a262-4a534f47686d
+		summarizeBy: sum
+		sourceColumn: part_count
+
+	partition ThemeColors = m
+		mode: import
+		source =
+				let
+				    // References only (RawSets + ThemesResolved + V1Inventories +
+				    // RawInventoryParts + Colors) — the SetColors firewall-safe pattern.
+				    Themes = {"Star Wars", "Harry Potter", "Friends", "City"},
+				    SetsTyped = Table.TransformColumnTypes(RawSets, {{"set_num", type text}, {"theme_id", Int64.Type}}),
+				    WithTheme = Table.NestedJoin(SetsTyped, {"theme_id"}, ThemesResolved, {"id"}, "T", JoinKind.LeftOuter),
+				    WithRoot = Table.ExpandTableColumn(WithTheme, "T", {"Root Theme"}),
+				    Curated = Table.SelectRows(WithRoot, each List.Contains(Themes, [Root Theme])),
+				    SetTheme = Table.SelectColumns(Curated, {"set_num", "Root Theme"}),
+				    InvJoin = Table.NestedJoin(V1Inventories, {"set_num"}, SetTheme, {"set_num"}, "st", JoinKind.Inner),
+				    InvTheme = Table.ExpandTableColumn(InvJoin, "st", {"Root Theme"}),
+				    PartsTyped = Table.TransformColumnTypes(RawInventoryParts, {{"inventory_id", Int64.Type}, {"color_id", Int64.Type}, {"quantity", Int64.Type}, {"is_spare", type logical}}),
+				    NoSpares = Table.SelectRows(PartsTyped, each not [is_spare]),
+				    PartsInScope = Table.NestedJoin(NoSpares, {"inventory_id"}, InvTheme, {"inventory_id"}, "inv", JoinKind.Inner),
+				    WithThemeCol = Table.ExpandTableColumn(PartsInScope, "inv", {"Root Theme"}),
+				    WithColor = Table.NestedJoin(WithThemeCol, {"color_id"}, Colors, {"color_id"}, "c", JoinKind.Inner),
+				    WithGray = Table.ExpandTableColumn(WithColor, "c", {"Hex", "IsGrayscale", "IsPseudoColor"}),
+				    RealColors = Table.SelectRows(WithGray, each not [IsPseudoColor]),
+				    Grouped = Table.Group(RealColors, {"Root Theme", "color_id"}, {{"part_count", each List.Sum([quantity]), Int64.Type}, {"color_hex", each List.First([Hex]), type text}, {"IsGrayscale", each List.First([IsGrayscale]), type logical}}),
+				    Labeled = Table.AddColumn(Grouped, "Brick Type", each if [IsGrayscale] then "Grey" else "Colour", type text)
+				in
+				    Labeled

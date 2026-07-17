@@ -278,13 +278,13 @@ function colours() {
   <div style="position:absolute;left:146px;top:130px;width:372px;font:400 14px Georgia,serif;line-height:1.55;color:${T.ink}">olour is the strongest magic in brick — and no licensed LEGO theme casts more of it than ${gink('Harry Potter')}. Its crown jewel, Diagon Alley (2025), is the ${gink('#2 most colourful')} LEGO set ever built, of any theme.</div>
   ${goldRibbon(56, 232, 428, 'Harry Potter · LEGO\'s most colourful licensed theme')}
   <!-- the real set, floating transparent (Rebrickable white box removed) -->
-  <img src="${uri('cut_diagon')}" style="position:absolute;left:6px;top:290px;width:524px;filter:drop-shadow(0 12px 16px rgba(40,20,8,.4))">
-  <div style="position:absolute;left:34px;top:566px;width:520px;font:700 12.5px Georgia,serif;color:${T.ink}">Diagon Alley 76444 · <span style="color:${T.red}">55 distinct colours</span> · #2 most colourful set ever</div>
-  <div style="position:absolute;left:34px;top:588px;font:italic 400 12px Georgia,serif;color:${T.ink2}">tap a ✦ to uncover a hidden tale</div>
+  <img src="${uri('cut_diagon')}" style="position:absolute;left:2px;top:276px;width:542px;filter:drop-shadow(0 12px 16px rgba(40,20,8,.4))">
+  <div style="position:absolute;left:34px;top:576px;width:520px;font:700 12.5px Georgia,serif;color:${T.ink}">Diagon Alley 76444 · <span style="color:${T.red}">55 distinct colours</span> · #2 most colourful set ever</div>
+  <div style="position:absolute;left:34px;top:598px;font:italic 400 12px Georgia,serif;color:${T.ink2}">tap a ✦ to uncover a hidden tale</div>
   ${clue(150, 506)} ${clue(446, 508)}
   <!-- charts -->
   ${fig(548, 80, 684, 286)} ${figCap(564, 94, 'FIGURE 1 · THE COLOUR MAP', 'every colour to scale, in its true brick hex — sized by parts')}
-  ${fig(548, 398, 684, 150)} ${figCap(564, 412, 'FIGURE 2 · THE 55-COLOUR SPECTRUM', 'one bar, every hue, ordered by part count')}
+  ${fig(548, 388, 684, 200)} ${figCap(564, 402, 'FIGURE 2 · THE 55-COLOUR SPECTRUM', 'one bar, every hue, ordered by part count')}
   <div style="position:absolute;right:64px;bottom:44px;padding:12px 22px;border:1.5px solid ${T.red};border-radius:4px;background:rgba(124,43,34,.12);font:600 13px Georgia,serif;color:${T.red}">…or come to the dark side ❦</div>
   ${pageNo('III')} ${turn()}`;
 }
@@ -297,13 +297,13 @@ function dark() {
   <div style="position:absolute;left:56px;top:52px;width:40px;height:40px;border-radius:50%;background:#1A1512;border:2px solid ${T.gold};display:flex;align-items:center;justify-content:center"><span style="font:800 18px Georgia,serif;color:${T.goldLeaf}">☾</span></div>
   ${eyebrow(112, 56, 'The Restricted Section · after closing time')}
   <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:#D8CBB0">The Chamber of Greys</div>
-  <div style="position:absolute;left:56px;top:132px;width:420px;font:400 14.5px Georgia,serif;line-height:1.55;color:#C7B89A">Not every set dazzles. The greyest theme of all is <span style="color:#C97A6A;font-weight:700">Star Wars</span> — about <span style="color:#C97A6A;font-weight:700">72% grey</span>, against Harry Potter's 42%. Its darkest build, Vader's TIE Advanced (2006), is <span style="color:#C97A6A;font-weight:700">97.9%</span> greyscale.</div>
-  <div style="position:absolute;left:64px;top:240px;font:800 92px Georgia,serif;color:#CFC4A8;text-shadow:0 0 20px rgba(0,0,0,.5)">97.9%</div>
-  <div style="position:absolute;left:68px;top:356px;font:italic 400 15px Georgia,serif;color:#A89A7E">of every brick is greyscale</div>
+  <div style="position:absolute;left:56px;top:132px;width:420px;font:400 14.5px Georgia,serif;line-height:1.55;color:#DBCFB6">Not every set dazzles. The greyest theme of all is <span style="color:#E08A78;font-weight:700">Star Wars</span> — about <span style="color:#E08A78;font-weight:700">72% grey</span>, against Harry Potter's 42%. Its darkest build, Vader's TIE Advanced (2006), is <span style="color:#E08A78;font-weight:700">97.9%</span> greyscale.</div>
+  <div style="position:absolute;left:64px;top:240px;font:800 92px Georgia,serif;color:#D8CCAE;text-shadow:0 0 20px rgba(0,0,0,.5)">97.9%</div>
+  <div style="position:absolute;left:68px;top:356px;font:italic 400 15px Georgia,serif;color:#BCAF92">of every brick is greyscale</div>
   ${plate('dark', 56, 410, 430, 240)}
   ${cutImg('cut_vold', 300, 344, 168)}
-  ${fig(512, 60, 720, 340)} ${figCap(528, 74, 'FIGURE 1 · COLOUR COMPOSITION', 'almost entirely grey — every mark in true hex')}
-  ${fig(512, 420, 720, 200)} ${figCap(528, 434, 'FIGURE 2 · GREYEST vs BRIGHTEST', 'the dark side meets the chamber of colours')}
+  ${fig(512, 60, 720, 340)} ${figCap(528, 74, 'FIGURE 1 · COLOUR COMPOSITION', 'grey vs the true rainbow of colour · Star Wars is greyest')}
+  ${fig(512, 420, 720, 200)} ${figCap(528, 434, 'FIGURE 2 · GREYEST vs BRIGHTEST', 'share of greyscale bricks, by theme')}
   <div style="position:absolute;left:64px;bottom:52px;padding:12px 22px;border:1.5px solid ${T.goldBright};border-radius:4px;background:rgba(20,14,6,.5);font:600 13px Georgia,serif;color:${T.goldLeaf}">❦ back to the colour</div>
   ${pageNo('III')} <div style="position:absolute;right:64px;bottom:34px;font:italic 600 13px Georgia,serif;color:#A89A7E">turn the page ❦</div>`;
 }

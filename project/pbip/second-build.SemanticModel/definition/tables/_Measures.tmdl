@@ -177,6 +177,12 @@ table _Measures
 		displayFolder: 01 Core
 		lineageTag: 3f5a1c8e-6b2d-4e7a-9c14-2a8f0d6b5e73
 
+	/// Dark chamber: parts of a given colour in a theme, for the Deneb true-hex composition.
+	measure Theme Colour Parts = SUM ( ThemeColors[part_count] )
+		formatString: #,0
+		displayFolder: 04 Themes
+		lineageTag: d3969b97-7fe3-43f5-9994-56e73a366ddb
+
 	column Value
 		dataType: string
 		isHidden
