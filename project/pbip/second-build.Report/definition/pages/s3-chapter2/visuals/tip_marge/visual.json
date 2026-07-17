@@ -4,10 +4,10 @@
   "position": {
     "x": 60,
     "y": 326,
-    "z": 300,
+    "z": 6000,
     "height": 250,
     "width": 542,
-    "tabOrder": 300
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "image",
@@ -86,8 +86,7 @@
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": false
+    }
   },
   "isHidden": true
 }

@@ -4,7 +4,7 @@
   "position": {
     "x": 0,
     "y": 0,
-    "z": 0,
+    "z": 1000,
     "height": 1200,
     "width": 800,
     "tabOrder": -1000

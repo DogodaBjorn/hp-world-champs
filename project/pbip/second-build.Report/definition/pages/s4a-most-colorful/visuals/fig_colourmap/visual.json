@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "fig_colourmap",
   "position": {
-    "x": 548,
-    "y": 80,
-    "z": 0,
-    "height": 286,
-    "width": 684,
+    "x": 547.59878419452889,
+    "y": 121.58054711246201,
+    "z": 15250,
+    "height": 244.13373860182372,
+    "width": 684.741641337386,
     "tabOrder": 0
   },
   "visual": {
@@ -70,6 +70,70 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Colors"
+                            }
+                          },
+                          "Property": "Hex"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -99,5 +163,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "16eff1b36cc37b0eef66",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Colors"
+              }
+            },
+            "Property": "Color Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9788577b56ce0f57c073",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Color Parts"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "img_patronus_glow",
   "position": {
-    "x": 150,
-    "y": 410,
-    "z": 205,
-    "height": 250,
-    "width": 250,
-    "tabOrder": 205
+    "x": 1076.0587002096436,
+    "y": 0,
+    "z": 4000,
+    "height": 108.67924528301886,
+    "width": 155.63941299790355,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "image",
@@ -86,8 +86,6 @@
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": false
-  },
-  "isHidden": true
+    }
+  }
 }

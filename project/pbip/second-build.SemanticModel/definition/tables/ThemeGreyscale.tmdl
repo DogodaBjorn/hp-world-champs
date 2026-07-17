@@ -58,3 +58,4 @@ table ThemeGreyscale
 				    Labeled = Table.AddColumn(Grouped, "Brick Type", each if [IsGrayscale] then "Grey" else "Colour", type text)
 				in
 				    Labeled
+

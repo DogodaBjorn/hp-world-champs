@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "fig_colours_s2",
+  "position": {
+    "x": 882.18844984802433,
+    "y": 412.40121580547117,
+    "z": 17125,
+    "height": 207.17325227963528,
+    "width": 350.15197568389061,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "treemap",
     "query": {
@@ -7,7 +16,6 @@
         "Group": {
           "projections": [
             {
-              "queryRef": "Colors.Color Name",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,15 @@
                   "Property": "Color Name"
                 }
               },
-              "nativeQueryRef": "Color Name"
+              "queryRef": "Colors.Color Name",
+              "nativeQueryRef": "Color Name",
+              "active": true
             }
           ]
         },
         "Values": {
           "projections": [
             {
-              "queryRef": "_Measures.Color Parts",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -36,6 +45,7 @@
                   "Property": "Color Parts"
                 }
               },
+              "queryRef": "_Measures.Color Parts",
               "nativeQueryRef": "Color Parts"
             }
           ]
@@ -60,8 +70,70 @@
         "isDefaultSort": true
       }
     },
-    "objects": {},
-    "drillFilterOtherVisuals": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Colors"
+                            }
+                          },
+                          "Property": "Hex"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -102,15 +174,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 882,
-    "y": 380,
-    "z": 0,
-    "width": 350,
-    "height": 240,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

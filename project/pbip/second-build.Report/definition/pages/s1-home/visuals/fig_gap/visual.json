@@ -4,7 +4,7 @@
   "position": {
     "x": 90,
     "y": 908,
-    "z": 0,
+    "z": 2500,
     "height": 150,
     "width": 620,
     "tabOrder": 0
@@ -99,5 +99,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ab429e6f5e6bbcb9accd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimYear"
+              }
+            },
+            "Property": "Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2b00753487a554ab4eac",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Total Sets"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

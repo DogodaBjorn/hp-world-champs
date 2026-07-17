@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "nav_tab_II",
+  "name": "bdffb38bdf79c4188a4a",
   "position": {
-    "x": 1232,
-    "y": 222,
-    "z": 510,
-    "height": 56,
-    "width": 48,
-    "tabOrder": 90510
+    "x": 1225.0246305418718,
+    "y": 148.07881773399015,
+    "z": 15000,
+    "height": 55.862068965517238,
+    "width": 54.975369458128078,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "actionButton",
@@ -25,6 +25,20 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "lineTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selected"
           }
         }
       ],
@@ -75,6 +89,34 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "74D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selected"
+          }
+        },
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "55D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "hover"
           }
         }
       ],
@@ -128,7 +170,7 @@
             "altText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Jump to chapter II'"
+                  "Value": "'Jump to chapter I'"
                 }
               }
             }
@@ -155,7 +197,20 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'s3-chapter2'"
+                  "Value": "'s2-chapter1'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

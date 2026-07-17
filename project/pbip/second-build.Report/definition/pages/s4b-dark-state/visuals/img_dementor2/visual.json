@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "img_dementor2",
   "position": {
-    "x": 78,
-    "y": 402,
-    "z": 200,
-    "height": 244,
-    "width": 150,
-    "tabOrder": 200
+    "x": 470.94339622641508,
+    "y": 139.53878406708594,
+    "z": 10000,
+    "height": 394.46540880503142,
+    "width": 372.99790356394129,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "image",
@@ -86,7 +86,7 @@
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": false
-  }
+    }
+  },
+  "isHidden": true
 }

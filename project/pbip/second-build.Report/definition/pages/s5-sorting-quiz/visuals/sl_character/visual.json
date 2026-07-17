@@ -4,10 +4,10 @@
   "position": {
     "x": 56,
     "y": 228,
-    "z": 0,
+    "z": 4000,
     "height": 92,
     "width": 388,
-    "tabOrder": 0
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -68,7 +68,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Albus Dumbledore'"
+                                "Value": "'Albert Runcorn / Harry Potter'"
                               }
                             }
                           ]
@@ -138,5 +138,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "689c6201b673a3168662",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Minifigs"
+              }
+            },
+            "Property": "character_name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

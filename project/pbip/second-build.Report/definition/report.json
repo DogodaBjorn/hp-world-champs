@@ -40,7 +40,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "false"
+                "Value": "true"
               }
             }
           }
@@ -98,11 +98,6 @@
           "type": "Image"
         },
         {
-          "name": "second-build.json",
-          "path": "second-build.json",
-          "type": "CustomTheme"
-        },
-        {
           "name": "cut_dementor2.png",
           "path": "cut_dementor2.png",
           "type": "Image"
@@ -116,6 +111,11 @@
           "name": "patronus_glow.png",
           "path": "patronus_glow.png",
           "type": "Image"
+        },
+        {
+          "name": "second-build.json",
+          "path": "second-build.json",
+          "type": "CustomTheme"
         },
         {
           "name": "tip_appearances.png",

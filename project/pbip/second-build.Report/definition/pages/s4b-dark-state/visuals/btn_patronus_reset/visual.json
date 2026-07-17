@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "btn_patronus_reset",
   "position": {
-    "x": 150,
-    "y": 410,
-    "z": 220,
-    "height": 250,
-    "width": 250,
-    "tabOrder": 220
+    "x": 1094.8427672955975,
+    "y": 0,
+    "z": 10500,
+    "height": 108.67924528301886,
+    "width": 131.48846960167714,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "actionButton",
@@ -163,6 +163,5 @@
         }
       ]
     }
-  },
-  "isHidden": true
+  }
 }

@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "img_minifig",
+  "position": {
+    "x": 110,
+    "y": 520,
+    "z": 3000,
+    "height": 128,
+    "width": 270,
+    "tabOrder": 2000
+  },
   "visual": {
     "visualType": "tableEx",
     "query": {
@@ -7,7 +16,6 @@
         "Values": {
           "projections": [
             {
-              "queryRef": "Minifigs.img_url",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,13 @@
                   "Property": "img_url"
                 }
               },
+              "queryRef": "Minifigs.img_url",
               "nativeQueryRef": "img_url"
             }
           ]
         }
       }
     },
-    "objects": {},
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -66,15 +73,25 @@
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
   },
-  "position": {
-    "x": 110,
-    "y": 520,
-    "z": 0,
-    "width": 270,
-    "height": 128,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json"
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "85ea910101e747f10473",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Minifigs"
+              }
+            },
+            "Property": "img_url"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

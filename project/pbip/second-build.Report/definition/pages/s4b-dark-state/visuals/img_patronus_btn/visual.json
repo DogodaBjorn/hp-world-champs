@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "img_patronus_btn",
   "position": {
-    "x": 246,
-    "y": 556,
-    "z": 210,
-    "height": 82,
-    "width": 226,
-    "tabOrder": 210
+    "x": 924.44444444444434,
+    "y": 56.35220125786163,
+    "z": 5000,
+    "height": 83.186582809224319,
+    "width": 226.75052410901466,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "image",
@@ -86,7 +86,7 @@
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": false
-  }
+    }
+  },
+  "isHidden": true
 }
