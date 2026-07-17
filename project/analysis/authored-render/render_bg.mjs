@@ -111,8 +111,8 @@ function pageNo(n) {
   return `<div style="position:absolute;left:0;bottom:20px;width:${W}px;text-align:center;font:italic 400 13px Georgia,serif;color:${T.ink2}">~ ${n} ~</div>`;
 }
 function turn() {
-  return `<div style="position:absolute;right:64px;bottom:16px;font:italic 600 13px Georgia,serif;color:${T.red}">turn the page ❦</div>
-  <div style="position:absolute;left:64px;bottom:16px;font:italic 600 13px Georgia,serif;color:${T.ink2}">❦ back</div>`;
+  return `<div style="position:absolute;right:64px;bottom:34px;font:italic 600 13px Georgia,serif;color:${T.red}">turn the page ❦</div>
+  <div style="position:absolute;left:64px;bottom:34px;font:italic 600 13px Georgia,serif;color:${T.ink2}">❦ back</div>`;
 }
 // transparent LEGO cutout floating on the page (no white box)
 function cutImg(n, x, y, w) {
@@ -155,7 +155,7 @@ function cover() {
     <div style="width:100%;height:100%;overflow:hidden;border-radius:264px 264px 8px 8px;background:#000 url('${uri('cover')}') center/cover;position:relative">
       <div style="position:absolute;inset:0;background:linear-gradient(0deg, rgba(20,10,20,.5), transparent 45%), radial-gradient(120% 90% at 50% 30%, transparent 55%, rgba(15,8,15,.5))"></div>
     </div></div>
-  <div style="position:absolute;left:0;top:716px;width:${CW}px;text-align:center;font:italic 400 13px Georgia,serif;color:#C9AE72">the castle, after the silence</div>
+  <div style="position:absolute;left:0;top:732px;width:${CW}px;text-align:center;font:italic 400 13px Georgia,serif;color:#C9AE72">the castle, after the silence</div>
   <!-- parchment plaque: the key takeaway + the gap chart -->
   <div style="position:absolute;left:64px;top:750px;width:672px;height:362px;background:#000 url('${PARCH}') center/cover;box-shadow:0 12px 30px rgba(0,0,0,.5), inset 0 0 40px rgba(60,35,12,.22);border:2px solid ${T.goldLeaf}"></div>
   <div style="position:absolute;left:70px;top:756px;width:660px;height:350px;border:1px solid ${T.gold}88"></div>
@@ -163,6 +163,9 @@ function cover() {
   <div style="position:absolute;left:88px;top:796px;width:624px;text-align:center;font:800 30px Georgia,serif;line-height:1.1;color:${T.ink}">It took <span style="color:${T.red}">seven years</span> for Harry to reappear.</div>
   ${figCap(90, 872, 'SETS SHIPPED PER YEAR · 2001–2026', 'the silent years 2012–2017 stand empty on the shelf')}
   ${fig(90, 908, 620, 150)}
+  <!-- highlight the seven silent years: a faint band + label over the empty middle -->
+  <div style="position:absolute;left:300px;top:924px;width:196px;height:112px;background:linear-gradient(180deg, rgba(124,43,34,.12), rgba(124,43,34,.03));border-left:1px dashed rgba(124,43,34,.45);border-right:1px dashed rgba(124,43,34,.45);border-radius:2px"></div>
+  <div style="position:absolute;left:286px;top:1030px;width:224px;text-align:center;font:italic 700 12px Georgia,serif;color:${T.red}">↑ seven silent years ↑</div>
   <div style="position:absolute;left:64px;top:1074px;width:672px;text-align:center;font:700 12px Georgia,serif;color:${T.ink2}">209 sets&nbsp;&nbsp;·&nbsp;&nbsp;576 minifigures&nbsp;&nbsp;·&nbsp;&nbsp;7 silent years</div>
   <!-- footer -->
   <div style="position:absolute;left:0;top:1134px;width:${CW}px;text-align:center;font:italic 600 15px Georgia,serif;color:#E8CF88">open the book ❦</div>`;
@@ -183,10 +186,10 @@ function yellow() {
   ${callout(214, 250, '267', 'avg parts')}
   ${plate('yellow', 56, 320, 430, 300)}
   ${clue(232, 486)} ${clue(406, 558)}
-  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate I · the Hogwarts Express · tap a ✦ to meet the yellow cast</div>
+  <div style="position:absolute;left:56px;top:640px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate I · the Hogwarts Express · tap a ✦ to meet the yellow cast</div>
   ${fig(512, 60, 720, 300)} ${figCap(528, 74, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect · year & size runes apply')}
-  ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from the left')}
-  ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · ITS TRUE COLOURS', 'each mark a real brick hex')}
+  ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from Figure 1 above')}
+  ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · ITS TRUE COLOURS', 'each tile a real brick colour · size = its parts in the set')}
   ${pageNo('I')} ${turn()}`;
 }
 
@@ -208,10 +211,10 @@ function cameback() {
   ${callout(56, 250, '142', 'sets')} ${callout(214, 250, '731', 'avg parts')}
   ${plate('cameback', 56, 320, 430, 300)}
   ${clue(140, 462)} ${clue(392, 470)} ${clue(250, 578)}
-  <div style="position:absolute;left:56px;top:628px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate II · the colour returns · tap a ✦ to uncover three hidden tales</div>
+  <div style="position:absolute;left:56px;top:640px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate II · the colour returns · tap a ✦ to uncover three hidden tales</div>
   ${fig(512, 60, 720, 300)} ${figCap(528, 74, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect')}
-  ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from the left')}
-  ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · FROM YELLOW TO COLOUR', 'the palette blooms to full spectrum')}
+  ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from Figure 1 above')}
+  ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · FROM YELLOW TO COLOUR', 'each tile a real brick colour · size = its parts in the set')}
   ${pageNo('II')} ${turn()}`;
 }
 
@@ -302,7 +305,7 @@ function dark() {
   ${fig(512, 60, 720, 340)} ${figCap(528, 74, 'FIGURE 1 · COLOUR COMPOSITION', 'almost entirely grey — every mark in true hex')}
   ${fig(512, 420, 720, 200)} ${figCap(528, 434, 'FIGURE 2 · GREYEST vs BRIGHTEST', 'the dark side meets the chamber of colours')}
   <div style="position:absolute;left:64px;bottom:52px;padding:12px 22px;border:1.5px solid ${T.goldBright};border-radius:4px;background:rgba(20,14,6,.5);font:600 13px Georgia,serif;color:${T.goldLeaf}">❦ back to the colour</div>
-  ${pageNo('III')} <div style="position:absolute;right:64px;bottom:16px;font:italic 600 13px Georgia,serif;color:#A89A7E">turn the page ❦</div>`;
+  ${pageNo('III')} <div style="position:absolute;right:64px;bottom:34px;font:italic 600 13px Georgia,serif;color:#A89A7E">turn the page ❦</div>`;
 }
 
 // ================= CHAPTER IV: Match the Minifig (game) =================
@@ -337,21 +340,25 @@ function explore() {
 
 // ================= SOURCES =================
 function sources() {
-  const rowH = (x, y, w, t, s) => `${fig(x, y, w, 96)}
-    <div style="position:absolute;left:${x + 20}px;top:${y + 18}px;font:700 14px Georgia,serif;color:${T.ink}">${t}</div>
-    <div style="position:absolute;left:${x + 20}px;top:${y + 44}px;width:${w - 40}px;font:400 12.5px Georgia,serif;line-height:1.45;color:${T.ink2}">${s}</div>`;
+  const rowH = (x, y, w, t, s) => `${fig(x, y, w, 86)}
+    <div style="position:absolute;left:${x + 18}px;top:${y + 13}px;font:700 13.5px Georgia,serif;color:${T.ink}">${t}</div>
+    <div style="position:absolute;left:${x + 18}px;top:${y + 37}px;width:${w - 36}px;font:400 12px Georgia,serif;line-height:1.42;color:${T.ink2}">${s}</div>`;
+  const L = 56, R = 646, W1 = 570, W2 = 586;
   return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(4)}
   ${step(56, 52, '?')} ${eyebrow(112, 56, 'The Footnotes')}
-  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">Sources & Credits</div>
-  <div style="position:absolute;left:56px;top:126px;width:900px;font:italic 400 13.5px Georgia,serif;color:${T.ink2}">Every brick in this story is sourced. Data, tools and trademarks belong to their owners — cited here with thanks.</div>
-  ${rowH(56, 176, 570, 'Rebrickable LEGO Database', 'Every set, part, colour, minifigure and photo — rebrickable.com. The foundation of the whole story.')}
-  ${rowH(646, 176, 586, 'Deneb (certified AppSource visual)', 'Daniel Marsh-Patrick — declarative Vega-Lite charts inside Power BI. The true-colour maps and blooms.')}
-  ${rowH(56, 288, 570, 'LEGO®', 'A trademark of The LEGO Group, used for a non-commercial fan data-story. © The LEGO Group.')}
-  ${rowH(646, 288, 586, 'Harry Potter™ / Wizarding World', 'Trademarks of Warner Bros. Entertainment Inc. Used for a non-commercial fan data-story.')}
-  ${rowH(56, 400, 570, 'Cinematic artwork', 'Original brick-built wizarding scenes generated with Google Gemini 2.5 Flash Image for this entry.')}
-  ${rowH(646, 400, 586, 'Contest', 'Power BI DataViz World Champs · Barcelona · Round 2. Brief & judging by the Microsoft Fabric community.')}
-  ${plate('sources', 476, 520, 330, 110)}
-  ${pageNo('✦')} ${turn()}`;
+  <div style="position:absolute;left:110px;top:70px;font:800 34px Georgia,serif;color:${T.ink}">Sources & Credits</div>
+  <div style="position:absolute;left:56px;top:122px;width:1020px;font:italic 400 13.5px Georgia,serif;color:${T.ink2}">Every brick in this story stands on someone's work. Data, tools, trademarks and teachers — cited here, with thanks.</div>
+  ${rowH(L, 158, W1, 'Rebrickable — the LEGO database', 'Every set, part, colour, minifigure and photograph. rebrickable.com — the factual foundation of the whole story.')}
+  ${rowH(R, 158, W2, 'Deneb · Daniel Marsh-Patrick', 'The certified AppSource visual rendering declarative Vega-Lite in Power BI — every true-colour map & spectrum here.')}
+  ${rowH(L, 252, W1, 'LEGO® · The LEGO Group', 'LEGO® is a trademark of The LEGO Group, which does not sponsor or endorse this non-commercial fan data-story.')}
+  ${rowH(R, 252, W2, 'Harry Potter™ · Wizarding World', 'Trademarks of Warner Bros. Entertainment Inc. Used lovingly for a non-commercial fan data-story.')}
+  ${rowH(L, 346, W1, 'Cinematic scene art · Google Gemini', 'Brick-built wizarding scenes generated with Google Gemini 2.5 Flash Image, anchored on real LEGO set photos.')}
+  ${rowH(R, 346, W2, 'pbir CLI · Kurt Buhler & Maxim Anatsko', 'The agent-first Power BI toolkit that made this PBIR authorable, used under its non-commercial licence.')}
+  ${rowH(L, 440, W1, 'Design craft', 'Storytelling & layout shaped by Cole Nussbaumer Knaflic, Lukas Reese, Draft BI, Numerro & MoonStory. Type set in Georgia.')}
+  ${rowH(R, 440, W2, 'The arena · DataViz World Champs', 'Power BI DataViz World Champs · Barcelona · Round 2 — brief & judging by the Microsoft Fabric community.')}
+  <div style="position:absolute;left:412px;top:548px;width:456px;height:1px;background:linear-gradient(90deg,transparent,${T.goldLeaf},transparent)"></div>
+  <div style="position:absolute;left:56px;top:560px;width:1168px;text-align:center;font:italic 600 14px Georgia,serif;color:${T.red}">…and to everyone and everything that shaped this build — knowingly and unknowingly — thank you.</div>
+  <div style="position:absolute;left:0;bottom:34px;width:${W}px;text-align:center;font:italic 600 13px Georgia,serif;color:${T.ink2}">❦ return to the book</div>`;
 }
 
 const PAGES = { cover, yellow, cameback, colours, dark, explore, sources };

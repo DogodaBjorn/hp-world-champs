@@ -103,20 +103,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ab429e6f5e6bbcb9accd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimYear"
-              }
-            },
-            "Property": "Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "2b00753487a554ab4eac",
         "field": {
           "Measure": {
@@ -129,6 +115,55 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "bd7cb93f72ebd17a8e5f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimYear"
+              }
+            },
+            "Property": "Year"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "DimYear",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 3,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "d"
+                        }
+                      },
+                      "Property": "Year"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "'2027'"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   }
