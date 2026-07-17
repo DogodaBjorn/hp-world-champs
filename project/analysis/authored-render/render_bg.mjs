@@ -165,7 +165,8 @@ function cover() {
   ${fig(90, 908, 620, 150)}
   <div style="position:absolute;left:64px;top:1074px;width:672px;text-align:center;font:700 12px Georgia,serif;color:${T.ink2}">209 sets&nbsp;&nbsp;·&nbsp;&nbsp;576 minifigures&nbsp;&nbsp;·&nbsp;&nbsp;7 silent years</div>
   <!-- footer -->
-  <div style="position:absolute;left:0;top:1134px;width:${CW}px;text-align:center;font:italic 600 15px Georgia,serif;color:#E8CF88">open the book ❦</div>`;
+  <div style="position:absolute;left:0;top:1134px;width:${CW}px;text-align:center;font:italic 600 15px Georgia,serif;color:#E8CF88">open the book ❦</div>
+  <div style="position:absolute;left:60px;top:1138px;font:italic 600 12.5px Georgia,serif;color:#C9AE72">with thanks ❦</div>`;
 }
 
 // ================= CHAPTER I: The Yellow Years =================
@@ -313,19 +314,30 @@ function numStep(x, y, n) {
 function sealSpot(x, y) {
   return `<div style="position:absolute;left:${x}px;top:${y}px;width:58px;height:58px;border-radius:50%;border:2px dashed ${T.gold}88;display:flex;align-items:center;justify-content:center"><span style="font:italic 400 11px Georgia,serif;color:${T.ink2}">match?</span></div>`;
 }
+// wax seal that opens the sealed answers (an invisible button sits over it)
+function sealAnswers(x, y) {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#8C2A20,#5E1812);border:2px solid ${T.goldBright};box-shadow:0 3px 10px rgba(0,0,0,.4), inset 0 0 8px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center"><span style="font:800 22px Georgia,serif;color:${T.goldLeaf}">❋</span></div>
+  <div style="position:absolute;left:${x - 24}px;top:${y + 56}px;width:100px;text-align:center;font:italic 400 10.5px Georgia,serif;color:${T.ink2}">tap the seal</div>`;
+}
 function explore() {
   return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(3)}
-  ${step(56, 52, '✦')} ${eyebrow(112, 56, 'The Final Chapter · the whole cast')}
+  ${step(56, 52, '✦')} ${eyebrow(112, 56, 'The Final Chapter · a seeker’s game')}
   <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">The Cast Assembles</div>
-  <div style="position:absolute;left:56px;top:126px;width:1176px;font:italic 400 14px Georgia,serif;line-height:1.5;color:${T.ink2}">Every ${gink('Harry Potter')} minifig design ever made — one dot each, placed by the year it first appeared and how many sets it comes to live in. Watch the cast fall silent through the lost years, then flood back in flesh and colour. ${gink('Hover any wizard')}; pick one on the left to meet them.</div>
-  <!-- left column: find-a-wizard + portrait -->
-  <div style="position:absolute;left:58px;top:188px;font:700 12px Segoe UI;letter-spacing:1.5px;color:${T.red}">FIND A WIZARD</div>
-  ${fig(56, 214, 280, 214)}
-  <div style="position:absolute;left:58px;top:444px;font:700 12px Segoe UI;letter-spacing:1.5px;color:${T.red}">THEIR FACES THROUGH THE YEARS</div>
-  ${fig(56, 470, 280, 158)}
+  <div style="position:absolute;left:56px;top:124px;width:1176px;font:italic 400 14px Georgia,serif;line-height:1.5;color:${T.ink2}">Every ${gink('Harry Potter')} minifig design ever made — one dot each, placed by the year it first appeared and how many sets it lives in. ${gink('Hover any dot')} to meet its wizard; pick a face on the left to follow one through the years.</div>
+  <!-- left column: find-a-wizard + faces -->
+  <div style="position:absolute;left:58px;top:184px;font:700 12px Segoe UI;letter-spacing:1.5px;color:${T.red}">FIND A WIZARD</div>
+  ${fig(56, 208, 280, 206)}
+  <div style="position:absolute;left:58px;top:432px;font:700 12px Segoe UI;letter-spacing:1.5px;color:${T.red}">THEIR FACES THROUGH THE YEARS</div>
+  ${fig(56, 456, 280, 150)}
   <!-- the swarm -->
-  ${fig(360, 200, 872, 428)}
-  ${figCap(376, 214, 'FIGURE · THE CAST, YEAR BY YEAR', 'each dot a minifig design · first appearance year across → sets it appears in ↑ · classic yellow vs modern flesh')}
+  ${fig(360, 184, 872, 400)}
+  ${figCap(376, 198, 'FIGURE · THE CAST, YEAR BY YEAR', 'each dot a minifig design · first appearance year across → sets it appears in ↑ · classic yellow vs modern flesh')}
+  <!-- the seeker's challenges -->
+  ${fig(360, 596, 872, 64)}
+  <div style="position:absolute;left:376px;top:604px;font:700 11px Segoe UI;letter-spacing:2px;color:${T.red}">SEEKER’S CHALLENGES</div>
+  <div style="position:absolute;left:376px;top:624px;width:760px;font:italic 400 12.5px Georgia,serif;line-height:1.45;color:${T.ink}">① Which wizard lives in the most sets?&nbsp;&nbsp;&nbsp;② Find the very last classic yellow face.&nbsp;&nbsp;&nbsp;③ How many new faces joined the lost years?</div>
+  ${sealAnswers(1156, 596)}
+  <div style="position:absolute;left:740px;bottom:20px;font:italic 600 13px Georgia,serif;color:${T.red}">❦ credits</div>
   ${pageNo('IV')} ${turn()}`;
 }
 
@@ -352,6 +364,44 @@ function sources() {
   <div style="position:absolute;left:0;bottom:34px;width:${W}px;text-align:center;font:italic 600 13px Georgia,serif;color:${T.ink2}">❦ return to the book</div>`;
 }
 
+// the sealed answers to the Seeker's Challenges (numbers verified against the
+// contest CSVs 2026-07-17: top fig 8 sets · last yellow debuts 2003 · 0 figs 2012-17)
+function answersScroll() {
+  const row = (y, n, t) => `<div style="position:absolute;left:26px;top:${y}px;width:30px;font:800 17px Georgia,serif;color:${T.red}">${n}</div>
+    <div style="position:absolute;left:60px;top:${y + 1}px;width:520px;font:400 13.5px Georgia,serif;line-height:1.45;color:${T.ink}">${t}</div>`;
+  return `<div style="position:absolute;left:0;top:0;width:620px;height:420px;background:#000 url('${PARCH}') center/cover;border:2px solid ${T.goldLeaf};border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.45)"></div>
+  <div style="position:absolute;left:26px;top:22px;display:flex;align-items:center;gap:10px">
+    <div style="width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#8C2A20,#5E1812);border:2px solid ${T.goldBright};display:flex;align-items:center;justify-content:center"><span style="font:800 17px Georgia,serif;color:${T.goldLeaf}">❋</span></div>
+    <span style="font:800 12px Segoe UI;letter-spacing:2.5px;color:${T.red}">THE SEEKER’S ANSWERS</span></div>
+  ${row(84, '①', `The very first <b>yellow-faced Harry</b> (2001). He lives in <b>8 different sets</b> — more than any other minifig design ever made. Draco’s best is 7.`)}
+  ${row(168, '②', `The <b>class of 2003</b> — a Draco, a Harry and a Lucius Malfoy were the last classic yellow faces ever made. From 2004, every wizard wears flesh tone.`)}
+  ${row(252, '③', `<b>Not a single one.</b> Across all of 2012–2017 no new minifig face joined the cast — the lost years stand as empty on this chart as they do on the shelf.`)}
+  <div style="position:absolute;left:26px;top:352px;width:568px;height:1px;background:linear-gradient(90deg,transparent,${T.goldLeaf},transparent)"></div>
+  <div style="position:absolute;left:26px;top:366px;width:568px;text-align:center;font:italic 400 12px Georgia,serif;color:${T.ink2}">well flown, Seeker — the book keeps your secret</div>
+  ${closeX2(620)}`;
+}
+// condensed credits card (the popup twin of the full Sources & Credits page)
+function creditsCard() {
+  const row = (x, y, t, s) => `<div style="position:absolute;left:${x}px;top:${y}px;width:284px;font:700 12px Georgia,serif;color:${T.ink}">${t}<div style="font:400 10.5px Georgia,serif;line-height:1.35;color:${T.ink2};margin-top:1px">${s}</div></div>`;
+  return `<div style="position:absolute;left:0;top:0;width:640px;height:480px;background:#000 url('${PARCH}') center/cover;border:2px solid ${T.goldLeaf};border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.45)"></div>
+  <div style="position:absolute;left:0;top:24px;width:640px;text-align:center;font:800 13px Segoe UI;letter-spacing:3px;color:${T.red}">WITH THANKS</div>
+  <div style="position:absolute;left:170px;top:46px;width:300px;height:1px;background:linear-gradient(90deg,transparent,${T.goldLeaf},transparent)"></div>
+  ${row(28, 64, 'Rebrickable', 'every set, part, colour, minifigure & photo — rebrickable.com')}
+  ${row(330, 64, 'Deneb · Daniel Marsh-Patrick', 'the certified Vega-Lite visual behind every true-colour chart')}
+  ${row(28, 128, 'LEGO® · The LEGO Group', 'trademark of The LEGO Group; not sponsored or endorsed')}
+  ${row(330, 128, 'Harry Potter™ · Wizarding World', 'trademarks of Warner Bros. Entertainment Inc.')}
+  ${row(28, 192, 'Scene art · Google Gemini', 'brick-built wizarding scenes, anchored on real set photos')}
+  ${row(330, 192, 'pbir CLI · Kurt Buhler & Maxim Anatsko', 'the agent-first toolkit that made this book authorable')}
+  ${row(28, 256, 'Design craft', 'Knaflic · Reese · Draft BI · Numerro · MoonStory')}
+  ${row(330, 256, 'The arena · DataViz World Champs', 'Round 2 · brief & judging by the Fabric community')}
+  <div style="position:absolute;left:28px;top:330px;width:584px;height:1px;background:linear-gradient(90deg,transparent,${T.goldLeaf},transparent)"></div>
+  <div style="position:absolute;left:44px;top:348px;width:552px;text-align:center;font:italic 600 13px Georgia,serif;line-height:1.5;color:${T.red}">…and to everyone and everything that shaped this build —<br>knowingly and unknowingly — thank you.</div>
+  <div style="position:absolute;left:0;top:420px;width:640px;text-align:center;font:italic 400 11px Georgia,serif;color:${T.ink2}">the full chronicle of sources lives behind the ? ribbon</div>
+  ${closeX2(640)}`;
+}
+// closeX for full-bleed cards (✕ inside the top-right corner, not overhanging)
+const closeX2 = (w) => `<div style="position:absolute;left:${w - 38}px;top:14px;width:26px;height:26px;border-radius:50%;background:${T.leather};border:1.5px solid ${T.goldLeaf};display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.45)"><span style="font:700 12px Georgia,serif;color:${T.goldLeaf};line-height:1">✕</span></div>`;
+
 const PAGES = { cover, yellow, cameback, colours, dark, explore, sources };
 const SIZES = { cover: { W: CW, H: CH } };   // portrait cover; every other page landscape
 const TIPS = {
@@ -362,6 +412,8 @@ const TIPS = {
   tip_yellow_duo: { w: 600, h: 252, fn: () => duoTip('cut_ron_y', 'cut_hermione_y', 'Ron & Hermione · the yellow years', `Back then we were a small cast — just ${nchip('134')} Harry Potter minifigures in the whole Yellow Years, the first of us in classic sunshine yellow.`, '#B8912E') },
   tip_colour_duo: { w: 600, h: 252, fn: () => duoTip('cut_ron_c', 'cut_hermione_c', 'Ron & Hermione · the colour years', `The return brought ${nchip('442')} minifigures — more than triple the Yellow Years — and every one now wears a real, flesh-toned face.`, '#7C2B22') },
   tip_appearances: { w: 600, h: 252, fn: () => duoTip('cut_draco', 'cut_harry_og', 'Set-appearance record', `Draco appears in ${nchip('7')} different sets — 2nd-most of any Harry Potter minifig. Only one wizard tops him: the very first yellow-faced Harry, on the right.`, '#2F6B4A') },
+  tip_answers: { w: 620, h: 420, fn: answersScroll },
+  tip_credits: { w: 640, h: 480, fn: creditsCard },
 };
 
 // ---- render ----

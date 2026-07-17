@@ -36,6 +36,21 @@
     },
     {
       "name": "bm_reset"
+    },
+    {
+      "name": "bm_rev_answers"
+    },
+    {
+      "name": "bm_rev_credits5"
+    },
+    {
+      "name": "bm_hide_s5"
+    },
+    {
+      "name": "bm_rev_credits"
+    },
+    {
+      "name": "bm_hide_s1"
     }
   ]
 }

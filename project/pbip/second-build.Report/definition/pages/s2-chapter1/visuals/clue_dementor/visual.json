@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_dementor",
   "position": {
-    "x": 404.3349753694581,
-    "y": 556.8472906403941,
+    "x": 404.33497536945811,
+    "y": 556.84729064039414,
     "z": 6000,
-    "height": 41.67487684729064,
+    "height": 41.674876847290641,
     "width": 42.5615763546798,
     "tabOrder": 5000
   },

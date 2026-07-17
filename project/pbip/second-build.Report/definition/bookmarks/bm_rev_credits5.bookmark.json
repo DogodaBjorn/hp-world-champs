@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Reveal · credits (ch IV)",
+  "name": "bm_rev_credits5",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "tip_answers",
+      "x_answers",
+      "tip_credits5",
+      "x_credits5"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "s5-sorting-quiz",
+    "sections": {
+      "s5-sorting-quiz": {
+        "visualContainers": {
+          "tip_answers": {
+            "singleVisual": {
+              "visualType": "image",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "x_answers": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "tip_credits5": {
+            "singleVisual": {
+              "visualType": "image"
+            }
+          },
+          "x_credits5": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          }
+        }
+      }
+    }
+  }
+}

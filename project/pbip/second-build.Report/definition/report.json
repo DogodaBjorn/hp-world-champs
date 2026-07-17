@@ -40,7 +40,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "false"
+                "Value": "true"
               }
             }
           }
@@ -155,6 +155,16 @@
         {
           "name": "tip_yellow_duo.png",
           "path": "tip_yellow_duo.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_answers.png",
+          "path": "tip_answers.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_credits.png",
+          "path": "tip_credits.png",
           "type": "Image"
         }
       ]

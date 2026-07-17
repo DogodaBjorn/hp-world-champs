@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_vold",
   "position": {
-    "x": 444.4984802431611,
+    "x": 444.49848024316111,
     "y": 506.74772036474167,
     "z": 6000,
-    "height": 41.82370820668693,
+    "height": 41.823708206686931,
     "width": 42.796352583586625,
     "tabOrder": 5000
   },
