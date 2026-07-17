@@ -6608,6 +6608,27 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "themecolors.luminance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ThemeColors",
+			          "ConceptualProperty": "Luminance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Luminance": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {

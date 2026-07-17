@@ -227,11 +227,12 @@ function goldRibbon(x, y, w, text) {
 }
 // a "minifig-tip": a transparent minifig + a parchment speech-scroll (a hidden
 // reveal shown when a clue is tapped). Rendered standalone on transparent bg.
-function minifigTip(cut, phrase, name, accent, figH = 224, sx = 158, sw = 258) {
+function minifigTip(cut, phrase, name, accent, figH = 224, sx = 158, sw = 258, cta = '') {
   return `<img src="${uri(cut)}" style="position:absolute;left:8px;bottom:8px;height:${figH}px;filter:drop-shadow(0 12px 16px rgba(0,0,0,.5))">
   <div style="position:absolute;left:${sx}px;top:18px;width:${sw}px;padding:15px 18px;background:#000 url('${PARCH}') center/cover;border:2px solid ${T.goldLeaf};border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.45)">
     <div style="font:800 11px Segoe UI;letter-spacing:1.5px;color:${accent};text-transform:uppercase;margin-bottom:6px;padding-right:16px">${name}</div>
     <div style="font:italic 400 14px Georgia,serif;line-height:1.5;color:${T.ink}">${phrase}</div>
+    ${cta ? `<div style="margin-top:11px;padding-top:9px;border-top:1px solid ${T.goldLeaf}66;font:italic 800 13px Georgia,serif;color:${T.red};text-decoration:underline;text-underline-offset:3px">${cta} ❦</div>` : ''}
     ${closeX()}
     <div style="position:absolute;left:-15px;top:64px;width:0;height:0;border-top:9px solid transparent;border-bottom:9px solid transparent;border-right:16px solid ${T.goldLeaf}"></div>
   </div>`;
@@ -282,7 +283,6 @@ function colours() {
   <!-- charts -->
   ${fig(548, 80, 684, 286)} ${figCap(564, 94, 'FIGURE 1 · THE COLOUR MAP', 'every colour to scale, in its true brick hex — sized by parts')}
   ${fig(548, 388, 684, 200)} ${figCap(564, 402, 'FIGURE 2 · THE 55-COLOUR SPECTRUM', 'one bar, every hue, ordered by part count')}
-  <div style="position:absolute;right:64px;bottom:44px;padding:12px 22px;border:1.5px solid ${T.red};border-radius:4px;background:rgba(124,43,34,.12);font:600 13px Georgia,serif;color:${T.red}">…or come to the dark side ❦</div>
   ${pageNo('III')} ${turn()}`;
 }
 
@@ -292,11 +292,11 @@ function dark() {
   <div style="position:absolute;inset:0;background:radial-gradient(120% 110% at 40% 40%, rgba(10,8,6,.45), rgba(6,5,4,.82) 100%)"></div>
   ${goldBorder(28, 24, 1224, 672)}
   <div style="position:absolute;left:56px;top:52px;width:40px;height:40px;border-radius:50%;background:#1A1512;border:2px solid ${T.gold};display:flex;align-items:center;justify-content:center"><span style="font:800 18px Georgia,serif;color:${T.goldLeaf}">☾</span></div>
-  ${eyebrow(112, 56, 'The Restricted Section · after closing time')}
+  ${eyebrow(112, 56, 'The Restricted Section')}
   <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:#D8CBB0">The Chamber of Greys</div>
-  <div style="position:absolute;left:56px;top:132px;width:420px;font:400 14.5px Georgia,serif;line-height:1.55;color:#DBCFB6">Not every set dazzles. The greyest theme of all is <span style="color:#E08A78;font-weight:700">Star Wars</span> — about <span style="color:#E08A78;font-weight:700">72% grey</span>, against Harry Potter's 42%. Its darkest build, Vader's TIE Advanced (2006), is <span style="color:#E08A78;font-weight:700">97.9%</span> greyscale.</div>
-  <div style="position:absolute;left:64px;top:240px;font:800 92px Georgia,serif;color:#D8CCAE;text-shadow:0 0 20px rgba(0,0,0,.5)">97.9%</div>
-  <div style="position:absolute;left:68px;top:356px;font:italic 400 15px Georgia,serif;color:#BCAF92">of every brick is greyscale</div>
+  <div style="position:absolute;left:56px;top:132px;width:420px;font:400 16px Georgia,serif;line-height:1.58;color:#DBCFB6">Not every set dazzles. The greyest theme of all is <span style="color:#E08A78;font-weight:700">Star Wars</span> — about <span style="color:#E08A78;font-weight:700">72% grey</span>, against Harry Potter's 42%. Its darkest build, Vader's TIE Advanced (2006), is <span style="color:#E08A78;font-weight:700">97.9%</span> greyscale.</div>
+  <div style="position:absolute;left:64px;top:252px;font:800 80px Georgia,serif;color:#D8CCAE;text-shadow:0 0 20px rgba(0,0,0,.5)">97.9%</div>
+  <div style="position:absolute;left:68px;top:348px;font:italic 400 15px Georgia,serif;color:#BCAF92">of every brick is greyscale</div>
   ${plate('dark', 56, 410, 430, 240)}
   ${cutImg('cut_vold', 300, 344, 168)}
   ${fig(512, 60, 720, 340)} ${figCap(528, 74, 'FIGURE 1 · COLOUR COMPOSITION', 'grey vs the true rainbow of colour · Star Wars is greyest')}
@@ -362,7 +362,7 @@ const PAGES = { cover, yellow, cameback, colours, dark, explore, sources };
 const SIZES = { cover: { W: CW, H: CH } };   // portrait cover; every other page landscape
 const TIPS = {
   tip_harry: { w: 476, h: 250, fn: () => minifigTip('cut_harry', "Look closer — this one set hides <b>55</b> real brick colours. There's only one LEGO set ever built that has more colours.", 'Harry Potter', T.red) },
-  tip_vold: { w: 476, h: 250, fn: () => minifigTip('cut_vold', "All this colour… how <i>garish</i>. Come find me in the greys, where <b>97.9%</b> of a set is shadow.", 'Lord Voldemort', '#7A5A1C') },
+  tip_vold: { w: 476, h: 250, fn: () => minifigTip('cut_vold', "All this colour… how <i>garish</i>. Come find me in the greys, where <b>97.9%</b> of a set is shadow.", 'Lord Voldemort', '#7A5A1C', 224, 158, 258, 'come to the dark side and see for yourself') },
   tip_dementor: { w: 476, h: 250, fn: () => minifigTip('cut_dementor', "Seven pieces of pure dread — no minifig in the Yellow Years is built from more.", 'The Dementor · largest of the era', '#4A5A3E') },
   tip_marge: { w: 542, h: 250, fn: () => minifigTip('cut_marge', "Fourteen pieces and still inflating — no Harry Potter minifig ever built is bigger than me.", 'Aunt Marge · the largest of all', T.red, 200, 232, 250) },
   tip_yellow_duo: { w: 600, h: 252, fn: () => duoTip('cut_ron_y', 'cut_hermione_y', 'Ron & Hermione · the yellow years', `Back then we were a small cast — just ${nchip('134')} Harry Potter minifigures in the whole Yellow Years, the first of us in classic sunshine yellow.`, '#B8912E') },

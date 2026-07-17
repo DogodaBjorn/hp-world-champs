@@ -25,14 +25,6 @@ table ThemeColors
 		summarizeBy: none
 		sourceColumn: color_hex
 
-	column Luminance
-		dataType: double
-		isHidden
-		formatString: 0.0
-		lineageTag: 1a6e4b90-8c72-4d3f-b5e1-9f0c2a4d7e63
-		summarizeBy: none
-		sourceColumn: Luminance
-
 	column 'Is Grayscale'
 		dataType: boolean
 		isHidden
@@ -52,6 +44,14 @@ table ThemeColors
 		lineageTag: d9bc9f35-0c58-442f-a262-4a534f47686d
 		summarizeBy: sum
 		sourceColumn: part_count
+
+	column Luminance
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: 1a6e4b90-8c72-4d3f-b5e1-9f0c2a4d7e63
+		summarizeBy: none
+		sourceColumn: Luminance
 
 	partition ThemeColors = m
 		mode: import

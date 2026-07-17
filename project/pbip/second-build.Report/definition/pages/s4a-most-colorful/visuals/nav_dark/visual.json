@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "nav_dark",
   "position": {
-    "x": 987.2340425531916,
-    "y": 635.1367781155016,
-    "z": 10000,
-    "height": 39.87841945288754,
-    "width": 226.6261398176292,
+    "x": 214,
+    "y": 384,
+    "z": 9000,
+    "height": 42,
+    "width": 252,
     "tabOrder": 9000
   },
   "visual": {
@@ -187,7 +187,7 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'Candara'"
                 }
               }
             }
@@ -231,7 +231,7 @@
             "altText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Turn the page'"
+                  "Value": "'Come to the dark side — the hidden Chamber of Greys'"
                 }
               }
             }
@@ -453,5 +453,6 @@
         }
       ]
     }
-  }
+  },
+  "isHidden": true
 }

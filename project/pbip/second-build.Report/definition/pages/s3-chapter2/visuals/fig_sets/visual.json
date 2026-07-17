@@ -6,7 +6,7 @@
     "y": 109.06403940886699,
     "z": 19500,
     "height": 242.95566502463055,
-    "width": 706.69950738916259,
+    "width": 706.6995073891626,
     "tabOrder": 2000
   },
   "visual": {
@@ -111,6 +111,13 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Candara'"
                 }
               }
             }
@@ -235,7 +242,7 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'Candara'"
                 }
               }
             }

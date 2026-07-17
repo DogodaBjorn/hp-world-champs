@@ -3,10 +3,10 @@
   "name": "fig_setcard_s3",
   "position": {
     "x": 512,
-    "y": 444.33480176211452,
+    "y": 444.3348017621145,
     "z": 19250,
-    "height": 175.92951541850221,
-    "width": 349.60352422907488,
+    "height": 175.9295154185022,
+    "width": 349.6035242290749,
     "tabOrder": 1000
   },
   "visual": {
@@ -186,7 +186,7 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'Candara'"
                 }
               }
             }

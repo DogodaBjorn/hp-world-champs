@@ -15,22 +15,22 @@
   "tableAccent": "#8A6A21",
   "textClasses": {
     "title": {
-      "fontFace": "Georgia",
+      "fontFace": "Candara",
       "fontSize": 20,
       "color": "#211B14"
     },
     "header": {
-      "fontFace": "Segoe UI",
+      "fontFace": "Candara",
       "fontSize": 12,
       "color": "#5C5346"
     },
     "label": {
-      "fontFace": "Segoe UI",
+      "fontFace": "Candara",
       "fontSize": 11,
       "color": "#5C5346"
     },
     "callout": {
-      "fontFace": "Georgia",
+      "fontFace": "Candara",
       "fontSize": 32,
       "color": "#211B14"
     }

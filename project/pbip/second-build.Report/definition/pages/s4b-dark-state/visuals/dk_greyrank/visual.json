@@ -3,10 +3,10 @@
   "name": "dk_greyrank",
   "position": {
     "x": 512,
-    "y": 448.84581497797359,
+    "y": 448.8458149779736,
     "z": 9500,
     "height": 171.41850220264317,
-    "width": 719.50660792951544,
+    "width": 719.5066079295154,
     "tabOrder": 1000
   },
   "visual": {
@@ -364,7 +364,7 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'Candara'"
                 }
               }
             }

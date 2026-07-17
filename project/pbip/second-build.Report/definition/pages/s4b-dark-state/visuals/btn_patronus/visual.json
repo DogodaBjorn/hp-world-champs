@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "btn_patronus",
   "position": {
-    "x": 924.4444444444443,
-    "y": 56.35220125786163,
-    "z": 9750,
-    "height": 83.18658280922432,
-    "width": 226.75052410901466,
+    "x": 878.8888888888889,
+    "y": 401.4255765199161,
+    "z": 10750,
+    "height": 51.11111111111111,
+    "width": 182.22222222222223,
     "tabOrder": 5000
   },
   "visual": {
@@ -187,7 +187,7 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'Candara'"
                 }
               }
             }

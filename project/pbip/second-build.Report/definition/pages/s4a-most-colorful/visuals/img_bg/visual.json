@@ -5,7 +5,7 @@
     "x": 0,
     "y": 0,
     "z": 2000,
-    "height": 719.75683890577511,
+    "height": 719.7568389057751,
     "width": 1280,
     "tabOrder": -1000
   },
@@ -74,7 +74,7 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'Candara'"
                 }
               }
             }

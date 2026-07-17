@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "fig_setcard_s2",
   "position": {
-    "x": 511.62561576354682,
+    "x": 511.6256157635468,
     "y": 425.615763546798,
     "z": 17250,
     "height": 195.07389162561577,
@@ -103,6 +103,13 @@
                   "Value": "10D"
                 }
               }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Candara'"
+                }
+              }
             }
           }
         }
@@ -153,6 +160,13 @@
                   "Value": "15D"
                 }
               }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Candara'"
+                }
+              }
             }
           }
         }
@@ -186,7 +200,7 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'Candara'"
                 }
               }
             }

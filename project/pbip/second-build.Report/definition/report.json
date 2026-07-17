@@ -40,7 +40,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -90,6 +90,11 @@
         {
           "name": "bg_explore.png",
           "path": "bg_explore.png",
+          "type": "Image"
+        },
+        {
+          "name": "bg_sources.png",
+          "path": "bg_sources.png",
           "type": "Image"
         },
         {
@@ -150,11 +155,6 @@
         {
           "name": "tip_yellow_duo.png",
           "path": "tip_yellow_duo.png",
-          "type": "Image"
-        },
-        {
-          "name": "bg_sources.png",
-          "path": "bg_sources.png",
           "type": "Image"
         }
       ]

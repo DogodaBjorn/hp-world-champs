@@ -8,7 +8,8 @@
       "tip_harry",
       "tip_vold",
       "x_harry",
-      "x_vold"
+      "x_vold",
+      "nav_dark"
     ],
     "suppressData": true
   },
@@ -40,6 +41,11 @@
             }
           },
           "x_vold": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          },
+          "nav_dark": {
             "singleVisual": {
               "visualType": "actionButton"
             }
