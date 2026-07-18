@@ -314,70 +314,150 @@ function numStep(x, y, n) {
 function sealSpot(x, y) {
   return `<div style="position:absolute;left:${x}px;top:${y}px;width:58px;height:58px;border-radius:50%;border:2px dashed ${T.gold}88;display:flex;align-items:center;justify-content:center"><span style="font:italic 400 11px Georgia,serif;color:${T.ink2}">match?</span></div>`;
 }
-// wax seal that opens the sealed answers (an invisible button sits over it)
-function sealAnswers(x, y) {
-  return `<div style="position:absolute;left:${x}px;top:${y}px;width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#8C2A20,#5E1812);border:2px solid ${T.goldBright};box-shadow:0 3px 10px rgba(0,0,0,.4), inset 0 0 8px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center"><span style="font:800 22px Georgia,serif;color:${T.goldLeaf}">❋</span></div>
-  <div style="position:absolute;left:${x - 24}px;top:${y + 56}px;width:100px;text-align:center;font:italic 400 10.5px Georgia,serif;color:${T.ink2}">tap the seal</div>`;
+// ============ THE MARAUDER'S MAP (Chapter IV) ============
+// Two states baked as separate canvases: the folded blank parchment with the
+// oath, and the revealed ink map. Every clickable rect (oath, mischief, each
+// name banner) is recorded into BANNERS and written to map_banners.json so the
+// PBIR build script places its invisible buttons on exactly the same spots.
+const MAPD = JSON.parse(readFileSync(join(HERE, 'map_data.json'), 'utf8'));
+const BANNERS = {};
+const MINK = '#4A3418';           // map ink (dark sepia)
+const reg = (slug, x, y, w, h) => { BANNERS[slug] = { x, y, w, h }; return ''; };
+// a Marauder name-banner: parchment ribbon with pointed ends + script name
+function banner(slug, x, y, name, small = false) {
+  const fs = small ? 12 : 13.5;
+  const w = Math.round(name.length * (small ? 6.4 : 7.2)) + 34;
+  const h = small ? 24 : 27;
+  reg(slug, x - 6, y - 6, w + 12, h + 12);
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:rgba(243,233,210,.92);border:1.2px solid ${MINK};box-shadow:1px 2px 4px rgba(60,35,12,.25);display:flex;align-items:center;justify-content:center">
+    <span style="font:italic 700 ${fs}px 'Segoe Script',Georgia,serif;color:${MINK};white-space:nowrap">${name}</span></div>
+  <div style="position:absolute;left:${x - 7}px;top:${y + 4}px;width:0;height:0;border-top:${h / 2 - 4}px solid transparent;border-bottom:${h / 2 - 4}px solid transparent;border-right:8px solid ${MINK}"></div>
+  <div style="position:absolute;left:${x + w - 1}px;top:${y + 4}px;width:0;height:0;border-top:${h / 2 - 4}px solid transparent;border-bottom:${h / 2 - 4}px solid transparent;border-left:8px solid ${MINK}"></div>`;
 }
-function explore() {
+// an ink-drawn room: double border + tiny caps label
+function room(x, y, w, h, label, extra = '') {
+  return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;border:1.6px solid ${MINK};box-shadow:inset 0 0 0 3px rgba(243,233,210,.9), inset 0 0 0 4.2px ${MINK}66;background:rgba(240,228,200,.35);${extra}"></div>
+  <div style="position:absolute;left:${x + 8}px;top:${y + 5}px;width:${w - 16}px;font:700 9.5px 'Segoe UI';letter-spacing:1.6px;color:${MINK};text-transform:uppercase;opacity:.85">${label}</div>`;
+}
+// a wandering trail of footprint pairs (tiny ink ovals, alternating offset)
+function feet(x, y, rot, n = 5, gap = 17) {
+  let s = '';
+  for (let i = 0; i < n; i++) {
+    const t = rot * Math.PI / 180, px = x + Math.cos(t) * gap * i, py = y + Math.sin(t) * gap * i;
+    const side = (i % 2 ? 4 : -4), sx = px - Math.sin(t) * side, syy = py + Math.cos(t) * side;
+    s += `<span style="position:absolute;left:${sx}px;top:${syy}px;width:3.4px;height:6.4px;background:${MINK};border-radius:50%;opacity:.65;transform:rotate(${rot + 90}deg)"></span>
+    <span style="position:absolute;left:${sx + Math.cos(t) * 5}px;top:${syy + Math.sin(t) * 5 - 3.4}px;width:2.2px;height:3.2px;background:${MINK};border-radius:50%;opacity:.6;transform:rotate(${rot + 90}deg)"></span>`;
+  }
+  return s;
+}
+const dash = (x, y, w, h) => `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;border-top:1.4px dashed ${MINK}88"></div>`;
+
+function map_folded() {
+  reg('solemn', 340, 396, 600, 64);
   return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(3)}
-  ${step(56, 52, '✦')} ${eyebrow(112, 56, 'The Final Chapter · a seeker’s game')}
-  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">The Cast Assembles</div>
-  <div style="position:absolute;left:56px;top:124px;width:1176px;font:italic 400 14px Georgia,serif;line-height:1.5;color:${T.ink2}">Every ${gink('Harry Potter')} minifig design ever made — one dot each, placed by the year it first appeared and how many sets it lives in. ${gink('Hover any dot')} to meet its wizard; pick a face on the left to follow one through the years.</div>
-  <!-- left column: find-a-wizard + faces -->
-  <div style="position:absolute;left:58px;top:184px;font:700 12px Segoe UI;letter-spacing:1.5px;color:${T.red}">FIND A WIZARD</div>
-  ${fig(56, 208, 280, 206)}
-  <div style="position:absolute;left:58px;top:432px;font:700 12px Segoe UI;letter-spacing:1.5px;color:${T.red}">THEIR FACES THROUGH THE YEARS</div>
-  ${fig(56, 456, 280, 150)}
-  <!-- the swarm -->
-  ${fig(360, 184, 872, 400)}
-  ${figCap(376, 198, 'FIGURE · THE CAST, YEAR BY YEAR', 'each dot a minifig design · first appearance year across → sets it appears in ↑ · classic yellow vs modern flesh')}
-  <!-- the seeker's challenges -->
-  ${fig(360, 596, 872, 64)}
-  <div style="position:absolute;left:376px;top:604px;font:700 11px Segoe UI;letter-spacing:2px;color:${T.red}">SEEKER’S CHALLENGES</div>
-  <div style="position:absolute;left:376px;top:624px;width:760px;font:italic 400 12.5px Georgia,serif;line-height:1.45;color:${T.ink}">① Which wizard lives in the most sets?&nbsp;&nbsp;&nbsp;② Find the very last classic yellow face.&nbsp;&nbsp;&nbsp;③ How many new faces joined the lost years?</div>
-  ${sealAnswers(1156, 596)}
+  ${step(56, 52, '✦')} ${eyebrow(112, 56, 'The Final Chapter')}
+  <div style="position:absolute;left:110px;top:72px;font:800 34px Georgia,serif;color:${T.ink}">…just a blank piece of parchment?</div>
+  <!-- faint fold creases -->
+  <div style="position:absolute;left:426px;top:120px;width:1px;height:520px;background:linear-gradient(180deg,transparent,${T.inkSoft}44,transparent)"></div>
+  <div style="position:absolute;left:852px;top:120px;width:1px;height:520px;background:linear-gradient(180deg,transparent,${T.inkSoft}44,transparent)"></div>
+  <div style="position:absolute;left:200px;top:368px;width:880px;height:1px;background:linear-gradient(90deg,transparent,${T.inkSoft}33,transparent)"></div>
+  <div style="position:absolute;left:0;top:300px;width:${W}px;text-align:center;font:italic 400 15px Georgia,serif;color:${T.ink2}">The castle keeps its secrets from plain eyes.<br>Only one oath will make the ink appear.</div>
+  <!-- the oath button (invisible clue_solemn sits over this rect) -->
+  <div style="position:absolute;left:340px;top:396px;width:600px;height:64px;border:2px solid ${T.red};border-radius:6px;background:rgba(124,43,34,.10);box-shadow:0 3px 12px rgba(60,20,10,.18);display:flex;align-items:center;justify-content:center">
+    <span style="font:italic 700 19px 'Segoe Script',Georgia,serif;color:${T.red}">I solemnly swear that I am up to no good&nbsp;❦</span></div>
+  <div style="position:absolute;left:0;top:478px;width:${W}px;text-align:center;font:italic 400 12px Georgia,serif;color:${T.ink2}">tap the oath — and mind who's watching</div>
   <div style="position:absolute;left:740px;bottom:20px;font:italic 600 13px Georgia,serif;color:${T.red}">❦ credits</div>
   ${pageNo('IV')} ${turn()}`;
 }
 
-// ================= SOURCES =================
-function sources() {
-  const rowH = (x, y, w, t, s) => `${fig(x, y, w, 86)}
-    <div style="position:absolute;left:${x + 18}px;top:${y + 13}px;font:700 13.5px Georgia,serif;color:${T.ink}">${t}</div>
-    <div style="position:absolute;left:${x + 18}px;top:${y + 37}px;width:${w - 36}px;font:400 12px Georgia,serif;line-height:1.42;color:${T.ink2}">${s}</div>`;
-  const L = 56, R = 646, W1 = 570, W2 = 586;
-  return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(4)}
-  ${step(56, 52, '?')} ${eyebrow(112, 56, 'The Footnotes')}
-  <div style="position:absolute;left:110px;top:70px;font:800 34px Georgia,serif;color:${T.ink}">Sources & Credits</div>
-  <div style="position:absolute;left:56px;top:122px;width:1020px;font:italic 400 13.5px Georgia,serif;color:${T.ink2}">Every brick in this story stands on someone's work. Data, tools, trademarks and teachers — cited here, with thanks.</div>
-  ${rowH(L, 158, W1, 'Rebrickable — the LEGO database', 'Every set, part, colour, minifigure and photograph. rebrickable.com — the factual foundation of the whole story.')}
-  ${rowH(R, 158, W2, 'Deneb · Daniel Marsh-Patrick', 'The certified AppSource visual rendering declarative Vega-Lite in Power BI — every true-colour map & spectrum here.')}
-  ${rowH(L, 252, W1, 'LEGO® · The LEGO Group', 'LEGO® is a trademark of The LEGO Group, which does not sponsor or endorse this non-commercial fan data-story.')}
-  ${rowH(R, 252, W2, 'Harry Potter™ · Wizarding World', 'Trademarks of Warner Bros. Entertainment Inc. Used lovingly for a non-commercial fan data-story.')}
-  ${rowH(L, 346, W1, 'Cinematic scene art · Google Gemini', 'Brick-built wizarding scenes generated with Google Gemini 2.5 Flash Image, anchored on real LEGO set photos.')}
-  ${rowH(R, 346, W2, 'pbir CLI · Kurt Buhler & Maxim Anatsko', 'The agent-first Power BI toolkit that made this PBIR authorable, used under its non-commercial licence.')}
-  ${rowH(L, 440, W1, 'Design craft', 'Storytelling & layout shaped by Cole Nussbaumer Knaflic, Lukas Reese, Draft BI, Numerro & MoonStory. Type set in Georgia.')}
-  ${rowH(R, 440, W2, 'The arena · DataViz World Champs', 'Power BI DataViz World Champs · Barcelona · Round 2 — brief & judging by the Microsoft Fabric community.')}
-  <div style="position:absolute;left:412px;top:548px;width:456px;height:1px;background:linear-gradient(90deg,transparent,${T.goldLeaf},transparent)"></div>
-  <div style="position:absolute;left:56px;top:560px;width:1168px;text-align:center;font:italic 600 14px Georgia,serif;color:${T.red}">…and to everyone and everything that shaped this build — knowingly and unknowingly — thank you.</div>
-  <div style="position:absolute;left:0;bottom:34px;width:${W}px;text-align:center;font:italic 600 13px Georgia,serif;color:${T.ink2}">❦ return to the book</div>`;
+function map_open() {
+  return `${parchmentPage()}
+  <div style="position:absolute;inset:0;background:radial-gradient(120% 110% at 50% 40%, transparent 60%, rgba(90,55,20,.16))"></div>
+  ${goldBorder(28, 24, 1224, 672)} ${ribbons(3)}
+  <!-- masthead -->
+  <div style="position:absolute;left:0;top:42px;width:${W}px;text-align:center;font:700 10.5px 'Segoe UI';letter-spacing:3.5px;color:${MINK}">MESSRS. MOONY, WORMTAIL, PADFOOT <span style="font-family:Georgia">&</span> PRONGS</div>
+  <div style="position:absolute;left:0;top:60px;width:${W}px;text-align:center;font:italic 400 11.5px Georgia,serif;color:${MINK}CC">purveyors of aids to magical mischief-makers, are proud to present</div>
+  <div style="position:absolute;left:0;top:76px;width:${W}px;text-align:center;font:italic 800 30px 'Segoe Script',Georgia,serif;color:${MINK};text-shadow:0 1px 0 rgba(255,244,214,.5)">The Marauder’s Map</div>
+  <div style="position:absolute;left:${W / 2 - 170}px;top:118px;width:340px;height:1px;background:linear-gradient(90deg,transparent,${MINK},transparent)"></div>
+  <div style="position:absolute;left:0;top:124px;width:${W}px;text-align:center;font:italic 400 11px Georgia,serif;color:${T.ink2}">the Map never lies — tap a banner to summon the minifig it follows</div>
+  <!-- ===== castle floor plan ===== -->
+  ${room(64, 152, 212, 92, 'Ravenclaw Tower')} ${banner('luna', 92, 196, 'Luna Lovegood')}
+  ${room(298, 152, 218, 92, 'The Library')} ${banner('hermione', 316, 196, 'Hermione Granger')}
+  ${room(538, 152, 220, 92, "Headmaster's Office")} ${banner('dumbledore', 552, 196, 'Albus Dumbledore')}
+  ${room(780, 152, 210, 92, 'Hospital Wing')} ${banner('pomfrey', 800, 196, 'Madam Pomfrey')}
+  ${room(1012, 152, 178, 92, 'The Owlery')} ${feet(1054, 196, 24, 4)}
+  ${dash(84, 262, 1100, 1)}
+  ${room(64, 282, 212, 92, 'Transfiguration')} ${banner('minerva', 76, 326, 'Minerva McGonagall')}
+  ${room(298, 282, 218, 92, 'Room of Requirement')} ${banner('cho', 336, 326, 'Cho Chang')}
+  ${room(538, 282, 220, 92, 'Second-Floor Bathroom')} ${banner('myrtle', 560, 326, 'Moaning Myrtle')}
+  ${room(780, 282, 210, 92, 'Defence Classroom')} ${banner('lockhart', 792, 326, 'Gilderoy Lockhart')}
+  ${room(1012, 282, 178, 92, 'Grand Staircase')} ${feet(1050, 320, 105, 4)}
+  ${dash(84, 392, 1100, 1)}
+  ${room(64, 412, 212, 92, 'Potions Dungeon')} ${banner('snape', 96, 456, 'Severus Snape')}
+  ${room(298, 412, 264, 92, 'Slytherin Common Room')} ${banner('draco', 306, 442, 'Draco Malfoy')} ${banner('goyle', 344, 474, 'Gregory Goyle', true)}
+  ${room(584, 412, 214, 92, 'Slytherin Corridor')} ${banner('ronmap', 606, 456, 'Ron Weasley')}
+  ${room(820, 412, 170, 92, 'The Kitchens')} ${banner('dobby', 850, 456, 'Dobby')}
+  ${room(1012, 412, 178, 92, 'The Great Hall')} ${feet(1060, 450, 60, 4)}
+  <!-- grounds -->
+  ${dash(84, 522, 1100, 1)}
+  <div style="position:absolute;left:64px;top:540px;width:250px;font:700 9.5px 'Segoe UI';letter-spacing:1.6px;color:${MINK};opacity:.85">PASSAGE TO THE SHRIEKING SHACK</div>
+  ${feet(80, 560, 8, 8)} ${banner('moony', 232, 556, 'Moony')}
+  <div style="position:absolute;left:404px;top:534px;width:230px;height:110px;border:1.6px solid ${MINK};border-radius:50%;box-shadow:inset 0 0 0 3px rgba(243,233,210,.9), inset 0 0 0 4.2px ${MINK}66;background:rgba(240,228,200,.3)"></div>
+  <div style="position:absolute;left:454px;top:544px;font:700 9.5px 'Segoe UI';letter-spacing:1.6px;color:${MINK};opacity:.85">QUIDDITCH PITCH</div>
+  ${banner('hooch', 452, 578, 'Madame Hooch')}
+  <div style="position:absolute;left:668px;top:536px;width:150px;height:104px;border:1.6px solid ${MINK};border-radius:8px 60px 8px 8px;box-shadow:inset 0 0 0 3px rgba(243,233,210,.9), inset 0 0 0 4.2px ${MINK}66;background:rgba(240,228,200,.3)"></div>
+  <div style="position:absolute;left:684px;top:544px;font:700 9.5px 'Segoe UI';letter-spacing:1.6px;color:${MINK};opacity:.85">HAGRID'S HUT</div>
+  ${banner('hagrid', 676, 580, 'Rubeus Hagrid')}
+  <div style="position:absolute;left:850px;top:536px;width:340px;height:104px;border:1.6px dashed ${MINK}77;background:rgba(150,160,140,.10)"></div>
+  <div style="position:absolute;left:868px;top:544px;font:700 9.5px 'Segoe UI';letter-spacing:1.6px;color:${MINK};opacity:.7">THE BLACK LAKE</div>
+  ${feet(920, 588, -18, 5)}
+  <!-- mischief managed (clue_mischief sits over this rect; clear of the credits clue at x724) -->
+  ${reg('mischief', 430, 652, 270, 40)}
+  <div style="position:absolute;left:430px;top:652px;width:270px;height:40px;border:1.8px solid ${T.red};border-radius:5px;background:rgba(124,43,34,.12);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(60,20,10,.2)">
+    <span style="font:italic 700 15px 'Segoe Script',Georgia,serif;color:${T.red}">Mischief managed&nbsp;❦</span></div>
+  <div style="position:absolute;left:740px;bottom:20px;font:italic 600 13px Georgia,serif;color:${T.red}">❦ credits</div>
+  <div style="position:absolute;right:64px;bottom:20px;font:italic 600 12px Georgia,serif;color:${T.red}">turn the page ❦</div>
+  <div style="position:absolute;left:64px;bottom:20px;font:italic 600 12px Georgia,serif;color:${T.ink2}">❦ back</div>`;
 }
 
-// the sealed answers to the Seeker's Challenges (numbers verified against the
-// contest CSVs 2026-07-17: top fig 8 sets · last yellow debuts 2003 · 0 figs 2012-17)
-function answersScroll() {
-  const row = (y, n, t) => `<div style="position:absolute;left:26px;top:${y}px;width:30px;font:800 17px Georgia,serif;color:${T.red}">${n}</div>
-    <div style="position:absolute;left:60px;top:${y + 1}px;width:520px;font:400 13.5px Georgia,serif;line-height:1.45;color:${T.ink}">${t}</div>`;
-  return `<div style="position:absolute;left:0;top:0;width:620px;height:420px;background:#000 url('${PARCH}') center/cover;border:2px solid ${T.goldLeaf};border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.45)"></div>
-  <div style="position:absolute;left:26px;top:22px;display:flex;align-items:center;gap:10px">
-    <div style="width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#8C2A20,#5E1812);border:2px solid ${T.goldBright};display:flex;align-items:center;justify-content:center"><span style="font:800 17px Georgia,serif;color:${T.goldLeaf}">❋</span></div>
-    <span style="font:800 12px Segoe UI;letter-spacing:2.5px;color:${T.red}">THE SEEKER’S ANSWERS</span></div>
-  ${row(84, '①', `The very first <b>yellow-faced Harry</b> (2001). He lives in <b>8 different sets</b> — more than any other minifig design ever made. Draco’s best is 7.`)}
-  ${row(168, '②', `The <b>class of 2003</b> — a Draco, a Harry and a Lucius Malfoy were the last classic yellow faces ever made. From 2004, every wizard wears flesh tone.`)}
-  ${row(252, '③', `<b>Not a single one.</b> Across all of 2012–2017 no new minifig face joined the cast — the lost years stand as empty on this chart as they do on the shelf.`)}
-  <div style="position:absolute;left:26px;top:352px;width:568px;height:1px;background:linear-gradient(90deg,transparent,${T.goldLeaf},transparent)"></div>
-  <div style="position:absolute;left:26px;top:366px;width:568px;text-align:center;font:italic 400 12px Georgia,serif;color:${T.ink2}">well flown, Seeker — the book keeps your secret</div>
+// a Marauder's Map character card: quote header + transparent minifig + stats
+// verified from the contest CSVs (map_data.json, derived 2026-07-18).
+const MQUOTES = {
+  hermione:  { q: 'It’s LeviOsa, not LeviosAR!' },
+  dobby:     { q: 'Master has given Dobby a sock… Dobby is free!' },
+  dumbledore:{ q: 'It does not do to dwell on dreams and forget to live.' },
+  snape:     { q: 'Always.' },
+  hagrid:    { q: 'Yer a wizard, Harry.' },
+  minerva:   { q: 'Have a biscuit, Potter.' },
+  luna:      { q: 'You’re just as sane as I am.' },
+  hooch:     { q: 'Up!' },
+  cho:       { q: 'Seeker of Ravenclaw', epithet: true },
+  myrtle:    { q: 'I was just sitting in the U-bend, thinking about death…' },
+  lockhart:  { q: 'Fame is a fickle friend, Harry.' },
+  pomfrey:   { q: 'Matron of the Hospital Wing', epithet: true },
+  moony:     { q: 'Mr Moony presents his compliments…' },
+  ronmap:    { q: 'The Map never lies — someone’s been at the Polyjuice again.', epithet: true, name: 'Vincent Crabbe ⁄ Ron Weasley', extraCut: 'cut_ron_c' },
+  draco:     { q: 'My father will hear about this!' },
+  goyle:     { q: '…' },
+};
+function mapTip(slug) {
+  const d = MAPD[slug], m = MQUOTES[slug];
+  const cut = slug === 'hermione' ? 'cut_hermione_c' : `cut_map_${slug}`;
+  const name = (m.name || d.name);
+  const quote = m.epithet ? m.q : `“${m.q}”`;
+  const stat = (y, label, val) => `<div style="position:absolute;left:268px;top:${y}px;font:700 10px 'Segoe UI';letter-spacing:2px;color:${T.red}">${label}</div>
+    <div style="position:absolute;left:268px;top:${y + 17}px;width:322px;font:400 14px Georgia,serif;line-height:1.35;color:${T.ink}">${val}</div>`;
+  return `<div style="position:absolute;left:0;top:0;width:620px;height:440px;background:#000 url('${PARCH}') center/cover;border:2px solid ${T.goldLeaf};border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.45)"></div>
+  <div style="position:absolute;left:26px;top:20px;width:540px;font:italic 700 17px Georgia,serif;line-height:1.35;color:${T.red}">${quote}</div>
+  <div style="position:absolute;left:26px;top:${m.q.length > 42 ? 84 : 62}px;font:800 12px 'Segoe UI';letter-spacing:2.5px;color:${T.gold};text-transform:uppercase">${name}</div>
+  <div style="position:absolute;left:26px;top:${m.q.length > 42 ? 104 : 82}px;width:568px;height:1px;background:linear-gradient(90deg,${T.goldLeaf},transparent)"></div>
+  <img src="${uri(cut)}" style="position:absolute;left:30px;bottom:44px;height:250px;filter:drop-shadow(0 10px 14px rgba(0,0,0,.45))">
+  ${m.extraCut ? `<img src="${uri(m.extraCut)}" style="position:absolute;left:138px;bottom:44px;height:148px;opacity:.92;filter:drop-shadow(0 8px 12px rgba(0,0,0,.4))">` : ''}
+  ${stat(140, 'APPEARS IN', `${d.sets} sets · ${d.figs} minifig design${d.figs > 1 ? 's' : ''}`)}
+  ${stat(210, 'FIRST SEEN', `${d.first_set} · ${d.first_year}`)}
+  ${stat(288, 'LAST SEEN', `${d.last_set} · ${d.last_year}`)}
+  <div style="position:absolute;left:268px;top:368px;width:322px;height:1px;background:linear-gradient(90deg,transparent,${T.goldLeaf},transparent)"></div>
+  <div style="position:absolute;left:26px;bottom:14px;width:568px;text-align:center;font:italic 400 10.5px Georgia,serif;color:${T.ink2}">as recorded by the Marauder’s Map · archive: Rebrickable</div>
   ${closeX2(620)}`;
 }
 // condensed credits card (the popup twin of the full Sources & Credits page)
@@ -394,15 +474,16 @@ function creditsCard() {
   ${row(330, 192, 'pbir CLI · Kurt Buhler & Maxim Anatsko', 'the agent-first toolkit that made this book authorable')}
   ${row(28, 256, 'Design craft', 'Knaflic · Reese · Draft BI · Numerro · MoonStory')}
   ${row(330, 256, 'The arena · DataViz World Champs', 'Round 2 · brief & judging by the Fabric community')}
-  <div style="position:absolute;left:28px;top:330px;width:584px;height:1px;background:linear-gradient(90deg,transparent,${T.goldLeaf},transparent)"></div>
-  <div style="position:absolute;left:44px;top:348px;width:552px;text-align:center;font:italic 600 13px Georgia,serif;line-height:1.5;color:${T.red}">…and to everyone and everything that shaped this build —<br>knowingly and unknowingly — thank you.</div>
-  <div style="position:absolute;left:0;top:420px;width:640px;text-align:center;font:italic 400 11px Georgia,serif;color:${T.ink2}">the full chronicle of sources lives behind the ? ribbon</div>
+  <div style="position:absolute;left:28px;top:322px;width:584px;height:1px;background:linear-gradient(90deg,transparent,${T.goldLeaf},transparent)"></div>
+  <div style="position:absolute;left:44px;top:334px;width:552px;text-align:center;font:400 11px Georgia,serif;line-height:1.4;color:${T.ink2}"><b>Quotes</b> · brief lines from J.K. Rowling’s novels & the Warner Bros. films, spoken again in loving homage</div>
+  <div style="position:absolute;left:44px;top:372px;width:552px;text-align:center;font:italic 600 13px Georgia,serif;line-height:1.5;color:${T.red}">…and to everyone and everything that shaped this build —<br>knowingly and unknowingly — thank you.</div>
+  <div style="position:absolute;left:0;top:426px;width:640px;text-align:center;font:italic 400 11px Georgia,serif;color:${T.ink2}">tap ✕ to return to the book</div>
   ${closeX2(640)}`;
 }
 // closeX for full-bleed cards (✕ inside the top-right corner, not overhanging)
 const closeX2 = (w) => `<div style="position:absolute;left:${w - 38}px;top:14px;width:26px;height:26px;border-radius:50%;background:${T.leather};border:1.5px solid ${T.goldLeaf};display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.45)"><span style="font:700 12px Georgia,serif;color:${T.goldLeaf};line-height:1">✕</span></div>`;
 
-const PAGES = { cover, yellow, cameback, colours, dark, explore, sources };
+const PAGES = { cover, yellow, cameback, colours, dark, map_folded, map_open };
 const SIZES = { cover: { W: CW, H: CH } };   // portrait cover; every other page landscape
 const TIPS = {
   tip_harry: { w: 476, h: 250, fn: () => minifigTip('cut_harry', "Look closer — this one set hides <b>55</b> real brick colours. There's only one LEGO set ever built that has more colours.", 'Harry Potter', T.red) },
@@ -412,8 +493,8 @@ const TIPS = {
   tip_yellow_duo: { w: 600, h: 252, fn: () => duoTip('cut_ron_y', 'cut_hermione_y', 'Ron & Hermione · the yellow years', `Back then we were a small cast — just ${nchip('134')} Harry Potter minifigures in the whole Yellow Years, the first of us in classic sunshine yellow.`, '#B8912E') },
   tip_colour_duo: { w: 600, h: 252, fn: () => duoTip('cut_ron_c', 'cut_hermione_c', 'Ron & Hermione · the colour years', `The return brought ${nchip('442')} minifigures — more than triple the Yellow Years — and every one now wears a real, flesh-toned face.`, '#7C2B22') },
   tip_appearances: { w: 600, h: 252, fn: () => duoTip('cut_draco', 'cut_harry_og', 'Set-appearance record', `Draco appears in ${nchip('7')} different sets — 2nd-most of any Harry Potter minifig. Only one wizard tops him: the very first yellow-faced Harry, on the right.`, '#2F6B4A') },
-  tip_answers: { w: 620, h: 420, fn: answersScroll },
   tip_credits: { w: 640, h: 480, fn: creditsCard },
+  ...Object.fromEntries(Object.keys(MQUOTES).map(s => [`tip_map_${s}`, { w: 620, h: 440, fn: () => mapTip(s) }])),
 };
 
 // ---- render ----
@@ -470,6 +551,14 @@ if (!only.length || only.includes('qa')) {
   await wrap(dark(), `<img src="${uri('cut_dementor2')}" style="position:absolute;left:566px;top:84px;height:302px;filter:drop-shadow(0 14px 22px rgba(0,0,0,.65))"><div style="position:absolute;left:512px;top:408px;width:372px;text-align:center">${patronusButton()}</div>`, `_qa_dark_dementor.png`);
   await wrap(dark(), `${patronusGlow(716, 220)}<div style="position:absolute;left:480px;top:452px;width:470px;text-align:center;font:italic 700 20px Georgia,serif;color:#EAF4FF;text-shadow:0 0 12px rgba(159,198,232,.95)">Expecto Patronum!</div><div style="position:absolute;left:480px;top:486px;width:470px;text-align:center;font:italic 400 14px Georgia,serif;color:#B9CBDD">The Dementor flees into the shadows.</div>`, `_qa_dark_banished.png`);
   console.log('baked QA tip previews');
+}
+
+// hotspot registry for the PBIR build (oath, mischief + every name banner):
+// only written when the map pages were composed this run, so partial renders
+// of other pages can't emit an empty registry.
+if (Object.keys(BANNERS).length) {
+  writeFileSync(join(HERE, 'map_banners.json'), JSON.stringify(BANNERS, null, 1));
+  console.log('wrote map_banners.json:', Object.keys(BANNERS).join(' '));
 }
 
 await browser.close();

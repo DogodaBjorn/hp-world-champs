@@ -38,9 +38,6 @@
       "name": "bm_reset"
     },
     {
-      "name": "bm_rev_answers"
-    },
-    {
       "name": "bm_rev_credits5"
     },
     {
@@ -51,6 +48,72 @@
     },
     {
       "name": "bm_hide_s1"
+    },
+    {
+      "name": "bm_solemn"
+    },
+    {
+      "name": "bm_mischief"
+    },
+    {
+      "name": "bm_hide_map"
+    },
+    {
+      "name": "bm_rev_map_hermione"
+    },
+    {
+      "name": "bm_rev_map_dobby"
+    },
+    {
+      "name": "bm_rev_map_dumbledore"
+    },
+    {
+      "name": "bm_rev_map_snape"
+    },
+    {
+      "name": "bm_rev_map_hagrid"
+    },
+    {
+      "name": "bm_rev_map_minerva"
+    },
+    {
+      "name": "bm_rev_map_luna"
+    },
+    {
+      "name": "bm_rev_map_hooch"
+    },
+    {
+      "name": "bm_rev_map_cho"
+    },
+    {
+      "name": "bm_rev_map_myrtle"
+    },
+    {
+      "name": "bm_rev_map_lockhart"
+    },
+    {
+      "name": "bm_rev_map_pomfrey"
+    },
+    {
+      "name": "bm_rev_map_moony"
+    },
+    {
+      "name": "bm_rev_map_ronmap"
+    },
+    {
+      "name": "bm_rev_map_draco"
+    },
+    {
+      "name": "bm_rev_map_goyle"
+    },
+    {
+      "name": "bm_rev_credits_s2"
+    },
+    {
+      "name": "bm_rev_credits_s3"
+    },
+    {
+      "name": "bm_rev_credits_s4a"
     }
   ]
 }

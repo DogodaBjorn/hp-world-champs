@@ -10,7 +10,9 @@
       "tip_marge",
       "x_appearances",
       "x_colour_duo",
-      "x_marge"
+      "x_marge",
+      "tip_credits_s3",
+      "x_credits_s3"
     ],
     "suppressData": true
   },
@@ -61,6 +63,22 @@
             }
           },
           "x_marge": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "tip_credits_s3": {
+            "singleVisual": {
+              "visualType": "image",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "x_credits_s3": {
             "singleVisual": {
               "visualType": "actionButton",
               "display": {

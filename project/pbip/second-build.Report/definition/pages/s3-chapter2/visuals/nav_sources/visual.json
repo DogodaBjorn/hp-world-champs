@@ -192,7 +192,7 @@
             "altText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sources & Credits'"
+                  "Value": "'Open the credits'"
                 }
               }
             }
@@ -212,14 +212,14 @@
             "type": {
               "expr": {
                 "Literal": {
-                  "Value": "'PageNavigation'"
+                  "Value": "'Bookmark'"
                 }
               }
             },
-            "navigationSection": {
+            "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'sources'"
+                  "Value": "'bm_rev_credits_s3'"
                 }
               }
             }

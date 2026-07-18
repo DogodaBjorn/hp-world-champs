@@ -5,8 +5,6 @@
   "options": {
     "applyOnlyToTargetVisuals": true,
     "targetVisualNames": [
-      "tip_answers",
-      "x_answers",
       "tip_credits5",
       "x_credits5"
     ],
@@ -18,22 +16,6 @@
     "sections": {
       "s5-sorting-quiz": {
         "visualContainers": {
-          "tip_answers": {
-            "singleVisual": {
-              "visualType": "image",
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "x_answers": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
           "tip_credits5": {
             "singleVisual": {
               "visualType": "image"

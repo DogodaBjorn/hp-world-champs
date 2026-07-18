@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'bg_explore.png'"
+                      "Value": "'bg_map_folded.png'"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "bg_explore.png"
+                      "ItemName": "bg_map_folded.png"
                     }
                   }
                 },

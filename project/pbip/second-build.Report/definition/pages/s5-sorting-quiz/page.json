@@ -30,17 +30,5 @@
         }
       }
     ]
-  },
-  "visualInteractions": [
-    {
-      "source": "tbl_wizards",
-      "target": "dn_cast",
-      "type": "DataFilter"
-    },
-    {
-      "source": "tbl_wizards",
-      "target": "img_minifig",
-      "type": "DataFilter"
-    }
-  ]
+  }
 }

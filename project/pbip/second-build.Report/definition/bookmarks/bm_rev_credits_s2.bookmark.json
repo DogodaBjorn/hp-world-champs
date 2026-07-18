@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Reveal · credits (s2)",
+  "name": "bm_rev_credits_s2",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "tip_credits_s2",
+      "x_credits_s2"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "s2-chapter1",
+    "sections": {
+      "s2-chapter1": {
+        "visualContainers": {
+          "tip_credits_s2": {
+            "singleVisual": {
+              "visualType": "image"
+            }
+          },
+          "x_credits_s2": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          }
+        }
+      }
+    }
+  }
+}

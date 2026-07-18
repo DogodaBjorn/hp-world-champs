@@ -8,7 +8,9 @@
       "tip_dementor",
       "tip_yellow_duo",
       "x_dementor",
-      "x_yellow_duo"
+      "x_yellow_duo",
+      "tip_credits_s2",
+      "x_credits_s2"
     ],
     "suppressData": true
   },
@@ -43,6 +45,22 @@
             }
           },
           "x_yellow_duo": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "tip_credits_s2": {
+            "singleVisual": {
+              "visualType": "image",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "x_credits_s2": {
             "singleVisual": {
               "visualType": "actionButton",
               "display": {

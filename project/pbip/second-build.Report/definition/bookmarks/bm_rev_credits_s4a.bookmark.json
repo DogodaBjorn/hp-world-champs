@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Reveal · credits (s4a)",
+  "name": "bm_rev_credits_s4a",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "tip_credits_s4a",
+      "x_credits_s4a"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "s4a-most-colorful",
+    "sections": {
+      "s4a-most-colorful": {
+        "visualContainers": {
+          "tip_credits_s4a": {
+            "singleVisual": {
+              "visualType": "image"
+            }
+          },
+          "x_credits_s4a": {
+            "singleVisual": {
+              "visualType": "actionButton"
+            }
+          }
+        }
+      }
+    }
+  }
+}

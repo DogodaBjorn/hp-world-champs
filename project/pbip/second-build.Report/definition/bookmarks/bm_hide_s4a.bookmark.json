@@ -9,7 +9,9 @@
       "tip_vold",
       "x_harry",
       "x_vold",
-      "nav_dark"
+      "nav_dark",
+      "tip_credits_s4a",
+      "x_credits_s4a"
     ],
     "suppressData": true
   },
@@ -52,6 +54,22 @@
             }
           },
           "nav_dark": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "tip_credits_s4a": {
+            "singleVisual": {
+              "visualType": "image",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "x_credits_s4a": {
             "singleVisual": {
               "visualType": "actionButton",
               "display": {

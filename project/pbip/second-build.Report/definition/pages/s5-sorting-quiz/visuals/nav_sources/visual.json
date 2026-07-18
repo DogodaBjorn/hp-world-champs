@@ -4,7 +4,7 @@
   "position": {
     "x": 1232,
     "y": 444,
-    "z": 520,
+    "z": 8600,
     "height": 56,
     "width": 48,
     "tabOrder": 95000
@@ -192,7 +192,7 @@
             "altText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sources & Credits'"
+                  "Value": "'Open the credits'"
                 }
               }
             }
@@ -212,14 +212,14 @@
             "type": {
               "expr": {
                 "Literal": {
-                  "Value": "'PageNavigation'"
+                  "Value": "'Bookmark'"
                 }
               }
             },
-            "navigationSection": {
+            "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'sources'"
+                  "Value": "'bm_rev_credits5'"
                 }
               }
             }

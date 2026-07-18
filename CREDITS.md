@@ -16,6 +16,7 @@ adopt a new idea into it, add its source here in the same change
 | **Daniel Marsh-Patrick** — [Deneb](https://deneb.guide/) | Declarative Vega-Lite visuals inside Power BI: the middle rung between native and custom-visual development. | deneb-studio |
 | **Microsoft Power BI / Fabric teams** | PBIP/PBIR/TMDL open formats, the base themes, `pbiviz` tooling, and the core-visuals work (Miguel Myers and team: new card, reference labels, button slicer). | everywhere; custom-visual-studio; nav-studio |
 | **UW Interactive Data Lab** — [Vega-Lite](https://vega.github.io/vega-lite/) | The grammar Deneb speaks. | deneb-studio |
+| **J.K. Rowling & Warner Bros. Entertainment** | Brief character lines from the Harry Potter novels & films, quoted in loving homage on the second-build Marauder's Map chapter; Harry Potter™ and the Marauder's Map are their creations and trademarks. | second-build ch. IV map cards, credits popup |
 
 ## Practitioners whose published work shaped the modules
 
