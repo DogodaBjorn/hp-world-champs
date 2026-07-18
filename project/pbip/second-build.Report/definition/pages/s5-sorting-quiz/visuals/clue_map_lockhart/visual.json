@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_map_lockhart",
   "position": {
-    "x": 786,
-    "y": 320,
+    "x": 730,
+    "y": 90,
     "z": 6000,
-    "height": 39,
-    "width": 168,
+    "height": 34,
+    "width": 138,
     "tabOrder": 6000
   },
   "visual": {

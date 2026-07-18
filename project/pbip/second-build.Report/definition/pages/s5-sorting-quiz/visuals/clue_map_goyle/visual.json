@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_map_goyle",
   "position": {
-    "x": 338,
-    "y": 468,
+    "x": 736,
+    "y": 382,
     "z": 6000,
-    "height": 36,
-    "width": 129,
+    "height": 32,
+    "width": 108,
     "tabOrder": 6000
   },
   "visual": {

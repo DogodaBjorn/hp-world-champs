@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_map_hagrid",
   "position": {
-    "x": 670,
-    "y": 574,
+    "x": 502,
+    "y": 560,
     "z": 6000,
-    "height": 39,
-    "width": 140,
+    "height": 34,
+    "width": 115,
     "tabOrder": 6000
   },
   "visual": {

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_mischief",
   "position": {
-    "x": 430,
-    "y": 652,
+    "x": 52,
+    "y": 560,
     "z": 6200,
     "height": 40,
-    "width": 270,
+    "width": 232,
     "tabOrder": 6200
   },
   "visual": {

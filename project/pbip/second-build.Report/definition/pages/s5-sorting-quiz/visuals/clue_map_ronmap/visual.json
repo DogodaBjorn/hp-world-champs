@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_map_ronmap",
   "position": {
-    "x": 600,
-    "y": 450,
+    "x": 586,
+    "y": 316,
     "z": 6000,
-    "height": 39,
-    "width": 125,
+    "height": 34,
+    "width": 103,
     "tabOrder": 6000
   },
   "visual": {

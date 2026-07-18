@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_map_minerva",
   "position": {
-    "x": 70,
-    "y": 320,
+    "x": 378,
+    "y": 166,
     "z": 6000,
-    "height": 39,
-    "width": 176,
+    "height": 34,
+    "width": 144,
     "tabOrder": 6000
   },
   "visual": {

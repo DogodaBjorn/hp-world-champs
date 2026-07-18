@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_map_cho",
   "position": {
-    "x": 330,
-    "y": 320,
+    "x": 836,
+    "y": 290,
     "z": 6000,
-    "height": 39,
-    "width": 111,
+    "height": 34,
+    "width": 91,
     "tabOrder": 6000
   },
   "visual": {

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "x_credits",
   "position": {
-    "x": 80,
-    "y": 360,
-    "z": 7100,
-    "height": 480,
-    "width": 640,
-    "tabOrder": 7100
+    "x": 0,
+    "y": 0,
+    "z": 25100,
+    "height": 1100,
+    "width": 800,
+    "tabOrder": 25100
   },
   "visual": {
     "visualType": "actionButton",

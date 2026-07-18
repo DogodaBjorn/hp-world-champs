@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_map_luna",
   "position": {
-    "x": 86,
-    "y": 190,
+    "x": 790,
+    "y": 152,
     "z": 6000,
-    "height": 39,
-    "width": 140,
+    "height": 34,
+    "width": 115,
     "tabOrder": 6000
   },
   "visual": {

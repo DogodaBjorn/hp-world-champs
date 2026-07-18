@@ -324,10 +324,11 @@ const BANNERS = {};
 const MINK = '#4A3418';           // map ink (dark sepia)
 const reg = (slug, x, y, w, h) => { BANNERS[slug] = { x, y, w, h }; return ''; };
 // a Marauder name-banner: parchment ribbon with pointed ends + script name
+// (compact: the names sit on the drawn Hogwarts itself)
 function banner(slug, x, y, name, small = false) {
-  const fs = small ? 12 : 13.5;
-  const w = Math.round(name.length * (small ? 6.4 : 7.2)) + 34;
-  const h = small ? 24 : 27;
+  const fs = small ? 10 : 11;
+  const w = Math.round(name.length * (small ? 5.4 : 5.9)) + 26;
+  const h = small ? 20 : 22;
   reg(slug, x - 6, y - 6, w + 12, h + 12);
   return `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:rgba(243,233,210,.92);border:1.2px solid ${MINK};box-shadow:1px 2px 4px rgba(60,35,12,.25);display:flex;align-items:center;justify-content:center">
     <span style="font:italic 700 ${fs}px 'Segoe Script',Georgia,serif;color:${MINK};white-space:nowrap">${name}</span></div>
@@ -371,50 +372,54 @@ function map_folded() {
 }
 
 function map_open() {
+  // the Gemini-drawn Hogwarts (square art, no text) sits full-height centre;
+  // masthead lives in the left margin; every name banner sits ON the drawing.
+  const AX = 308, AY = 26, AS = 668;   // art rect on the page
   return `${parchmentPage()}
   <div style="position:absolute;inset:0;background:radial-gradient(120% 110% at 50% 40%, transparent 60%, rgba(90,55,20,.16))"></div>
+  <img src="${uri('hogwarts_map')}" style="position:absolute;left:${AX}px;top:${AY}px;width:${AS}px;height:${AS}px;mix-blend-mode:multiply;opacity:.97;-webkit-mask-image:radial-gradient(88% 88% at 50% 50%, #000 78%, transparent 99%)">
   ${goldBorder(28, 24, 1224, 672)} ${ribbons(3)}
-  <!-- masthead -->
-  <div style="position:absolute;left:0;top:42px;width:${W}px;text-align:center;font:700 10.5px 'Segoe UI';letter-spacing:3.5px;color:${MINK}">MESSRS. MOONY, WORMTAIL, PADFOOT <span style="font-family:Georgia">&</span> PRONGS</div>
-  <div style="position:absolute;left:0;top:60px;width:${W}px;text-align:center;font:italic 400 11.5px Georgia,serif;color:${MINK}CC">purveyors of aids to magical mischief-makers, are proud to present</div>
-  <div style="position:absolute;left:0;top:76px;width:${W}px;text-align:center;font:italic 800 30px 'Segoe Script',Georgia,serif;color:${MINK};text-shadow:0 1px 0 rgba(255,244,214,.5)">The Marauder’s Map</div>
-  <div style="position:absolute;left:${W / 2 - 170}px;top:118px;width:340px;height:1px;background:linear-gradient(90deg,transparent,${MINK},transparent)"></div>
-  <div style="position:absolute;left:0;top:124px;width:${W}px;text-align:center;font:italic 400 11px Georgia,serif;color:${T.ink2}">the Map never lies — tap a banner to summon the minifig it follows</div>
-  <!-- ===== castle floor plan ===== -->
-  ${room(64, 152, 212, 92, 'Ravenclaw Tower')} ${banner('luna', 92, 196, 'Luna Lovegood')}
-  ${room(298, 152, 218, 92, 'The Library')} ${banner('hermione', 316, 196, 'Hermione Granger')}
-  ${room(538, 152, 220, 92, "Headmaster's Office")} ${banner('dumbledore', 552, 196, 'Albus Dumbledore')}
-  ${room(780, 152, 210, 92, 'Hospital Wing')} ${banner('pomfrey', 800, 196, 'Madam Pomfrey')}
-  ${room(1012, 152, 178, 92, 'The Owlery')} ${feet(1054, 196, 24, 4)}
-  ${dash(84, 262, 1100, 1)}
-  ${room(64, 282, 212, 92, 'Transfiguration')} ${banner('minerva', 76, 326, 'Minerva McGonagall')}
-  ${room(298, 282, 218, 92, 'Room of Requirement')} ${banner('cho', 336, 326, 'Cho Chang')}
-  ${room(538, 282, 220, 92, 'Second-Floor Bathroom')} ${banner('myrtle', 560, 326, 'Moaning Myrtle')}
-  ${room(780, 282, 210, 92, 'Defence Classroom')} ${banner('lockhart', 792, 326, 'Gilderoy Lockhart')}
-  ${room(1012, 282, 178, 92, 'Grand Staircase')} ${feet(1050, 320, 105, 4)}
-  ${dash(84, 392, 1100, 1)}
-  ${room(64, 412, 212, 92, 'Potions Dungeon')} ${banner('snape', 96, 456, 'Severus Snape')}
-  ${room(298, 412, 264, 92, 'Slytherin Common Room')} ${banner('draco', 306, 442, 'Draco Malfoy')} ${banner('goyle', 344, 474, 'Gregory Goyle', true)}
-  ${room(584, 412, 214, 92, 'Slytherin Corridor')} ${banner('ronmap', 606, 456, 'Ron Weasley')}
-  ${room(820, 412, 170, 92, 'The Kitchens')} ${banner('dobby', 850, 456, 'Dobby')}
-  ${room(1012, 412, 178, 92, 'The Great Hall')} ${feet(1060, 450, 60, 4)}
-  <!-- grounds -->
-  ${dash(84, 522, 1100, 1)}
-  <div style="position:absolute;left:64px;top:540px;width:250px;font:700 9.5px 'Segoe UI';letter-spacing:1.6px;color:${MINK};opacity:.85">PASSAGE TO THE SHRIEKING SHACK</div>
-  ${feet(80, 560, 8, 8)} ${banner('moony', 232, 556, 'Moony')}
-  <div style="position:absolute;left:404px;top:534px;width:230px;height:110px;border:1.6px solid ${MINK};border-radius:50%;box-shadow:inset 0 0 0 3px rgba(243,233,210,.9), inset 0 0 0 4.2px ${MINK}66;background:rgba(240,228,200,.3)"></div>
-  <div style="position:absolute;left:454px;top:544px;font:700 9.5px 'Segoe UI';letter-spacing:1.6px;color:${MINK};opacity:.85">QUIDDITCH PITCH</div>
-  ${banner('hooch', 452, 578, 'Madame Hooch')}
-  <div style="position:absolute;left:668px;top:536px;width:150px;height:104px;border:1.6px solid ${MINK};border-radius:8px 60px 8px 8px;box-shadow:inset 0 0 0 3px rgba(243,233,210,.9), inset 0 0 0 4.2px ${MINK}66;background:rgba(240,228,200,.3)"></div>
-  <div style="position:absolute;left:684px;top:544px;font:700 9.5px 'Segoe UI';letter-spacing:1.6px;color:${MINK};opacity:.85">HAGRID'S HUT</div>
-  ${banner('hagrid', 676, 580, 'Rubeus Hagrid')}
-  <div style="position:absolute;left:850px;top:536px;width:340px;height:104px;border:1.6px dashed ${MINK}77;background:rgba(150,160,140,.10)"></div>
-  <div style="position:absolute;left:868px;top:544px;font:700 9.5px 'Segoe UI';letter-spacing:1.6px;color:${MINK};opacity:.7">THE BLACK LAKE</div>
-  ${feet(920, 588, -18, 5)}
-  <!-- mischief managed (clue_mischief sits over this rect; clear of the credits clue at x724) -->
-  ${reg('mischief', 430, 652, 270, 40)}
-  <div style="position:absolute;left:430px;top:652px;width:270px;height:40px;border:1.8px solid ${T.red};border-radius:5px;background:rgba(124,43,34,.12);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(60,20,10,.2)">
-    <span style="font:italic 700 15px 'Segoe Script',Georgia,serif;color:${T.red}">Mischief managed&nbsp;❦</span></div>
+  <!-- masthead (left margin) -->
+  <div style="position:absolute;left:48px;top:64px;width:240px;text-align:center;font:700 10px 'Segoe UI';letter-spacing:2.6px;line-height:1.7;color:${MINK}">MESSRS. MOONY, WORMTAIL, PADFOOT <span style="font-family:Georgia">&</span> PRONGS</div>
+  <div style="position:absolute;left:48px;top:118px;width:240px;text-align:center;font:italic 400 11px Georgia,serif;line-height:1.45;color:${MINK}CC">purveyors of aids to magical mischief-makers, are proud to present</div>
+  <div style="position:absolute;left:40px;top:166px;width:256px;text-align:center;font:italic 800 27px 'Segoe Script',Georgia,serif;line-height:1.25;color:${MINK};text-shadow:0 1px 0 rgba(255,244,214,.5)">The Marauder’s Map</div>
+  <div style="position:absolute;left:68px;top:246px;width:200px;height:1px;background:linear-gradient(90deg,transparent,${MINK},transparent)"></div>
+  <div style="position:absolute;left:52px;top:262px;width:232px;text-align:center;font:italic 400 11px Georgia,serif;line-height:1.5;color:${T.ink2}">the Map never lies —<br>tap a name to summon the minifig it follows</div>
+  ${feet(120, 330, 62, 5)}
+  <!-- mischief managed (left margin, under the masthead) -->
+  ${reg('mischief', 52, 560, 232, 40)}
+  <div style="position:absolute;left:52px;top:560px;width:232px;height:40px;border:1.8px solid ${T.red};border-radius:5px;background:rgba(124,43,34,.12);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(60,20,10,.2)">
+    <span style="font:italic 700 14px 'Segoe Script',Georgia,serif;color:${T.red}">Mischief managed&nbsp;❦</span></div>
+  <!-- ===== names on the drawn castle (art-space anchors) ===== -->
+  ${banner('minerva', 384, 172, 'Minerva McGonagall')}
+  ${banner('dumbledore', 548, 116, 'Albus Dumbledore')}
+  ${banner('lockhart', 736, 96, 'Gilderoy Lockhart')}
+  ${banner('luna', 796, 158, 'Luna Lovegood')}
+  ${banner('pomfrey', 864, 216, 'Madam Pomfrey')}
+  ${banner('hermione', 626, 196, 'Hermione Granger')}
+  ${banner('myrtle', 700, 258, 'Moaning Myrtle')}
+  ${banner('cho', 842, 296, 'Cho Chang')}
+  ${banner('snape', 434, 300, 'Severus Snape')}
+  ${banner('dobby', 500, 350, 'Dobby')}
+  ${banner('ronmap', 592, 322, 'Ron Weasley')}
+  ${banner('draco', 700, 356, 'Draco Malfoy')}
+  ${banner('goyle', 742, 388, 'Gregory Goyle', true)}
+  ${banner('hooch', 428, 442, 'Madame Hooch')}
+  ${banner('moony', 856, 436, 'Moony')}
+  ${banner('hagrid', 508, 566, 'Rubeus Hagrid')}
+  ${feet(636, 470, 40, 5)} ${feet(806, 500, -35, 5)}
+  <!-- right margin: compass rose + sighting legend + wandering prints -->
+  <svg style="position:absolute;left:1042px;top:96px" width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="${MINK}" opacity=".8">
+    <circle cx="60" cy="60" r="44" stroke-width="1.4"/><circle cx="60" cy="60" r="34" stroke-width=".8" opacity=".6"/>
+    <path d="M60 10 L66 54 L60 60 L54 54 Z" fill="${T.red}" stroke="${T.red}"/>
+    <path d="M60 110 L66 66 L60 60 L54 66 Z" fill="${MINK}" opacity=".7"/>
+    <path d="M10 60 L54 54 L60 60 L54 66 Z M110 60 L66 54 L60 60 L66 66 Z" fill="${MINK}" opacity=".45"/>
+  </svg>
+  <div style="position:absolute;left:1042px;top:222px;width:120px;text-align:center;font:italic 700 12px 'Segoe Script',Georgia,serif;color:${MINK}">north, more or less</div>
+  <div style="position:absolute;left:1030px;top:300px;width:150px;border-top:1px solid ${MINK}66"></div>
+  <div style="position:absolute;left:1030px;top:314px;width:150px;font:italic 400 11px Georgia,serif;line-height:1.6;color:${T.ink2}">sighted tonight:<br><b style="color:${MINK}">sixteen wizards</b><br>wandering the grounds<br>— every one of them<br>a real LEGO minifig</div>
+  ${feet(1070, 430, 78, 6)} ${feet(1104, 560, 100, 5)}
+  <!-- chrome cues -->
   <div style="position:absolute;left:740px;bottom:20px;font:italic 600 13px Georgia,serif;color:${T.red}">❦ credits</div>
   <div style="position:absolute;right:64px;bottom:20px;font:italic 600 12px Georgia,serif;color:${T.red}">turn the page ❦</div>
   <div style="position:absolute;left:64px;bottom:20px;font:italic 600 12px Georgia,serif;color:${T.ink2}">❦ back</div>`;

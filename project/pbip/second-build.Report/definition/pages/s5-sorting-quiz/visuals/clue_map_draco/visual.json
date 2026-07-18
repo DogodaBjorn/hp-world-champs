@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_map_draco",
   "position": {
-    "x": 300,
-    "y": 436,
+    "x": 694,
+    "y": 350,
     "z": 6000,
-    "height": 39,
-    "width": 132,
+    "height": 34,
+    "width": 109,
     "tabOrder": 6000
   },
   "visual": {
