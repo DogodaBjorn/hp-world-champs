@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "nav_back",
   "position": {
-    "x": 56,
-    "y": 662,
-    "z": 8000,
-    "height": 30,
-    "width": 120,
-    "tabOrder": 7000
+    "x": 35.144617189791731,
+    "y": 666.39601056028164,
+    "z": 39000,
+    "height": 43.254913464359049,
+    "width": 120.30272807274861,
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "actionButton",
@@ -219,7 +219,20 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'s4b-dark-state'"
+                  "Value": "'s4a-most-colorful'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

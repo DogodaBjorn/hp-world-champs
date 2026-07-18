@@ -672,20 +672,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "c6afcdae2a64e4ba79ad",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Theme Grayscale %"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

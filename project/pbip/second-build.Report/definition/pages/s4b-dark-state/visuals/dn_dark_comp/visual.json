@@ -312,48 +312,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "cc74887391e9dff6fd7e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ThemeColors"
-              }
-            },
-            "Property": "color_hex"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ae67034f6a0c5b6b2fb4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ThemeColors"
-              }
-            },
-            "Property": "Is Grayscale"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "dbe0c1a66e1b8a22f810",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Theme Colour Parts"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

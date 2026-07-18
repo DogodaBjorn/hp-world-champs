@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_credits5",
   "position": {
-    "x": 724,
-    "y": 668,
-    "z": 8500,
-    "height": 36,
-    "width": 120,
-    "tabOrder": 8500
+    "x": 717.76122029920793,
+    "y": 675.85802288061018,
+    "z": 40000,
+    "height": 36.496333235552946,
+    "width": 118.95101202698739,
+    "tabOrder": 40000
   },
   "visual": {
     "visualType": "actionButton",

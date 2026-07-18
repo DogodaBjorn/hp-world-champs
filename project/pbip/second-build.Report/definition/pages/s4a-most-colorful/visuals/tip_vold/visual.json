@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "tip_vold",
   "position": {
-    "x": 40,
-    "y": 250,
-    "z": 4000,
-    "height": 250,
-    "width": 476,
+    "x": 328.46699911997655,
+    "y": 152.74391317101791,
+    "z": 18000,
+    "height": 354.1496039894397,
+    "width": 628.54796127896748,
     "tabOrder": 3000
   },
   "visual": {
@@ -87,6 +87,5 @@
         }
       ]
     }
-  },
-  "isHidden": true
+  }
 }

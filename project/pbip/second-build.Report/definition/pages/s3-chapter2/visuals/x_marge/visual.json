@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "x_marge",
   "position": {
-    "x": 60,
-    "y": 326,
-    "z": 12000,
-    "height": 250,
-    "width": 542,
+    "x": 340.63244353182751,
+    "y": 105.43385156937518,
+    "z": 26200,
+    "height": 452.82487533000881,
+    "width": 811.02962745673221,
     "tabOrder": 11000
   },
   "visual": {

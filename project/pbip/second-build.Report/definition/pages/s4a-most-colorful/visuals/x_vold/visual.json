@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "x_vold",
   "position": {
-    "x": 40,
-    "y": 250,
-    "z": 8000,
-    "height": 250,
-    "width": 476,
+    "x": 340.63244353182751,
+    "y": 147.33704898797302,
+    "z": 5000,
+    "height": 359.55646817248459,
+    "width": 601.51364036374309,
     "tabOrder": 7000
   },
   "visual": {
@@ -453,6 +453,5 @@
         }
       ]
     }
-  },
-  "isHidden": true
+  }
 }
