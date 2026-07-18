@@ -175,7 +175,7 @@ function yellow() {
   ${goldBorder(28, 24, 1224, 672)}
   ${ribbons(0)}
   ${step(56, 52, 'I')}
-  ${eyebrow(112, 56, 'Bag One · 2001–2011')}
+  ${eyebrow(112, 56, 'Chapter I · 2001–2011')}
   <div style="position:absolute;left:110px;top:70px;font:800 34px Georgia,serif;color:${T.ink}">The Yellow Years</div>
   <div style="position:absolute;left:112px;top:110px;font:italic 600 15px Georgia,serif;color:${T.red}">…and then he vanished</div>
   ${dropCap('O', 56, 148)}
@@ -201,7 +201,7 @@ function numeral(x, y, n, sub) {
 // ================= CHAPTER II: …and Came Back =================
 function cameback() {
   return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(1)}
-  ${step(56, 52, 'II')} ${eyebrow(112, 56, 'Bag Two · 2018–today')}
+  ${step(56, 52, 'II')} ${eyebrow(112, 56, 'Chapter II · 2018–today')}
   <div style="position:absolute;left:110px;top:70px;font:800 34px Georgia,serif;color:${T.ink}">The Colour Years</div>
   <div style="position:absolute;left:112px;top:110px;font:italic 600 15px Georgia,serif;color:${T.red}">…and then he came back</div>
   ${dropCap('A', 56, 148)}
@@ -270,20 +270,27 @@ function patronusGlow(cx, cy) {
 
 // ================= CHAPTER III: The Chamber of Colours =================
 function colours() {
+  const chip = (x, y, t) => `<div style="position:absolute;left:${x}px;top:${y}px;padding:4px 12px;background:${T.red};border-radius:3px;box-shadow:0 2px 5px rgba(60,20,10,.25);font:800 10.5px 'Segoe UI';letter-spacing:2px;color:#F3E3AE">${t}</div>`;
   return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(2)}
-  ${step(56, 52, 'III')} ${eyebrow(112, 56, 'Bag Three · The Chamber of Colours')}
+  ${step(56, 52, 'III')} ${eyebrow(112, 56, 'Chapter III · The Chamber of Colours')}
   <div style="position:absolute;left:110px;top:70px;font:800 34px Georgia,serif;color:${T.ink}">The Chamber of Colours</div>
-  ${dropCap('C', 56, 128)}
-  <div style="position:absolute;left:146px;top:130px;width:372px;font:400 14px Georgia,serif;line-height:1.55;color:${T.ink}">olour is the strongest magic in brick — and no licensed LEGO theme casts more of it than ${gink('Harry Potter')}. Its crown jewel, Diagon Alley (2025), is the ${gink('#2 most colourful')} LEGO set ever built, of any theme.</div>
-  ${goldRibbon(56, 232, 428, 'Harry Potter · LEGO\'s most colourful licensed theme')}
-  <!-- the real set, floating transparent (Rebrickable white box removed) -->
-  <img src="${uri('cut_diagon')}" style="position:absolute;left:2px;top:276px;width:542px;filter:drop-shadow(0 12px 16px rgba(40,20,8,.4))">
-  <div style="position:absolute;left:34px;top:576px;width:520px;font:700 12.5px Georgia,serif;color:${T.ink}">Diagon Alley 76444 · <span style="color:${T.red}">55 distinct colours</span> · #2 most colourful set ever</div>
-  <div style="position:absolute;left:34px;top:598px;font:italic 400 12px Georgia,serif;color:${T.ink2}">tap a ✦ to uncover a hidden tale</div>
-  ${clue(150, 506)} ${clue(446, 508)}
-  <!-- charts -->
-  ${fig(548, 80, 684, 286)} ${figCap(564, 94, 'FIGURE 1 · THE COLOUR MAP', 'every colour to scale, in its true brick hex — sized by parts')}
-  ${fig(548, 388, 684, 200)} ${figCap(564, 402, 'FIGURE 2 · THE 55-COLOUR SPECTRUM', 'one bar, every hue, ordered by part count')}
+  <!-- ===== FIRST TALE · the theme ===== -->
+  ${chip(56, 122, 'FIRST TALE · THE MOST COLOURFUL THEME')}
+  ${dropCap('C', 56, 156)}
+  <div style="position:absolute;left:146px;top:158px;width:372px;font:400 14px Georgia,serif;line-height:1.55;color:${T.ink}">olour is the strongest magic in brick — and since the Second Build era, no licensed LEGO theme casts more of it than ${gink('Harry Potter')}. ${gink('Figure 1')} holds every colour the theme has ever used, each sized by the bricks that carry it.</div>
+  ${goldRibbon(56, 262, 428, 'Harry Potter · LEGO\'s most colourful licensed theme')}
+  ${fig(548, 80, 684, 286)} ${chip(564, 66, 'FIRST TALE')}
+  ${figCap(564, 96, 'FIGURE 1 · EVERY COLOUR THE THEME EVER CAST', 'all Harry Potter brick colours in their true hex · sized by parts used')}
+  <!-- gold rule between the two tales (right column) -->
+  <div style="position:absolute;left:548px;top:374px;width:684px;height:1px;background:linear-gradient(90deg,transparent,${T.goldLeaf},transparent)"></div>
+  <!-- ===== SECOND TALE · the set ===== -->
+  ${chip(34, 306, 'SECOND TALE · ITS MOST COLOURFUL SET')}
+  <img src="${uri('cut_diagon')}" style="position:absolute;left:2px;top:330px;width:520px;filter:drop-shadow(0 12px 16px rgba(40,20,8,.4))">
+  <div style="position:absolute;left:34px;top:600px;width:520px;font:700 12.5px Georgia,serif;color:${T.ink}">Diagon Alley 76444 · <span style="color:${T.red}">55 distinct colours</span> · #2 most colourful set ever <span style="font:italic 700 12px Georgia,serif;color:${T.red}">&nbsp;⟶ Figure 2</span></div>
+  <div style="position:absolute;left:34px;top:622px;font:italic 400 12px Georgia,serif;color:${T.ink2}">tap a ✦ to uncover a hidden tale</div>
+  ${clue(150, 546)} ${clue(446, 548)}
+  ${fig(548, 396, 684, 196)} ${chip(564, 382, 'SECOND TALE')}
+  ${figCap(564, 412, 'FIGURE 2 · DIAGON ALLEY’S OWN 55', 'every colour inside set 76444 · one bar, every hue, ordered by part count')}
   ${pageNo('III')} ${turn()}`;
 }
 
@@ -490,6 +497,26 @@ function creditsCard() {
 // closeX for full-bleed cards (✕ inside the top-right corner, not overhanging)
 const closeX2 = (w) => `<div style="position:absolute;left:${w - 38}px;top:14px;width:26px;height:26px;border-radius:50%;background:${T.leather};border:1.5px solid ${T.goldLeaf};display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.45)"><span style="font:700 12px Georgia,serif;color:${T.goldLeaf};line-height:1">✕</span></div>`;
 
+// hover-tooltip card for the set bar charts (t2-settip page background, 440x320).
+// The white plate makes the Rebrickable product shot's white background read as
+// an intentional instruction-manual product plate on the parchment.
+function ttSetCard() {
+  return `<div style="position:absolute;left:0;top:0;width:440px;height:320px;background:#000 url('${PARCH}') center/cover;border:2px solid ${T.goldLeaf};border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.4)"></div>
+  <div style="position:absolute;left:16px;top:12px;font:800 10px 'Segoe UI';letter-spacing:2.2px;color:${T.red}">FROM THE SHELF · SET RECORD</div>
+  <div style="position:absolute;left:16px;top:30px;width:408px;height:1px;background:linear-gradient(90deg,${T.goldLeaf},transparent)"></div>
+  <!-- white product plate (live set photo sits inside) -->
+  <div style="position:absolute;left:16px;top:52px;width:240px;height:236px;padding:5px;background:linear-gradient(180deg,#FCFBF8,#F2ECDD);border:1.5px solid ${T.ink};box-shadow:0 4px 12px rgba(40,25,8,.25)">
+    <div style="width:100%;height:100%;background:#FFFFFF;box-shadow:inset 0 0 0 1px rgba(58,42,20,.15)"></div></div>
+  <div style="position:absolute;left:26px;top:44px;display:flex;gap:3px">
+    <span style="width:12px;height:8px;background:${T.red};border-radius:2px 2px 0 0;border:1px solid ${T.ink}"></span>
+    <span style="width:12px;height:8px;background:${T.goldBright};border-radius:2px 2px 0 0;border:1px solid ${T.ink}"></span></div>
+  <!-- right column labels (live cards fill the gaps) -->
+  <div style="position:absolute;left:270px;top:48px;font:700 9.5px 'Segoe UI';letter-spacing:2px;color:${T.red}">THE SET</div>
+  <div style="position:absolute;left:270px;top:158px;font:700 9.5px 'Segoe UI';letter-spacing:2px;color:${T.red}">PARTS</div>
+  <div style="position:absolute;left:270px;top:224px;font:700 9.5px 'Segoe UI';letter-spacing:2px;color:${T.red}">BUILD</div>
+  <div style="position:absolute;left:270px;top:288px;width:154px;font:italic 400 9.5px Georgia,serif;color:${T.ink2}">photo · Rebrickable archive</div>`;
+}
+
 const PAGES = { cover, yellow, cameback, colours, dark, map_folded, map_open };
 const SIZES = { cover: { W: CW, H: CH } };   // portrait cover; every other page landscape
 const TIPS = {
@@ -501,6 +528,7 @@ const TIPS = {
   tip_colour_duo: { w: 600, h: 252, fn: () => duoTip('cut_ron_c', 'cut_hermione_c', 'Ron & Hermione · the colour years', `The return brought ${nchip('442')} minifigures — more than triple the Yellow Years — and every one now wears a real, flesh-toned face.`, '#7C2B22') },
   tip_appearances: { w: 600, h: 252, fn: () => duoTip('cut_draco', 'cut_harry_og', 'Set-appearance record', `Draco appears in ${nchip('7')} different sets — 2nd-most of any Harry Potter minifig. Only one wizard tops him: the very first yellow-faced Harry, on the right.`, '#2F6B4A') },
   tip_credits: { w: 640, h: 480, fn: creditsCard },
+  tt_set_bg: { w: 440, h: 320, fn: ttSetCard },
   ...Object.fromEntries(Object.keys(MQUOTES).map(s => [`tip_map_${s}`, { w: 620, h: 440, fn: () => mapTip(s) }])),
 };
 

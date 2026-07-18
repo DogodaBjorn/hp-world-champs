@@ -241,6 +241,11 @@
           "name": "tip_map_goyle.png",
           "path": "tip_map_goyle.png",
           "type": "Image"
+        },
+        {
+          "name": "tt_set_bg.png",
+          "path": "tt_set_bg.png",
+          "type": "Image"
         }
       ]
     }

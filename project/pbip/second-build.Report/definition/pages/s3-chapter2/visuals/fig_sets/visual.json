@@ -6,7 +6,7 @@
     "y": 109.06403940886699,
     "z": 19500,
     "height": 242.95566502463055,
-    "width": 706.69950738916259,
+    "width": 706.6995073891626,
     "tabOrder": 2000
   },
   "visual": {
@@ -461,6 +461,33 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Canvas'"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'t2-settip'"
                 }
               }
             }

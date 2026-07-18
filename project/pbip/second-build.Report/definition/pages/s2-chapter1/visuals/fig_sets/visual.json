@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "fig_sets",
   "position": {
-    "x": 511.62561576354682,
+    "x": 511.6256157635468,
     "y": 117.04433497536947,
     "z": 16562,
     "height": 242.95566502463055,
-    "width": 707.58620689655174,
+    "width": 707.5862068965517,
     "tabOrder": 2000
   },
   "visual": {
@@ -236,6 +236,33 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Canvas'"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'t2-settip'"
                 }
               }
             }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "clue_harry",
   "position": {
-    "x": 148.8145896656535,
-    "y": 505.77507598784194,
+    "x": 150,
+    "y": 546,
     "z": 2000,
-    "height": 41.823708206686931,
-    "width": 41.823708206686931,
+    "height": 41.82370820668693,
+    "width": 41.82370820668693,
     "tabOrder": 4000
   },
   "visual": {

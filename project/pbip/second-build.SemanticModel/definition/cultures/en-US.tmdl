@@ -6637,19 +6637,7 @@ cultureInfo en-US
 			          "ConceptualProperty": "Fig First Year"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Fig First Year": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    },
 			    "table_measures.fig_appearances": {
 			      "Definition": {
@@ -6658,19 +6646,7 @@ cultureInfo en-US
 			          "ConceptualProperty": "Fig Appearances"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Fig Appearances": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    }
 			  },
 			  "Relationships": {
