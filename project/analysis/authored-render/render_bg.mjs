@@ -377,7 +377,7 @@ function map_open() {
   const AX = 308, AY = 26, AS = 668;   // art rect on the page
   return `${parchmentPage()}
   <div style="position:absolute;inset:0;background:radial-gradient(120% 110% at 50% 40%, transparent 60%, rgba(90,55,20,.16))"></div>
-  <img src="${uri('hogwarts_map')}" style="position:absolute;left:${AX}px;top:${AY}px;width:${AS}px;height:${AS}px;mix-blend-mode:multiply;opacity:.97;-webkit-mask-image:radial-gradient(88% 88% at 50% 50%, #000 78%, transparent 99%)">
+  <img src="${uri('hogwarts_map_lego')}" style="position:absolute;left:${AX}px;top:${AY}px;width:${AS}px;height:${AS}px;mix-blend-mode:multiply;opacity:.97;filter:contrast(1.07);-webkit-mask-image:radial-gradient(88% 88% at 50% 50%, #000 78%, transparent 99%)">
   ${goldBorder(28, 24, 1224, 672)} ${ribbons(3)}
   <!-- masthead (left margin) -->
   <div style="position:absolute;left:48px;top:64px;width:240px;text-align:center;font:700 10px 'Segoe UI';letter-spacing:2.6px;line-height:1.7;color:${MINK}">MESSRS. MOONY, WORMTAIL, PADFOOT <span style="font-family:Georgia">&</span> PRONGS</div>
@@ -418,7 +418,9 @@ function map_open() {
   <div style="position:absolute;left:1042px;top:222px;width:120px;text-align:center;font:italic 700 12px 'Segoe Script',Georgia,serif;color:${MINK}">north, more or less</div>
   <div style="position:absolute;left:1030px;top:300px;width:150px;border-top:1px solid ${MINK}66"></div>
   <div style="position:absolute;left:1030px;top:314px;width:150px;font:italic 400 11px Georgia,serif;line-height:1.6;color:${T.ink2}">sighted tonight:<br><b style="color:${MINK}">sixteen wizards</b><br>wandering the grounds<br>— every one of them<br>a real LEGO minifig</div>
-  ${feet(1070, 430, 78, 6)} ${feet(1104, 560, 100, 5)}
+  <svg style="position:absolute;left:1072px;top:412px" width="44" height="30" viewBox="0 0 32 22" fill="none" stroke="${MINK}" stroke-width="1.3" opacity=".8"><rect x="2" y="8" width="28" height="12" rx="1.5"/><rect x="5" y="3" width="6" height="5" rx="1"/><rect x="13" y="3" width="6" height="5" rx="1"/><rect x="21" y="3" width="6" height="5" rx="1"/><path d="M2 14 h28" opacity=".5"/></svg>
+  <div style="position:absolute;left:1030px;top:448px;width:150px;text-align:center;font:italic 400 10px Georgia,serif;color:${T.ink2}">the castle itself:<br>assembled brick by brick</div>
+  ${feet(1096, 500, 82, 4)} ${feet(1104, 590, 100, 4)}
   <!-- chrome cues -->
   <div style="position:absolute;left:740px;bottom:20px;font:italic 600 13px Georgia,serif;color:${T.red}">❦ credits</div>
   <div style="position:absolute;right:64px;bottom:20px;font:italic 600 12px Georgia,serif;color:${T.red}">turn the page ❦</div>
