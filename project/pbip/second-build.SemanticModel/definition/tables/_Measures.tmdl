@@ -206,12 +206,6 @@ table _Measures
 		displayFolder: 05 Cast Explorer
 		lineageTag: 9d1f3a4c-6b28-4e57-8a90-2c7e5f1b8d43
 
-	/// Chapter III showdown: distinct real colours across a licensed theme's whole shelf (grain 1 row/theme, so SUM is exact).
-	measure 'Licensed Distinct Colours' = SUM ( LicensedThemeColours[DistinctColours] )
-		formatString: #,0
-		displayFolder: 04 Themes
-		lineageTag: 2f8a6d13-7c45-4b09-9e62-4a1d8c5f7e30
-
 	/// T2 set tooltip: build size as a 1–5 star rating from the hovered set's part count.
 	measure 'Build Stars' =
 			VAR p = MAX ( Sets[num_parts] )
@@ -230,6 +224,12 @@ table _Measures
 		formatString: @
 		displayFolder: 02 Display\Tooltip
 		lineageTag: 8e5b2f7a-4c31-4d96-b0a8-6f2d9c1e3a57
+
+	/// Chapter III showdown: distinct real colours across a licensed theme's whole shelf (grain 1 row/theme, so SUM is exact).
+	measure 'Licensed Distinct Colours' = SUM ( LicensedThemeColours[DistinctColours] )
+		formatString: #,0
+		displayFolder: 04 Themes
+		lineageTag: 2f8a6d13-7c45-4b09-9e62-4a1d8c5f7e30
 
 	column Value
 		dataType: string

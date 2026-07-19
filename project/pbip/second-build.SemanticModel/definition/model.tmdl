@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["Sets","SetColors","Colors","Minifigs","DimYear","QuizPool","_Measures","DataFolder","fnCsv","RawSets","RawInventoryParts","RawInventoryMinifigs","RawColors","RawMinifigs","ThemesResolved","V1Inventories","EraGuess","ThemeGreyscale","ThemeColors"]
+annotation PBI_QueryOrder = ["Sets","SetColors","Colors","Minifigs","DimYear","QuizPool","_Measures","DataFolder","fnCsv","RawSets","RawInventoryParts","RawInventoryMinifigs","RawColors","RawMinifigs","ThemesResolved","V1Inventories","EraGuess","ThemeGreyscale","ThemeColors","LicensedThemeColours"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -23,6 +23,7 @@ ref table EraGuess
 ref table SetGuess
 ref table ThemeGreyscale
 ref table ThemeColors
+ref table LicensedThemeColours
 
 ref cultureInfo en-US
 
