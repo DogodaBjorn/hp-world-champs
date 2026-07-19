@@ -209,8 +209,8 @@ function cover_prophet() {
 // then colour). Gilt title above, year annotations on the art, takeaway plate below.
 function cover_shelf() {
   const mark = (y, t, hot = false) => `<div style="position:absolute;right:34px;top:${y}px;text-align:right">
-    <div style="font:800 12px 'Segoe UI';letter-spacing:2px;color:${hot ? '#E8A090' : T.goldLeaf}">${t}</div></div>
-  <div style="position:absolute;right:26px;top:${y + 2}px;width:4px;height:14px;background:${hot ? '#C97A6A' : T.goldLeaf};opacity:.85"></div>`;
+    <div style="font:800 12.5px 'Segoe UI';letter-spacing:2px;color:${hot ? '#E8A090' : T.goldLeaf};text-shadow:0 1px 3px rgba(0,0,0,.8)">${t}</div></div>
+  <div style="position:absolute;right:26px;top:${y + 2}px;width:4px;height:15px;background:${hot ? '#C97A6A' : T.goldLeaf};opacity:.85"></div>`;
   return `
   <div style="position:absolute;inset:0;background:radial-gradient(120% 78% at 50% 12%, #4A1712 0%, #331210 40%, #1C0D18 78%, #0B0712 100%)"></div>
   <div style="position:absolute;left:22px;top:22px;right:22px;bottom:22px;border:2.5px solid ${T.goldLeaf};box-shadow:inset 0 0 0 4px rgba(0,0,0,.3), 0 0 26px rgba(201,169,74,.16)"></div>
@@ -219,21 +219,24 @@ function cover_shelf() {
   <div style="position:absolute;left:0;top:48px;width:${CW}px;text-align:center;font:700 13px Segoe UI;letter-spacing:7px;color:${T.goldLeaf}">HARRY POTTER LEGO</div>
   <div style="position:absolute;left:0;top:74px;width:${CW}px;text-align:center;font:800 46px Georgia,serif;line-height:1.04;color:#E8CF88;text-shadow:0 2px 1px rgba(0,0,0,.65)">The Boy Who<br>Came Back</div>
   <div style="position:absolute;left:0;top:186px;width:${CW}px;text-align:center;font:italic 400 13.5px Georgia,serif;color:#D8BE7E">a LEGO® brick history in colour · 2001–2026</div>
-  <!-- the shelf: full, then empty, then full of colour -->
-  <img src="${uri('great_shelf')}" style="position:absolute;left:36px;top:218px;width:728px;height:672px;object-fit:cover;-webkit-mask-image:radial-gradient(94% 94% at 50% 50%, #000 82%, transparent 100%);box-shadow:0 14px 40px rgba(0,0,0,.6)">
-  <div style="position:absolute;left:36px;top:218px;width:728px;height:672px;border:2px solid ${T.goldBright}AA"></div>
-  ${mark(294, '2001–2011 · THE YELLOW YEARS')}
-  ${mark(534, '2012–2017 · NOT A SINGLE SET', true)}
-  ${mark(760, '2018–2026 · THE COLOUR YEARS')}
-  <!-- takeaway plate + live shelf-chart card -->
-  <div style="position:absolute;left:64px;top:908px;width:672px;height:224px;background:#000 url('${PARCH}') center/cover;box-shadow:0 12px 30px rgba(0,0,0,.5), inset 0 0 40px rgba(60,35,12,.22);border:2px solid ${T.goldLeaf}"></div>
-  <div style="position:absolute;left:88px;top:920px;width:624px;text-align:center;display:flex;justify-content:center;align-items:center;gap:8px">${sparkle(T.red)}<span style="font:700 11px Segoe UI;letter-spacing:3px;color:${T.red}">KEY TAKEAWAY</span></div>
-  <div style="position:absolute;left:88px;top:940px;width:624px;text-align:center;font:800 23px Georgia,serif;line-height:1.1;color:${T.ink}">It took <span style="color:${T.red}">seven years</span> for Harry to reappear.</div>
-  ${fig(90, 982, 620, 116)}
-  <div style="position:absolute;left:64px;top:1104px;width:672px;text-align:center;font:700 11px Georgia,serif;color:${T.ink2}">209 sets&nbsp;·&nbsp;576 minifigures&nbsp;·&nbsp;7 silent years</div>
-  <!-- footer actions (below the plate) -->
-  <div style="position:absolute;left:300px;top:1144px;width:200px;text-align:center;font:italic 700 14px Georgia,serif;color:#E8CF88">open the book ❦</div>
-  <div style="position:absolute;left:60px;top:1148px;font:italic 600 11.5px Georgia,serif;color:#C9AE72">with thanks ❦</div>`;
+  <!-- the three shelves: full, empty, full of colour -->
+  <img src="${uri('great_shelf')}" style="position:absolute;left:36px;top:218px;width:728px;height:600px;object-fit:cover;-webkit-mask-image:radial-gradient(96% 96% at 50% 50%, #000 84%, transparent 100%);box-shadow:0 14px 40px rgba(0,0,0,.6)">
+  <div style="position:absolute;left:36px;top:218px;width:728px;height:600px;border:2px solid ${T.goldBright}AA"></div>
+  ${mark(248, '2001–2011 · THE YELLOW YEARS')}
+  ${mark(516, '2012–2017 · NOT A SINGLE SET', true)}
+  ${mark(742, '2018–2026 · THE COLOUR YEARS')}
+  <!-- the key takeaway, bright on the leather -->
+  <div style="position:absolute;left:0;top:846px;width:${CW}px;text-align:center;display:flex;justify-content:center;align-items:center;gap:9px">${sparkle(T.goldLeaf)}<span style="font:700 11.5px Segoe UI;letter-spacing:3.5px;color:${T.goldLeaf}">KEY TAKEAWAY</span></div>
+  <div style="position:absolute;left:60px;top:868px;width:680px;text-align:center;font:800 27px Georgia,serif;line-height:1.12;color:#F3E3AE;text-shadow:0 2px 2px rgba(0,0,0,.6)">It took <span style="color:#E8A090">seven years</span> for Harry to reappear.</div>
+  <div style="position:absolute;left:80px;top:912px;width:640px;text-align:center;font:italic 400 14px Georgia,serif;color:#C9AE72">Sixty-seven sets in classic yellow — then silence — then one hundred and forty-two in full colour.</div>
+  <div style="position:absolute;left:0;top:946px;width:${CW}px;text-align:center;font:700 11.5px Georgia,serif;letter-spacing:.5px;color:#A8916A">209 sets&nbsp;&nbsp;·&nbsp;&nbsp;576 minifigures&nbsp;&nbsp;·&nbsp;&nbsp;7 silent years</div>
+  <!-- the shelf chart, chrome subordinate -->
+  <div style="position:absolute;left:80px;top:984px;font:700 10.5px 'Segoe UI';letter-spacing:2.5px;color:${T.goldLeaf}CC">SETS SHIPPED PER YEAR · 2001–2026</div>
+  <div style="position:absolute;left:80px;top:1002px;width:640px;height:1px;background:linear-gradient(90deg,${T.goldLeaf}66,transparent)"></div>
+  <!-- live chart sits at (80,1010,640,120) -->
+  <!-- footer actions -->
+  <div style="position:absolute;left:300px;top:1146px;width:200px;text-align:center;font:italic 700 14px Georgia,serif;color:#E8CF88">open the book ❦</div>
+  <div style="position:absolute;left:60px;top:1150px;font:italic 600 11.5px Georgia,serif;color:#C9AE72">with thanks ❦</div>`;
 }
 // ================= CHAPTER I: The Yellow Years =================
 function yellow() {
@@ -581,8 +584,8 @@ function ttSetCard() {
   <div style="position:absolute;left:270px;top:288px;width:154px;font:italic 400 9.5px Georgia,serif;color:${T.ink2}">photo · Rebrickable archive</div>`;
 }
 
-const PAGES = { cover: cover_prophet, covershelf: cover_shelf, yellow, cameback, colours, dark, map_folded, map_open };
-const SIZES = { cover: { W: CW, H: CH }, covershelf: { W: CW, H: CH } };   // portrait covers; every other page landscape
+const PAGES = { covershelf: cover_shelf, yellow, cameback, colours, dark, map_folded, map_open };
+const SIZES = { covershelf: { W: CW, H: CH } };   // portrait covers; every other page landscape
 const TIPS = {
   tip_harry: { w: 476, h: 250, fn: () => minifigTip('cut_harry', "Look closer — this one set hides <b>55</b> real brick colours. There's only one LEGO set ever built that has more colours.", 'Harry Potter', T.red) },
   tip_vold: { w: 476, h: 250, fn: () => minifigTip('cut_vold', "All this colour… how <i>garish</i>. Come find me in the greys, where <b>97.9%</b> of a set is shadow.", 'Lord Voldemort', '#7A5A1C', 224, 158, 258, 'come to the dark side and see for yourself') },
