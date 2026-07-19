@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Hide overlays · shelf cover",
+  "name": "bm_hide_cs",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "tip_credits_cs",
+      "x_credits_cs"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "covershelf",
+    "sections": {
+      "covershelf": {
+        "visualContainers": {
+          "tip_credits_cs": {
+            "singleVisual": {
+              "visualType": "image",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "x_credits_cs": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

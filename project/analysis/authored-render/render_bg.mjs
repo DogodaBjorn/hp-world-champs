@@ -169,6 +169,72 @@ function cover() {
   <div style="position:absolute;left:60px;top:1138px;font:italic 600 12.5px Georgia,serif;color:#C9AE72">with thanks ❦</div>`;
 }
 
+// ============ COVER BAKE-OFF CANDIDATES (portrait 800x1200) ============
+// Variant P — the wizarding newspaper front page. The takeaway IS the headline.
+function cover_prophet() {
+  const rule = (y, w2 = 2) => `<div style="position:absolute;left:44px;top:${y}px;width:712px;border-top:${w2}px solid ${T.ink}"></div>`;
+  return `${parchmentPage()}
+  <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 30%, transparent 55%, rgba(60,35,12,.22))"></div>
+  <div style="position:absolute;left:24px;top:20px;right:24px;bottom:20px;border:1.5px solid ${T.ink}66"></div>
+  <!-- masthead -->
+  <div style="position:absolute;left:0;top:36px;width:${CW}px;text-align:center;font:italic 400 12px Georgia,serif;color:${T.ink2}">the wizarding world’s chronicle of bricks</div>
+  <div style="position:absolute;left:0;top:52px;width:${CW}px;text-align:center;font:800 54px Georgia,serif;letter-spacing:3px;color:${T.ink};text-shadow:0 1px 0 rgba(255,244,214,.6)">THE DAILY PROPHET</div>
+  ${rule(126, 2.5)} ${rule(131, 1)}
+  <div style="position:absolute;left:44px;top:138px;width:712px;display:flex;justify-content:space-between;font:700 11px 'Segoe UI';letter-spacing:1.5px;color:${T.ink2}">
+    <span>No. 76,444</span><span>SUNDAY · SPECIAL BRICK EDITION</span><span>PRICE: 2 STUDS</span></div>
+  ${rule(160, 1)}
+  <!-- headline = the takeaway -->
+  <div style="position:absolute;left:44px;top:178px;width:712px;text-align:center;font:800 44px Georgia,serif;line-height:1.06;color:${T.ink}">BOY WIZARD VANISHES<br>FROM SHELVES</div>
+  <div style="position:absolute;left:44px;top:286px;width:712px;text-align:center;font:italic 600 19px Georgia,serif;color:${T.red}">…and returns seven years later — in full colour</div>
+  <!-- the moving photograph -->
+  <div style="position:absolute;left:90px;top:330px;width:620px;height:300px;padding:6px;background:#F2ECDD;border:1.5px solid ${T.ink};box-shadow:0 6px 18px rgba(40,25,8,.3)">
+    <div style="width:100%;height:100%;background:#000 url('${uri('cover')}') center/cover;box-shadow:inset 0 0 30px rgba(20,10,3,.5)"></div></div>
+  <div style="position:absolute;left:90px;top:642px;width:620px;text-align:center;font:italic 400 11.5px Georgia,serif;color:${T.ink2}">the castle, after the silence — readers report the photograph appears to move</div>
+  <!-- editorial columns (real numbers only) -->
+  <div style="position:absolute;left:56px;top:676px;width:330px;font:400 12.5px Georgia,serif;line-height:1.5;color:${T.ink};text-align:justify"><b style="font-size:15px">T</b>he shelves of the wizarding world stood full from ${gink('2001 to 2011')} — sixty-seven sets in classic yellow, an entire brick-built decade of magic. Then, without warning: nothing. For seven years, ${gink('not a single set')} shipped.</div>
+  <div style="position:absolute;left:${CW / 2}px;top:678px;width:1px;height:150px;background:${T.ink}44"></div>
+  <div style="position:absolute;left:414px;top:676px;width:330px;font:400 12.5px Georgia,serif;line-height:1.5;color:${T.ink};text-align:justify">In ${gink('2018')} the story returned — louder, bigger, and in ${gink('full colour')}: one hundred and forty-two sets and counting. ${gink('209 sets')} and ${gink('576 minifigures')} later, the whole affair is recorded in the figure below.</div>
+  <!-- the figure -->
+  ${rule(852, 1)}
+  <div style="position:absolute;left:56px;top:862px;font:700 12px 'Segoe UI';letter-spacing:2px;color:${T.red}">SETS SHIPPED PER YEAR · 2001–2026</div>
+  <div style="position:absolute;left:56px;top:880px;font:italic 400 11px Georgia,serif;color:${T.ink2}">the silent years, faithfully recorded — every empty socket a year without a single set</div>
+  ${fig(56, 902, 688, 168)}
+  ${rule(1084, 1)}
+  <div style="position:absolute;left:56px;top:1092px;font:italic 400 11px Georgia,serif;color:${T.ink2}">story continues on page I — the yellow years</div>
+  <!-- footer actions (same coords as the buttons) -->
+  <div style="position:absolute;left:0;top:1134px;width:${CW}px;text-align:center;font:italic 800 16px Georgia,serif;color:${T.red}">open the book ❦</div>
+  <div style="position:absolute;left:60px;top:1138px;font:italic 600 12.5px Georgia,serif;color:${T.ink2}">with thanks ❦</div>`;
+}
+// Variant S — the Great Shelf: the cover IS the data (full shelves, then nothing,
+// then colour). Gilt title above, year annotations on the art, takeaway plate below.
+function cover_shelf() {
+  const mark = (y, t, hot = false) => `<div style="position:absolute;right:34px;top:${y}px;text-align:right">
+    <div style="font:800 12px 'Segoe UI';letter-spacing:2px;color:${hot ? '#E8A090' : T.goldLeaf}">${t}</div></div>
+  <div style="position:absolute;right:26px;top:${y + 2}px;width:4px;height:14px;background:${hot ? '#C97A6A' : T.goldLeaf};opacity:.85"></div>`;
+  return `
+  <div style="position:absolute;inset:0;background:radial-gradient(120% 78% at 50% 12%, #4A1712 0%, #331210 40%, #1C0D18 78%, #0B0712 100%)"></div>
+  <div style="position:absolute;left:22px;top:22px;right:22px;bottom:22px;border:2.5px solid ${T.goldLeaf};box-shadow:inset 0 0 0 4px rgba(0,0,0,.3), 0 0 26px rgba(201,169,74,.16)"></div>
+  ${filigree(28, 28, 0)}${filigree(702, 28, 90)}${filigree(702, 1102, 180)}${filigree(28, 1102, 270)}
+  <!-- gilt title -->
+  <div style="position:absolute;left:0;top:48px;width:${CW}px;text-align:center;font:700 13px Segoe UI;letter-spacing:7px;color:${T.goldLeaf}">HARRY POTTER LEGO</div>
+  <div style="position:absolute;left:0;top:74px;width:${CW}px;text-align:center;font:800 46px Georgia,serif;line-height:1.04;color:#E8CF88;text-shadow:0 2px 1px rgba(0,0,0,.65)">The Boy Who<br>Came Back</div>
+  <div style="position:absolute;left:0;top:186px;width:${CW}px;text-align:center;font:italic 400 13.5px Georgia,serif;color:#D8BE7E">a LEGO® brick history in colour · 2001–2026</div>
+  <!-- the shelf: full, then empty, then full of colour -->
+  <img src="${uri('great_shelf')}" style="position:absolute;left:36px;top:218px;width:728px;height:672px;object-fit:cover;-webkit-mask-image:radial-gradient(94% 94% at 50% 50%, #000 82%, transparent 100%);box-shadow:0 14px 40px rgba(0,0,0,.6)">
+  <div style="position:absolute;left:36px;top:218px;width:728px;height:672px;border:2px solid ${T.goldBright}AA"></div>
+  ${mark(294, '2001–2011 · THE YELLOW YEARS')}
+  ${mark(534, '2012–2017 · NOT A SINGLE SET', true)}
+  ${mark(760, '2018–2026 · THE COLOUR YEARS')}
+  <!-- takeaway plate + live shelf-chart card -->
+  <div style="position:absolute;left:64px;top:908px;width:672px;height:224px;background:#000 url('${PARCH}') center/cover;box-shadow:0 12px 30px rgba(0,0,0,.5), inset 0 0 40px rgba(60,35,12,.22);border:2px solid ${T.goldLeaf}"></div>
+  <div style="position:absolute;left:88px;top:920px;width:624px;text-align:center;display:flex;justify-content:center;align-items:center;gap:8px">${sparkle(T.red)}<span style="font:700 11px Segoe UI;letter-spacing:3px;color:${T.red}">KEY TAKEAWAY</span></div>
+  <div style="position:absolute;left:88px;top:940px;width:624px;text-align:center;font:800 23px Georgia,serif;line-height:1.1;color:${T.ink}">It took <span style="color:${T.red}">seven years</span> for Harry to reappear.</div>
+  ${fig(90, 982, 620, 116)}
+  <div style="position:absolute;left:64px;top:1104px;width:672px;text-align:center;font:700 11px Georgia,serif;color:${T.ink2}">209 sets&nbsp;·&nbsp;576 minifigures&nbsp;·&nbsp;7 silent years</div>
+  <!-- footer actions (below the plate) -->
+  <div style="position:absolute;left:300px;top:1144px;width:200px;text-align:center;font:italic 700 14px Georgia,serif;color:#E8CF88">open the book ❦</div>
+  <div style="position:absolute;left:60px;top:1148px;font:italic 600 11.5px Georgia,serif;color:#C9AE72">with thanks ❦</div>`;
+}
 // ================= CHAPTER I: The Yellow Years =================
 function yellow() {
   return `${parchmentPage()}
@@ -515,8 +581,8 @@ function ttSetCard() {
   <div style="position:absolute;left:270px;top:288px;width:154px;font:italic 400 9.5px Georgia,serif;color:${T.ink2}">photo · Rebrickable archive</div>`;
 }
 
-const PAGES = { cover, yellow, cameback, colours, dark, map_folded, map_open };
-const SIZES = { cover: { W: CW, H: CH } };   // portrait cover; every other page landscape
+const PAGES = { cover: cover_prophet, covershelf: cover_shelf, yellow, cameback, colours, dark, map_folded, map_open };
+const SIZES = { cover: { W: CW, H: CH }, covershelf: { W: CW, H: CH } };   // portrait covers; every other page landscape
 const TIPS = {
   tip_harry: { w: 476, h: 250, fn: () => minifigTip('cut_harry', "Look closer — this one set hides <b>55</b> real brick colours. There's only one LEGO set ever built that has more colours.", 'Harry Potter', T.red) },
   tip_vold: { w: 476, h: 250, fn: () => minifigTip('cut_vold', "All this colour… how <i>garish</i>. Come find me in the greys, where <b>97.9%</b> of a set is shadow.", 'Lord Voldemort', '#7A5A1C', 224, 158, 258, 'come to the dark side and see for yourself') },

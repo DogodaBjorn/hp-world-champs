@@ -246,6 +246,11 @@
           "name": "tt_set_bg.png",
           "path": "tt_set_bg.png",
           "type": "Image"
+        },
+        {
+          "name": "bg_covershelf.png",
+          "path": "bg_covershelf.png",
+          "type": "Image"
         }
       ]
     }

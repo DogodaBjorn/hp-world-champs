@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "dn_cover_shelf",
   "position": {
-    "x": 90,
-    "y": 908,
+    "x": 66,
+    "y": 912,
     "z": 2500,
-    "height": 150,
-    "width": 620,
+    "height": 148,
+    "width": 668,
     "tabOrder": 2500
   },
   "visual": {

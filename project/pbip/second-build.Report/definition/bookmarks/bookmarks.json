@@ -114,6 +114,12 @@
     },
     {
       "name": "bm_rev_credits_s4a"
+    },
+    {
+      "name": "bm_rev_credits_cs"
+    },
+    {
+      "name": "bm_hide_cs"
     }
   ]
 }
