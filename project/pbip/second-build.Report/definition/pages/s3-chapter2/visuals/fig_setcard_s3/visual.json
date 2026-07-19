@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "fig_setcard_s3",
   "position": {
-    "x": 512,
-    "y": 444.33480176211452,
+    "x": 576,
+    "y": 440,
     "z": 19250,
-    "height": 175.92951541850221,
-    "width": 349.60352422907488,
+    "height": 174,
+    "width": 316,
     "tabOrder": 1000
   },
   "visual": {

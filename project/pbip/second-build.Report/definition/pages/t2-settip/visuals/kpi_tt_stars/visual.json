@@ -153,5 +153,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "26f6f34b94dc01a7da57",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Build Stars"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

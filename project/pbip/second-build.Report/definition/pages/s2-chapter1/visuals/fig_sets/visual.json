@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "fig_sets",
   "position": {
-    "x": 511.6256157635468,
-    "y": 117.04433497536947,
+    "x": 576,
+    "y": 128,
     "z": 16562,
-    "height": 242.95566502463055,
-    "width": 707.5862068965517,
+    "height": 204,
+    "width": 648,
     "tabOrder": 2000
   },
   "visual": {
@@ -271,5 +271,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f9704eb933ee47c5209b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sets"
+              }
+            },
+            "Property": "Set Label"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "64033b6d2e787d975307",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Parts per Year"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

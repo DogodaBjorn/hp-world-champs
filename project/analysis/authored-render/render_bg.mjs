@@ -177,17 +177,17 @@ function yellow() {
   ${step(56, 52, 'I')}
   ${eyebrow(112, 56, 'Chapter I · 2001–2011')}
   <div style="position:absolute;left:110px;top:70px;font:800 34px Georgia,serif;color:${T.ink}">The Yellow Years</div>
-  <div style="position:absolute;left:112px;top:110px;font:italic 600 15px Georgia,serif;color:${T.red}">…and then he vanished</div>
-  ${dropCap('O', 56, 148)}
-  <div style="position:absolute;left:146px;top:150px;width:340px;font:400 14.5px Georgia,serif;line-height:1.58;color:${T.ink}">ne quiet decade, built in classic yellow. Small sets, few colours — the humble first act of a wizarding brick world, until the silence fell in ${gink('2011')}.</div>
-  ${callout(56, 250, '67', 'sets')}
-  ${callout(214, 250, '267', 'avg parts')}
+  <div style="position:absolute;left:112px;top:110px;font:italic 600 17px Georgia,serif;color:${T.red}">…and then he vanished</div>
+  ${dropCap('O', 56, 152)}
+  <div style="position:absolute;left:146px;top:154px;width:400px;font:400 15.5px Georgia,serif;line-height:1.62;color:${T.ink}">ne quiet decade, built in classic yellow. Small sets, few colours — the humble first act of a wizarding brick world, until the silence fell in ${gink('2011')}.</div>
+  ${callout(56, 260, '67', 'sets')}
+  ${callout(214, 260, '267', 'avg parts')}
   ${plate('yellow', 56, 320, 430, 300)}
   ${clue(232, 486)} ${clue(406, 558)}
   <div style="position:absolute;left:56px;top:640px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate I · the Hogwarts Express · tap a ✦ to meet the yellow cast</div>
-  ${fig(512, 60, 720, 300)} ${figCap(528, 74, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect · year & size runes apply')}
-  ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from Figure 1 above')}
-  ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · ITS TRUE COLOURS', 'each tile a real brick colour · size = its parts in the set')}
+  ${fig(568, 72, 664, 268)} ${figCap(584, 86, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect · hover for the set itself')}
+  ${fig(568, 380, 332, 240)} ${figCap(584, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from Figure 1 above')}
+  ${fig(912, 380, 320, 240)} ${figCap(928, 394, 'FIGURE 3 · ITS TRUE COLOURS', 'each tile a real brick colour · size = its parts in the set')}
   ${pageNo('I')} ${turn()}`;
 }
 
@@ -203,16 +203,16 @@ function cameback() {
   return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(1)}
   ${step(56, 52, 'II')} ${eyebrow(112, 56, 'Chapter II · 2018–today')}
   <div style="position:absolute;left:110px;top:70px;font:800 34px Georgia,serif;color:${T.ink}">The Colour Years</div>
-  <div style="position:absolute;left:112px;top:110px;font:italic 600 15px Georgia,serif;color:${T.red}">…and then he came back</div>
-  ${dropCap('A', 56, 148)}
-  <div style="position:absolute;left:146px;top:150px;width:340px;font:400 14.5px Georgia,serif;line-height:1.58;color:${T.ink}">fter seven silent years the story returned in ${gink('2018')} — bigger sets, bolder builds, and a burst of colour. Nearly ${gink('triple')} the scale of the yellow years.</div>
-  ${callout(56, 250, '142', 'sets')} ${callout(214, 250, '731', 'avg parts')}
+  <div style="position:absolute;left:112px;top:110px;font:italic 600 17px Georgia,serif;color:${T.red}">…and then he came back</div>
+  ${dropCap('A', 56, 152)}
+  <div style="position:absolute;left:146px;top:154px;width:400px;font:400 15.5px Georgia,serif;line-height:1.62;color:${T.ink}">fter seven silent years the story returned in ${gink('2018')} — bigger sets, bolder builds, and a burst of colour. Nearly ${gink('triple')} the scale of the yellow years.</div>
+  ${callout(56, 260, '142', 'sets')} ${callout(214, 260, '731', 'avg parts')}
   ${plate('cameback', 56, 320, 430, 300)}
   ${clue(140, 462)} ${clue(392, 470)} ${clue(250, 578)}
   <div style="position:absolute;left:56px;top:640px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate II · the colour returns · tap a ✦ to uncover three hidden tales</div>
-  ${fig(512, 60, 720, 300)} ${figCap(528, 74, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect')}
-  ${fig(512, 380, 350, 240)} ${figCap(528, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from Figure 1 above')}
-  ${fig(882, 380, 350, 240)} ${figCap(898, 394, 'FIGURE 3 · FROM YELLOW TO COLOUR', 'each tile a real brick colour · size = its parts in the set')}
+  ${fig(568, 72, 664, 268)} ${figCap(584, 86, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect · hover for the set itself')}
+  ${fig(568, 380, 332, 240)} ${figCap(584, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from Figure 1 above')}
+  ${fig(912, 380, 320, 240)} ${figCap(928, 394, 'FIGURE 3 · FROM YELLOW TO COLOUR', 'each tile a real brick colour · size = its parts in the set')}
   ${pageNo('II')} ${turn()}`;
 }
 
@@ -270,27 +270,25 @@ function patronusGlow(cx, cy) {
 
 // ================= CHAPTER III: The Chamber of Colours =================
 function colours() {
-  const chip = (x, y, t) => `<div style="position:absolute;left:${x}px;top:${y}px;padding:4px 12px;background:${T.red};border-radius:3px;box-shadow:0 2px 5px rgba(60,20,10,.25);font:800 10.5px 'Segoe UI';letter-spacing:2px;color:#F3E3AE">${t}</div>`;
   return `${parchmentPage()} ${goldBorder(28, 24, 1224, 672)} ${ribbons(2)}
   ${step(56, 52, 'III')} ${eyebrow(112, 56, 'Chapter III · The Chamber of Colours')}
   <div style="position:absolute;left:110px;top:70px;font:800 34px Georgia,serif;color:${T.ink}">The Chamber of Colours</div>
-  <!-- ===== FIRST TALE · the theme ===== -->
-  ${chip(56, 122, 'FIRST TALE · THE MOST COLOURFUL THEME')}
-  ${dropCap('C', 56, 156)}
-  <div style="position:absolute;left:146px;top:158px;width:372px;font:400 14px Georgia,serif;line-height:1.55;color:${T.ink}">olour is the strongest magic in brick — and since the Second Build era, no licensed LEGO theme casts more of it than ${gink('Harry Potter')}. ${gink('Figure 1')} holds every colour the theme has ever used, each sized by the bricks that carry it.</div>
-  ${goldRibbon(56, 262, 428, 'Harry Potter · LEGO\'s most colourful licensed theme')}
-  ${fig(548, 80, 684, 286)} ${chip(564, 66, 'FIRST TALE')}
-  ${figCap(564, 96, 'FIGURE 1 · EVERY COLOUR THE THEME EVER CAST', 'all Harry Potter brick colours in their true hex · sized by parts used')}
-  <!-- gold rule between the two tales (right column) -->
+  <!-- the arc so far: chapter breadcrumb -->
+  <div style="position:absolute;left:112px;top:112px;width:424px;font:700 10px 'Segoe UI';letter-spacing:1.4px;color:${T.inkSoft}">I · YELLOW&nbsp;&nbsp;⟶&nbsp;&nbsp;II · COLOUR&nbsp;&nbsp;⟶&nbsp;&nbsp;<span style="color:${T.red}">III · THE CHAMBER OF COLOURS</span></div>
+  ${dropCap('T', 56, 150)}
+  <div style="position:absolute;left:146px;top:152px;width:400px;font:400 15.5px Georgia,serif;line-height:1.6;color:${T.ink}">he colour years did more than end the silence — they crowned a champion. Today ${gink('no licensed LEGO theme')} casts more distinct colour than Harry Potter (${gink('Figure 1')}). And its crown jewel wears ${gink('55 colours at once')}: in all of LEGO, only one set has ever worn more.</div>
+  ${goldRibbon(56, 282, 428, 'Harry Potter · LEGO\'s most colourful licensed theme')}
+  ${fig(548, 80, 684, 286)}
+  ${figCap(564, 96, 'FIGURE 1 · THE MOST COLOURFUL LICENSED THEME', 'distinct brick colours across each licensed theme’s whole shelf · Harry Potter leads with 99')}
   <div style="position:absolute;left:548px;top:374px;width:684px;height:1px;background:linear-gradient(90deg,transparent,${T.goldLeaf},transparent)"></div>
-  <!-- ===== SECOND TALE · the set ===== -->
-  ${chip(34, 306, 'SECOND TALE · ITS MOST COLOURFUL SET')}
+  <div style="position:absolute;left:548px;top:368px;width:684px;text-align:center;font:italic 600 12px Georgia,serif;color:${T.red}"><span style="background:#F1E8D4;padding:0 14px">…and one set carries the crown ↓</span></div>
+  <!-- the crown jewel -->
   <img src="${uri('cut_diagon')}" style="position:absolute;left:2px;top:330px;width:520px;filter:drop-shadow(0 12px 16px rgba(40,20,8,.4))">
   <div style="position:absolute;left:34px;top:600px;width:520px;font:700 12.5px Georgia,serif;color:${T.ink}">Diagon Alley 76444 · <span style="color:${T.red}">55 distinct colours</span> · #2 most colourful set ever <span style="font:italic 700 12px Georgia,serif;color:${T.red}">&nbsp;⟶ Figure 2</span></div>
   <div style="position:absolute;left:34px;top:622px;font:italic 400 12px Georgia,serif;color:${T.ink2}">tap a ✦ to uncover a hidden tale</div>
   ${clue(150, 546)} ${clue(446, 548)}
-  ${fig(548, 396, 684, 196)} ${chip(564, 382, 'SECOND TALE')}
-  ${figCap(564, 412, 'FIGURE 2 · DIAGON ALLEY’S OWN 55', 'every colour inside set 76444 · one bar, every hue, ordered by part count')}
+  ${fig(548, 396, 684, 196)}
+  ${figCap(564, 412, 'FIGURE 2 · DIAGON ALLEY’S OWN 55', 'every colour inside set 76444 · only one LEGO set ever wore more — a red dragon’s hoard of 56')}
   ${pageNo('III')} ${turn()}`;
 }
 

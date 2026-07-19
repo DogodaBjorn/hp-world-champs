@@ -1,0 +1,190 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "dn_licensed",
+  "position": {
+    "x": 560,
+    "y": 142,
+    "z": 14000,
+    "height": 214,
+    "width": 660,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LicensedThemeColours"
+                    }
+                  },
+                  "Property": "Root Theme"
+                }
+              },
+              "queryRef": "LicensedThemeColours.Root Theme",
+              "nativeQueryRef": "Root Theme",
+              "displayName": "Root Theme"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Licensed Distinct Colours"
+                }
+              },
+              "queryRef": "_Measures.Licensed Distinct Colours",
+              "nativeQueryRef": "Licensed Distinct Colours",
+              "displayName": "Licensed Distinct Colours"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\", \"description\": \"Chapter III showdown: distinct real brick colours across each licensed theme''s whole shelf; Harry Potter leads. Dataset: Root Theme, Licensed Distinct Colours. Values verified vs contest CSVs 2026-07-19.\", \"width\": \"container\", \"height\": \"container\", \"autosize\": {\"type\": \"fit\", \"contains\": \"padding\"}, \"background\": \"transparent\", \"data\": {\"name\": \"dataset\"}, \"transform\": [{\"filter\": \"isValid(datum[''Licensed Distinct Colours'']) && datum[''Licensed Distinct Colours''] > 0\"}, {\"calculate\": \"datum[''Root Theme''] === ''Harry Potter''\", \"as\": \"isHP\"}], \"layer\": [{\"mark\": {\"type\": \"bar\", \"height\": {\"band\": 0.72}, \"cornerRadiusEnd\": 2}, \"encoding\": {\"y\": {\"field\": \"Root Theme\", \"type\": \"nominal\", \"sort\": \"-x\", \"axis\": {\"title\": null, \"labelColor\": \"#211B14\", \"labelFont\": \"Candara\", \"labelFontSize\": 12, \"labelPadding\": 8, \"domainColor\": \"#8A7A5B\", \"ticks\": false, \"labelLimit\": 180}}, \"x\": {\"field\": \"Licensed Distinct Colours\", \"type\": \"quantitative\", \"scale\": {\"domain\": [0, 112], \"nice\": false}, \"axis\": null}, \"color\": {\"condition\": {\"test\": \"datum.isHP\", \"value\": \"#B8912E\"}, \"value\": \"#A8977B\"}, \"opacity\": {\"condition\": {\"test\": \"datum.isHP\", \"value\": 1}, \"value\": 0.55}}}, {\"mark\": {\"type\": \"text\", \"align\": \"left\", \"dx\": 6, \"font\": \"Candara\", \"fontSize\": 12, \"fontWeight\": \"bold\"}, \"encoding\": {\"y\": {\"field\": \"Root Theme\", \"type\": \"nominal\", \"sort\": \"-x\"}, \"x\": {\"field\": \"Licensed Distinct Colours\", \"type\": \"quantitative\"}, \"text\": {\"field\": \"Licensed Distinct Colours\", \"type\": \"quantitative\", \"format\": \"d\"}, \"color\": {\"condition\": {\"test\": \"datum.isHP\", \"value\": \"#7C2B22\"}, \"value\": \"#7A6238\"}}}]}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vegaLite'"
+                }
+              }
+            },
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'6.4.1'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stateManagement": [
+        {
+          "properties": {
+            "viewportHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "184D"
+                }
+              }
+            },
+            "viewportWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "628D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "developer": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'1.9.1.0'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "editor": [
+        {
+          "properties": {
+            "theme": {
+              "expr": {
+                "Literal": {
+                  "Value": "'light'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distinct brick colours across each licensed LEGO theme: Harry Potter leads with 99, ahead of Disney, Star Wars and Marvel.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

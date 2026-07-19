@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "kpi_tt_parts",
   "position": {
-    "x": 264,
-    "y": 170,
+    "x": 264.39179681192184,
+    "y": 169.54854783270665,
     "z": 4000,
-    "height": 46,
-    "width": 164,
+    "height": 58.465016494036774,
+    "width": 164.35165747768116,
     "tabOrder": 4000
   },
   "visual": {
@@ -153,5 +153,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "eadd3da4cd9d50a02187",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Set Parts"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

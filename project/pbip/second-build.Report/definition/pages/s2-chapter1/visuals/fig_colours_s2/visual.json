@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "fig_colours_s2",
   "position": {
-    "x": 882.18844984802433,
-    "y": 412.40121580547117,
+    "x": 918,
+    "y": 414,
     "z": 17125,
-    "height": 207.17325227963528,
-    "width": 350.15197568389061,
+    "height": 200,
+    "width": 308,
     "tabOrder": 0
   },
   "visual": {

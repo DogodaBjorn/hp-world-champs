@@ -1,0 +1,46 @@
+/// SCENARIO CONTEXT (disconnected): distinct real brick colours used across each
+/// licensed theme's entire shelf — the Chapter III "most colourful licensed theme"
+/// showdown (Harry Potter leads with 99). Curated franchises, verified against the
+/// contest CSVs 2026-07-19; firewall-safe references M (the ThemeColors pattern).
+/// Grain: one row per licensed root theme.
+table LicensedThemeColours
+	lineageTag: 5a2e8c40-91b7-4f6d-a3c5-7e0d2b9f4c18
+
+	column 'Root Theme'
+		dataType: string
+		lineageTag: 3c7f1a92-5d48-4e06-b8a1-9f2c6e0d7b35
+		summarizeBy: none
+		sourceColumn: Root Theme
+
+	column DistinctColours
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b4d9e21-8f60-4c53-a2d7-1e5c3a8f6d09
+		summarizeBy: sum
+		sourceColumn: DistinctColours
+
+	partition LicensedThemeColours = m
+		mode: import
+		source =
+				let
+				    // References only (RawSets + ThemesResolved + V1Inventories +
+				    // RawInventoryParts + Colors) — the ThemeColors firewall-safe pattern.
+				    Themes = {"Harry Potter", "Disney", "Star Wars", "Super Heroes Marvel", "Super Heroes DC", "Minecraft", "Jurassic World", "Super Mario", "Sonic The Hedgehog", "Speed Champions"},
+				    SetsTyped = Table.TransformColumnTypes(RawSets, {{"set_num", type text}, {"theme_id", Int64.Type}}),
+				    WithTheme = Table.NestedJoin(SetsTyped, {"theme_id"}, ThemesResolved, {"id"}, "T", JoinKind.LeftOuter),
+				    WithRoot = Table.ExpandTableColumn(WithTheme, "T", {"Root Theme"}),
+				    Curated = Table.SelectRows(WithRoot, each List.Contains(Themes, [Root Theme])),
+				    SetTheme = Table.SelectColumns(Curated, {"set_num", "Root Theme"}),
+				    InvJoin = Table.NestedJoin(V1Inventories, {"set_num"}, SetTheme, {"set_num"}, "st", JoinKind.Inner),
+				    InvTheme = Table.ExpandTableColumn(InvJoin, "st", {"Root Theme"}),
+				    PartsTyped = Table.TransformColumnTypes(RawInventoryParts, {{"inventory_id", Int64.Type}, {"color_id", Int64.Type}, {"is_spare", type logical}}),
+				    NoSpares = Table.SelectRows(PartsTyped, each not [is_spare]),
+				    PartsInScope = Table.NestedJoin(NoSpares, {"inventory_id"}, InvTheme, {"inventory_id"}, "inv", JoinKind.Inner),
+				    WithThemeCol = Table.ExpandTableColumn(PartsInScope, "inv", {"Root Theme"}),
+				    WithColor = Table.NestedJoin(WithThemeCol, {"color_id"}, Colors, {"color_id"}, "c", JoinKind.Inner),
+				    WithPseudo = Table.ExpandTableColumn(WithColor, "c", {"IsPseudoColor"}),
+				    RealColors = Table.SelectRows(WithPseudo, each not [IsPseudoColor]),
+				    Grouped = Table.Group(RealColors, {"Root Theme"}, {{"DistinctColours", each List.Count(List.Distinct([color_id])), Int64.Type}})
+				in
+				    Grouped
+
