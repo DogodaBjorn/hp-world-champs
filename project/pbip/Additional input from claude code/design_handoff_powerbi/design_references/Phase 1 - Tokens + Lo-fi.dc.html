@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin:0; background:#E7E1D2; font-family:"Segoe UI", system-ui, sans-serif; color:#211B14; }
+a { color:#8A6A21; } a:hover { color:#6E2B25; }
+</style>
+</helmet>
+<section style="display:flex; flex-direction:column; gap:32px; padding:40px; align-items:flex-start;">
+  <div style="display:flex; align-items:baseline; gap:16px;">
+    <div style="background:#211B14; color:#F5EFE3; font-size:13px; font-weight:600; padding:4px 10px; letter-spacing:0.08em;">1a</div>
+    <div style="font-family:'Crimson Pro', serif; font-size:30px; font-weight:600;">The Boy Who Came Back — Phase 1: Design Tokens &amp; Lo-fi Grid</div>
+    <div style="font-size:13px; color:#5C5346;">Power BI · 1280 × 720 · six screens · for approval before hi-fi</div>
+  </div>
+
+  <!-- ============ TOKENS ============ -->
+  <div style="background:#F5EFE3; border:1px solid #D8CFBC; padding:32px; width:1312px; box-sizing:border-box; display:flex; flex-direction:column; gap:28px;">
+    <div style="font-size:13px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#8A6A21;">Design Tokens — transcribed to Power BI theme JSON</div>
+
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div style="font-family:'Crimson Pro', serif; font-size:22px; font-weight:600;">Palette — light (pages 1, 2, 3, 4a, 5)</div>
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:12px;">
+        <sc-for list="{{ lightSwatches }}" as="s" hint-placeholder-count="8">
+          <div style="display:flex; gap:10px; align-items:center; border:1px solid #D8CFBC; padding:10px; background:#FCF9F1;">
+            <div style="width:44px; height:44px; flex:none; background:{{ s.hex }}; border:1px solid #D8CFBC;"></div>
+            <div style="display:flex; flex-direction:column; gap:1px; min-width:0;">
+              <div style="font-size:13px; font-weight:600;">{{ s.name }}</div>
+              <div style="font-size:12px; color:#5C5346;">{{ s.hex }} · {{ s.contrast }}</div>
+              <div style="font-size:11px; color:#5C5346;">{{ s.use }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="font-family:'Crimson Pro', serif; font-size:22px; font-weight:600; margin-top:8px;">Palette — dark state (page 4b only)</div>
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:12px;">
+        <sc-for list="{{ darkSwatches }}" as="s" hint-placeholder-count="5">
+          <div style="display:flex; gap:10px; align-items:center; border:1px solid #3A342B; padding:10px; background:#1F1B16; color:#CFC9BE;">
+            <div style="width:44px; height:44px; flex:none; background:{{ s.hex }}; border:1px solid #3A342B;"></div>
+            <div style="display:flex; flex-direction:column; gap:1px; min-width:0;">
+              <div style="font-size:13px; font-weight:600;">{{ s.name }}</div>
+              <div style="font-size:12px; color:#948D80;">{{ s.hex }} · {{ s.contrast }}</div>
+              <div style="font-size:11px; color:#948D80;">{{ s.use }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="font-size:12px; color:#5C5346; max-width:900px;"><b>Brand devices (IP-safe):</b> stud-capped brick columns, 2×2 brick chapter icons in true brick hexes, classic yellow &amp; flesh-tone minifig head glyphs, spectacles-and-bolt mark — all original vector shapes (Power BI: image/shape elements), no film fonts, crests, or WB artwork.</div>
+      <div style="font-size:12px; color:#5C5346; max-width:900px;">Rule: charts about LEGO colors always render marks in their true Rebrickable brick hex — the chart is the palette. Era tones (sepia / garnet) are reserved for the two eras and always paired with a text label, never color-only.</div>
+    </div>
+
+    <div style="display:flex; gap:40px;">
+      <div style="display:flex; flex-direction:column; gap:8px; flex:1;">
+        <div style="font-family:'Crimson Pro', serif; font-size:22px; font-weight:600;">Type scale — Crimson Pro + Segoe UI (2 families)</div>
+        <sc-for list="{{ typeScale }}" as="t" hint-placeholder-count="7">
+          <div style="display:flex; align-items:baseline; gap:16px; border-bottom:1px solid #D8CFBC; padding:6px 0;">
+            <div style="width:340px; flex:none; font-size:12px; color:#5C5346;">{{ t.spec }}</div>
+            <div style="font-family:{{ t.family }}; font-size:{{ t.px }}px; font-weight:{{ t.weight }}; letter-spacing:{{ t.ls }}; text-transform:{{ t.tt }}; line-height:1.1; white-space:nowrap;">{{ t.sample }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; width:300px; flex:none;">
+        <div style="font-family:'Crimson Pro', serif; font-size:22px; font-weight:600;">Geometry</div>
+        <div style="font-size:13px; line-height:1.7;">
+          <div><b>Spacing unit</b> — 8 px (grid gutters 24 px)</div>
+          <div><b>Corner radius</b> — 2 px (near-square, museum)</div>
+          <div><b>Hairline</b> — 1 px, Rule ink / Rule silver</div>
+          <div><b>Page canvas</b> — 1280 × 720 fixed</div>
+          <div><b>Footer fixture</b> — 28 px band, hairline top rule, caption type: “Source: Rebrickable LEGO Database (rebrickable.com)”</div>
+          <div><b>Focus state</b> — 2 px Gold-bright outline, 2 px offset, on all buttons/slicers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ LO-FI SCREENS ============ -->
+  <div style="display:flex; flex-wrap:wrap; gap:32px; width:1312px;">
+
+    <!-- S1 -->
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <div style="font-size:13px; font-weight:600;">S1 · Home — “The Boy Who Came Back”</div>
+      <div style="width:640px; height:360px; overflow:hidden; border:1px solid #B5AB95;">
+      <div style="width:1280px; height:720px; transform:scale(0.5); transform-origin:top left; background:#F5EFE3; box-sizing:border-box; display:flex; flex-direction:column; font-family:'Segoe UI', sans-serif;">
+        <div style="flex:1; display:flex;">
+          <div style="width:348px; flex:none; box-sizing:border-box; border-right:1px solid #D8CFBC; padding:28px 28px 20px; display:flex; flex-direction:column; gap:16px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <svg width="64" height="30" viewBox="0 0 64 30" fill="none" aria-hidden="true">
+                <circle cx="16" cy="18" r="10" stroke="#211B14" stroke-width="2.5"></circle>
+                <circle cx="46" cy="18" r="10" stroke="#211B14" stroke-width="2.5"></circle>
+                <path d="M26 18 Q31 14 36 18" stroke="#211B14" stroke-width="2.5" fill="none"></path>
+                <path d="M33 1 L28 8 L32 8 L27 15" stroke="#8A6A21" stroke-width="2.5" fill="none" stroke-linejoin="round"></path>
+              </svg>
+              <svg width="44" height="26" viewBox="0 0 44 26" aria-hidden="true">
+                <rect x="1" y="9" width="42" height="16" fill="#C91A09" stroke="#211B14" stroke-width="1.5"></rect>
+                <rect x="6" y="2" width="12" height="7" rx="1" fill="#C91A09" stroke="#211B14" stroke-width="1.5"></rect>
+                <rect x="26" y="2" width="12" height="7" rx="1" fill="#C91A09" stroke="#211B14" stroke-width="1.5"></rect>
+              </svg>
+            </div>
+            <div style="font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#8A6A21;">A LEGO Retrospective · 2001–2026</div>
+            <div style="font-family:'Crimson Pro', serif; font-size:46px; font-weight:600; line-height:1.05;">The Boy Who Came Back</div>
+            <div style="border:1px solid #D8CFBC; background:#FCF9F1; padding:14px; font-size:14px; line-height:1.45;">
+              <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#8A6A21; margin-bottom:6px;">Key Takeaway</div>
+              LEGO Harry Potter vanished for seven years. It returned in 2018 at nearly triple the scale — bigger sets, more colors, aimed at the readers who grew up. Two marriages, one franchise, told in 576 minifigures.
+            </div>
+            <div style="display:flex; gap:8px;">
+              <div style="flex:1; border-top:2px solid #8C7A5B; padding-top:6px;"><div style="font-family:'Crimson Pro',serif; font-size:24px; font-weight:600;">67 → 142</div><div style="font-size:11px; color:#5C5346;">sets</div></div>
+              <div style="flex:1; border-top:2px solid #8C7A5B; padding-top:6px;"><div style="font-family:'Crimson Pro',serif; font-size:24px; font-weight:600;">267 → 731</div><div style="font-size:11px; color:#5C5346;">avg parts</div></div>
+              <div style="flex:1; border-top:2px solid #8C7A5B; padding-top:6px;"><div style="font-family:'Crimson Pro',serif; font-size:24px; font-weight:600;">67 → 80</div><div style="font-size:11px; color:#5C5346;">colors</div></div>
+            </div>
+            <div style="margin-top:auto; display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+              <sc-for list="{{ navButtons }}" as="n" hint-placeholder-count="4">
+                <div style="border:1px solid #211B14; padding:9px 10px; font-size:13px; font-weight:600; display:flex; align-items:center; gap:8px;">
+                  <svg width="18" height="12" viewBox="0 0 18 12" aria-hidden="true"><rect x="0.75" y="4" width="16.5" height="7.25" fill="{{ n.brick }}" stroke="#211B14" stroke-width="1"></rect><rect x="3" y="0.75" width="4.5" height="3.25" fill="{{ n.brick }}" stroke="#211B14" stroke-width="1"></rect><rect x="10.5" y="0.75" width="4.5" height="3.25" fill="{{ n.brick }}" stroke="#211B14" stroke-width="1"></rect></svg>
+                  {{ n.label }}
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="flex:1; padding:28px; box-sizing:border-box; display:flex; flex-direction:column;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-size:13px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5C5346;">Parts shipped per year — column chart, ≈63% of canvas</div>
+              <div style="display:flex; gap:14px; font-size:12px;"><span>▪ 2001–2011 first marriage (sepia)</span><span style="color:#6E2B25;">▪ 2018–2026 second marriage (garnet)</span></div>
+            </div>
+            <div style="flex:1; display:flex; align-items:flex-end; gap:5px; padding-top:40px; position:relative;">
+              <sc-for list="{{ heroBars }}" as="b" hint-placeholder-count="26">
+                <div style="flex:1; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; height:100%;">
+                  <div style="display:{{ b.stud }}; gap:4px; margin-bottom:0;"><div style="width:7px; height:5px; border-radius:2px 2px 0 0; background:{{ b.studColor }};"></div><div style="width:7px; height:5px; border-radius:2px 2px 0 0; background:{{ b.studColor }};"></div></div>
+                  <div style="width:100%; height:{{ b.h }}px; background:{{ b.color }}; border:{{ b.border }}; margin-bottom:4px;"></div>
+                  <div style="font-size:10px; color:#5C5346; transform:rotate(-90deg); transform-origin:center; height:26px; display:flex; align-items:center;">{{ b.year }}</div>
+                </div>
+              </sc-for>
+              <div style="position:absolute; left:37%; top:90px; width:21%; text-align:center; border-bottom:1px solid #8A6A21; padding-bottom:4px; font-family:'Crimson Pro', serif; font-size:20px; font-style:italic; color:#8A6A21;">seven silent years</div>
+            </div>
+          </div>
+        </div>
+        <div style="height:28px; flex:none; border-top:1px solid #D8CFBC; display:flex; align-items:center; justify-content:space-between; padding:0 28px; font-size:11px; color:#5C5346;"><span>Source: Rebrickable LEGO Database (rebrickable.com)</span><span>Home · 1 of 5</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- S2 -->
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <div style="font-size:13px; font-weight:600;">S2 · Chapter I — The First Marriage (2001–2011). Grid is the mirror twin of S3.</div>
+      <div style="width:640px; height:360px; overflow:hidden; border:1px solid #B5AB95;">
+      <div style="width:1280px; height:720px; transform:scale(0.5); transform-origin:top left; background:#F5EFE3; box-sizing:border-box; display:flex; flex-direction:column; font-family:'Segoe UI', sans-serif;">
+        <div style="padding:24px 28px 12px; display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid #D8CFBC;">
+          <div style="white-space:nowrap;"><span style="font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#8A6A21;">Chapter I</span> <span style="font-family:'Crimson Pro',serif; font-size:34px; font-weight:600; margin-left:12px;">The First Marriage · 2001–2011</span></div>
+          <div style="font-family:'Crimson Pro',serif; font-size:18px; font-style:italic; color:#5C5346; white-space:nowrap; margin-left:20px;">A modest toy line in classic yellow.</div>
+        </div>
+        <div style="display:flex; gap:20px; padding:14px 28px;">
+          <sc-for list="{{ era1Kpis }}" as="k" hint-placeholder-count="5">
+            <div style="flex:1; border-top:2px solid #8C7A5B; padding-top:6px;"><div style="font-family:'Crimson Pro',serif; font-size:28px; font-weight:600;">{{ k.v }}</div><div style="font-size:11px; color:#5C5346;">{{ k.l }}</div></div>
+          </sc-for>
+        </div>
+        <div style="display:flex; gap:20px; padding:0 28px; flex:1;">
+          <div style="width:430px; flex:none; border:1px dashed #B5AB95; padding:12px; box-sizing:border-box;">
+            <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5C5346;">Set-size distribution — column chart · parts-per-set bins · era sepia</div>
+            <div style="display:flex; align-items:flex-end; gap:6px; height:110px; margin-top:12px;"><div style="flex:1;height:90%;background:#8C7A5B;"></div><div style="flex:1;height:55%;background:#8C7A5B;"></div><div style="flex:1;height:30%;background:#8C7A5B;"></div><div style="flex:1;height:14%;background:#8C7A5B;"></div><div style="flex:1;height:6%;background:#8C7A5B;"></div></div>
+          </div>
+          <div style="flex:1; border:1px dashed #B5AB95; padding:12px; box-sizing:border-box; display:flex; flex-direction:column;">
+            <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5C5346;">The era palette — 67 colors, each bar its true brick hex · 51% grayscale</div>
+            <div style="flex:1; display:flex; align-items:flex-end; gap:1px; margin-top:12px;">
+              <sc-for list="{{ strip1 }}" as="c" hint-placeholder-count="40">
+                <div style="flex:1; height:{{ c.h }}%; background:{{ c.hex }};"></div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex; gap:20px; padding:14px 28px;">
+          <sc-for list="{{ gallery1 }}" as="g" hint-placeholder-count="4">
+            <div style="flex:1; border:1px solid #D8CFBC; background:#FCF9F1; padding:10px; box-sizing:border-box;">
+              <div style="height:88px; border:1px dashed #B5AB95; display:flex; align-items:center; justify-content:center; font-size:11px; color:#5C5346;">[IMG: rebrickable]</div>
+              <div style="font-size:12px; font-weight:600; margin-top:6px;">{{ g.name }}</div>
+              <div style="font-size:11px; color:#5C5346;">{{ g.meta }}</div>
+            </div>
+          </sc-for>
+          <div style="width:300px; flex:none; border:1px dashed #B5AB95; padding:10px; box-sizing:border-box;">
+            <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5C5346;">Minifig row — yellow-skin era · matrix w/ image URLs</div>
+            <div style="display:flex; gap:6px; margin-top:8px;">
+              <sc-for list="{{ heads1 }}" as="h" hint-placeholder-count="4">
+                <div style="width:52px; height:64px; border:1px solid #D8CFBC; background:#FCF9F1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;">
+                  <svg width="30" height="36" viewBox="0 0 30 36" aria-hidden="true"><rect x="10" y="1" width="10" height="5" fill="{{ h.skin }}" stroke="#211B14" stroke-width="1"></rect><rect x="4" y="6" width="22" height="22" rx="7" fill="{{ h.skin }}" stroke="#211B14" stroke-width="1.2"></rect><circle cx="11" cy="15" r="1.6" fill="#211B14"></circle><circle cx="19" cy="15" r="1.6" fill="#211B14"></circle><path d="M10 20 Q15 24 20 20" stroke="#211B14" stroke-width="1.4" fill="none"></path><rect x="7" y="28" width="16" height="6" fill="{{ h.skin }}" stroke="#211B14" stroke-width="1"></rect></svg>
+                  <div style="font-size:9px; color:#5C5346;">[IMG]</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="height:28px; flex:none; border-top:1px solid #D8CFBC; display:flex; align-items:center; justify-content:space-between; padding:0 28px; font-size:11px; color:#5C5346;"><span>Source: Rebrickable LEGO Database (rebrickable.com)</span><span>Chapter I · 2 of 5</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- S3 -->
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <div style="font-size:13px; font-weight:600;">S3 · Chapter II — The Second Marriage (2018– ). Same grid, everything bigger &amp; richer.</div>
+      <div style="width:640px; height:360px; overflow:hidden; border:1px solid #B5AB95;">
+      <div style="width:1280px; height:720px; transform:scale(0.5); transform-origin:top left; background:#F5EFE3; box-sizing:border-box; display:flex; flex-direction:column; font-family:'Segoe UI', sans-serif;">
+        <div style="padding:24px 28px 12px; display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid #D8CFBC;">
+          <div style="white-space:nowrap;"><span style="font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#8A6A21;">Chapter II</span> <span style="font-family:'Crimson Pro',serif; font-size:34px; font-weight:600; margin-left:12px;">The Second Marriage · 2018–</span></div>
+          <div style="font-family:'Crimson Pro',serif; font-size:18px; font-style:italic; color:#5C5346; white-space:nowrap; margin-left:20px;">It came back for the grown-ups.</div>
+        </div>
+        <div style="display:flex; gap:20px; padding:14px 28px;">
+          <sc-for list="{{ era2Kpis }}" as="k" hint-placeholder-count="5">
+            <div style="flex:1; border-top:2px solid #6E2B25; padding-top:6px;"><div style="font-family:'Crimson Pro',serif; font-size:28px; font-weight:600; color:#6E2B25;">{{ k.v }}</div><div style="font-size:11px; color:#5C5346;">{{ k.l }}</div></div>
+          </sc-for>
+        </div>
+        <div style="display:flex; gap:20px; padding:0 28px; flex:1;">
+          <div style="width:430px; flex:none; border:1px dashed #B5AB95; padding:12px; box-sizing:border-box;">
+            <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5C5346;">Set-size distribution — same bins, garnet · visibly heavier tail</div>
+            <div style="display:flex; align-items:flex-end; gap:6px; height:110px; margin-top:12px;"><div style="flex:1;height:70%;background:#6E2B25;"></div><div style="flex:1;height:95%;background:#6E2B25;"></div><div style="flex:1;height:60%;background:#6E2B25;"></div><div style="flex:1;height:38%;background:#6E2B25;"></div><div style="flex:1;height:22%;background:#6E2B25;"></div></div>
+          </div>
+          <div style="flex:1; border:1px dashed #B5AB95; padding:12px; box-sizing:border-box; display:flex; flex-direction:column;">
+            <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5C5346;">The era palette — 80 colors, true hex · 41% grayscale</div>
+            <div style="flex:1; display:flex; align-items:flex-end; gap:1px; margin-top:12px;">
+              <sc-for list="{{ strip2 }}" as="c" hint-placeholder-count="50">
+                <div style="flex:1; height:{{ c.h }}%; background:{{ c.hex }};"></div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex; gap:20px; padding:14px 28px;">
+          <sc-for list="{{ gallery2 }}" as="g" hint-placeholder-count="3">
+            <div style="flex:1; border:1px solid #D8CFBC; background:#FCF9F1; padding:10px; box-sizing:border-box;">
+              <div style="height:88px; border:1px dashed #B5AB95; display:flex; align-items:center; justify-content:center; font-size:11px; color:#5C5346;">[IMG: rebrickable]</div>
+              <div style="font-size:12px; font-weight:600; margin-top:6px;">{{ g.name }}</div>
+              <div style="font-size:11px; color:#5C5346;">{{ g.meta }}</div>
+            </div>
+          </sc-for>
+          <div style="width:340px; flex:none; border:1px solid #8A6A21; background:#FCF9F1; padding:10px; box-sizing:border-box;">
+            <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#8A6A21;">Old vs new — Hermione, 2001 · 2026</div>
+            <div style="display:flex; gap:8px; margin-top:8px; align-items:flex-end;">
+              <div style="width:56px; height:64px; border:1px solid #D8CFBC; background:#FCF9F1; display:flex; align-items:center; justify-content:center;"><svg width="28" height="34" viewBox="0 0 30 36" aria-hidden="true"><rect x="10" y="1" width="10" height="5" fill="#F2CD37" stroke="#211B14" stroke-width="1"></rect><rect x="4" y="6" width="22" height="22" rx="7" fill="#F2CD37" stroke="#211B14" stroke-width="1.2"></rect><circle cx="11" cy="15" r="1.6" fill="#211B14"></circle><circle cx="19" cy="15" r="1.6" fill="#211B14"></circle><path d="M10 20 Q15 24 20 20" stroke="#211B14" stroke-width="1.4" fill="none"></path><rect x="7" y="28" width="16" height="6" fill="#F2CD37" stroke="#211B14" stroke-width="1"></rect></svg></div>
+              <div style="width:56px; height:72px; border:1px solid #D8CFBC; background:#FCF9F1; display:flex; align-items:center; justify-content:center;"><svg width="30" height="38" viewBox="0 0 30 36" aria-hidden="true"><rect x="10" y="1" width="10" height="5" fill="#F6D7B3" stroke="#211B14" stroke-width="1"></rect><rect x="4" y="6" width="22" height="22" rx="7" fill="#F6D7B3" stroke="#211B14" stroke-width="1.2"></rect><circle cx="11" cy="15" r="1.6" fill="#211B14"></circle><circle cx="19" cy="15" r="1.6" fill="#211B14"></circle><path d="M10 20 Q15 24 20 20" stroke="#211B14" stroke-width="1.4" fill="none"></path><rect x="7" y="28" width="16" height="6" fill="#F6D7B3" stroke="#211B14" stroke-width="1"></rect></svg></div>
+              <div style="font-size:11px; color:#5C5346; line-height:1.4;">9 old vs 33 new Hermiones<br>[IMG: rebrickable] × 2</div>
+            </div>
+          </div>
+        </div>
+        <div style="height:28px; flex:none; border-top:1px solid #D8CFBC; display:flex; align-items:center; justify-content:space-between; padding:0 28px; font-size:11px; color:#5C5346;"><span>Source: Rebrickable LEGO Database (rebrickable.com)</span><span>Chapter II · 3 of 5</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- S4a -->
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <div style="font-size:13px; font-weight:600;">S4a · Chapter III — The Most Colorful Set of Them All (light state)</div>
+      <div style="width:640px; height:360px; overflow:hidden; border:1px solid #B5AB95;">
+      <div style="width:1280px; height:720px; transform:scale(0.5); transform-origin:top left; background:#F5EFE3; box-sizing:border-box; display:flex; flex-direction:column; font-family:'Segoe UI', sans-serif;">
+        <div style="flex:1; display:flex; padding:28px; gap:28px; box-sizing:border-box;">
+          <div style="width:430px; flex:none; display:flex; flex-direction:column; gap:14px;">
+            <div style="font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#8A6A21;">Chapter III · The Most Colorful Set of Them All</div>
+            <div style="font-family:'Crimson Pro',serif; font-size:150px; font-weight:600; line-height:0.9;">55</div>
+            <div style="font-family:'Crimson Pro',serif; font-size:26px; font-weight:600;">distinct colors</div>
+            <div style="font-size:14px; line-height:1.5;">Diagon Alley Wizarding Shops (2025) — <b>#2 most colorful LEGO set ever made, of any theme.</b></div>
+            <div style="margin-top:auto; border:1px solid #211B14; padding:10px 12px; font-size:13px; font-weight:600; width:fit-content;">Prefer the least colorful? Come to the dark side →</div>
+          </div>
+          <div style="flex:1; border:1px dashed #B5AB95; display:flex; align-items:center; justify-content:center; font-size:12px; color:#5C5346;">[IMG: rebrickable] — Diagon Alley Wizarding Shops box photo</div>
+        </div>
+        <div style="height:130px; flex:none; padding:0 28px 14px; box-sizing:border-box; display:flex; flex-direction:column;">
+          <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5C5346; margin-bottom:8px;">Color composition — stacked bar, all 55 marks in true hex, part-count ordered</div>
+          <div style="flex:1; display:flex; gap:1px;">
+            <sc-for list="{{ comp55 }}" as="c" hint-placeholder-count="30">
+              <div style="width:{{ c.w }}%; background:{{ c.hex }};"></div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="height:28px; flex:none; border-top:1px solid #D8CFBC; display:flex; align-items:center; justify-content:space-between; padding:0 28px; font-size:11px; color:#5C5346;"><span>Source: Rebrickable LEGO Database (rebrickable.com)</span><span>Chapter III · 4 of 5</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- S4b -->
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <div style="font-size:13px; font-weight:600;">S4b · Chapter III — dark state (bookmark swap, same grammar inverted)</div>
+      <div style="width:640px; height:360px; overflow:hidden; border:1px solid #B5AB95;">
+      <div style="width:1280px; height:720px; transform:scale(0.5); transform-origin:top left; background:#15120E; color:#CFC9BE; box-sizing:border-box; display:flex; flex-direction:column; font-family:'Segoe UI', sans-serif;">
+        <div style="flex:1; display:flex; padding:28px; gap:28px; box-sizing:border-box;">
+          <div style="width:430px; flex:none; display:flex; flex-direction:column; gap:14px;">
+            <div style="font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#D95F4B;">Chapter III · The Grayest Set of Them All</div>
+            <div style="font-family:'Crimson Pro',serif; font-size:130px; font-weight:600; line-height:0.9; color:#CFC9BE;">97.9%</div>
+            <div style="font-family:'Crimson Pro',serif; font-size:26px; font-weight:600;">grayscale bricks</div>
+            <div style="font-size:14px; line-height:1.5;">Vader’s TIE Advanced (2006), Star Wars — LEGO’s grayest theme: <b>~72% gray vs Harry Potter’s ~42%.</b></div>
+            <div style="display:flex; gap:10px; align-items:flex-end;">
+              <div style="width:110px;"><div style="height:52px; background:#948D80;"></div><div style="font-size:11px; margin-top:4px;">Star Wars ~72%</div></div>
+              <div style="width:110px;"><div style="height:30px; background:#6E2B25;"></div><div style="font-size:11px; margin-top:4px;">Harry Potter ~42%</div></div>
+            </div>
+            <div style="margin-top:auto; border:1px solid #CFC9BE; padding:10px 14px; font-size:13px; font-weight:600; width:fit-content; white-space:nowrap;">← Back to the light</div>
+          </div>
+          <div style="flex:1; display:flex; gap:20px;">
+            <div style="flex:1; border:1px dashed #3A342B; display:flex; align-items:center; justify-content:center; font-size:12px; color:#948D80;">[IMG: rebrickable] — Vader’s TIE Advanced</div>
+            <div style="width:160px; flex:none; border:1px dashed #3A342B; display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:11px; color:#948D80; text-align:center; gap:6px;">[IMG: rebrickable]<br>Voldemort minifig<br>“curator of the gray collection”</div>
+          </div>
+        </div>
+        <div style="height:130px; flex:none; padding:0 28px 14px; box-sizing:border-box; display:flex; flex-direction:column;">
+          <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#948D80; margin-bottom:8px;">Color composition — almost entirely gray, true hex</div>
+          <div style="flex:1; display:flex; gap:1px;">
+            <sc-for list="{{ compGray }}" as="c" hint-placeholder-count="10">
+              <div style="width:{{ c.w }}%; background:{{ c.hex }};"></div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="height:28px; flex:none; border-top:1px solid #3A342B; display:flex; align-items:center; justify-content:space-between; padding:0 28px; font-size:11px; color:#948D80;"><span>Source: Rebrickable LEGO Database (rebrickable.com)</span><span>Chapter III · 4 of 5 · after closing time</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- S5 -->
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <div style="font-size:13px; font-weight:600;">S5 · Chapter IV — The Sorting Quiz (custom visual frame)</div>
+      <div style="width:640px; height:360px; overflow:hidden; border:1px solid #B5AB95;">
+      <div style="width:1280px; height:720px; transform:scale(0.5); transform-origin:top left; background:#F5EFE3; box-sizing:border-box; display:flex; flex-direction:column; font-family:'Segoe UI', sans-serif;">
+        <div style="padding:24px 28px 12px; display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid #D8CFBC;">
+          <div><span style="font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#8A6A21;">Chapter IV</span> <span style="font-family:'Crimson Pro',serif; font-size:34px; font-weight:600; margin-left:12px;">The Sorting Quiz</span></div>
+          <div style="font-size:13px; color:#5C5346;">Click a minifig, then its name, then its era — match all ten.</div>
+        </div>
+        <div style="flex:1; display:flex; gap:20px; padding:16px 28px;">
+          <div style="flex:1; border:1px solid #D8CFBC; background:#FCF9F1; padding:16px; box-sizing:border-box; display:flex; gap:0; position:relative;">
+            <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
+              <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5C5346;">Minifigure</div>
+              <div style="width:64px; height:74px; border:1px dashed #B5AB95;"></div>
+              <div style="width:64px; height:74px; border:2px solid #C9A227;"></div>
+              <div style="width:64px; height:74px; border:1px dashed #B5AB95;"></div>
+              <div style="width:64px; height:74px; border:2px solid #C9A227; outline:2px solid #C9A227; outline-offset:2px;"></div>
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column; gap:20px; justify-content:center;">
+              <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5C5346;">Character</div>
+              <div style="font-family:'Crimson Pro',serif; font-size:20px;">Hermione Granger</div>
+              <div style="font-family:'Crimson Pro',serif; font-size:20px; color:#8A6A21; font-weight:600;">Rubeus Hagrid ✓</div>
+              <div style="font-family:'Crimson Pro',serif; font-size:20px;">Severus Snape</div>
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column; gap:20px; justify-content:center;">
+              <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5C5346;">Era · Set</div>
+              <div style="font-size:14px;">First marriage · 2004</div>
+              <div style="font-size:14px; color:#8A6A21; font-weight:600;">Second marriage · 2021 ✓</div>
+              <div style="font-size:14px;">First marriage · 2001</div>
+            </div>
+            <svg style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;" viewBox="0 0 800 500" preserveAspectRatio="none">
+              <line x1="120" y1="190" x2="330" y2="235" stroke="#C9A227" stroke-width="3"></line>
+              <line x1="460" y1="235" x2="580" y2="235" stroke="#C9A227" stroke-width="3"></line>
+              <line x1="120" y1="120" x2="330" y2="320" stroke="#B33A2B" stroke-width="3" stroke-dasharray="6 5"></line>
+            </svg>
+          </div>
+          <div style="width:280px; flex:none; display:flex; flex-direction:column; gap:14px;">
+            <div style="border:1px solid #D8CFBC; background:#FCF9F1; padding:14px;">
+              <div style="font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5C5346;">Score</div>
+              <div style="font-family:'Crimson Pro',serif; font-size:56px; font-weight:600;">7 / 10</div>
+            </div>
+            <div style="border:1px solid #211B14; padding:10px 12px; font-size:13px; font-weight:600; text-align:center;">Reveal answers</div>
+            <div style="border:1px solid #211B14; padding:10px 12px; font-size:13px; font-weight:600; text-align:center; outline:2px solid #C9A227; outline-offset:2px;">Reset</div>
+            <div style="font-size:11px; color:#5C5346; line-height:1.5;">Line tokens — idle: 1px dashed rule ink · locked: 3px Gold-bright · wrong: 3px dashed Red-flash, 400ms then clears. Focus: 2px gold outline (shown on Reset).</div>
+          </div>
+        </div>
+        <div style="height:28px; flex:none; border-top:1px solid #D8CFBC; display:flex; align-items:center; justify-content:space-between; padding:0 28px; font-size:11px; color:#5C5346;"><span>Source: Rebrickable LEGO Database (rebrickable.com)</span><span>Chapter IV · 5 of 5</span></div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="font-size:13px; color:#5C5346; max-width:900px;">Every number shown is from the contest dataset; 2006 / 2008 / 2009 parts totals were not supplied and will carry [TK] until provided. Palette strips here are placeholder proportions — hi-fi versions bind the real 67/80-color distributions in true Rebrickable hex.</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const lightSwatches = [
+      { name: "Paper", hex: "#F5EFE3", contrast: "surface", use: "page background" },
+      { name: "Paper raised", hex: "#FCF9F1", contrast: "surface", use: "cards, gallery tiles" },
+      { name: "Ink", hex: "#211B14", contrast: "14.6:1 on Paper", use: "titles, body text" },
+      { name: "Ink soft", hex: "#5C5346", contrast: "6.6:1 on Paper", use: "captions, axis labels" },
+      { name: "Gold", hex: "#8A6A21", contrast: "4.8:1 on Paper", use: "eyebrows, accents, links" },
+      { name: "Gold bright", hex: "#C9A227", contrast: "3:1+ lines only", use: "locked lines, focus rings" },
+      { name: "Era I — Sepia", hex: "#8C7A5B", contrast: "3.6:1 (marks)", use: "first-marriage data marks" },
+      { name: "Era II — Garnet", hex: "#6E2B25", contrast: "8.9:1 on Paper", use: "second-marriage data marks" },
+      { name: "Rule", hex: "#D8CFBC", contrast: "hairline", use: "1px rules, borders" },
+      { name: "Bottle green — proposed", hex: "#2E5941", contrast: "6.9:1 on Paper", use: "3rd accent: Ch. IV quiz — awaiting approval" },
+    ];
+    const darkSwatches = [
+      { name: "Night", hex: "#15120E", contrast: "surface", use: "4b page background" },
+      { name: "Night raised", hex: "#1F1B16", contrast: "surface", use: "4b cards" },
+      { name: "Silver ink", hex: "#CFC9BE", contrast: "12.4:1 on Night", use: "4b text" },
+      { name: "Silver soft", hex: "#948D80", contrast: "5.1:1 on Night", use: "4b captions" },
+      { name: "Blood red", hex: "#D95F4B", contrast: "4.6:1 on Night", use: "single 4b accent" },
+      { name: "Rule silver", hex: "#3A342B", contrast: "hairline", use: "4b rules" },
+    ];
+    const typeScale = [
+      { spec: "Display — Crimson Pro 600 · 120/108 (monumental numbers)", family: "'Crimson Pro', serif", px: 64, weight: 600, ls: "0", tt: "none", sample: "55" },
+      { spec: "H1 chapter — Crimson Pro 600 · 44/48", family: "'Crimson Pro', serif", px: 36, weight: 600, ls: "0", tt: "none", sample: "The First Marriage" },
+      { spec: "H2 — Crimson Pro 600 · 28/34", family: "'Crimson Pro', serif", px: 26, weight: 600, ls: "0", tt: "none", sample: "Seven silent years" },
+      { spec: "KPI number — Crimson Pro 600 · 40/44", family: "'Crimson Pro', serif", px: 30, weight: 600, ls: "0", tt: "none", sample: "15,234" },
+      { spec: "Label small-caps — Segoe UI 600 · 13/16 · +0.12em · uppercase", family: "'Segoe UI', sans-serif", px: 13, weight: 600, ls: "0.12em", tt: "uppercase", sample: "Parts shipped per year" },
+      { spec: "Body — Segoe UI 400 · 15/22", family: "'Segoe UI', sans-serif", px: 15, weight: 400, ls: "0", tt: "none", sample: "It returned in 2018 at nearly triple the scale." },
+      { spec: "Caption / footer — Segoe UI 400 · 11.5/16", family: "'Segoe UI', sans-serif", px: 11.5, weight: 400, ls: "0", tt: "none", sample: "Source: Rebrickable LEGO Database (rebrickable.com)" },
+    ];
+    const series = [
+      [2001, 2326], [2002, 2423], [2003, 332], [2004, 3591], [2005, 2115],
+      [2006, null], [2007, 946], [2008, null], [2009, null], [2010, 3180], [2011, 2960],
+      [2012, 0], [2013, 0], [2014, 0], [2015, 0], [2016, 0], [2017, 0],
+      [2018, 15234], [2019, 2863], [2020, 9852], [2021, 10252], [2022, 11730],
+      [2023, 14419], [2024, 11317], [2025, 16150], [2026, 11993],
+    ];
+    const heroBars = series.map(([year, v]) => {
+      const era1 = year <= 2011;
+      return {
+        year,
+        h: v === null ? 40 : Math.max(v / 16150 * 380, v > 0 ? 8 : 2),
+        color: v === null ? "repeating-linear-gradient(45deg,#D8CFBC,#D8CFBC 4px,#F5EFE3 4px,#F5EFE3 8px)"
+          : v === 0 ? "#D8CFBC"
+          : era1 ? "repeating-linear-gradient(to top, #8C7A5B 0 13px, #A08E6C 13px 14px)"
+          : "repeating-linear-gradient(to top, #6E2B25 0 13px, #84443D 13px 14px)",
+        border: v === null ? "1px dashed #B5AB95" : "none",
+        stud: (v !== null && v > 500) ? "flex" : "none",
+        studColor: era1 ? "#8C7A5B" : "#6E2B25",
+      };
+    });
+    const era1Kpis = [
+      { v: "67", l: "sets" }, { v: "267", l: "avg parts / set" }, { v: "2,029", l: "largest set" },
+      { v: "67", l: "distinct colors" }, { v: "51%", l: "grayscale bricks" },
+    ];
+    const era2Kpis = [
+      { v: "142", l: "sets" }, { v: "731", l: "avg parts / set (2.7×)" }, { v: "6,020", l: "largest set" },
+      { v: "80", l: "distinct colors" }, { v: "41%", l: "grayscale bricks" },
+    ];
+    // Real Rebrickable brick hexes; proportions placeholder until dataset bind
+    const grays = ["#05131D", "#6C6E68", "#A0A5A9", "#9BA19D", "#E6E3E0", "#575857", "#3E3C39"];
+    const brights = ["#C91A09", "#0055BF", "#237841", "#F2CD37", "#FE8A18", "#582A12", "#81007B", "#078BC9", "#4B9F4A", "#720E0F", "#0A3463", "#958A73", "#B31004", "#DFEEA5", "#FC97AC"];
+    const mkStrip = (n, grayShare) => Array.from({ length: n }, (_, i) => ({
+      hex: i < n * grayShare ? grays[i % grays.length] : brights[i % brights.length],
+      h: 100 - (i % 7) * 9,
+    }));
+    const strip1 = mkStrip(40, 0.51);
+    const strip2 = mkStrip(50, 0.41);
+    const gallery1 = [
+      { name: "Hogwarts Castle", meta: "2001 · [TK] parts" },
+      { name: "Diagon Alley", meta: "2011 · 2,029 parts" },
+      { name: "[TK set]", meta: "[TK] · [TK] parts" },
+      { name: "[TK set]", meta: "[TK] · [TK] parts" },
+    ];
+    const gallery2 = [
+      { name: "Hogwarts Castle", meta: "2018 · 6,020 parts" },
+      { name: "Diagon Alley Wizarding Shops", meta: "2025 · 55 colors" },
+      { name: "[TK set]", meta: "[TK] · [TK] parts" },
+    ];
+    const comp55 = Array.from({ length: 30 }, (_, i) => ({
+      w: i < 4 ? 9 : i < 10 ? 5 : 1.7,
+      hex: [...grays.slice(0, 3), ...brights][i % 18],
+    }));
+    const compGray = [
+      { w: 34, hex: "#6C6E68" }, { w: 30, hex: "#A0A5A9" }, { w: 22, hex: "#05131D" },
+      { w: 8, hex: "#E6E3E0" }, { w: 2.1, hex: "#C91A09" }, { w: 3.9, hex: "#575857" },
+    ];
+    const navButtons = [
+      { label: "I · First Marriage", brick: "#F2CD37" },
+      { label: "II · Second Marriage", brick: "#C91A09" },
+      { label: "III · Most Colorful", brick: "#0055BF" },
+      { label: "IV · Sorting Quiz", brick: "#237841" },
+    ];
+    const heads1 = [{ skin: "#F2CD37" }, { skin: "#F2CD37" }, { skin: "#F2CD37" }, { skin: "#F2CD37" }];
+    return { lightSwatches, darkSwatches, typeScale, heroBars, era1Kpis, era2Kpis, strip1, strip2, gallery1, gallery2, comp55, compGray, navButtons, heads1 };
+  }
+}
+</script>
+</body>
+</html>

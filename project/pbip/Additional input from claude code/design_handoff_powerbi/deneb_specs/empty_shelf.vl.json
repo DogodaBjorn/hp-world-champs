@@ -1,0 +1,534 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "The Empty Shelf — sets per year as book spines; 2012-2017 stand empty. Cover hero visual.",
+  "background": "transparent",
+  "width": "container",
+  "height": "container",
+  "padding": {
+    "left": 4,
+    "right": 4,
+    "top": 10,
+    "bottom": 64
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "font": "Crimson Pro"
+  },
+  "data": {
+    "values": [
+      {
+        "year": 2001,
+        "sets": 7,
+        "era": "yellow",
+        "eraLabel": "I · The Yellow Years",
+        "spineColor": "#C69A31"
+      },
+      {
+        "year": 2002,
+        "sets": 8,
+        "era": "yellow",
+        "eraLabel": "I · The Yellow Years",
+        "spineColor": "#C69A31"
+      },
+      {
+        "year": 2003,
+        "sets": 5,
+        "era": "yellow",
+        "eraLabel": "I · The Yellow Years",
+        "spineColor": "#C69A31"
+      },
+      {
+        "year": 2004,
+        "sets": 9,
+        "era": "yellow",
+        "eraLabel": "I · The Yellow Years",
+        "spineColor": "#C69A31"
+      },
+      {
+        "year": 2005,
+        "sets": 7,
+        "era": "yellow",
+        "eraLabel": "I · The Yellow Years",
+        "spineColor": "#C69A31"
+      },
+      {
+        "year": 2006,
+        "sets": 6,
+        "era": "yellow",
+        "eraLabel": "I · The Yellow Years",
+        "spineColor": "#C69A31"
+      },
+      {
+        "year": 2007,
+        "sets": 5,
+        "era": "yellow",
+        "eraLabel": "I · The Yellow Years",
+        "spineColor": "#C69A31"
+      },
+      {
+        "year": 2008,
+        "sets": 6,
+        "era": "yellow",
+        "eraLabel": "I · The Yellow Years",
+        "spineColor": "#C69A31"
+      },
+      {
+        "year": 2009,
+        "sets": 6,
+        "era": "yellow",
+        "eraLabel": "I · The Yellow Years",
+        "spineColor": "#C69A31"
+      },
+      {
+        "year": 2010,
+        "sets": 8,
+        "era": "yellow",
+        "eraLabel": "I · The Yellow Years",
+        "spineColor": "#C69A31"
+      },
+      {
+        "year": 2011,
+        "sets": 8,
+        "era": "yellow",
+        "eraLabel": "I · The Yellow Years",
+        "spineColor": "#C69A31"
+      },
+      {
+        "year": 2012,
+        "sets": 0,
+        "era": "silence",
+        "eraLabel": "the silence",
+        "dust": 0.6
+      },
+      {
+        "year": 2013,
+        "sets": 0,
+        "era": "silence",
+        "eraLabel": "the silence",
+        "ghostH": 5
+      },
+      {
+        "year": 2014,
+        "sets": 0,
+        "era": "silence",
+        "eraLabel": "the silence",
+        "dust": 0.5
+      },
+      {
+        "year": 2015,
+        "sets": 0,
+        "era": "silence",
+        "eraLabel": "the silence",
+        "ghostH": 5.8
+      },
+      {
+        "year": 2016,
+        "sets": 0,
+        "era": "silence",
+        "eraLabel": "the silence",
+        "dust": 0.7
+      },
+      {
+        "year": 2017,
+        "sets": 0,
+        "era": "silence",
+        "eraLabel": "the silence",
+        "ghostH": 4.4
+      },
+      {
+        "year": 2018,
+        "sets": 19,
+        "era": "colour",
+        "eraLabel": "II · The Colour Years",
+        "spineColor": "#D9A733"
+      },
+      {
+        "year": 2019,
+        "sets": 10,
+        "era": "colour",
+        "eraLabel": "II · The Colour Years",
+        "spineColor": "#7FA06A"
+      },
+      {
+        "year": 2020,
+        "sets": 14,
+        "era": "colour",
+        "eraLabel": "II · The Colour Years",
+        "spineColor": "#C97B4A"
+      },
+      {
+        "year": 2021,
+        "sets": 15,
+        "era": "colour",
+        "eraLabel": "II · The Colour Years",
+        "spineColor": "#8FA7C7"
+      },
+      {
+        "year": 2022,
+        "sets": 16,
+        "era": "colour",
+        "eraLabel": "II · The Colour Years",
+        "spineColor": "#B5533C"
+      },
+      {
+        "year": 2023,
+        "sets": 18,
+        "era": "colour",
+        "eraLabel": "II · The Colour Years",
+        "spineColor": "#E3C878"
+      },
+      {
+        "year": 2024,
+        "sets": 16,
+        "era": "colour",
+        "eraLabel": "II · The Colour Years",
+        "spineColor": "#7FA06A"
+      },
+      {
+        "year": 2025,
+        "sets": 20,
+        "era": "colour",
+        "eraLabel": "II · The Colour Years",
+        "spineColor": "#D9A733"
+      },
+      {
+        "year": 2026,
+        "sets": 17,
+        "era": "colour",
+        "eraLabel": "II · The Colour Years",
+        "spineColor": "#B5533C"
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "axis": null,
+      "scale": {
+        "paddingInner": 0.38,
+        "paddingOuter": 0.08
+      }
+    },
+    "y": {
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          22
+        ]
+      },
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#A97E2F",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": null,
+        "y": {
+          "datum": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#6B3323",
+        "strokeWidth": 1,
+        "yOffset": 7
+      },
+      "encoding": {
+        "x": null,
+        "y": {
+          "datum": 0
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.era !== 'silence' && datum.year !== 2011"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "cornerRadiusTopLeft": 1.5,
+        "cornerRadiusTopRight": 1.5
+      },
+      "encoding": {
+        "y": {
+          "field": "sets"
+        },
+        "y2": {
+          "datum": 0
+        },
+        "fill": {
+          "field": "spineColor",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "title": "year"
+          },
+          {
+            "field": "sets",
+            "title": "sets released"
+          },
+          {
+            "field": "eraLabel",
+            "title": "era"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2011"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "shape": "M -0.117 0 L 0.117 0 L 0.117 -1 L -0.117 -1 Z",
+        "filled": true,
+        "fill": "#C69A31",
+        "angle": 9,
+        "size": 5184
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        },
+        "tooltip": [
+          {
+            "field": "year"
+          },
+          {
+            "field": "sets",
+            "title": "sets released"
+          },
+          {
+            "field": "eraLabel",
+            "title": "era"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.era === 'colour'"
+        },
+        {
+          "calculate": "datum.sets * 0.9",
+          "as": "bandY"
+        }
+      ],
+      "mark": {
+        "type": "tick",
+        "thickness": 3,
+        "size": 10,
+        "color": "#E9CF8B",
+        "opacity": 0.55
+      },
+      "encoding": {
+        "y": {
+          "field": "bandY"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.era === 'yellow' && datum.year !== 2011"
+        },
+        {
+          "calculate": "datum.sets * 0.86",
+          "as": "debossY"
+        }
+      ],
+      "mark": {
+        "type": "tick",
+        "thickness": 2,
+        "size": 9,
+        "color": "#2B0A06",
+        "opacity": 0.35
+      },
+      "encoding": {
+        "y": {
+          "field": "debossY"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "isValid(datum.ghostH)"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "fillOpacity": 0,
+        "stroke": "#6B3323",
+        "strokeWidth": 1,
+        "strokeDash": [
+          3,
+          3
+        ],
+        "cornerRadiusTopLeft": 1.5,
+        "cornerRadiusTopRight": 1.5
+      },
+      "encoding": {
+        "y": {
+          "field": "ghostH"
+        },
+        "y2": {
+          "datum": 0
+        },
+        "tooltip": [
+          {
+            "field": "year"
+          },
+          {
+            "field": "eraLabel",
+            "title": "era"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "isValid(datum.dust)"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 7,
+        "color": "#C9A227",
+        "opacity": 0.3
+      },
+      "encoding": {
+        "y": {
+          "field": "dust"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2014"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "text": "2012–2017",
+        "xOffset": 12,
+        "fontSize": 10,
+        "fontWeight": 600,
+        "color": "#B99253"
+      },
+      "encoding": {
+        "y": {
+          "datum": 10.8
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2014"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "text": "the shelf stood empty",
+        "xOffset": 12,
+        "fontSize": 14,
+        "fontStyle": "italic",
+        "color": "#C9A227"
+      },
+      "encoding": {
+        "y": {
+          "datum": 8.6
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "indexof([2001,2011,2018,2026], datum.year) >= 0"
+        },
+        {
+          "calculate": "'\\u2019' + substring(toString(datum.year), 2)",
+          "as": "yl"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": 26,
+        "fontSize": 11,
+        "color": "#B99253",
+        "clip": false
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        },
+        "text": {
+          "field": "yl"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2006"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "text": "I · THE YELLOW YEARS",
+        "dy": 48,
+        "fontSize": 10.5,
+        "fontWeight": 600,
+        "color": "#C9A227",
+        "clip": false
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2022"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "text": "II · THE COLOUR YEARS",
+        "dy": 48,
+        "fontSize": 10.5,
+        "fontWeight": 600,
+        "color": "#C9A227",
+        "clip": false
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        }
+      }
+    }
+  ]
+}
