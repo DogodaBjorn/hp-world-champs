@@ -254,7 +254,7 @@ function yellow() {
   ${plate('yellow', 56, 320, 430, 300)}
   ${clue(232, 486)} ${clue(406, 558)}
   <div style="position:absolute;left:56px;top:640px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate I · the Hogwarts Express · tap a ✦ to meet the yellow cast</div>
-  ${fig(568, 72, 664, 268)} ${figCap(584, 86, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect · hover for the set itself')}
+  ${fig(568, 72, 664, 268)} ${figCap(584, 86, 'FIGURE 1 · ALL SETS OF THE YELLOW YEARS, BY SIZE', 'tap a bar to inspect · hover for the set itself')}
   ${fig(568, 380, 332, 240)} ${figCap(584, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from Figure 1 above')}
   ${fig(912, 380, 320, 240)} ${figCap(928, 394, 'FIGURE 3 · ITS TRUE COLOURS', 'each tile a real brick colour · size = its parts in the set')}
   ${pageNo('I')} ${turn()}`;
@@ -279,7 +279,7 @@ function cameback() {
   ${plate('cameback', 56, 320, 430, 300)}
   ${clue(140, 462)} ${clue(392, 470)} ${clue(250, 578)}
   <div style="position:absolute;left:56px;top:640px;font:italic 400 12px Georgia,serif;color:${T.ink2}">Plate II · the colour returns · tap a ✦ to uncover three hidden tales</div>
-  ${fig(568, 72, 664, 268)} ${figCap(584, 86, 'FIGURE 1 · EVERY SET IN VIEW', 'tap a bar to inspect · hover for the set itself')}
+  ${fig(568, 72, 664, 268)} ${figCap(584, 86, 'FIGURE 1 · ALL SETS OF THE COLOUR YEARS, BY SIZE', 'tap a bar to inspect · hover for the set itself')}
   ${fig(568, 380, 332, 240)} ${figCap(584, 394, 'FIGURE 2 · THE SELECTED SET', 'chosen from Figure 1 above')}
   ${fig(912, 380, 320, 240)} ${figCap(928, 394, 'FIGURE 3 · FROM YELLOW TO COLOUR', 'each tile a real brick colour · size = its parts in the set')}
   ${pageNo('II')} ${turn()}`;
