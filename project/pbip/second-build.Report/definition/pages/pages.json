@@ -1,7 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
   "pageOrder": [
-    "s1-home",
     "covershelf",
     "s2-chapter1",
     "s3-chapter2",
@@ -10,5 +9,5 @@
     "s5-sorting-quiz",
     "t2-settip"
   ],
-  "activePageName": "s1-home"
+  "activePageName": "covershelf"
 }

@@ -78,13 +78,23 @@
           "type": "Image"
         },
         {
-          "name": "bg_cover.png",
-          "path": "bg_cover.png",
+          "name": "bg_covershelf.png",
+          "path": "bg_covershelf.png",
           "type": "Image"
         },
         {
           "name": "bg_dark.png",
           "path": "bg_dark.png",
+          "type": "Image"
+        },
+        {
+          "name": "bg_map_folded.png",
+          "path": "bg_map_folded.png",
+          "type": "Image"
+        },
+        {
+          "name": "bg_map_open.png",
+          "path": "bg_map_open.png",
           "type": "Image"
         },
         {
@@ -138,6 +148,86 @@
           "type": "Image"
         },
         {
+          "name": "tip_map_cho.png",
+          "path": "tip_map_cho.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_dobby.png",
+          "path": "tip_map_dobby.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_draco.png",
+          "path": "tip_map_draco.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_dumbledore.png",
+          "path": "tip_map_dumbledore.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_goyle.png",
+          "path": "tip_map_goyle.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_hagrid.png",
+          "path": "tip_map_hagrid.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_hermione.png",
+          "path": "tip_map_hermione.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_hooch.png",
+          "path": "tip_map_hooch.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_lockhart.png",
+          "path": "tip_map_lockhart.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_luna.png",
+          "path": "tip_map_luna.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_minerva.png",
+          "path": "tip_map_minerva.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_moony.png",
+          "path": "tip_map_moony.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_myrtle.png",
+          "path": "tip_map_myrtle.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_pomfrey.png",
+          "path": "tip_map_pomfrey.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_ronmap.png",
+          "path": "tip_map_ronmap.png",
+          "type": "Image"
+        },
+        {
+          "name": "tip_map_snape.png",
+          "path": "tip_map_snape.png",
+          "type": "Image"
+        },
+        {
           "name": "tip_marge.png",
           "path": "tip_marge.png",
           "type": "Image"
@@ -153,103 +243,8 @@
           "type": "Image"
         },
         {
-          "name": "bg_map_folded.png",
-          "path": "bg_map_folded.png",
-          "type": "Image"
-        },
-        {
-          "name": "bg_map_open.png",
-          "path": "bg_map_open.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_hermione.png",
-          "path": "tip_map_hermione.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_dobby.png",
-          "path": "tip_map_dobby.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_dumbledore.png",
-          "path": "tip_map_dumbledore.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_snape.png",
-          "path": "tip_map_snape.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_hagrid.png",
-          "path": "tip_map_hagrid.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_minerva.png",
-          "path": "tip_map_minerva.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_luna.png",
-          "path": "tip_map_luna.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_hooch.png",
-          "path": "tip_map_hooch.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_cho.png",
-          "path": "tip_map_cho.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_myrtle.png",
-          "path": "tip_map_myrtle.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_lockhart.png",
-          "path": "tip_map_lockhart.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_pomfrey.png",
-          "path": "tip_map_pomfrey.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_moony.png",
-          "path": "tip_map_moony.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_ronmap.png",
-          "path": "tip_map_ronmap.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_draco.png",
-          "path": "tip_map_draco.png",
-          "type": "Image"
-        },
-        {
-          "name": "tip_map_goyle.png",
-          "path": "tip_map_goyle.png",
-          "type": "Image"
-        },
-        {
           "name": "tt_set_bg.png",
           "path": "tt_set_bg.png",
-          "type": "Image"
-        },
-        {
-          "name": "bg_covershelf.png",
-          "path": "bg_covershelf.png",
           "type": "Image"
         }
       ]

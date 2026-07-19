@@ -15,18 +15,7 @@
     "activeSection": "s1-home",
     "sections": {
       "s1-home": {
-        "visualContainers": {
-          "tip_credits": {
-            "singleVisual": {
-              "visualType": "image"
-            }
-          },
-          "x_credits": {
-            "singleVisual": {
-              "visualType": "actionButton"
-            }
-          }
-        }
+        "visualContainers": {}
       }
     }
   }
