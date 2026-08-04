@@ -22,6 +22,9 @@ dist/
 # --- Project data (sample extracts stay local) ---
 project/data-samples/*
 !project/data-samples/.gitkeep
+# Contest source CSVs (136MB, public Rebrickable data — relocated from the
+# workspace root 2026-08-04; DataFolder parameters point here; never commit)
+project/source-data/
 
 # --- Claude Code local settings ---
 .claude/settings.local.json

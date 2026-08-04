@@ -1,6 +1,48 @@
-# Hooks and scripts must keep LF endings on every platform (Git Bash on
-# Windows chokes on CRLF shebangs).
-*.sh text eol=lf
-*.py text eol=lf
-# Everything else: normalize in the repo, checkout per platform default.
+# Line-ending policy for this repo.
+# NOTE: editing this file only affects files as they are (re)staged. To apply
+# it to already-tracked files, run once and commit the result:
+#   git add --renormalize .
+
+# Default: anything git detects as text is normalized to LF in the repo and
+# checked out with platform-native endings.
 * text=auto
+
+# Docs, config, and source: always text.
+*.md    text
+*.yaml  text
+*.yml   text
+*.json  text
+*.py    text eol=lf
+*.tmdl  text
+*.dax   text
+*.svg   text
+*.html  text
+*.css   text
+*.less  text
+*.js    text
+*.mjs   text
+*.ts    text
+*.csv   text
+*.txt   text
+*.gitignore   text
+*.gitkeep     text
+
+# PBIP project metadata (JSON despite the extensions).
+*.pbip  text
+*.pbir  text
+*.pbism text
+.platform text
+
+# Shell scripts and hooks must keep LF on every platform (Git Bash on
+# Windows chokes on CRLF shebangs); .py above gets eol=lf for the same reason.
+*.sh    text eol=lf
+
+# Binary: never normalize or textually diff.
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.pbix   binary
+*.pbiviz binary
+*.abf    binary
+*.zip    binary
+*.pyc    binary

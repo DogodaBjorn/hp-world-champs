@@ -1,7 +1,7 @@
 /// Folder containing the contest CSVs. Set once in Desktop (Transform data >
 /// Edit parameters). Ships as a placeholder on purpose: machine paths are a
 /// validator error in this repo; imported data travels inside the .pbix.
-expression DataFolder = "E:\PowerBI Set-up\World Champs Round 2 Data" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression DataFolder = "E:\PowerBI Set-up\hp-world-champs\project\source-data" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: 1db7e028-6685-4184-b643-ebaec2f37ad8
 
 	annotation PBI_ResultType = Text
